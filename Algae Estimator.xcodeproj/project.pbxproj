@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD4EE91C1D9F269F0083C393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4EE91B1D9F269F0083C393 /* AppDelegate.swift */; };
+		FD4EE91E1D9F26A00083C393 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4EE91D1D9F269F0083C393 /* ViewController.swift */; };
+		FD4EE9211D9F26A00083C393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD4EE91F1D9F26A00083C393 /* Main.storyboard */; };
+		FD4EE9241D9F26A00083C393 /* Algae_Estimator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD4EE9221D9F26A00083C393 /* Algae_Estimator.xcdatamodeld */; };
+		FD4EE9261D9F26A00083C393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD4EE9251D9F26A00083C393 /* Assets.xcassets */; };
+		FD4EE9291D9F26A00083C393 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD4EE9271D9F26A00083C393 /* LaunchScreen.storyboard */; };
+		FD4EE9341D9F26A00083C393 /* Algae_EstimatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4EE9331D9F26A00083C393 /* Algae_EstimatorTests.swift */; };
+		FD4EE93F1D9F26A00083C393 /* Algae_EstimatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4EE93E1D9F26A00083C393 /* Algae_EstimatorUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD4EE9301D9F26A00083C393 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD4EE9101D9F269F0083C393 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD4EE9171D9F269F0083C393;
+			remoteInfo = "Algae Estimator";
+		};
+		FD4EE93B1D9F26A00083C393 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD4EE9101D9F269F0083C393 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD4EE9171D9F269F0083C393;
+			remoteInfo = "Algae Estimator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FD4EE9181D9F269F0083C393 /* Algae Estimator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Algae Estimator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD4EE91B1D9F269F0083C393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FD4EE91D1D9F269F0083C393 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD4EE9201D9F26A00083C393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FD4EE9231D9F26A00083C393 /* Algae_Estimator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Algae_Estimator.xcdatamodel; sourceTree = "<group>"; };
+		FD4EE9251D9F26A00083C393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD4EE9281D9F26A00083C393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FD4EE92A1D9F26A00083C393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD4EE92F1D9F26A00083C393 /* Algae EstimatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Algae EstimatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD4EE9331D9F26A00083C393 /* Algae_EstimatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algae_EstimatorTests.swift; sourceTree = "<group>"; };
+		FD4EE9351D9F26A00083C393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD4EE93A1D9F26A00083C393 /* Algae EstimatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Algae EstimatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD4EE93E1D9F26A00083C393 /* Algae_EstimatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algae_EstimatorUITests.swift; sourceTree = "<group>"; };
+		FD4EE9401D9F26A00083C393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD4EE9151D9F269F0083C393 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD4EE92C1D9F26A00083C393 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD4EE9371D9F26A00083C393 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD4EE90F1D9F269F0083C393 = {
+			isa = PBXGroup;
+			children = (
+				FD4EE91A1D9F269F0083C393 /* Algae Estimator */,
+				FD4EE9321D9F26A00083C393 /* Algae EstimatorTests */,
+				FD4EE93D1D9F26A00083C393 /* Algae EstimatorUITests */,
+				FD4EE9191D9F269F0083C393 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD4EE9191D9F269F0083C393 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD4EE9181D9F269F0083C393 /* Algae Estimator.app */,
+				FD4EE92F1D9F26A00083C393 /* Algae EstimatorTests.xctest */,
+				FD4EE93A1D9F26A00083C393 /* Algae EstimatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD4EE91A1D9F269F0083C393 /* Algae Estimator */ = {
+			isa = PBXGroup;
+			children = (
+				FD4EE91B1D9F269F0083C393 /* AppDelegate.swift */,
+				FD4EE91D1D9F269F0083C393 /* ViewController.swift */,
+				FD4EE91F1D9F26A00083C393 /* Main.storyboard */,
+				FD4EE9251D9F26A00083C393 /* Assets.xcassets */,
+				FD4EE9271D9F26A00083C393 /* LaunchScreen.storyboard */,
+				FD4EE92A1D9F26A00083C393 /* Info.plist */,
+				FD4EE9221D9F26A00083C393 /* Algae_Estimator.xcdatamodeld */,
+			);
+			path = "Algae Estimator";
+			sourceTree = "<group>";
+		};
+		FD4EE9321D9F26A00083C393 /* Algae EstimatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD4EE9331D9F26A00083C393 /* Algae_EstimatorTests.swift */,
+				FD4EE9351D9F26A00083C393 /* Info.plist */,
+			);
+			path = "Algae EstimatorTests";
+			sourceTree = "<group>";
+		};
+		FD4EE93D1D9F26A00083C393 /* Algae EstimatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FD4EE93E1D9F26A00083C393 /* Algae_EstimatorUITests.swift */,
+				FD4EE9401D9F26A00083C393 /* Info.plist */,
+			);
+			path = "Algae EstimatorUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD4EE9171D9F269F0083C393 /* Algae Estimator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD4EE9431D9F26A00083C393 /* Build configuration list for PBXNativeTarget "Algae Estimator" */;
+			buildPhases = (
+				FD4EE9141D9F269F0083C393 /* Sources */,
+				FD4EE9151D9F269F0083C393 /* Frameworks */,
+				FD4EE9161D9F269F0083C393 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Algae Estimator";
+			productName = "Algae Estimator";
+			productReference = FD4EE9181D9F269F0083C393 /* Algae Estimator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FD4EE92E1D9F26A00083C393 /* Algae EstimatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD4EE9461D9F26A00083C393 /* Build configuration list for PBXNativeTarget "Algae EstimatorTests" */;
+			buildPhases = (
+				FD4EE92B1D9F26A00083C393 /* Sources */,
+				FD4EE92C1D9F26A00083C393 /* Frameworks */,
+				FD4EE92D1D9F26A00083C393 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD4EE9311D9F26A00083C393 /* PBXTargetDependency */,
+			);
+			name = "Algae EstimatorTests";
+			productName = "Algae EstimatorTests";
+			productReference = FD4EE92F1D9F26A00083C393 /* Algae EstimatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FD4EE9391D9F26A00083C393 /* Algae EstimatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD4EE9491D9F26A00083C393 /* Build configuration list for PBXNativeTarget "Algae EstimatorUITests" */;
+			buildPhases = (
+				FD4EE9361D9F26A00083C393 /* Sources */,
+				FD4EE9371D9F26A00083C393 /* Frameworks */,
+				FD4EE9381D9F26A00083C393 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD4EE93C1D9F26A00083C393 /* PBXTargetDependency */,
+			);
+			name = "Algae EstimatorUITests";
+			productName = "Algae EstimatorUITests";
+			productReference = FD4EE93A1D9F26A00083C393 /* Algae EstimatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD4EE9101D9F269F0083C393 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Software Engineering";
+				TargetAttributes = {
+					FD4EE9171D9F269F0083C393 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					FD4EE92E1D9F26A00083C393 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FD4EE9171D9F269F0083C393;
+					};
+					FD4EE9391D9F26A00083C393 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FD4EE9171D9F269F0083C393;
+					};
+				};
+			};
+			buildConfigurationList = FD4EE9131D9F269F0083C393 /* Build configuration list for PBXProject "Algae Estimator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD4EE90F1D9F269F0083C393;
+			productRefGroup = FD4EE9191D9F269F0083C393 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD4EE9171D9F269F0083C393 /* Algae Estimator */,
+				FD4EE92E1D9F26A00083C393 /* Algae EstimatorTests */,
+				FD4EE9391D9F26A00083C393 /* Algae EstimatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD4EE9161D9F269F0083C393 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD4EE9291D9F26A00083C393 /* LaunchScreen.storyboard in Resources */,
+				FD4EE9261D9F26A00083C393 /* Assets.xcassets in Resources */,
+				FD4EE9211D9F26A00083C393 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD4EE92D1D9F26A00083C393 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD4EE9381D9F26A00083C393 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD4EE9141D9F269F0083C393 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD4EE91E1D9F26A00083C393 /* ViewController.swift in Sources */,
+				FD4EE91C1D9F269F0083C393 /* AppDelegate.swift in Sources */,
+				FD4EE9241D9F26A00083C393 /* Algae_Estimator.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD4EE92B1D9F26A00083C393 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD4EE9341D9F26A00083C393 /* Algae_EstimatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD4EE9361D9F26A00083C393 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD4EE93F1D9F26A00083C393 /* Algae_EstimatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD4EE9311D9F26A00083C393 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD4EE9171D9F269F0083C393 /* Algae Estimator */;
+			targetProxy = FD4EE9301D9F26A00083C393 /* PBXContainerItemProxy */;
+		};
+		FD4EE93C1D9F26A00083C393 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD4EE9171D9F269F0083C393 /* Algae Estimator */;
+			targetProxy = FD4EE93B1D9F26A00083C393 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FD4EE91F1D9F26A00083C393 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD4EE9201D9F26A00083C393 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FD4EE9271D9F26A00083C393 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD4EE9281D9F26A00083C393 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD4EE9411D9F26A00083C393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD4EE9421D9F26A00083C393 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD4EE9441D9F26A00083C393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Algae Estimator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SE.Algae-Estimator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FD4EE9451D9F26A00083C393 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Algae Estimator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SE.Algae-Estimator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		FD4EE9471D9F26A00083C393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Algae EstimatorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SE.Algae-EstimatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Algae Estimator.app/Algae Estimator";
+			};
+			name = Debug;
+		};
+		FD4EE9481D9F26A00083C393 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Algae EstimatorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SE.Algae-EstimatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Algae Estimator.app/Algae Estimator";
+			};
+			name = Release;
+		};
+		FD4EE94A1D9F26A00083C393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Algae EstimatorUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SE.Algae-EstimatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Algae Estimator";
+			};
+			name = Debug;
+		};
+		FD4EE94B1D9F26A00083C393 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Algae EstimatorUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SE.Algae-EstimatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Algae Estimator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD4EE9131D9F269F0083C393 /* Build configuration list for PBXProject "Algae Estimator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD4EE9411D9F26A00083C393 /* Debug */,
+				FD4EE9421D9F26A00083C393 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD4EE9431D9F26A00083C393 /* Build configuration list for PBXNativeTarget "Algae Estimator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD4EE9441D9F26A00083C393 /* Debug */,
+				FD4EE9451D9F26A00083C393 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FD4EE9461D9F26A00083C393 /* Build configuration list for PBXNativeTarget "Algae EstimatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD4EE9471D9F26A00083C393 /* Debug */,
+				FD4EE9481D9F26A00083C393 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FD4EE9491D9F26A00083C393 /* Build configuration list for PBXNativeTarget "Algae EstimatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD4EE94A1D9F26A00083C393 /* Debug */,
+				FD4EE94B1D9F26A00083C393 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FD4EE9221D9F26A00083C393 /* Algae_Estimator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FD4EE9231D9F26A00083C393 /* Algae_Estimator.xcdatamodel */,
+			);
+			currentVersion = FD4EE9231D9F26A00083C393 /* Algae_Estimator.xcdatamodel */;
+			path = Algae_Estimator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FD4EE9101D9F269F0083C393 /* Project object */;
+}
