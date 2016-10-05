@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84F63DDA1DA5B2D000753A32 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F63DD91DA5B2D000753A32 /* DataViewController.swift */; };
 		FD4EE91C1D9F269F0083C393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4EE91B1D9F269F0083C393 /* AppDelegate.swift */; };
-		FD4EE91E1D9F26A00083C393 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4EE91D1D9F269F0083C393 /* ViewController.swift */; };
+		FD4EE91E1D9F26A00083C393 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4EE91D1D9F269F0083C393 /* CalculateViewController.swift */; };
 		FD4EE9211D9F26A00083C393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD4EE91F1D9F26A00083C393 /* Main.storyboard */; };
 		FD4EE9241D9F26A00083C393 /* Algae_Estimator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD4EE9221D9F26A00083C393 /* Algae_Estimator.xcdatamodeld */; };
 		FD4EE9261D9F26A00083C393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD4EE9251D9F26A00083C393 /* Assets.xcassets */; };
@@ -35,9 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84F63DD91DA5B2D000753A32 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		FD4EE9181D9F269F0083C393 /* Algae Estimator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Algae Estimator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD4EE91B1D9F269F0083C393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD4EE91D1D9F269F0083C393 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD4EE91D1D9F269F0083C393 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
 		FD4EE9201D9F26A00083C393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD4EE9231D9F26A00083C393 /* Algae_Estimator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Algae_Estimator.xcdatamodel; sourceTree = "<group>"; };
 		FD4EE9251D9F26A00083C393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,12 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				FD4EE91B1D9F269F0083C393 /* AppDelegate.swift */,
-				FD4EE91D1D9F269F0083C393 /* ViewController.swift */,
+				FD4EE91D1D9F269F0083C393 /* CalculateViewController.swift */,
 				FD4EE91F1D9F26A00083C393 /* Main.storyboard */,
 				FD4EE9251D9F26A00083C393 /* Assets.xcassets */,
 				FD4EE9271D9F26A00083C393 /* LaunchScreen.storyboard */,
 				FD4EE92A1D9F26A00083C393 /* Info.plist */,
 				FD4EE9221D9F26A00083C393 /* Algae_Estimator.xcdatamodeld */,
+				84F63DD91DA5B2D000753A32 /* DataViewController.swift */,
 			);
 			path = "Algae Estimator";
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				TargetAttributes = {
 					FD4EE9171D9F269F0083C393 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 7KDLJ86653;
 						ProvisioningStyle = Automatic;
 					};
 					FD4EE92E1D9F26A00083C393 = {
@@ -262,7 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD4EE91E1D9F26A00083C393 /* ViewController.swift in Sources */,
+				84F63DDA1DA5B2D000753A32 /* DataViewController.swift in Sources */,
+				FD4EE91E1D9F26A00083C393 /* CalculateViewController.swift in Sources */,
 				FD4EE91C1D9F269F0083C393 /* AppDelegate.swift in Sources */,
 				FD4EE9241D9F26A00083C393 /* Algae_Estimator.xcdatamodeld in Sources */,
 			);
@@ -416,8 +421,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7KDLJ86653;
 				INFOPLIST_FILE = "Algae Estimator/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SE.Algae-Estimator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -429,8 +435,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7KDLJ86653;
 				INFOPLIST_FILE = "Algae Estimator/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SE.Algae-Estimator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -511,6 +518,7 @@
 				FD4EE9451D9F26A00083C393 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD4EE9461D9F26A00083C393 /* Build configuration list for PBXNativeTarget "Algae EstimatorTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +527,7 @@
 				FD4EE9481D9F26A00083C393 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD4EE9491D9F26A00083C393 /* Build configuration list for PBXNativeTarget "Algae EstimatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +536,7 @@
 				FD4EE94B1D9F26A00083C393 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
