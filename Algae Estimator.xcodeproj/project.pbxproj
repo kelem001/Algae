@@ -16,6 +16,7 @@
 		FD4EE9291D9F26A00083C393 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD4EE9271D9F26A00083C393 /* LaunchScreen.storyboard */; };
 		FD4EE9341D9F26A00083C393 /* Algae_EstimatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4EE9331D9F26A00083C393 /* Algae_EstimatorTests.swift */; };
 		FD4EE93F1D9F26A00083C393 /* Algae_EstimatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4EE93E1D9F26A00083C393 /* Algae_EstimatorUITests.swift */; };
+		FDB90A3D1DA5BF0200800DDD /* Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB90A3C1DA5BF0200800DDD /* Calculations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		FD4EE93A1D9F26A00083C393 /* Algae EstimatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Algae EstimatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD4EE93E1D9F26A00083C393 /* Algae_EstimatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algae_EstimatorUITests.swift; sourceTree = "<group>"; };
 		FD4EE9401D9F26A00083C393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDB90A3C1DA5BF0200800DDD /* Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				FD4EE92A1D9F26A00083C393 /* Info.plist */,
 				FD4EE9221D9F26A00083C393 /* Algae_Estimator.xcdatamodeld */,
 				84F63DD91DA5B2D000753A32 /* DataViewController.swift */,
+				FDB90A3C1DA5BF0200800DDD /* Calculations.swift */,
 			);
 			path = "Algae Estimator";
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDB90A3D1DA5BF0200800DDD /* Calculations.swift in Sources */,
 				84F63DDA1DA5B2D000753A32 /* DataViewController.swift in Sources */,
 				FD4EE91E1D9F26A00083C393 /* CalculateViewController.swift in Sources */,
 				FD4EE91C1D9F269F0083C393 /* AppDelegate.swift in Sources */,
