@@ -18,6 +18,11 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var brightBox: UITextField!
     @IBOutlet weak var luxLabel: UILabel!
     
+    
+    @IBOutlet weak var po4Box: UITextField!
+    @IBOutlet weak var lakeDepthBox: UITextField!
+    @IBOutlet weak var pavLabel: UILabel!
+    
     @IBAction func fakeSubmit(_ sender: AnyObject) {
         //temp difference
         let result = Double(tempSurface.text!)! - Double(tempBottom.text!)!
@@ -26,6 +31,11 @@ class CalculateViewController: UIViewController {
         //Lux
         let lux = Double(brightBox.text!)!
         luxLabel.text = lux.description
+        
+        //Pav
+        let pav = Double(po4Box.text!)! / Double(lakeDepthBox.text!)!
+        pavLabel.text = pav.description
+        
         
     }
     

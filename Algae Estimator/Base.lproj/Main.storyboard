@@ -198,13 +198,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pav" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKJ-zk-Eet">
+                                <frame key="frameInset" minX="134" minY="480" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3v-kY-Kmz">
+                                <frame key="frameInset" minX="134" minY="509" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="CALCULATE" id="9D3-kF-Mha"/>
                     <connections>
                         <outlet property="brightBox" destination="srQ-gs-WWi" id="uq7-IE-aQo"/>
+                        <outlet property="lakeDepthBox" destination="frl-KK-9X0" id="e4K-hG-t9O"/>
                         <outlet property="luxLabel" destination="GDr-3t-fhe" id="b2S-rz-Pzz"/>
+                        <outlet property="pavLabel" destination="B3v-kY-Kmz" id="ZhW-ua-1Tb"/>
+                        <outlet property="po4Box" destination="bSo-tL-OQ8" id="BQg-ZF-10Z"/>
                         <outlet property="tempBottom" destination="Iyi-pu-GYv" id="9mN-7A-hFH"/>
                         <outlet property="tempDiffLabel" destination="SMP-rd-xu0" id="nfG-IF-5bJ"/>
                         <outlet property="tempSurface" destination="I7P-11-wIS" id="NJf-HE-VcQ"/>
