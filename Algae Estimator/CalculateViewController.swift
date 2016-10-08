@@ -10,6 +10,19 @@ import UIKit
 
 class CalculateViewController: UIViewController {
 
+    @IBOutlet weak var tempSurface: UITextField!
+    @IBOutlet weak var tempBottom: UITextField!
+    @IBOutlet weak var tempDiffLabel: UILabel!
+    
+    
+    
+    @IBAction func fakeSubmit(_ sender: AnyObject) {
+        //temp difference
+        let result = Double(tempSurface.text!)! - Double(tempBottom.text!)!
+        tempDiffLabel.text = result.description
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
