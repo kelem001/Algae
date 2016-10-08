@@ -15,11 +15,17 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var tempDiffLabel: UILabel!
     
     
+    @IBOutlet weak var brightBox: UITextField!
+    @IBOutlet weak var luxLabel: UILabel!
     
     @IBAction func fakeSubmit(_ sender: AnyObject) {
         //temp difference
         let result = Double(tempSurface.text!)! - Double(tempBottom.text!)!
         tempDiffLabel.text = result.description
+        
+        //Lux
+        let lux = Double(brightBox.text!)!
+        luxLabel.text = lux.description
         
     }
     

@@ -184,11 +184,27 @@
                                     <action selector="fakeSubmit:" destination="Msz-d4-ZYG" eventType="touchUpInside" id="kka-fe-d6E"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lux" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMr-lf-EIP">
+                                <frame key="frameInset" minX="75" minY="480" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDr-3t-fhe">
+                                <frame key="frameInset" minX="75" minY="509" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="CALCULATE" id="9D3-kF-Mha"/>
                     <connections>
+                        <outlet property="brightBox" destination="srQ-gs-WWi" id="uq7-IE-aQo"/>
+                        <outlet property="luxLabel" destination="GDr-3t-fhe" id="b2S-rz-Pzz"/>
                         <outlet property="tempBottom" destination="Iyi-pu-GYv" id="9mN-7A-hFH"/>
                         <outlet property="tempDiffLabel" destination="SMP-rd-xu0" id="nfG-IF-5bJ"/>
                         <outlet property="tempSurface" destination="I7P-11-wIS" id="NJf-HE-VcQ"/>
