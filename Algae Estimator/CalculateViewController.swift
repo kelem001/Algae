@@ -25,6 +25,7 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var lakeDepthBox: UITextField!
     @IBOutlet weak var pavLabel: UILabel!
     
+    @IBOutlet weak var cyanoChlBox: UITextField!
     
     @IBOutlet weak var chlBox: UITextField!
     @IBOutlet weak var chLabel: UILabel!
@@ -63,6 +64,30 @@ class CalculateViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            // Create a variable that you want to send
+    
+            let tempDiff = Float(tempSurface.text!)! - Float(tempBottom.text!)!
+            NSLog(String(tempDiff))
+            let lux = Float(brightBox.text!)!
+            let pav = Float(po4Box.text!)! / Float(lakeDepthBox.text!)!
+            let chl = Float(chlBox.text!)!
+            let cyanoChl = Float(cyanoChlBox.text!)!
+    
+            // Create a new variable to store the instance of PlayerTableViewController
+            let tabbar = segue.destination as! UITabBarController
+            let destinationVC = tabbar.viewControllers?[0] as! DataViewController
+    
+            destinationVC.tempDiff = tempDiff
+            destinationVC.lux = lux
+            destinationVC.pav = pav
+            destinationVC.chl = chl
+            destinationVC.cyano = cyanoChl
+            
+        }
+
 
 
 }

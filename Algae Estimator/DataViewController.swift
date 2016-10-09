@@ -10,9 +10,26 @@ import UIKit
 
 class DataViewController: UIViewController {
     
+    var tempDiff: Float?
+    var pav: Float?
+    var lux: Float?
+    var chl: Float?
+    var cyano: Float?
+    
+    @IBOutlet weak var tempDiffLabel: UILabel!
+    @IBOutlet weak var pavLabel: UILabel!
+    @IBOutlet weak var luxLabel: UILabel!
+    @IBOutlet weak var chlaLabel: UILabel!
+    @IBOutlet weak var cyanoLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        tempDiffLabel.text = String(describing: self.tempDiff!)
+        pavLabel.text = String(describing: self.pav!)
+        luxLabel.text = String(describing: self.lux!)
+        chlaLabel.text = String(describing: self.chl!)
+        cyanoLabel.text = String(describing: self.cyano!)
     }
     
     override func didReceiveMemoryWarning() {
