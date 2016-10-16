@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 class DataViewController: UIViewController {
     
-    var tempDiff: Float?
-    var pav: Float?
-    var lux: Float?
-    var chl: Float?
-    var cyano: Float?
+//    var tempDiff: Float?
+//    var pav: Float?
+//    var lux: Float?
+//    var chl: Float?
+//    var cyano: Float?
+    var id: NSManagedObjectID?
     
     @IBOutlet weak var tempDiffLabel: UILabel!
     @IBOutlet weak var pavLabel: UILabel!
@@ -25,11 +27,21 @@ class DataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tempDiffLabel.text = String(describing: self.tempDiff!)
-        pavLabel.text = String(describing: self.pav!)
-        luxLabel.text = String(describing: self.lux!)
-        chlaLabel.text = String(describing: self.chl!)
-        cyanoLabel.text = String(describing: self.cyano!)
+        let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//        let fetchRequest = NSFetchRequest<NSFetchRequestResult> (entityName: "Datalog")
+//        do {
+//            let results = try managedContext.fetch(fetchRequest)
+        let results = managedContext.object(with: self.id!)
+        NSLog("test: \(results)")
+//            tempDiffLabel.text = String(describing: self.tempDiff!)
+//            pavLabel.text = String(describing: self.pav!)
+//            luxLabel.text = String(describing: self.lux!)
+//            chlaLabel.text = String(describing: self.chl!)
+//            cyanoLabel.text = String(describing: self.cyano!)
+            
+//        } catch let error as NSError {
+//            print ("Could not fetch \(error), \(error.userInfo)")
+//        }
     }
     
     override func didReceiveMemoryWarning() {
