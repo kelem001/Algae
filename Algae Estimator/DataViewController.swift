@@ -10,12 +10,8 @@ import UIKit
 import CoreData
 
 class DataViewController: UIViewController {
-    
-//    var tempDiff: Float?
-//    var pav: Float?
-//    var lux: Float?
-//    var chl: Float?
-//    var cyano: Float?
+
+    // ID for the target NSManagedObject for datalog.
     var id: NSManagedObjectID?
     
     @IBOutlet weak var tempDiffLabel: UILabel!
@@ -27,21 +23,44 @@ class DataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Retrieve Managed Context
         let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//        let fetchRequest = NSFetchRequest<NSFetchRequestResult> (entityName: "Datalog")
-//        do {
-//            let results = try managedContext.fetch(fetchRequest)
-        let results = managedContext.object(with: self.id!)
-        NSLog("test: \(results)")
-//            tempDiffLabel.text = String(describing: self.tempDiff!)
-//            pavLabel.text = String(describing: self.pav!)
-//            luxLabel.text = String(describing: self.lux!)
-//            chlaLabel.text = String(describing: self.chl!)
-//            cyanoLabel.text = String(describing: self.cyano!)
-            
-//        } catch let error as NSError {
-//            print ("Could not fetch \(error), \(error.userInfo)")
-//        }
+
+        // Retrieve target datalog based on NSManagedObjectID
+        let datalog = managedContext.object(with: self.id!)
+        
+        
+        // Set Data label values, set them to 'Not Found' if the corresponding value doesn't exist.
+        if let tempDiff = datalog.value(forKey: "temp_diff") {
+            tempDiffLabel.text = String(describing: tempDiff)
+        } else {
+            tempDiffLabel.text = "Not Found"
+        }
+        
+        if let po4 = datalog.value(forKey: "po4") {
+            pavLabel.text = String(describing: po4)
+        } else {
+            pavLabel.text = "Not Found"
+        }
+
+        if let lux = datalog.value(forKey: "brightness") {
+            luxLabel.text = String(describing: lux)
+        } else {
+            luxLabel.text = "Not Found"
+        }
+        
+        if let total_chl = datalog.value(forKey: "total_chl") {
+            chlaLabel.text = String(describing: total_chl)
+        } else {
+            chlaLabel.text = "Not Found"
+        }
+        
+        if let cyano_chl = datalog.value(forKey: "cyano_chl") {
+            cyanoLabel.text = String(describing: cyano_chl)
+        } else {
+            cyanoLabel.text = "Not Found"
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {

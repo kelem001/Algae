@@ -41,76 +41,8 @@ class CalculateViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //    @IBAction func saveData(_ sender: AnyObject) {
-    //        // Get input values from View.
-    //        let temp_diff = Float(tempSurface.text!)! - Float(tempBottom.text!)!
-    //        let brightness = Float(brightBox.text!)!
-    //        let po4 = Float(po4Box.text!)! / Float(lakeDepthBox.text!)!
-    //        let total_chl = Float(chlBox.text!)!
-    //        let cyano_chl = Float(cyanoChlBox.text!)!
-    //        let depth = Float(lakeDepthBox.text!)!
-    //
-    //        // Retrieve PersistentContainer managed Context...
-    //        let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    //
-    //        // Retrieve Datalog entity from CoreData model.
-    //        let entity = NSEntityDescription.entity(forEntityName: "Datalog", in: managedContext)
-    //        let datalog = NSManagedObject(entity: entity!, insertInto: managedContext)
-    //
-    //        // Insert form data into CoreData model
-    //        datalog.setValue(temp_diff, forKey: "temp_diff")
-    //        datalog.setValue(brightness, forKey: "brightness")
-    //        datalog.setValue(po4, forKey: "po4")
-    //        datalog.setValue(total_chl, forKey: "total_chl")
-    //        datalog.setValue(cyano_chl, forKey: "cyano_chl")
-    //        datalog.setValue(depth, forKey: "depth")
-    //
-    //        // Save data.
-    //        do {
-    //            try managedContext.save()
-    //            let id = datalog.objectID
-    //            //            UserDefaults.standard.set(string, forKey: "userID")
-    //            NSLog("ID: \(id)")
-    //            managedContext.object(with: id)
-    //        } catch let error as NSError {
-    //            print ("Could not save \(error), \(error.userInfo)")
-    //        }
-    //    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //
-        //        // Get input values from View.
-        //        let temp_diff = Float(tempSurface.text!)! - Float(tempBottom.text!)!
-        //        let brightness = Float(brightBox.text!)!
-        //        let po4 = Float(po4Box.text!)! / Float(lakeDepthBox.text!)!
-        //        let total_chl = Float(chlBox.text!)!
-        //        let cyano_chl = Float(cyanoChlBox.text!)!
-        //        let depth = Float(lakeDepthBox.text!)!
-        //
-        //        // Retrieve PersistentContainer managed Context...
-        //        let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        //
-        //        // Retrieve Datalog entity from CoreData model.
-        //        let entity = NSEntityDescription.entity(forEntityName: "Datalog", in: managedContext)
-        //        let datalog = NSManagedObject(entity: entity!, insertInto: managedContext)
-        //
-        //        // Insert form data into CoreData model
-        //        datalog.setValue(temp_diff, forKey: "temp_diff")
-        //        datalog.setValue(brightness, forKey: "brightness")
-        //        datalog.setValue(po4, forKey: "po4")
-        //        datalog.setValue(total_chl, forKey: "total_chl")
-        //        datalog.setValue(cyano_chl, forKey: "cyano_chl")
-        //        datalog.setValue(depth, forKey: "depth")
-        //
-        // Create a new variable to store the instance of DataViewController
-//        let tabbar = segue.destination as! UITabBarController
-//        let destinationVC = tabbar.viewControllers?[0] as! DataViewController
-        //
-        ////        destinationVC.tempDiff = tempDiff
-        ////        destinationVC.lux = lux
-        ////        destinationVC.pav = pav
-        ////        destinationVC.chl = chl
-        ////        destinationVC.cyano = cyanoChl
         
         // Get input values from View.
         let temp_diff = Float(tempSurface.text!)! - Float(tempBottom.text!)!
@@ -119,6 +51,7 @@ class CalculateViewController: UIViewController {
         let total_chl = Float(chlBox.text!)!
         let cyano_chl = Float(cyanoChlBox.text!)!
         let depth = Float(lakeDepthBox.text!)!
+        let date = NSDate()
         
         // Retrieve PersistentContainer managed Context...
         let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -134,22 +67,25 @@ class CalculateViewController: UIViewController {
         datalog.setValue(total_chl, forKey: "total_chl")
         datalog.setValue(cyano_chl, forKey: "cyano_chl")
         datalog.setValue(depth, forKey: "depth")
+        datalog.setValue(date, forKey: "date")
         
-        // Save data.
         do {
+            // Commit Changes to database.
             try managedContext.save()
-            let id = datalog.objectID
-            //            UserDefaults.standard.set(string, forKey: "userID")
-            let results = managedContext.object(with: id)
             
+            // Get the NSManagedObjectID for the record just inserted.
+            let id = datalog.objectID
+            
+            // Obtain destVC controller instance.
             let tabbar = segue.destination as! UITabBarController
             let destinationVC = tabbar.viewControllers?[0] as! DataViewController
-//            managedContext.object(with: id)
+            
+            // Pass ObjectID to the destVC
             destinationVC.id = id
         } catch let error as NSError {
             print ("Could not save \(error), \(error.userInfo)")
         }
-        //
+    
     }
     
     
