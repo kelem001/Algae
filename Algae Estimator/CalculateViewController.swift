@@ -45,9 +45,10 @@ class CalculateViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         // Get input values from View.
-        let temp_diff = Float(tempSurface.text!)! - Float(tempBottom.text!)!
+        let temp_bot = Float(tempBottom.text!)!
+        let temp_top = Float(tempSurface.text!)!
         let brightness = Float(brightBox.text!)!
-        let po4 = Float(po4Box.text!)! / Float(lakeDepthBox.text!)!
+        let po4 = Float(po4Box.text!)!
         let total_chl = Float(chlBox.text!)!
         let cyano_chl = Float(cyanoChlBox.text!)!
         let depth = Float(lakeDepthBox.text!)!
@@ -61,7 +62,8 @@ class CalculateViewController: UIViewController {
         let datalog = NSManagedObject(entity: entity!, insertInto: managedContext)
         
         // Insert form data into CoreData model
-        datalog.setValue(temp_diff, forKey: "temp_diff")
+        datalog.setValue(temp_bot, forKey: "temp_bot")
+        datalog.setValue(temp_top, forKey: "temp_top")
         datalog.setValue(brightness, forKey: "brightness")
         datalog.setValue(po4, forKey: "po4")
         datalog.setValue(total_chl, forKey: "total_chl")

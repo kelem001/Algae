@@ -31,7 +31,8 @@ class DataViewController: UIViewController {
         
         
         // Set Data label values, set them to 'Not Found' if the corresponding value doesn't exist.
-        if let tempDiff = datalog.value(forKey: "temp_diff") {
+        if let temp_top: Float = datalog.value(forKey: "temp_top") as? Float , let temp_bot: Float = (datalog.value(forKey: "temp_bot") as? Float) {
+            let tempDiff: Float = temp_top - temp_bot
             tempDiffLabel.text = String(describing: tempDiff)
         } else {
             tempDiffLabel.text = "Not Found"

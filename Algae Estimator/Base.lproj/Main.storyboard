@@ -9,7 +9,7 @@
         <!--DATALOG-->
         <scene sceneID="1GX-By-P8Q">
             <objects>
-                <viewController id="Slz-D2-UPQ" sceneMemberID="viewController">
+                <viewController id="Slz-D2-UPQ" customClass="DataLogViewController" customModule="Algae_Estimator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VSR-Gr-wGv"/>
                         <viewControllerLayoutGuide type="bottom" id="KaO-Ul-S27"/>
