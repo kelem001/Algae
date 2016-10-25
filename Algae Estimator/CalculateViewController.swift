@@ -11,6 +11,8 @@ import CoreData
 
 class CalculateViewController: UIViewController {
     
+    var po4Est: Float?
+    
     //All IBOUTLETS are properties, text boxes are UITextField and
     //UILabel is the results label
     @IBOutlet weak var tempSurface: UITextField!
@@ -22,7 +24,11 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var luxLabel: UILabel!
     
     
-    @IBOutlet weak var po4Box: UITextField!
+    @IBAction func po4Set(_ sender: UIButton) {
+        performSegue(withIdentifier: "po4TabBar", sender: self)
+    }
+    
+    
     @IBOutlet weak var lakeDepthBox: UITextField!
     @IBOutlet weak var pavLabel: UILabel!
     
@@ -44,50 +50,54 @@ class CalculateViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        // Get input values from View.
-        let temp_bot = Float(tempBottom.text!)!
-        let temp_top = Float(tempSurface.text!)!
-        let brightness = Float(brightBox.text!)!
-        let po4 = Float(po4Box.text!)!
-        let total_chl = Float(chlBox.text!)!
-        let cyano_chl = Float(cyanoChlBox.text!)!
-        let depth = Float(lakeDepthBox.text!)!
-        let date = NSDate()
-        
-        // Retrieve PersistentContainer managed Context...
-        let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        // Retrieve Datalog entity from CoreData model.
-        let entity = NSEntityDescription.entity(forEntityName: "Datalog", in: managedContext)
-        let datalog = NSManagedObject(entity: entity!, insertInto: managedContext)
-        
-        // Insert form data into CoreData model
-        datalog.setValue(temp_bot, forKey: "temp_bot")
-        datalog.setValue(temp_top, forKey: "temp_top")
-        datalog.setValue(brightness, forKey: "brightness")
-        datalog.setValue(po4, forKey: "po4")
-        datalog.setValue(total_chl, forKey: "total_chl")
-        datalog.setValue(cyano_chl, forKey: "cyano_chl")
-        datalog.setValue(depth, forKey: "depth")
-        datalog.setValue(date, forKey: "date")
-        
-        do {
-            // Commit Changes to database.
-            try managedContext.save()
+        if (segue.identifier == "po4TabBar") {
             
-            // Get the NSManagedObjectID for the record just inserted.
-            let id = datalog.objectID
+        } else if (segue.identifier == "toDataPage") {
             
-            // Obtain destVC controller instance.
-            let tabbar = segue.destination as! UITabBarController
-            let destinationVC = tabbar.viewControllers?[0] as! DataViewController
+            // Get input values from View.
+            let temp_bot = Float(tempBottom.text!)!
+            let temp_top = Float(tempSurface.text!)!
+            let brightness = Float(brightBox.text!)!
+            let po4 = po4Est! / Float(lakeDepthBox.text!)!
+            let total_chl = Float(chlBox.text!)!
+            let cyano_chl = Float(cyanoChlBox.text!)!
+            let depth = Float(lakeDepthBox.text!)!
+            let date = NSDate()
             
-            // Pass ObjectID to the destVC
-            destinationVC.id = id
-        } catch let error as NSError {
-            print ("Could not save \(error), \(error.userInfo)")
+            // Retrieve PersistentContainer managed Context...
+            let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            // Retrieve Datalog entity from CoreData model.
+            let entity = NSEntityDescription.entity(forEntityName: "Datalog", in: managedContext)
+            let datalog = NSManagedObject(entity: entity!, insertInto: managedContext)
+            
+            // Insert form data into CoreData model
+            datalog.setValue(temp_top, forKey: "temp_top")
+            datalog.setValue(temp_bot, forKey: "temp_bot")
+            datalog.setValue(brightness, forKey: "brightness")
+            datalog.setValue(po4, forKey: "po4")
+            datalog.setValue(total_chl, forKey: "total_chl")
+            datalog.setValue(cyano_chl, forKey: "cyano_chl")
+            datalog.setValue(depth, forKey: "depth")
+            datalog.setValue(date, forKey: "date")
+            
+            do {
+                // Commit Changes to database.
+                try managedContext.save()
+                
+                // Get the NSManagedObjectID for the record just inserted.
+                let id = datalog.objectID
+                
+                // Obtain destVC controller instance.
+                let tabbar = segue.destination as! UITabBarController
+                let destinationVC = tabbar.viewControllers?[0] as! DataViewController
+                
+                // Pass ObjectID to the destVC
+                destinationVC.id = id
+            } catch let error as NSError {
+                print ("Could not save \(error), \(error.userInfo)")
+            }
         }
-    
     }
     
     

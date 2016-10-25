@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		84F63DDA1DA5B2D000753A32 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F63DD91DA5B2D000753A32 /* DataViewController.swift */; };
-		962745B11DBADDB900851B96 /* DataLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962745B01DBADDB900851B96 /* DataLogViewController.swift */; };
+		FD1C31C21DB85118007C7036 /* PO4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1C31C11DB85118007C7036 /* PO4ViewController.swift */; };
 		FD4EE91C1D9F269F0083C393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4EE91B1D9F269F0083C393 /* AppDelegate.swift */; };
 		FD4EE91E1D9F26A00083C393 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4EE91D1D9F269F0083C393 /* CalculateViewController.swift */; };
 		FD4EE9211D9F26A00083C393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD4EE91F1D9F26A00083C393 /* Main.storyboard */; };
@@ -39,7 +39,7 @@
 
 /* Begin PBXFileReference section */
 		84F63DD91DA5B2D000753A32 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		962745B01DBADDB900851B96 /* DataLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLogViewController.swift; sourceTree = "<group>"; };
+		FD1C31C11DB85118007C7036 /* PO4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PO4ViewController.swift; sourceTree = "<group>"; };
 		FD4EE9181D9F269F0083C393 /* Algae Estimator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Algae Estimator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD4EE91B1D9F269F0083C393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD4EE91D1D9F269F0083C393 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 				FD4EE91B1D9F269F0083C393 /* AppDelegate.swift */,
 				FD4EE91D1D9F269F0083C393 /* CalculateViewController.swift */,
 				FD4EE91F1D9F26A00083C393 /* Main.storyboard */,
-				962745B01DBADDB900851B96 /* DataLogViewController.swift */,
+				FD1C31C11DB85118007C7036 /* PO4ViewController.swift */,
 				FD4EE9251D9F26A00083C393 /* Assets.xcassets */,
 				FD4EE9271D9F26A00083C393 /* LaunchScreen.storyboard */,
 				FD4EE92A1D9F26A00083C393 /* Info.plist */,
@@ -275,8 +275,8 @@
 				FDB90A3D1DA5BF0200800DDD /* Calculations.swift in Sources */,
 				84F63DDA1DA5B2D000753A32 /* DataViewController.swift in Sources */,
 				FD4EE91E1D9F26A00083C393 /* CalculateViewController.swift in Sources */,
-				962745B11DBADDB900851B96 /* DataLogViewController.swift in Sources */,
 				FD4EE91C1D9F269F0083C393 /* AppDelegate.swift in Sources */,
+				FD1C31C21DB85118007C7036 /* PO4ViewController.swift in Sources */,
 				FD4EE9241D9F26A00083C393 /* Algae_Estimator.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
