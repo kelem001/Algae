@@ -15,13 +15,14 @@ class CalculateViewController: UIViewController {
     
     //All IBOUTLETS are properties, text boxes are UITextField and
     //UILabel is the results label
+    
     @IBOutlet weak var tempSurface: UITextField!
     @IBOutlet weak var tempBottom: UITextField!
-    @IBOutlet weak var tempDiffLabel: UILabel!
+    //@IBOutlet weak var tempDiffLabel: UILabel!
     
     
     @IBOutlet weak var brightBox: UITextField!
-    @IBOutlet weak var luxLabel: UILabel!
+    //@IBOutlet weak var luxLabel: UILabel!
     
     
     @IBAction func po4Set(_ sender: UIButton) {
@@ -30,12 +31,12 @@ class CalculateViewController: UIViewController {
     
     
     @IBOutlet weak var lakeDepthBox: UITextField!
-    @IBOutlet weak var pavLabel: UILabel!
+    //@IBOutlet weak var pavLabel: UILabel!
     
     @IBOutlet weak var cyanoChlBox: UITextField!
     
     @IBOutlet weak var chlBox: UITextField!
-    @IBOutlet weak var chLabel: UILabel!
+    //@IBOutlet weak var chLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
