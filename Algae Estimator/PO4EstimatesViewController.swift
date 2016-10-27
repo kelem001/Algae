@@ -99,10 +99,7 @@ class PO4EstimatesViewController: UIViewController {
         if (segue.identifier == "segueSend2") {
             let tabbar = segue.destination as! UITabBarController
             let destinationVC = tabbar.viewControllers?[0] as! CalculateViewController
-            
-            
             destinationVC.po4Est = Float(po4Val.text!)!
-            //round(1000*finalVal)/10000
         }
     }
     
