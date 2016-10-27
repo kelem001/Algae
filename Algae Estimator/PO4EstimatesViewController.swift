@@ -100,16 +100,16 @@ class PO4EstimatesViewController: UIViewController {
             let tabbar = segue.destination as! UITabBarController
             let destinationVC = tabbar.viewControllers?[0] as! CalculateViewController
             
-            //Attempting to round to X.XXX
-            let preDest = Float(po4Val.text!)!
-            destinationVC.po4Est = Float(round(1000*preDest)/1000)
+            
+            destinationVC.po4Est = Float(po4Val.text!)!
+            //round(1000*finalVal)/10000
         }
     }
     
     func calculatePO4(){
         let value:Float = 0.1*location + 0.4*landVegetation + 0.1*waterVegetation + 0.4*recurringBlooms;
-        let finalVal:Float = 44.2222*value - 0.36
-        po4Val.text = String(finalVal)
+        let finalVal:  Float = 44.2222*value - 0.36
+        po4Val.text = String(format: "%.4f",(round(10000*finalVal)/10000))
         
     }
     
