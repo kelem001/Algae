@@ -27,7 +27,7 @@ class Calculations {
     var bottemp:Float
     var depth:Float
     var lux:Float
-
+    
     // Direct constructor
     init(total_chla:Float, cyano_chla: Float,Pbot:Float, surtemp:Float,bottemp:Float, depth:Float, lux:Float){
         self.total_chla = total_chla
@@ -39,7 +39,7 @@ class Calculations {
         self.lux = lux
         self.N0 = N0_MIN
     }
-        //Estimate constructor
+    //Estimate constructor
     func AlgalDataCal(SD_value:Float, DO_value:Float,Pbot:Float,surtemp:Float, bottemp:Float, depth:Float, lux:Float, estimate:Bool) {
         self.cyano_chla = Calculations.estimateCyanoChla(SD_value: SD_value,surtemp: surtemp)
         if (DO_value>0) {
@@ -59,7 +59,7 @@ class Calculations {
     func getCyanoCurTime() -> Int{
         return 0
     }
-        
+    
     // static methods to return estimate Chla
     static func estimateTotalChla(SD_value: Float, DO_value:Float) -> Float {
         return -6.4775 + 21.6396 * (1/SD_value) + 0.0006 * Float(pow(DO_value,2))
@@ -68,7 +68,7 @@ class Calculations {
     static func estimateCyanoChla(SD_value: Float, surtemp: Float) -> Float{
         return 0.409 - 0.7486 * surtemp + 17.6979 * (1/SD_value)
     }
-        
+    
     func getK1() -> Float {
         let pav = Pbot/depth
         var K1 = 1875 * pav - 7.5
@@ -80,7 +80,7 @@ class Calculations {
         }
         return K1
     }
-        
+    
     func getK2() -> Float{
         let pav = Pbot/depth
         var K2 = 1625 * pav - 12.5
@@ -92,7 +92,7 @@ class Calculations {
         }
         return K2
     }
-        
+    
     func getR01() -> Float {
         var pav = Pbot/depth
         var tempdiff: Float
@@ -120,7 +120,7 @@ class Calculations {
         }
         return R01
     }
-        
+    
     func getR02() -> Float {
         var pav: Float = Pbot/depth
         var tempdiff: Float
@@ -146,25 +146,26 @@ class Calculations {
         }
         return R02
     }
-        
+    
     func getT_CUR_CHL(isTotal: Bool) -> Float{
         var t_cur_Chl: Float = 0
         var R0: Float
         var K: Float
         var N_CUR_CHL:Float
         if(isTotal){
-        R0 = getR01()
-        K = getK1()
-        N_CUR_CHL = total_chla
+            R0 = getR01()
+            K = getK1()
+            N_CUR_CHL = total_chla
         }
         else{
-        R0 = getR02()
-        K = getK2()
-        N_CUR_CHL = cyano_chla
+            R0 = getR02()
+            K = getK2()
+            N_CUR_CHL = cyano_chla
         }
         t_cur_Chl = t_cur_Chl - (1/(R0*GROWTH_RATE_SCALE)) * Float (log((N0 * K / N_CUR_CHL-N0)/(K-N0))) + Float(TIMESHIFT)
         return t_cur_Chl
-        }
+    }
+    
     func getTotalChlaDataSet() -> Array<Float>{
         var totalDataSet: Array<Float> = [Float]()
         totalDataSet.append(0)
@@ -174,17 +175,17 @@ class Calculations {
         var Nt_continuous:Float = (N0 * K)/(N0+(K - N0) * Float (exp(-R0 * GROWTH_RATE_SCALE * Float(q - TIMESHIFT))))
         totalDataSet.append(Nt_continuous)
         while (K-Nt_continuous>0.1&&q<360){
-        q += 1
-        Nt_continuous = (N0*K)/(N0+(K-N0)*Float(exp(-R0*GROWTH_RATE_SCALE*Float((q-TIMESHIFT)))))
-        totalDataSet.append(Nt_continuous)
-        
+            q += 1
+            Nt_continuous = (N0*K)/(N0+(K-N0)*Float(exp(-R0*GROWTH_RATE_SCALE*Float((q-TIMESHIFT)))))
+            totalDataSet.append(Nt_continuous)
+            
         }
         var peak:Int = q
         for q in((q + 1)..<401){
-        var tempTemp: Int = (-(q - 2 * peak) - TIMESHIFT)
-        var temp:Float = exp(-R0 * GROWTH_RATE_SCALE * Float(tempTemp))
-        Nt_continuous = (N0*K)/(N0+(K-N0) * temp)
-        totalDataSet.append(Nt_continuous)
+            var tempTemp: Int = (-(q - 2 * peak) - TIMESHIFT)
+            var temp:Float = exp(-R0 * GROWTH_RATE_SCALE * Float(tempTemp))
+            Nt_continuous = (N0*K)/(N0+(K-N0) * temp)
+            totalDataSet.append(Nt_continuous)
         }
         return totalDataSet
     }
@@ -196,21 +197,21 @@ class Calculations {
         var K:Float = getK2()
         var R0:Float = getR02()
         var Nt_continuous:Float = (N0*K)/(N0+(K-N0)*Float(exp(-R0*GROWTH_RATE_SCALE * Float((q-TIMESHIFT)))))
-    cyanoDataSet.append(Nt_continuous)
-    while (K-Nt_continuous>0.1&&q<360){
-    q += 1
-    Nt_continuous = (N0*K)/(N0+(K-N0)*Float(exp(-R0*GROWTH_RATE_SCALE*Float((q-TIMESHIFT)))))
-    cyanoDataSet.append(Nt_continuous)
-    
-    }
+        cyanoDataSet.append(Nt_continuous)
+        while (K-Nt_continuous>0.1&&q<360){
+            q += 1
+            Nt_continuous = (N0*K)/(N0+(K-N0)*Float(exp(-R0*GROWTH_RATE_SCALE*Float((q-TIMESHIFT)))))
+            cyanoDataSet.append(Nt_continuous)
+            
+        }
         var peak:Int = q
-    for q in((q + 1)..<401){
-    var temp:Float = exp(-R0*GROWTH_RATE_SCALE * Float((-(q-2*peak)-TIMESHIFT)))
-    Nt_continuous = (N0*K)/(N0+(K-N0)*temp)
-    cyanoDataSet.append(Nt_continuous)
+        for q in((q + 1)..<401){
+            var temp:Float = exp(-R0*GROWTH_RATE_SCALE * Float((-(q-2*peak)-TIMESHIFT)))
+            Nt_continuous = (N0*K)/(N0+(K-N0)*temp)
+            cyanoDataSet.append(Nt_continuous)
+        }
+        return cyanoDataSet
     }
-    return cyanoDataSet
-}
 }
 
 
