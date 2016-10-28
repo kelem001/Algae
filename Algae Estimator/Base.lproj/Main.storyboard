@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JGi-vB-afj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JGi-vB-afj">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -633,6 +634,9 @@
                                 <state key="normal" title="?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cyanoButton:" destination="Msz-d4-ZYG" eventType="touchUpInside" id="blP-CJ-KvL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hX-4V-Upd">
                                 <frame key="frameInset" minX="184" minY="180" width="97" height="30"/>
@@ -656,6 +660,7 @@
                         <outlet property="lakeDepthBox" destination="frl-KK-9X0" id="wd5-Sg-pDr"/>
                         <outlet property="tempBottom" destination="Iyi-pu-GYv" id="63Z-13-RgY"/>
                         <outlet property="tempSurface" destination="I7P-11-wIS" id="eOQ-De-Sdp"/>
+                        <segue destination="Oxb-zP-LsT" kind="modal" identifier="segueBoat" id="Hq3-ng-vMq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AJh-MC-fUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -841,6 +846,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psM-eG-jAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1606" y="-254"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="F8u-Za-XY5">
+            <objects>
+                <viewController storyboardIdentifier="resultVC" id="Oxb-zP-LsT" customClass="ResultViewController" customModule="Algae_Estimator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MrB-S4-YQP"/>
+                        <viewControllerLayoutGuide type="bottom" id="BPP-yX-Caf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Wq-Vb-clJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5oR-Tl-29p">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0M-qG-muF">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="67" id="5Od-D1-Tb9"/>
+                                            <constraint firstAttribute="width" constant="238" id="mGh-3D-saZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S9I-Oh-4cx"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzu-o7-siR">
+                                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="173" id="CDW-Ac-s8m"/>
+                                            <constraint firstAttribute="height" constant="49" id="Wgo-Pw-azv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="goBack:" destination="Oxb-zP-LsT" eventType="touchUpInside" id="kpK-eJ-6cR"/>
+                                            <action selector="goBackWithSender:" destination="Oxb-zP-LsT" eventType="touchUpInside" id="Kk7-0T-zmb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5oR-Tl-29p" firstAttribute="centerY" secondItem="2Wq-Vb-clJ" secondAttribute="centerY" id="43O-PG-FC7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5oR-Tl-29p" secondAttribute="trailing" id="5YD-jW-qV8"/>
+                            <constraint firstItem="5oR-Tl-29p" firstAttribute="top" secondItem="MrB-S4-YQP" secondAttribute="bottom" constant="20" id="BGO-fu-W1M"/>
+                            <constraint firstItem="5oR-Tl-29p" firstAttribute="centerX" secondItem="2Wq-Vb-clJ" secondAttribute="centerX" id="HoO-bY-HNn"/>
+                            <constraint firstItem="5oR-Tl-29p" firstAttribute="leading" secondItem="2Wq-Vb-clJ" secondAttribute="leadingMargin" id="dq0-y2-t5I"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3aa-xq-5JC"/>
+                    <connections>
+                        <outlet property="myImage" destination="S9I-Oh-4cx" id="Dz6-6R-POO"/>
+                        <outlet property="myLabel" destination="r0M-qG-muF" id="lR4-de-JFf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z4B-U8-dwm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-530" y="545"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

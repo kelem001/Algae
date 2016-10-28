@@ -11,6 +11,27 @@ import CoreData
 
 class CalculateViewController: UIViewController {
     
+    @IBAction func cyanoButton(_ sender: AnyObject) {
+        self.performSegue(withIdentifier: MyConstants.segueBoat, sender: self)
+    }
+    
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let myResultVC = segue.destination as! ResultViewController
+        
+        if segue.identifier == MyConstants.segueBoat {
+            
+            myResultVC.setTransport(transport: MyConstants.Transport.Boat)
+            
+        }
+        if segue.identifier == MyConstants.segueRocket {
+            
+            myResultVC.setTransport(transport: MyConstants.Transport.Rocket)
+            
+        }
+    }
+    
+    
     var po4Est: Float?
     
     //All IBOUTLETS are properties, text boxes are UITextField and

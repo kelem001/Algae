@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842DADA51DC40275001DE313 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DADA41DC40275001DE313 /* ResultViewController.swift */; };
+		842DADA71DC4027B001DE313 /* MyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DADA61DC4027B001DE313 /* MyConstants.swift */; };
 		84F63DDA1DA5B2D000753A32 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F63DD91DA5B2D000753A32 /* DataViewController.swift */; };
 		FD1C31C21DB85118007C7036 /* PO4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1C31C11DB85118007C7036 /* PO4ViewController.swift */; };
 		FD4EE91C1D9F269F0083C393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4EE91B1D9F269F0083C393 /* AppDelegate.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		842DADA41DC40275001DE313 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultViewController.swift; path = "../../../.Trash/algae-ios 11.31.13 AM/Algae Estimator/ResultViewController.swift"; sourceTree = "<group>"; };
+		842DADA61DC4027B001DE313 /* MyConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyConstants.swift; path = "../../../.Trash/algae-ios 11.31.13 AM/Algae Estimator/MyConstants.swift"; sourceTree = "<group>"; };
 		84F63DD91DA5B2D000753A32 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		FD1C31C11DB85118007C7036 /* PO4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PO4ViewController.swift; sourceTree = "<group>"; };
 		FD4EE9181D9F269F0083C393 /* Algae Estimator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Algae Estimator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +120,9 @@
 				FD4EE92A1D9F26A00083C393 /* Info.plist */,
 				FD4EE9221D9F26A00083C393 /* Algae_Estimator.xcdatamodeld */,
 				84F63DD91DA5B2D000753A32 /* DataViewController.swift */,
+				842DADA41DC40275001DE313 /* ResultViewController.swift */,
 				FDB90A3C1DA5BF0200800DDD /* Calculations.swift */,
+				842DADA61DC4027B001DE313 /* MyConstants.swift */,
 				FDC95D121DC18489003AB088 /* PO4EstimatesViewController.swift */,
 			);
 			path = "Algae Estimator";
@@ -278,6 +284,8 @@
 				FDB90A3D1DA5BF0200800DDD /* Calculations.swift in Sources */,
 				84F63DDA1DA5B2D000753A32 /* DataViewController.swift in Sources */,
 				FD4EE91E1D9F26A00083C393 /* CalculateViewController.swift in Sources */,
+				842DADA71DC4027B001DE313 /* MyConstants.swift in Sources */,
+				842DADA51DC40275001DE313 /* ResultViewController.swift in Sources */,
 				FD4EE91C1D9F269F0083C393 /* AppDelegate.swift in Sources */,
 				FDC95D131DC18489003AB088 /* PO4EstimatesViewController.swift in Sources */,
 				FD1C31C21DB85118007C7036 /* PO4ViewController.swift in Sources */,
