@@ -17,6 +17,9 @@
 		FD4EE9291D9F26A00083C393 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD4EE9271D9F26A00083C393 /* LaunchScreen.storyboard */; };
 		FD4EE9341D9F26A00083C393 /* Algae_EstimatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4EE9331D9F26A00083C393 /* Algae_EstimatorTests.swift */; };
 		FD4EE93F1D9F26A00083C393 /* Algae_EstimatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4EE93E1D9F26A00083C393 /* Algae_EstimatorUITests.swift */; };
+		FD598FFC1DC428B00061816E /* ChlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD598FFB1DC428B00061816E /* ChlViewController.swift */; };
+		FD598FFE1DC43F570061816E /* ChlEstimateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD598FFD1DC43F570061816E /* ChlEstimateViewController.swift */; };
+		FD5990001DC4451A0061816E /* DataLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD598FFF1DC4451A0061816E /* DataLogViewController.swift */; };
 		FDB90A3D1DA5BF0200800DDD /* Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB90A3C1DA5BF0200800DDD /* Calculations.swift */; };
 		FDC95D131DC18489003AB088 /* PO4EstimatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC95D121DC18489003AB088 /* PO4EstimatesViewController.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +58,9 @@
 		FD4EE93A1D9F26A00083C393 /* Algae EstimatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Algae EstimatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD4EE93E1D9F26A00083C393 /* Algae_EstimatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algae_EstimatorUITests.swift; sourceTree = "<group>"; };
 		FD4EE9401D9F26A00083C393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD598FFB1DC428B00061816E /* ChlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChlViewController.swift; sourceTree = "<group>"; };
+		FD598FFD1DC43F570061816E /* ChlEstimateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChlEstimateViewController.swift; sourceTree = "<group>"; };
+		FD598FFF1DC4451A0061816E /* DataLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLogViewController.swift; sourceTree = "<group>"; };
 		FDB90A3C1DA5BF0200800DDD /* Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculations.swift; sourceTree = "<group>"; };
 		FDC95D121DC18489003AB088 /* PO4EstimatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PO4EstimatesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,8 +122,11 @@
 				FD4EE92A1D9F26A00083C393 /* Info.plist */,
 				FD4EE9221D9F26A00083C393 /* Algae_Estimator.xcdatamodeld */,
 				84F63DD91DA5B2D000753A32 /* DataViewController.swift */,
+				FD598FFF1DC4451A0061816E /* DataLogViewController.swift */,
 				FDB90A3C1DA5BF0200800DDD /* Calculations.swift */,
 				FDC95D121DC18489003AB088 /* PO4EstimatesViewController.swift */,
+				FD598FFB1DC428B00061816E /* ChlViewController.swift */,
+				FD598FFD1DC43F570061816E /* ChlEstimateViewController.swift */,
 			);
 			path = "Algae Estimator";
 			sourceTree = "<group>";
@@ -275,9 +284,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD598FFC1DC428B00061816E /* ChlViewController.swift in Sources */,
 				FDB90A3D1DA5BF0200800DDD /* Calculations.swift in Sources */,
 				84F63DDA1DA5B2D000753A32 /* DataViewController.swift in Sources */,
 				FD4EE91E1D9F26A00083C393 /* CalculateViewController.swift in Sources */,
+				FD598FFE1DC43F570061816E /* ChlEstimateViewController.swift in Sources */,
+				FD5990001DC4451A0061816E /* DataLogViewController.swift in Sources */,
 				FD4EE91C1D9F269F0083C393 /* AppDelegate.swift in Sources */,
 				FDC95D131DC18489003AB088 /* PO4EstimatesViewController.swift in Sources */,
 				FD1C31C21DB85118007C7036 /* PO4ViewController.swift in Sources */,

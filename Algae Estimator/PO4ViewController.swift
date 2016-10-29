@@ -10,7 +10,7 @@ import UIKit
 
 class PO4ViewController: UIViewController {
 
-    
+    var dataEntryVals: [String:Float] = [:]
     
     @IBOutlet weak var po4TextField: UITextField!
     
@@ -22,11 +22,10 @@ class PO4ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "backToDataEntry") {
-            let po4Val = Float(po4TextField.text!)!
+            dataEntryVals["po4"] = Float(po4TextField.text!)!
             let tabbar = segue.destination as! UITabBarController
             let dest = tabbar.viewControllers?[0] as! CalculateViewController
-            
-            dest.po4Est = po4Val
+            dest.dataEntryVals = dataEntryVals
             
         }
     }
@@ -35,6 +34,12 @@ class PO4ViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if dataEntryVals["po4"] != nil {
+            po4TextField.text = String(describing: dataEntryVals["po4"]!)
+        }
     }
 
     override func didReceiveMemoryWarning() {
