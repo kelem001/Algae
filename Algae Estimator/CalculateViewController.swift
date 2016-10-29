@@ -62,6 +62,15 @@ class CalculateViewController: UIViewController {
         result.dataEntryVals = dataEntryVals
         self.present(result, animated: true, completion: nil)
     }
+    
+    @IBAction func ChlButton(_ sender: AnyObject) {
+        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
+            as! ResultViewController
+        result.number = 1
+        _updateDataEntryVals()
+        result.dataEntryVals = dataEntryVals
+        self.present(result, animated: true, completion: nil)
+    }
  
     var dataEntryVals: [String:Float] = [:]
         

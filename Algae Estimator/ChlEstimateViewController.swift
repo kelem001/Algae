@@ -25,6 +25,8 @@ class ChlEstimateViewController: UIViewController {
         let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
             as! ResultViewController
         result.number = 9
+        _updateDataEntryVals()
+        result.dataEntryVals = dataEntryVals
         self.present(result, animated: true, completion: nil)
     }
 
@@ -33,14 +35,18 @@ class ChlEstimateViewController: UIViewController {
         performSegue(withIdentifier: "submit", sender: self)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+    private func _updateDataEntryVals() {
         if secciDepthTextfield.text != "" {
             dataEntryVals["secciDepth"] = Float(secciDepthTextfield.text!)!
         }
         if dissolvedOxygenTextfield.text != "" {
             dataEntryVals["dissolvedOxygen"] = Float(dissolvedOxygenTextfield.text!)!
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        _updateDataEntryVals()
         
         if (segue.identifier == "submit") {
             

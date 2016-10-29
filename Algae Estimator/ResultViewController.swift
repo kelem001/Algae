@@ -63,6 +63,9 @@ class ResultViewController : UIViewController {
         case 9:
             myImage.image = UIImage(named: "dialog_do")
             TextResult.text = "You will need a dissolved oxygen meter or oxygen test string. Usage: 1. Collect water sample from different depths 2. place the electrode into the sample container and gently stir 3. Once the display on the meter has settled on a number, this is your result. "
+        case 10:
+            myImage.image = UIImage(named: "dialog_podirect")
+            TextResult.text = "Collection of bottom phosphate can be done using affordable PO4 test strips on the spot, but the test water has to come from the bottom. - Preperations: a. A narrow-mouthed glass bottle containing less than 500 ml of water. b. A stopper that fits tight into the mouth of the bottle. c. Firmly attach a weight (stone or a heavy piece of metal) to the lower part of the bottle so that the bottle will easily sink. d. Attach a string to the neck of the bottle. e. Attach the stopper securely to the same piece of string, just obove the opening of the bottle, at a distance eual to  at least twice the length of the stopper. - Sampling procedure: 1. Put the stopper firmly in place to close the water sampler. 2. Lower the sampler into the water ito the desired depth. 3. Jerk the string sharply to pull the stopper out and open the sampler. It should now start filling with water, while air bubbles appear on the surface of the pond. 4. When air bubbles no longer appear, carefully pull the full water sampler out of the pond."
         default:
             myImage.image = UIImage(named: "")
 

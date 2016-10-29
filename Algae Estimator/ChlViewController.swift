@@ -24,17 +24,23 @@ class ChlViewController: UIViewController {
         let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
             as! ResultViewController
         result.number = 7
+        _updateDataEntryVals()
+        result.dataEntryVals = dataEntryVals
         self.present(result, animated: true, completion: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+    private func _updateDataEntryVals() {
         if totalChlTextfield.text != "" {
             dataEntryVals["totalChl"] = Float(totalChlTextfield.text!)!
         }
         if cyanoChlTextfield.text! != "" {
-           dataEntryVals["cyanoChl"] = Float(cyanoChlTextfield.text!)!
+            dataEntryVals["cyanoChl"] = Float(cyanoChlTextfield.text!)!
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        _updateDataEntryVals()
         
         if (segue.identifier == "submit") {
             

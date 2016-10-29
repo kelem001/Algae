@@ -20,9 +20,24 @@ class PO4ViewController: UIViewController {
     }
     
     
+    @IBAction func po4ConButton(_ sender: AnyObject) {
+        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
+            as! ResultViewController
+        result.number = 10
+        _updateDataEntryVals()
+        result.dataEntryVals = dataEntryVals
+        self.present(result, animated: true, completion: nil)
+    }
+
+    private func _updateDataEntryVals() {
+        if po4TextField.text != "" {
+            dataEntryVals["po4"] = Float(po4TextField.text!)!
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "backToDataEntry") {
-            dataEntryVals["po4"] = Float(po4TextField.text!)!
+            _updateDataEntryVals()
             let tabbar = segue.destination as! UITabBarController
             let dest = tabbar.viewControllers?[0] as! CalculateViewController
             dest.dataEntryVals = dataEntryVals
@@ -46,16 +61,5 @@ class PO4ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
