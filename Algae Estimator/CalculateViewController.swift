@@ -56,7 +56,8 @@ class CalculateViewController: UIViewController {
         } else if (segue.identifier == "toDataPage") {
             
             // Get input values from View.
-            let temp_diff = Float(tempSurface.text!)! - Float(tempBottom.text!)!
+            let temp_bot = Float(tempBottom.text!)!
+            let temp_top = Float(tempSurface.text!)!
             let brightness = Float(brightBox.text!)!
             let po4 = po4Est! / Float(lakeDepthBox.text!)!
             let total_chl = Float(chlBox.text!)!
@@ -72,7 +73,8 @@ class CalculateViewController: UIViewController {
             let datalog = NSManagedObject(entity: entity!, insertInto: managedContext)
             
             // Insert form data into CoreData model
-            datalog.setValue(temp_diff, forKey: "temp_diff")
+            datalog.setValue(temp_top, forKey: "temp_top")
+            datalog.setValue(temp_bot, forKey: "temp_bot")
             datalog.setValue(brightness, forKey: "brightness")
             datalog.setValue(po4, forKey: "po4")
             datalog.setValue(total_chl, forKey: "total_chl")
