@@ -40,16 +40,19 @@ class Calculations {
         self.N0 = N0_MIN
     }
     //Estimate constructor
-    func AlgalDataCal(SD_value:Float, DO_value:Float,Pbot:Float,surtemp:Float, bottemp:Float, depth:Float, lux:Float, estimate:Bool) {
+    init(SD_value:Float, DO_value:Float,Pbot:Float,surtemp:Float, bottemp:Float, depth:Float, lux:Float, estimate:Bool) {
         self.cyano_chla = Calculations.estimateCyanoChla(SD_value: SD_value,surtemp: surtemp)
         if (DO_value>0) {
             self.total_chla = Calculations.estimateTotalChla(SD_value: SD_value, DO_value: DO_value)
+        } else {
+            self.total_chla = 0
         }
         self.Pbot = Pbot
         self.surtemp = surtemp
         self.bottemp = bottemp
         self.depth = depth
         self.lux = lux
+        self.N0 = N0_MIN
     }
     
     func getTotalCurTime() -> Int {

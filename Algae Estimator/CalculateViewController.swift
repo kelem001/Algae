@@ -74,10 +74,6 @@ class CalculateViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        for e in dataEntryVals {
-            NSLog(String(describing: e))
-        }
-        
         if (tempBottom.text != "") {
             dataEntryVals["temp_bot"] = Float(tempBottom.text!)!
         }
@@ -122,17 +118,17 @@ class CalculateViewController: UIViewController {
             
             // Insert form data into CoreData model
             datalog.setValue(dataEntryVals["temp_top"], forKey: "temp_top")
-            datalog.setValue(dataEntryVals["temp_top"], forKey: "temp_bot")
+            datalog.setValue(dataEntryVals["temp_bot"], forKey: "temp_bot")
             datalog.setValue(dataEntryVals["brightness"], forKey: "brightness")
             datalog.setValue(dataEntryVals["po4"], forKey: "po4")
             
-            NSLog(String(describing: self.totalChl))
             if dataEntryVals["totalChl"] != nil && dataEntryVals["cyanoChl"] != nil {
                 datalog.setValue(dataEntryVals["totalChl"], forKey: "total_chl")
                 datalog.setValue(dataEntryVals["cyanoChl"], forKey: "cyano_chl")
             } else {
                 datalog.setValue(dataEntryVals["secciDepth"], forKey: "secci_depth")
                 datalog.setValue(dataEntryVals["dissolvedOxygen"], forKey: "dissolved_oxygen")
+                datalog.setValue(nil, forKey: "total_chl")
             }
             
             datalog.setValue(dataEntryVals["depth"], forKey: "depth")
