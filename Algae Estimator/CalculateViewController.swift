@@ -10,6 +10,12 @@ import UIKit
 import CoreData
 
 class CalculateViewController: UIViewController {
+    @IBAction func chlValueButton(_ sender: AnyObject) {
+        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
+            as! ResultViewController
+        result.number = 1
+        self.present(result, animated: true, completion: nil)
+    }
     
     @IBAction func BrightnessButton(_ sender: AnyObject) {
         let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
