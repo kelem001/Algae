@@ -52,8 +52,7 @@ class CalculateViewController: UIViewController {
         self.present(result, animated: true, completion: nil)
     }
  
-    
-    var po4Est: Float?
+    var dataEntryVals: [String:Float] = [:]
     
     //All IBOUTLETS are properties, text boxes are UITextField and
     //UILabel is the results label
@@ -85,6 +84,21 @@ class CalculateViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if dataEntryVals["temp_top"] != nil {
+            tempSurface.text = String(describing: dataEntryVals["temp_top"]!)
+        }
+        if dataEntryVals["temp_bot"] != nil {
+            tempBottom.text = String(describing: dataEntryVals["temp_bot"]!)
+        }
+        if dataEntryVals["brightness"] != nil {
+            brightBox.text = String(describing: dataEntryVals["brightness"]!)
+        }
+        if dataEntryVals["depth"] != nil {
+            lakeDepthBox.text = String(describing: dataEntryVals["depth"]!)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -93,18 +107,39 @@ class CalculateViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        if (tempBottom.text != "") {
+            dataEntryVals["temp_bot"] = Float(tempBottom.text!)!
+        }
+        if (tempSurface.text != "") {
+            dataEntryVals["temp_top"] = Float(tempSurface.text!)!
+        }
+        if (brightBox.text != "") {
+            dataEntryVals["brightness"] = Float(brightBox.text!)!
+        }
+        if (lakeDepthBox.text != "") {
+            dataEntryVals["depth"] = Float(lakeDepthBox.text!)!
+        }
+        
         if (segue.identifier == "po4TabBar") {
+            
+            // Obtain destVC controller instance.
+            let tabbar = segue.destination as! UITabBarController
+            let destinationVC = tabbar.viewControllers?[0] as! PO4ViewController
+            
+            destinationVC.dataEntryVals = dataEntryVals
+            
+        } else if (segue.identifier == "toChl") {
+            
+            // Obtain destVC controller instance.
+            let tabbar = segue.destination as! UITabBarController
+            let destinationVC = tabbar.viewControllers?[0] as! ChlViewController
+            let otherTabVC = tabbar.viewControllers?[1] as! ChlEstimateViewController
+            
+            destinationVC.dataEntryVals = dataEntryVals
+            otherTabVC.dataEntryVals = dataEntryVals
             
         } else if (segue.identifier == "toDataPage") {
             
-            // Get input values from View.
-            let temp_bot = Float(tempBottom.text!)!
-            let temp_top = Float(tempSurface.text!)!
-            let brightness = Float(brightBox.text!)!
-            let po4 = po4Est! / Float(lakeDepthBox.text!)!
-            let total_chl = Float(chlBox.text!)!
-            let cyano_chl = Float(cyanoChlBox.text!)!
-            let depth = Float(lakeDepthBox.text!)!
             let date = NSDate()
             
             // Retrieve PersistentContainer managed Context...
@@ -115,13 +150,21 @@ class CalculateViewController: UIViewController {
             let datalog = NSManagedObject(entity: entity!, insertInto: managedContext)
             
             // Insert form data into CoreData model
-            datalog.setValue(temp_top, forKey: "temp_top")
-            datalog.setValue(temp_bot, forKey: "temp_bot")
-            datalog.setValue(brightness, forKey: "brightness")
-            datalog.setValue(po4, forKey: "po4")
-            datalog.setValue(total_chl, forKey: "total_chl")
-            datalog.setValue(cyano_chl, forKey: "cyano_chl")
-            datalog.setValue(depth, forKey: "depth")
+            datalog.setValue(dataEntryVals["temp_top"], forKey: "temp_top")
+            datalog.setValue(dataEntryVals["temp_bot"], forKey: "temp_bot")
+            datalog.setValue(dataEntryVals["brightness"], forKey: "brightness")
+            datalog.setValue(dataEntryVals["po4"], forKey: "po4")
+            
+            if dataEntryVals["totalChl"] != nil && dataEntryVals["cyanoChl"] != nil {
+                datalog.setValue(dataEntryVals["totalChl"], forKey: "total_chl")
+                datalog.setValue(dataEntryVals["cyanoChl"], forKey: "cyano_chl")
+            } else {
+                datalog.setValue(dataEntryVals["secciDepth"], forKey: "secci_depth")
+                datalog.setValue(dataEntryVals["dissolvedOxygen"], forKey: "dissolved_oxygen")
+                datalog.setValue(nil, forKey: "total_chl")
+            }
+            
+            datalog.setValue(dataEntryVals["depth"], forKey: "depth")
             datalog.setValue(date, forKey: "date")
             
             do {
@@ -140,6 +183,7 @@ class CalculateViewController: UIViewController {
             } catch let error as NSError {
                 print ("Could not save \(error), \(error.userInfo)")
             }
+
         }
     }
     

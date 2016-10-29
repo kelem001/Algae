@@ -10,6 +10,8 @@ import UIKit
 import CoreData
 
 class PO4EstimatesViewController: UIViewController {
+    
+    var dataEntryVals: [String:Float] = [:]
 
     // MAKE:Properties
     @IBOutlet weak var po4Val: UILabel!
@@ -99,7 +101,8 @@ class PO4EstimatesViewController: UIViewController {
         if (segue.identifier == "segueSend2") {
             let tabbar = segue.destination as! UITabBarController
             let destinationVC = tabbar.viewControllers?[0] as! CalculateViewController
-            destinationVC.po4Est = Float(po4Val.text!)!
+            dataEntryVals["po4"] = Float(po4Val.text!)!
+            destinationVC.dataEntryVals = dataEntryVals
         }
     }
     
