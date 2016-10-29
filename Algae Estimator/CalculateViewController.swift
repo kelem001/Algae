@@ -12,25 +12,46 @@ import CoreData
 class CalculateViewController: UIViewController {
     
     @IBAction func cyanoButton(_ sender: AnyObject) {
-        self.performSegue(withIdentifier: MyConstants.segueBoat, sender: self)
+        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
+         as! ResultViewController
+        result.number = 1
+        self.present(result, animated: true, completion: nil)
     }
     
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        let myResultVC = segue.destination as! ResultViewController
-        
-        if segue.identifier == MyConstants.segueBoat {
-            
-            myResultVC.setTransport(transport: MyConstants.Transport.Boat)
-            
-        }
-        if segue.identifier == MyConstants.segueRocket {
-            
-            myResultVC.setTransport(transport: MyConstants.Transport.Rocket)
-            
-        }
+    @IBAction func BrightnessButton(_ sender: AnyObject) {
+        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
+            as! ResultViewController
+        result.number = 2
+        self.present(result, animated: true, completion: nil)
+    }
+    @IBAction func lakeDepthButton(_ sender: AnyObject) {
+        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
+            as! ResultViewController
+        result.number = 3
+        self.present(result, animated: true, completion: nil)
+    }
+
+    @IBAction func TempBotButton(_ sender: AnyObject) {
+        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
+            as! ResultViewController
+        result.number = 4
+        self.present(result, animated: true, completion: nil)
+    }
+
+    @IBAction func TempSurButton(_ sender: AnyObject) {
+        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
+            as! ResultViewController
+        result.number = 5
+        self.present(result, animated: true, completion: nil)
     }
     
+    @IBAction func PO4ConButton(_ sender: AnyObject) {
+        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
+            as! ResultViewController
+        result.number = 6
+        self.present(result, animated: true, completion: nil)
+    }
+ 
     
     var po4Est: Float?
     
