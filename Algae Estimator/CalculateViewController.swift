@@ -11,13 +11,6 @@ import CoreData
 
 class CalculateViewController: UIViewController {
     
-    @IBAction func cyanoButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-         as! ResultViewController
-        result.number = 1
-        self.present(result, animated: true, completion: nil)
-    }
-    
     @IBAction func BrightnessButton(_ sender: AnyObject) {
         let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
             as! ResultViewController
@@ -53,7 +46,7 @@ class CalculateViewController: UIViewController {
     }
  
     var dataEntryVals: [String:Float] = [:]
-    
+        
     //All IBOUTLETS are properties, text boxes are UITextField and
     //UILabel is the results label
     
@@ -73,11 +66,7 @@ class CalculateViewController: UIViewController {
     
     @IBOutlet weak var lakeDepthBox: UITextField!
     //@IBOutlet weak var pavLabel: UILabel!
-    
-    @IBOutlet weak var cyanoChlBox: UITextField!
-    
-    @IBOutlet weak var chlBox: UITextField!
-    //@IBOutlet weak var chLabel: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,6 +107,10 @@ class CalculateViewController: UIViewController {
         }
         if (lakeDepthBox.text != "") {
             dataEntryVals["depth"] = Float(lakeDepthBox.text!)!
+        }
+        
+        for e in dataEntryVals {
+            NSLog(String(describing: e))
         }
         
         if (segue.identifier == "po4TabBar") {
@@ -166,6 +159,8 @@ class CalculateViewController: UIViewController {
             
             datalog.setValue(dataEntryVals["depth"], forKey: "depth")
             datalog.setValue(date, forKey: "date")
+            
+
             
             do {
                 // Commit Changes to database.

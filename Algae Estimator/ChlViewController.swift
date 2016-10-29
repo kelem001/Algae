@@ -19,6 +19,14 @@ class ChlViewController: UIViewController {
         performSegue(withIdentifier: "submit", sender: self)
     }
     
+    
+    @IBAction func CyanoChlButton(_ sender: AnyObject) {
+        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
+            as! ResultViewController
+        result.number = 7
+        self.present(result, animated: true, completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if totalChlTextfield.text != "" {
