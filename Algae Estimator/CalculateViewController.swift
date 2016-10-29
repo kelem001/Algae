@@ -14,6 +14,8 @@ class CalculateViewController: UIViewController {
         let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
             as! ResultViewController
         result.number = 1
+        _updateDataEntryVals()
+        result.dataEntryVals = dataEntryVals
         self.present(result, animated: true, completion: nil)
     }
     
@@ -21,12 +23,16 @@ class CalculateViewController: UIViewController {
         let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
             as! ResultViewController
         result.number = 2
+        _updateDataEntryVals()
+        result.dataEntryVals = dataEntryVals
         self.present(result, animated: true, completion: nil)
     }
     @IBAction func lakeDepthButton(_ sender: AnyObject) {
         let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
             as! ResultViewController
         result.number = 3
+        _updateDataEntryVals()
+        result.dataEntryVals = dataEntryVals
         self.present(result, animated: true, completion: nil)
     }
 
@@ -34,6 +40,8 @@ class CalculateViewController: UIViewController {
         let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
             as! ResultViewController
         result.number = 4
+        _updateDataEntryVals()
+        result.dataEntryVals = dataEntryVals
         self.present(result, animated: true, completion: nil)
     }
 
@@ -41,6 +49,8 @@ class CalculateViewController: UIViewController {
         let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
             as! ResultViewController
         result.number = 5
+        _updateDataEntryVals()
+        result.dataEntryVals = dataEntryVals
         self.present(result, animated: true, completion: nil)
     }
     
@@ -48,6 +58,8 @@ class CalculateViewController: UIViewController {
         let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
             as! ResultViewController
         result.number = 6
+        _updateDataEntryVals()
+        result.dataEntryVals = dataEntryVals
         self.present(result, animated: true, completion: nil)
     }
  
@@ -100,7 +112,7 @@ class CalculateViewController: UIViewController {
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    private func _updateDataEntryVals() {
         
         if (tempBottom.text != "") {
             dataEntryVals["temp_bot"] = Float(tempBottom.text!)!
@@ -115,9 +127,12 @@ class CalculateViewController: UIViewController {
             dataEntryVals["depth"] = Float(lakeDepthBox.text!)!
         }
         
-        for e in dataEntryVals {
-            NSLog(String(describing: e))
-        }
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        _updateDataEntryVals()
         
         if (segue.identifier == "po4TabBar") {
             

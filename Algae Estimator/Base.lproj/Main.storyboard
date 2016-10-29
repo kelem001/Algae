@@ -988,7 +988,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="Msz-d4-ZYG" kind="modal" id="fqH-ln-jd7"/>
+                                            <segue destination="JGi-vB-afj" kind="presentation" id="gGr-sK-mqX"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1019,6 +1019,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Wdx-ry-GBJ"/>
-        <segue reference="YZF-c6-Rbi"/>
+        <segue reference="gGr-sK-mqX"/>
     </inferredMetricsTieBreakers>
 </document>

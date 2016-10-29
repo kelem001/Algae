@@ -17,7 +17,7 @@ class ResultViewController : UIViewController {
     
     
     var number: Int = 0
-    
+    var dataEntryVals: [String:Float] = [:]
 
     
 
@@ -71,12 +71,19 @@ class ResultViewController : UIViewController {
     }
     
     @IBAction func goBack(sender: AnyObject) {
-        
-        
+    
     }
     
     
     func setTransport ( transport:MyConstants.Transport){
         self.transport = transport
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tabbar = segue.destination as! UITabBarController
+        let destinationVC = tabbar.viewControllers?[0] as! CalculateViewController
+        
+        destinationVC.dataEntryVals = dataEntryVals
+    }
+    
 }
