@@ -54,6 +54,15 @@ class ResultViewController : UIViewController {
         case 6:
             myImage.image = UIImage(named: "")
             TextResult.text = "Phosphorus is an important nutrient element. Many important molecules within a cell contain phosphorus. ATP is an example of a molecule that uses phosophorus. ATP is essential to all living organisms since it is used for energy. However, too much phosphorus in a system could cause an algae bloom. So to predict algae bloom one needs to measure the phosphate concentration at the bottom. Two options for inputting P04 concentration value: 1. Directly input after measuring phosphate value by yourself. 2. Estimate phosphate concentration basedo n the condition of the examining lake."
+        case 7:
+            myImage.image = UIImage(named: "dialog_direct")
+            TextResult.text = "You will need an algae torch for this part. This allows direct measurement at the water source, helping to reduce failures due to transporting the sample to the lab. 1. Place torch in water and wait for analysis to complete. 2. The values shown on the torch are your results. 3. The torch can measure both total chlorophyll a (all types of algae) and cyano chlorophyll a (blue-green algae)"
+        case 8:
+            myImage.image = UIImage(named: "dialog_secchi_disk")
+            TextResult.text = "Secchi depth is to determine the turbidity. You will need: a secchi disk A gadget to measure water transparency. Usage: 1. Put the secchi disk slowly into the water until the disk is no longer visible. 2. Measure the length of the line that is dipped into the water. "
+        case 9:
+            myImage.image = UIImage(named: "dialog_do")
+            TextResult.text = "You will need a dissolved oxygen meter or oxygen test string. Usage: 1. Collect water sample from different depths 2. place the electrode into the sample container and gently stir 3. Once the display on the meter has settled on a number, this is your result. "
         default:
             myImage.image = UIImage(named: "")
 

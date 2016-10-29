@@ -29,7 +29,7 @@
         <!--Estimate-->
         <scene sceneID="rXX-Kk-u7f">
             <objects>
-                <viewController id="g63-R2-dKY" sceneMemberID="viewController">
+                <viewController id="g63-R2-dKY" customClass="SecchiDepthController" customModule="Algae_Estimator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8FK-02-2Oq"/>
                         <viewControllerLayoutGuide type="bottom" id="Cqg-fB-zco"/>
@@ -76,6 +76,9 @@
                                 <state key="normal" title="?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="DissolvedOxygenButton:" destination="g63-R2-dKY" eventType="touchUpInside" id="Dr2-hI-dkV"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Secci Depth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNe-h0-Ofr">
                                 <frame key="frameInset" minX="15" minY="284" width="97" height="21"/>
@@ -97,6 +100,9 @@
                                 <state key="normal" title="?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="SecchiDepthButton:" destination="g63-R2-dKY" eventType="touchUpInside" id="nTD-lg-Xcf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Chl a Values" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGs-GF-BMq">
                                 <frame key="frameInset" minX="70" minY="24" width="134" height="21"/>
@@ -117,7 +123,7 @@
         <!--Direct-->
         <scene sceneID="8vU-e4-lEx">
             <objects>
-                <viewController id="LLM-MP-znG" sceneMemberID="viewController">
+                <viewController id="LLM-MP-znG" customClass="TotalChlAcontroller" customModule="Algae_Estimator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8zs-mF-CAc"/>
                         <viewControllerLayoutGuide type="bottom" id="wXE-Hn-Vqj"/>
@@ -156,6 +162,9 @@
                                 <state key="normal" title="?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="CyanoChlButton:" destination="LLM-MP-znG" eventType="touchUpInside" id="ulq-JP-K0c"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Chl a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qz8-fJ-Ul7">
                                 <frame key="frameInset" minX="16" minY="283" width="92" height="21"/>
@@ -932,7 +941,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fqH-ln-jd7"/>
-        <segue reference="meG-w0-AnV"/>
+        <segue reference="BtY-bl-UkL"/>
+        <segue reference="HIs-Al-EuU"/>
     </inferredMetricsTieBreakers>
 </document>
