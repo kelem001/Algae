@@ -10,7 +10,7 @@
         <!--DATALOG-->
         <scene sceneID="1GX-By-P8Q">
             <objects>
-                <viewController id="Slz-D2-UPQ" sceneMemberID="viewController">
+                <viewController id="Slz-D2-UPQ" customClass="DataLogViewController" customModule="Algae_Estimator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VSR-Gr-wGv"/>
                         <viewControllerLayoutGuide type="bottom" id="KaO-Ul-S27"/>
@@ -21,6 +21,9 @@
                         <color key="backgroundColor" red="0.28107216619999997" green="0.30745128989999998" blue="0.57800356220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="DATALOG" id="Ms7-5g-WTZ"/>
+                    <connections>
+                        <segue destination="OQj-UK-l0F" kind="show" identifier="showLog" id="mtL-TN-S57"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QUk-eX-ugb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -444,6 +447,9 @@
                                 <state key="normal" title="?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="po4ConButton:" destination="VVh-Hh-oeO" eventType="touchUpInside" id="b9y-N8-NVJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQB-CI-n6R">
                                 <frame key="frameInset" minX="221" minY="389" width="138" height="48"/>
@@ -824,7 +830,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Msz-d4-ZYG" kind="show" id="Wdx-ry-GBJ"/>
+                                    <segue destination="JGi-vB-afj" kind="show" id="3yP-gv-FLO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="n0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbP-CC-mIX">
@@ -1018,7 +1024,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wdx-ry-GBJ"/>
-        <segue reference="gGr-sK-mqX"/>
+        <segue reference="3yP-gv-FLO"/>
+        <segue reference="mtL-TN-S57"/>
     </inferredMetricsTieBreakers>
 </document>
