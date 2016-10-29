@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreData
 
 class ResultViewController : UIViewController {
     
@@ -18,7 +18,7 @@ class ResultViewController : UIViewController {
     
     var number: Int = 0
     var dataEntryVals: [String:Float] = [:]
-
+    var logID: NSManagedObjectID?
     
 
     @IBOutlet weak var TextResult: UITextField!
@@ -87,6 +87,9 @@ class ResultViewController : UIViewController {
         let destinationVC = tabbar.viewControllers?[0] as! CalculateViewController
         
         destinationVC.dataEntryVals = dataEntryVals
+        if logID != nil {
+            destinationVC.logID = logID
+        }
     }
     
 }

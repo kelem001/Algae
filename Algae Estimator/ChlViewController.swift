@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class ChlViewController: UIViewController {
     
     var dataEntryVals: [String:Float] = [:]
+    var logID: NSManagedObjectID?
     
     @IBOutlet weak var totalChlTextfield: UITextField!
     @IBOutlet weak var cyanoChlTextfield: UITextField!
@@ -48,6 +50,9 @@ class ChlViewController: UIViewController {
             let dest = tabbar.viewControllers?[0] as! CalculateViewController
             
             dest.dataEntryVals = dataEntryVals
+            if logID != nil {
+                dest.logID = logID
+            }
             
         }
     }

@@ -12,6 +12,7 @@ import CoreData
 class PO4EstimatesViewController: UIViewController {
     
     var dataEntryVals: [String:Float] = [:]
+    var logID: NSManagedObjectID?
 
     // MAKE:Properties
     @IBOutlet weak var po4Val: UILabel!
@@ -103,6 +104,9 @@ class PO4EstimatesViewController: UIViewController {
             let destinationVC = tabbar.viewControllers?[0] as! CalculateViewController
             dataEntryVals["po4"] = Float(po4Val.text!)!
             destinationVC.dataEntryVals = dataEntryVals
+            if logID != nil {
+                destinationVC.logID = logID
+            }
         }
     }
     

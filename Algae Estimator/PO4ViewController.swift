@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class PO4ViewController: UIViewController {
 
     var dataEntryVals: [String:Float] = [:]
+    var logID: NSManagedObjectID?
     
     @IBOutlet weak var po4TextField: UITextField!
     
@@ -41,6 +43,9 @@ class PO4ViewController: UIViewController {
             let tabbar = segue.destination as! UITabBarController
             let dest = tabbar.viewControllers?[0] as! CalculateViewController
             dest.dataEntryVals = dataEntryVals
+            if logID != nil {
+                dest.logID = logID
+            }
             
         }
     }

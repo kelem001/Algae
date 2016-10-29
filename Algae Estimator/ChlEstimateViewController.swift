@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class ChlEstimateViewController: UIViewController {
     
     var dataEntryVals: [String:Float] = [:]
+    var logID: NSManagedObjectID?
     
     @IBOutlet weak var dissolvedOxygenTextfield: UITextField!
     @IBOutlet weak var secciDepthTextfield: UITextField!
@@ -54,6 +56,9 @@ class ChlEstimateViewController: UIViewController {
             let dest = tabbar.viewControllers?[0] as! CalculateViewController
             
             dest.dataEntryVals = dataEntryVals
+            if logID != nil {
+                dest.logID = logID
+            }
             
         }
     }

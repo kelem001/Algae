@@ -73,6 +73,8 @@ class CalculateViewController: UIViewController {
     }
  
     var dataEntryVals: [String:Float] = [:]
+    var logID: NSManagedObjectID?
+    var logDate: NSDate?
         
     //All IBOUTLETS are properties, text boxes are UITextField and
     //UILabel is the results label
@@ -101,6 +103,30 @@ class CalculateViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        if self.logID != nil {
+            // Retrieve Managed Context
+            let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            // Retrieve target datalog based on NSManagedObjectID
+            let datalog = managedContext.object(with: self.logID!)
+            
+            dataEntryVals["po4"] = datalog.value(forKey: "po4") as! Float
+            dataEntryVals["temp_top"] = datalog.value(forKey: "temp_top") as? Float
+            dataEntryVals["temp_bot"] = datalog.value(forKey: "temp_bot") as? Float
+            dataEntryVals["depth"] = datalog.value(forKey: "depth") as? Float
+            dataEntryVals["brightness"] = datalog.value(forKey: "brightness") as? Float
+            logDate = datalog.value(forKey: "date") as? NSDate
+            
+            if (datalog.value(forKey: "total_chl") != nil) {
+                dataEntryVals["totalChl"] = datalog.value(forKey: "total_chl") as! Float
+                dataEntryVals["cyanoChl"] = datalog.value(forKey: "cyano_chl") as! Float
+            } else {
+                dataEntryVals["secciDepth"] = datalog.value(forKey: "secci_depth") as! Float
+                dataEntryVals["dissolvedOxygen"] = datalog.value(forKey: "dissolved_oxygen") as! Float
+            }
+        }
+        
         if dataEntryVals["temp_top"] != nil {
             tempSurface.text = String(describing: dataEntryVals["temp_top"]!)
         }
@@ -143,6 +169,8 @@ class CalculateViewController: UIViewController {
         
         _updateDataEntryVals()
         
+        
+        
         if (segue.identifier == "po4TabBar") {
             
             // Obtain destVC controller instance.
@@ -150,6 +178,9 @@ class CalculateViewController: UIViewController {
             let destinationVC = tabbar.viewControllers?[0] as! PO4ViewController
             
             destinationVC.dataEntryVals = dataEntryVals
+            if logID != nil {
+                destinationVC.logID = logID
+            }
             
         } else if (segue.identifier == "toChl") {
             
@@ -160,7 +191,10 @@ class CalculateViewController: UIViewController {
             
             destinationVC.dataEntryVals = dataEntryVals
             otherTabVC.dataEntryVals = dataEntryVals
-            
+            if logID != nil {
+                destinationVC.logID = logID
+                otherTabVC.logID = logID
+            }
         } else if (segue.identifier == "toDataPage") {
             
             let date = NSDate()
@@ -168,9 +202,15 @@ class CalculateViewController: UIViewController {
             // Retrieve PersistentContainer managed Context...
             let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             
-            // Retrieve Datalog entity from CoreData model.
-            let entity = NSEntityDescription.entity(forEntityName: "Datalog", in: managedContext)
-            let datalog = NSManagedObject(entity: entity!, insertInto: managedContext)
+            let datalog: NSManagedObject
+            if logID != nil {
+                // Retrieve target datalog based on NSManagedObjectID
+                datalog = managedContext.object(with: self.logID!)
+            } else {
+                // Retrieve Datalog entity from CoreData model.
+                let entity = NSEntityDescription.entity(forEntityName: "Datalog", in: managedContext)
+                datalog = NSManagedObject(entity: entity!, insertInto: managedContext)
+            }
             
             // Insert form data into CoreData model
             datalog.setValue(dataEntryVals["temp_top"], forKey: "temp_top")
@@ -188,8 +228,10 @@ class CalculateViewController: UIViewController {
             }
             
             datalog.setValue(dataEntryVals["depth"], forKey: "depth")
-            datalog.setValue(date, forKey: "date")
             
+            if logID == nil {
+                datalog.setValue(date, forKey: "date")
+            }
 
             
             do {

@@ -75,6 +75,13 @@ class DataViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editLog" {
+            let tabbar = segue.destination as! UITabBarController
+            let destinationVC = tabbar.viewControllers?[0] as! CalculateViewController
+            destinationVC.logID = id
+        }
+    }
     
 }
 
