@@ -34,9 +34,13 @@ class ChlViewController: UIViewController {
     private func _updateDataEntryVals() {
         if totalChlTextfield.text != "" {
             dataEntryVals["totalChl"] = Float(totalChlTextfield.text!)!
+        } else {
+            dataEntryVals["totalChl"] = nil
         }
         if cyanoChlTextfield.text! != "" {
             dataEntryVals["cyanoChl"] = Float(cyanoChlTextfield.text!)!
+        } else {
+            dataEntryVals["cyanoChl"] = nil
         }
     }
     
