@@ -100,6 +100,7 @@ class CalculateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -111,7 +112,7 @@ class CalculateViewController: UIViewController {
             // Retrieve target datalog based on NSManagedObjectID
             let datalog = managedContext.object(with: self.logID!)
             
-            dataEntryVals["po4"] = datalog.value(forKey: "po4") as! Float
+            dataEntryVals["po4"] = datalog.value(forKey: "po4") as? Float
             dataEntryVals["temp_top"] = datalog.value(forKey: "temp_top") as? Float
             dataEntryVals["temp_bot"] = datalog.value(forKey: "temp_bot") as? Float
             dataEntryVals["depth"] = datalog.value(forKey: "depth") as? Float
@@ -165,11 +166,60 @@ class CalculateViewController: UIViewController {
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         _updateDataEntryVals()
         
+        if identifier == "toDataPage" {
+            
+            var formValid = true
+            var msg = ""
+            
+            if dataEntryVals["po4"] == nil {
+                formValid = false
+                msg = "Missing value for P04 Concentration"
+            }
+            
+            if dataEntryVals["cyano_chl"] == nil || dataEntryVals["total_chl"] == nil {
+                if dataEntryVals["secciDepth"] == nil && dataEntryVals["dissolvedOxygen"] == nil {
+                    formValid = false
+                    msg = "Missing value for Chl a"
+                }
+            }
+            
+            if  dataEntryVals["brightness"] == nil {
+                formValid = false
+                msg = "Missing value for Brightness"
+            }
+            
+            if dataEntryVals["depth"] == nil {
+                formValid = false
+                msg = "Missing value for Lake Depth"
+            }
+            
+            if dataEntryVals["temp_bot"] == nil {
+                formValid = false
+                msg = "Missing value for Temp Bottom"
+            }
+            
+            if dataEntryVals["temp_top"] == nil {
+                formValid = false
+                msg = "Missing value for Temp Surface"
+            }
+            
+            if !formValid {
+                let alert = UIAlertController(title: "Alert", message: msg, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+
+            return formValid
+        }
         
+        return true
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if (segue.identifier == "po4TabBar") {
             
