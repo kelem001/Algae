@@ -75,6 +75,7 @@ class CalculateViewController: UIViewController {
     var dataEntryVals: [String:Float] = [:]
     var logID: NSManagedObjectID?
     var logDate: NSDate?
+    var startEdit: Bool?
         
     //All IBOUTLETS are properties, text boxes are UITextField and
     //UILabel is the results label
@@ -105,7 +106,7 @@ class CalculateViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        if self.logID != nil {
+        if self.logID != nil && startEdit! {
             // Retrieve Managed Context
             let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             
@@ -126,6 +127,7 @@ class CalculateViewController: UIViewController {
                 dataEntryVals["secciDepth"] = datalog.value(forKey: "secci_depth") as! Float
                 dataEntryVals["dissolvedOxygen"] = datalog.value(forKey: "dissolved_oxygen") as! Float
             }
+            self.startEdit = false
         }
         
         if dataEntryVals["temp_top"] != nil {
@@ -176,34 +178,49 @@ class CalculateViewController: UIViewController {
             
             if dataEntryVals["po4"] == nil {
                 formValid = false
-                msg = "Missing value for P04 Concentration"
+                msg = "Missing value for P04 Concentration."
             }
             
-            if dataEntryVals["cyano_chl"] == nil || dataEntryVals["total_chl"] == nil {
-                if dataEntryVals["secciDepth"] == nil && dataEntryVals["dissolvedOxygen"] == nil {
+            if dataEntryVals["cyanoChl"] == nil || dataEntryVals["totalChl"] == nil {
+                if dataEntryVals["secciDepth"] == nil || dataEntryVals["dissolvedOxygen"] == nil {
                     formValid = false
-                    msg = "Missing value for Chl a"
+                    msg = "Missing value for Chl a."
                 }
             }
             
             if  dataEntryVals["brightness"] == nil {
                 formValid = false
-                msg = "Missing value for Brightness"
+                msg = "Missing value for Brightness."
             }
             
             if dataEntryVals["depth"] == nil {
                 formValid = false
-                msg = "Missing value for Lake Depth"
+                msg = "Missing value for Lake Depth."
             }
             
             if dataEntryVals["temp_bot"] == nil {
                 formValid = false
-                msg = "Missing value for Temp Bottom"
+                msg = "Missing value for Bottom Temperature."
             }
             
             if dataEntryVals["temp_top"] == nil {
                 formValid = false
-                msg = "Missing value for Temp Surface"
+                msg = "Missing value for Surface Temperature."
+            }
+            
+            if dataEntryVals["temp_top"]! > 40.0 || dataEntryVals["temp_top"]! < Float(0.0) {
+                formValid = false
+                msg = "Please input Surface Temperature between 0 and 40."
+            }
+            
+            if dataEntryVals["temp_bot"]! > 40.0 || dataEntryVals["temp_bot"]! < Float(0.0) {
+                formValid = false
+                msg = "Please input Bottom Temperature between 0 and 40."
+            }
+            
+            if dataEntryVals["temp_bot"]! > dataEntryVals["temp_top"]! {
+                formValid = false
+                msg = "Bottom Temperature cannot be greater than Surface Temperature."
             }
             
             if !formValid {

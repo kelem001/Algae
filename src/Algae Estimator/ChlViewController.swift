@@ -54,6 +54,7 @@ class ChlViewController: UIViewController {
             let dest = tabbar.viewControllers?[0] as! CalculateViewController
             
             dest.dataEntryVals = dataEntryVals
+            dest.startEdit = false
             if logID != nil {
                 dest.logID = logID
             }

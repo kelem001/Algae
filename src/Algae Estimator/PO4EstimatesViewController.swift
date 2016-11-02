@@ -104,6 +104,7 @@ class PO4EstimatesViewController: UIViewController {
             let destinationVC = tabbar.viewControllers?[0] as! CalculateViewController
             dataEntryVals["po4"] = Float(po4Val.text!)!
             destinationVC.dataEntryVals = dataEntryVals
+            destinationVC.startEdit = false
             if logID != nil {
                 destinationVC.logID = logID
             }

@@ -34,6 +34,8 @@ class PO4ViewController: UIViewController {
     private func _updateDataEntryVals() {
         if po4TextField.text != "" {
             dataEntryVals["po4"] = Float(po4TextField.text!)!
+        } else {
+            dataEntryVals["po4"] = nil
         }
     }
     
@@ -43,6 +45,12 @@ class PO4ViewController: UIViewController {
             let tabbar = segue.destination as! UITabBarController
             let dest = tabbar.viewControllers?[0] as! CalculateViewController
             dest.dataEntryVals = dataEntryVals
+            dest.startEdit = false
+            
+            for e in dataEntryVals {
+                NSLog(String(describing:e))
+            }
+            
             if logID != nil {
                 dest.logID = logID
             }

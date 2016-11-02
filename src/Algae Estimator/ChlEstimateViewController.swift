@@ -40,9 +40,13 @@ class ChlEstimateViewController: UIViewController {
     private func _updateDataEntryVals() {
         if secciDepthTextfield.text != "" {
             dataEntryVals["secciDepth"] = Float(secciDepthTextfield.text!)!
+        } else {
+            dataEntryVals["secciDepth"] = nil
         }
         if dissolvedOxygenTextfield.text != "" {
             dataEntryVals["dissolvedOxygen"] = Float(dissolvedOxygenTextfield.text!)!
+        } else {
+            dataEntryVals["dissolvedOxygen"] = nil
         }
     }
     
@@ -56,6 +60,7 @@ class ChlEstimateViewController: UIViewController {
             let dest = tabbar.viewControllers?[0] as! CalculateViewController
             
             dest.dataEntryVals = dataEntryVals
+            dest.startEdit = false
             if logID != nil {
                 dest.logID = logID
             }

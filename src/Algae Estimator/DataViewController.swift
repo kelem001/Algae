@@ -80,6 +80,7 @@ class DataViewController: UIViewController {
             let tabbar = segue.destination as! UITabBarController
             let destinationVC = tabbar.viewControllers?[0] as! CalculateViewController
             destinationVC.logID = id
+            destinationVC.startEdit = true
         }
     }
     
