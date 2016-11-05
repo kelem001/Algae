@@ -12,7 +12,6 @@ import CoreData
 class DataLogViewController: UIViewController {
 
     var datalogs :[NSManagedObject]?
-    
     var datalogIDs: [NSManagedObjectID]?
     var datalogIDsIndex: Int?
     
@@ -37,7 +36,7 @@ class DataLogViewController: UIViewController {
             
             let screenSize: CGRect = UIScreen.main.bounds
             let btnWidth = screenSize.width
-            let btnHeight = 40
+            let btnHeight = 20
             
             var index = 0
             
@@ -45,13 +44,15 @@ class DataLogViewController: UIViewController {
                 // Retrieve date for corrent log
                 // Date in format YYYY-MM-DD HH:MM:SS in UTC time zone
                 let logDate = datalog.value(forKey: "date")
-                var dateStr = String(describing: logDate)
-                var dateFormatter = DateFormatter()
-                dateFormatter.dateStyle = .short
-                dateFormatter.timeStyle = .short
+                if logDate != nil {
+                    let dateStr = String(describing: logDate!)
+                                
+                let dateFormatter = DateFormatter()
+                //dateFormatter.dateStyle = .short
+                //dateFormatter.timeStyle = .short
                 dateFormatter.dateFormat = "yyyy-MM-dd"
-                var date = dateFormatter.date(from: dateStr)
-                
+                let date = dateFormatter.date(from: dateStr)
+                //print(date) //contains nil
                 
                 //Retrieve Record ID for current log
                 let logID = datalog.objectID
@@ -69,10 +70,9 @@ class DataLogViewController: UIViewController {
                 
                 offset += btnHeight
                 index += 1
-                
+                }
             }
         } catch {print("Error")}
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -86,5 +86,4 @@ class DataLogViewController: UIViewController {
             destinationVC.id = datalogIDs?[datalogIDsIndex!]
         }
     }
-    
 }
