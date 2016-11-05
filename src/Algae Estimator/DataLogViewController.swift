@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class DataLogViewController: UIViewController {
-
+    
     var datalogs :[NSManagedObject]?
     var datalogIDs: [NSManagedObjectID]?
     var datalogIDsIndex: Int?
@@ -47,26 +47,30 @@ class DataLogViewController: UIViewController {
                 if logDate != nil {
                     let dateStr = String(describing: logDate!)
                     
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "yyyy-MM-dd"
-                let date = dateFormatter.string(from: logDate as! Date)
-                
-                //Retrieve Record ID for current log
-                let logID = datalog.objectID
-                if datalogIDs?.append(logID) == nil {
-                    datalogIDs = [logID]
-                }
-                
-                let button = UIButton(type: .system)
-                button.frame = CGRect(origin: CGPoint(x: 0,y: offset), size: CGSize(width: CGFloat(btnWidth), height: CGFloat(btnHeight)))
-                button.backgroundColor = UIColor.green
-                button.setTitle(date, for: UIControlState.normal)
-                button.tag = index
-                button.addTarget(self, action: #selector(DataLogViewController.viewDataLog), for: UIControlEvents.touchUpInside)
-                self.view.addSubview(button)
-                
-                offset += btnHeight
-                index += 1
+                    let dateFormatter = DateFormatter()
+                    let hourFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd"
+                    hourFormatter.dateFormat = "HH:mm:ss"
+                    let date = dateFormatter.string(from: logDate as! Date)
+                    let hour = hourFormatter.string(from: logDate as! Date)
+                    
+                    print(hour)
+                    //Retrieve Record ID for current log
+                    let logID = datalog.objectID
+                    if datalogIDs?.append(logID) == nil {
+                        datalogIDs = [logID]
+                    }
+
+                    let button = UIButton(type: .system)
+                    button.frame = CGRect(origin: CGPoint(x: 0,y: offset), size: CGSize(width: CGFloat(btnWidth), height: CGFloat(btnHeight)))
+                    button.backgroundColor = UIColor.green
+                    button.setTitle(date, for: UIControlState.normal)
+                    button.tag = index
+                    button.addTarget(self, action: #selector(DataLogViewController.viewDataLog), for: UIControlEvents.touchUpInside)
+                    self.view.addSubview(button)
+                    
+                    offset += btnHeight
+                    index += 1
                 }
             }
         } catch {print("Error")}
