@@ -45,7 +45,13 @@ class DataLogViewController: UIViewController {
                 // Retrieve date for corrent log
                 // Date in format YYYY-MM-DD HH:MM:SS in UTC time zone
                 let logDate = datalog.value(forKey: "date")
-                let dateStr = String(describing: logDate!)
+                var dateStr = String(describing: logDate)
+                var dateFormatter = DateFormatter()
+                dateFormatter.dateStyle = .short
+                dateFormatter.timeStyle = .short
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                var date = dateFormatter.date(from: dateStr)
+                
                 
                 //Retrieve Record ID for current log
                 let logID = datalog.objectID
