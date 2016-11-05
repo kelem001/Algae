@@ -46,13 +46,10 @@ class DataLogViewController: UIViewController {
                 let logDate = datalog.value(forKey: "date")
                 if logDate != nil {
                     let dateStr = String(describing: logDate!)
-                                
+                    
                 let dateFormatter = DateFormatter()
-                //dateFormatter.dateStyle = .short
-                //dateFormatter.timeStyle = .short
                 dateFormatter.dateFormat = "yyyy-MM-dd"
-                let date = dateFormatter.date(from: dateStr)
-                //print(date) //contains nil
+                let date = dateFormatter.string(from: logDate as! Date)
                 
                 //Retrieve Record ID for current log
                 let logID = datalog.objectID
@@ -63,7 +60,7 @@ class DataLogViewController: UIViewController {
                 let button = UIButton(type: .system)
                 button.frame = CGRect(origin: CGPoint(x: 0,y: offset), size: CGSize(width: CGFloat(btnWidth), height: CGFloat(btnHeight)))
                 button.backgroundColor = UIColor.green
-                button.setTitle(dateStr, for: UIControlState.normal)
+                button.setTitle(date, for: UIControlState.normal)
                 button.tag = index
                 button.addTarget(self, action: #selector(DataLogViewController.viewDataLog), for: UIControlEvents.touchUpInside)
                 self.view.addSubview(button)
