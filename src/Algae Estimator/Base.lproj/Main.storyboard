@@ -112,7 +112,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.28107216619999997" green="0.30745128989999998" blue="0.57800356220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.28278976678848267" green="0.30867388844490051" blue="0.57703393697738647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="titleLabel" destination="Qfj-lN-tBs" id="iXx-28-nPe"/>
                                             <segue destination="OQj-UK-l0F" kind="show" identifier="showLog" id="WEg-ik-fuu"/>

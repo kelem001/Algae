@@ -44,16 +44,17 @@ class DataLogViewController: UIViewController, UITableViewDataSource, UITableVie
                 if (logDate != nil) {
                     let dateStr = String(describing: logDate!)
                     
-                    print("dateStr: " + dateStr)
                     let dateFormatter = DateFormatter()
                     let hourFormatter = DateFormatter()
                     dateFormatter.dateFormat = "yyyy-MM-dd"
                     hourFormatter.dateFormat = "HH:mm:ss"
                     let date = dateFormatter.string(from: logDate as! Date)
                     let hour = hourFormatter.string(from: logDate as! Date)
-                    if (dateStr.contains(date)) {
-                        self.objects.add(date)
-                    }
+
+                    // Does not add all dates, also not currently removing all duplicates
+                    //if (dateStr.contains(date)) {
+                    self.objects.add(date)
+                    //}
                     
                     //Retrieve Record ID for current log
                     let logID = datalog.objectID
@@ -87,29 +88,40 @@ class DataLogViewController: UIViewController, UITableViewDataSource, UITableVie
         
         cell.titleLabel.text = self.objects.object(at: indexPath.row) as? String
         
+        // Index pass?
+        cell.titleLabel.tag = indexPath.row
+        
+        
         //cell.shareButton.tag = indexPath.row
         
-        //cell.shareButton.addTarget(self, action: "logAction", for: .touchUpInside)
+        //cell.shareButton.addTarget(self, action: "sendDataLog", for: .touchUpInside)
         
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegue(withIdentifier: "showView", sender: self)
-    }
+    //func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+      //  self.performSegue(withIdentifier: "showView", sender: self)
+    //}
     
-    @IBAction func logAction(sender: UIButton) {
-        let titleString = self.objects.object(at: sender.tag) as? String
-        let firstActivityItem = "\(titleString!)"
-        let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [firstActivityItem], applicationActivities: nil)
-        self.present(activityViewController, animated: true, completion: nil)
-    }
+    //@IBAction func logAction(sender: UIButton) {
+    //let titleString = self.objects.object(at: sender.tag) as? String
+    //let firstActivityItem = "\(titleString!)"
+    //let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [firstActivityItem], applicationActivities: nil)
+    //self.present(activityViewController, animated: true, completion: nil)
+    //}
     
-   // func viewDataLog(sender: UIButton) {
-     //   datalogIDsIndex = sender.tag
+    //@IBAction func sendDataLog(sender: UIButton) {
+      //  datalogIDsIndex = sender.tag
        // NSLog(String(describing: sender.tag))
        // NSLog(String(describing: datalogIDs))
-       // performSegue(withIdentifier: "showLog", sender: self)
+       // performSegue(withIdentifier: "showView", sender: self)
+    //}
+    
+    // func viewDataLog(sender: UIButton) {
+    //   datalogIDsIndex = sender.tag
+    // NSLog(String(describing: sender.tag))
+    // NSLog(String(describing: datalogIDs))
+    // performSegue(withIdentifier: "showLog", sender: self)
     //}
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -118,6 +130,7 @@ class DataLogViewController: UIViewController, UITableViewDataSource, UITableVie
             let indexPath = self.tableView.indexPathForSelectedRow!
             let titleString = self.objects.object(at: indexPath.row) as? String
             upcoming.titleString = titleString
+            upcoming.datalogIDsIndex = indexPath.row
             self.tableView.deselectRow(at: indexPath, animated: true)
         }
         //if (segue.identifier == "showLog") {
