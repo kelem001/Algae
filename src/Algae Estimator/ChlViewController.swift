@@ -18,7 +18,7 @@ class ChlViewController: UIViewController {
     @IBOutlet weak var cyanoChlTextfield: UITextField!
     
     @IBAction func submitButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "submit", sender: self)
+       // performSegue(withIdentifier: "submit", sender: self)
     }
     
     
