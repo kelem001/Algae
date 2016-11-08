@@ -33,7 +33,7 @@ class DataLogViewController: UIViewController {
         do {
             let datalogs = try managedContext.fetch(dataLogFetch) as? [NSManagedObject]
             
-            var offset: Int = 30
+            var offset: Int = 60
             
             let screenSize: CGRect = UIScreen.main.bounds
             let btnWidth = screenSize.width

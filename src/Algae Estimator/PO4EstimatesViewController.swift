@@ -24,7 +24,7 @@ class PO4EstimatesViewController: UIViewController {
     
     
     @IBAction func sendP04Val(_ sender: AnyObject) {
-        performSegue(withIdentifier: "segueSend2", sender: self)
+        //performSegue(withIdentifier: "segueSend2", sender: self)
     }
     
     var location:Float = 0.065

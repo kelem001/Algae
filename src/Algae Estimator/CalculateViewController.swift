@@ -90,7 +90,7 @@ class CalculateViewController: UIViewController {
     
     
     @IBAction func po4Set(_ sender: UIButton) {
-        performSegue(withIdentifier: "po4TabBar", sender: self)
+        //performSegue(withIdentifier: "po4TabBar", sender: self)
     }
     
     

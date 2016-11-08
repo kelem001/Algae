@@ -34,7 +34,7 @@ class ChlEstimateViewController: UIViewController {
 
     
     @IBAction func submitButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "submit", sender: self)
+       // performSegue(withIdentifier: "submit", sender: self)
     }
     
     private func _updateDataEntryVals() {
