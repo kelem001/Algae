@@ -73,9 +73,13 @@ class ResultViewController : UIViewController {
         //myImage.image = UIImage(named: (transport?.rawValue)!)
     }
     
-    @IBAction func goBack(sender: AnyObject) {
+    @IBAction func goBack(_ sender: Any) {
+        
+        if((self.presentingViewController) != nil){
+            self.dismiss(animated: true, completion: nil)     }
     
     }
+
     
     
     func setTransport ( transport:MyConstants.Transport){
