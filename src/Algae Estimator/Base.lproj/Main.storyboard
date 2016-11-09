@@ -983,17 +983,18 @@
                                 <rect key="frame" x="16" y="40" width="343" height="587"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoA-wN-ovX">
-                                        <rect key="frame" x="51.5" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <rect key="frame" x="51.5" y="0.0" width="240" height="300"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="X0Z-1L-esV"/>
-                                            <constraint firstAttribute="height" constant="128" id="wnC-zS-7lg"/>
+                                            <constraint firstAttribute="height" constant="300" id="wnC-zS-7lg"/>
                                         </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S9I-Oh-4cx">
-                                        <rect key="frame" x="0.0" y="148" width="343" height="370"/>
+                                        <rect key="frame" x="0.0" y="320" width="343" height="198"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzu-o7-siR">
                                         <rect key="frame" x="85" y="538" width="173" height="49"/>
@@ -1021,7 +1022,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="5oR-Tl-29p" firstAttribute="centerY" secondItem="2Wq-Vb-clJ" secondAttribute="centerY" id="43O-PG-FC7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5oR-Tl-29p" secondAttribute="trailing" id="5YD-jW-qV8"/>
