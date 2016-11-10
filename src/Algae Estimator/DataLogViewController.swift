@@ -13,12 +13,15 @@ class DataLogViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet weak var tableView: UITableView!
     
+    // Contains an array of dates
     var objects: NSMutableArray! = NSMutableArray()
     
-    var datalogs :[NSManagedObject]?
+    // Contains logs
+    var datalogs: [NSManagedObject]?
     var datalogIDs: [NSManagedObjectID]?
     var datalogIDsIndex: Int?
     
+    var dates : [String] = []
     override func viewDidLoad() {
         
         // Retrieve Managed Context
@@ -38,23 +41,55 @@ class DataLogViewController: UIViewController, UITableViewDataSource, UITableVie
             //var index = 0
             
             for datalog in datalogs! {
+                
                 // Retrieve date for corrent log
                 // Date in format YYYY-MM-DD HH:MM:SS in UTC time zone
                 let logDate = datalog.value(forKey: "date")
+                
                 if (logDate != nil) {
-                    let dateStr = String(describing: logDate!)
                     
+                    // Contains current date
+                    let dateStr = String(describing: logDate!)
+                    print("dateStr: ", dateStr)
+                    
+                    // Displays date and/or hour in format
                     let dateFormatter = DateFormatter()
                     let hourFormatter = DateFormatter()
                     dateFormatter.dateFormat = "yyyy-MM-dd"
                     hourFormatter.dateFormat = "HH:mm:ss"
-                    let date = dateFormatter.string(from: logDate as! Date)
+                    var date = dateFormatter.string(from: logDate as! Date)
                     let hour = hourFormatter.string(from: logDate as! Date)
-
-                    // Does not add all dates, also not currently removing all duplicates
-                    //if (dateStr.contains(date)) {
-                    self.objects.add(date)
+                    
+                    print("date: ", date)
+                    //for date in objects {
+                    //    if !uniqueValues.contains(date as! String) {
+                    //        uniqueValues.append(date as! String)
+                    //    }
                     //}
+                    var titleString: String
+                        titleString = " " + hour + " +0000"
+                    var index = objects.count
+                    // Does not add all dates, also not currently removing all duplicates
+                    //&& dateStr != date && date != "") {
+                    
+                    if dateStr.contains(date) {
+                        self.objects.add(date)
+                        self.dates.append(date)
+                       print("objects list: ", objects)
+                        print("dates list: ", dates)
+                    }
+                    
+                    
+                    
+                    //if dateStr.contains(date) {
+                      //  self.objects.remove(date)
+                        //self.dates.append(date)
+                        //print("dates: ",dates)
+                    //} else if dateStr.contains(date) {
+                     //   date.append(titleString)
+                      //  self.objects.add(date)
+                        
+                   // }
                     
                     //Retrieve Record ID for current log
                     let logID = datalog.objectID
@@ -89,7 +124,7 @@ class DataLogViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.titleLabel.text = self.objects.object(at: indexPath.row) as? String
         
         // Index pass?
-        cell.titleLabel.tag = indexPath.row
+        //cell.titleLabel.tag = indexPath.row
         
         
         //cell.shareButton.tag = indexPath.row
@@ -100,7 +135,7 @@ class DataLogViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     //func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-      //  self.performSegue(withIdentifier: "showView", sender: self)
+    //  self.performSegue(withIdentifier: "showView", sender: self)
     //}
     
     //@IBAction func logAction(sender: UIButton) {
@@ -111,17 +146,17 @@ class DataLogViewController: UIViewController, UITableViewDataSource, UITableVie
     //}
     
     //@IBAction func sendDataLog(sender: UIButton) {
+    //  datalogIDsIndex = sender.tag
+    // NSLog(String(describing: sender.tag))
+    // NSLog(String(describing: datalogIDs))
+    // performSegue(withIdentifier: "showView", sender: self)
+    //}
+    
+    //func viewDataLog(sender: UIButton) {
       //  datalogIDsIndex = sender.tag
        // NSLog(String(describing: sender.tag))
        // NSLog(String(describing: datalogIDs))
-       // performSegue(withIdentifier: "showView", sender: self)
-    //}
-    
-    // func viewDataLog(sender: UIButton) {
-    //   datalogIDsIndex = sender.tag
-    // NSLog(String(describing: sender.tag))
-    // NSLog(String(describing: datalogIDs))
-    // performSegue(withIdentifier: "showLog", sender: self)
+       // performSegue(withIdentifier: "showLog", sender: self)
     //}
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
