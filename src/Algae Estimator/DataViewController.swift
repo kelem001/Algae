@@ -26,8 +26,13 @@ class DataViewController: UIViewController {
     @IBOutlet weak var cyanorLabel: UILabel!
     @IBOutlet weak var cyanokLabel: UILabel!
     
+    var chlaDataSet: Array<Float> = [Float]()
+    var cyanoDataSet:Array<Float> = [Float]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NSLog("\(self.tabBarItem.badgeColor)")
         
         // Retrieve Managed Context
         let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -67,6 +72,9 @@ class DataViewController: UIViewController {
         cyanonLabel.text = String(describing: calculation.N0)
         cyanorLabel.text = String(describing: calculation.getR02())
         cyanokLabel.text = String(describing: calculation.getK2())
+        
+        chlaDataSet = calculation.getTotalChlaDataSet()
+        cyanoDataSet = calculation.getCyanoChlaDataSet()
 
     }
     
@@ -81,6 +89,11 @@ class DataViewController: UIViewController {
             let destinationVC = tabbar.viewControllers?[0] as! CalculateViewController
             destinationVC.logID = id
             destinationVC.startEdit = true
+        }
+        else if segue.identifier == "dataSet" {
+            let tabbar = segue.destination as! UITabBarController
+            let destinationVC = tabbar.viewControllers?[0] as! DataSetTableViewController
+            destinationVC.data = [chlaDataSet, cyanoDataSet]
         }
     }
     
