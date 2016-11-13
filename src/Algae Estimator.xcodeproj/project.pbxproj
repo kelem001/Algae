@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45FEC3BAB957A8198AFE58AC /* Pods_Algae_Estimator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01B3158D2F1FF3DD54843B7 /* Pods_Algae_Estimator.framework */; };
+		498471AE47C8056EEC49EE4E /* Pods_Algae_EstimatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC43475CA55A81E308035780 /* Pods_Algae_EstimatorUITests.framework */; };
 		751BB8751DCE649200678BB6 /* DataLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751BB8741DCE649200678BB6 /* DataLogTableViewCell.swift */; };
 		751BB8771DCE66C000678BB6 /* DataLog2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751BB8761DCE66C000678BB6 /* DataLog2ViewController.swift */; };
 		751BB8791DCE782200678BB6 /* DataLog2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751BB8781DCE782200678BB6 /* DataLog2TableViewCell.swift */; };
+		793795B9888AEC73433689B7 /* Pods_Algae_EstimatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40B394B362F49A115019AA9 /* Pods_Algae_EstimatorTests.framework */; };
 		84F63DDA1DA5B2D000753A32 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F63DD91DA5B2D000753A32 /* DataViewController.swift */; };
 		FD1C31C21DB85118007C7036 /* PO4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1C31C11DB85118007C7036 /* PO4ViewController.swift */; };
 		FD4574421DC518BF008E87E4 /* DataLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4574411DC518BF008E87E4 /* DataLogViewController.swift */; };
@@ -27,6 +30,7 @@
 		FD7310D91DC4101C00ACBE6A /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7310D81DC4101C00ACBE6A /* ResultViewController.swift */; };
 		FDB90A3D1DA5BF0200800DDD /* Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB90A3C1DA5BF0200800DDD /* Calculations.swift */; };
 		FDC95D131DC18489003AB088 /* PO4EstimatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC95D121DC18489003AB088 /* PO4EstimatesViewController.swift */; };
+		FDFEA9841DD90C210082D6DB /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFEA9831DD90C210082D6DB /* GraphViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +51,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CDE9AE90A7C796C22D5E5B4 /* Pods-Algae Estimator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algae Estimator.release.xcconfig"; path = "Pods/Target Support Files/Pods-Algae Estimator/Pods-Algae Estimator.release.xcconfig"; sourceTree = "<group>"; };
 		751BB8741DCE649200678BB6 /* DataLogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLogTableViewCell.swift; sourceTree = "<group>"; };
 		751BB8761DCE66C000678BB6 /* DataLog2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLog2ViewController.swift; sourceTree = "<group>"; };
 		751BB8781DCE782200678BB6 /* DataLog2TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLog2TableViewCell.swift; sourceTree = "<group>"; };
 		84F63DD91DA5B2D000753A32 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		91A39DD037E59AD49E703241 /* Pods-Algae EstimatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algae EstimatorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Algae EstimatorUITests/Pods-Algae EstimatorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		98017A4453AFFC99111A86F8 /* Pods-Algae EstimatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algae EstimatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Algae EstimatorTests/Pods-Algae EstimatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC43475CA55A81E308035780 /* Pods_Algae_EstimatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Algae_EstimatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B65ED9ED6F664EE202DC53A1 /* Pods-Algae EstimatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algae EstimatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Algae EstimatorTests/Pods-Algae EstimatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		C01B3158D2F1FF3DD54843B7 /* Pods_Algae_Estimator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Algae_Estimator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF05F169DD6DFE97CA48DF79 /* Pods-Algae Estimator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algae Estimator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Algae Estimator/Pods-Algae Estimator.debug.xcconfig"; sourceTree = "<group>"; };
+		E40B394B362F49A115019AA9 /* Pods_Algae_EstimatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Algae_EstimatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2EF70200C74384E441A4B6 /* Pods-Algae EstimatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algae EstimatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Algae EstimatorUITests/Pods-Algae EstimatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FD1C31C11DB85118007C7036 /* PO4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PO4ViewController.swift; sourceTree = "<group>"; };
 		FD4574411DC518BF008E87E4 /* DataLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLogViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FD4EE9181D9F269F0083C393 /* Algae Estimator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Algae Estimator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +86,7 @@
 		FD7310D81DC4101C00ACBE6A /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		FDB90A3C1DA5BF0200800DDD /* Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculations.swift; sourceTree = "<group>"; };
 		FDC95D121DC18489003AB088 /* PO4EstimatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PO4EstimatesViewController.swift; sourceTree = "<group>"; };
+		FDFEA9831DD90C210082D6DB /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45FEC3BAB957A8198AFE58AC /* Pods_Algae_Estimator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				793795B9888AEC73433689B7 /* Pods_Algae_EstimatorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,12 +110,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				498471AE47C8056EEC49EE4E /* Pods_Algae_EstimatorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3F7128339BA9F4F2FC4B858 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF05F169DD6DFE97CA48DF79 /* Pods-Algae Estimator.debug.xcconfig */,
+				0CDE9AE90A7C796C22D5E5B4 /* Pods-Algae Estimator.release.xcconfig */,
+				98017A4453AFFC99111A86F8 /* Pods-Algae EstimatorTests.debug.xcconfig */,
+				B65ED9ED6F664EE202DC53A1 /* Pods-Algae EstimatorTests.release.xcconfig */,
+				EC2EF70200C74384E441A4B6 /* Pods-Algae EstimatorUITests.debug.xcconfig */,
+				91A39DD037E59AD49E703241 /* Pods-Algae EstimatorUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CD6AE05F3CC2D1CA97F9E14B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C01B3158D2F1FF3DD54843B7 /* Pods_Algae_Estimator.framework */,
+				E40B394B362F49A115019AA9 /* Pods_Algae_EstimatorTests.framework */,
+				AC43475CA55A81E308035780 /* Pods_Algae_EstimatorUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FD4EE90F1D9F269F0083C393 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +147,8 @@
 				FD4EE9321D9F26A00083C393 /* Algae EstimatorTests */,
 				FD4EE93D1D9F26A00083C393 /* Algae EstimatorUITests */,
 				FD4EE9191D9F269F0083C393 /* Products */,
+				A3F7128339BA9F4F2FC4B858 /* Pods */,
+				CD6AE05F3CC2D1CA97F9E14B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +184,7 @@
 				FD7310D81DC4101C00ACBE6A /* ResultViewController.swift */,
 				FD5990011DC461950061816E /* ChlEstimateViewController.swift */,
 				FD5990031DC462350061816E /* ChlViewController.swift */,
+				FDFEA9831DD90C210082D6DB /* GraphViewController.swift */,
 			);
 			path = "Algae Estimator";
 			sourceTree = "<group>";
@@ -171,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD4EE9431D9F26A00083C393 /* Build configuration list for PBXNativeTarget "Algae Estimator" */;
 			buildPhases = (
+				60C5E669C9FC51C66F17FC11 /* [CP] Check Pods Manifest.lock */,
 				FD4EE9141D9F269F0083C393 /* Sources */,
 				FD4EE9151D9F269F0083C393 /* Frameworks */,
 				FD4EE9161D9F269F0083C393 /* Resources */,
+				19621188D83100C7BAA6F5F5 /* [CP] Embed Pods Frameworks */,
+				972B6BB5A553483617F4D4DD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD4EE9461D9F26A00083C393 /* Build configuration list for PBXNativeTarget "Algae EstimatorTests" */;
 			buildPhases = (
+				FE9F3D904CB025CCDC650737 /* [CP] Check Pods Manifest.lock */,
 				FD4EE92B1D9F26A00083C393 /* Sources */,
 				FD4EE92C1D9F26A00083C393 /* Frameworks */,
 				FD4EE92D1D9F26A00083C393 /* Resources */,
+				3F96192F377EC5203FBCEEBD /* [CP] Embed Pods Frameworks */,
+				0A555989810EA95B487B5548 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,9 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD4EE9491D9F26A00083C393 /* Build configuration list for PBXNativeTarget "Algae EstimatorUITests" */;
 			buildPhases = (
+				B448970F71AAD12BA1D5D90E /* [CP] Check Pods Manifest.lock */,
 				FD4EE9361D9F26A00083C393 /* Sources */,
 				FD4EE9371D9F26A00083C393 /* Frameworks */,
 				FD4EE9381D9F26A00083C393 /* Resources */,
+				54D9EEBD4230E5CAA6C43982 /* [CP] Embed Pods Frameworks */,
+				743CDEED4E12B96439EC0586 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -294,6 +346,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A555989810EA95B487B5548 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Algae EstimatorTests/Pods-Algae EstimatorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19621188D83100C7BAA6F5F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Algae Estimator/Pods-Algae Estimator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F96192F377EC5203FBCEEBD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Algae EstimatorTests/Pods-Algae EstimatorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54D9EEBD4230E5CAA6C43982 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Algae EstimatorUITests/Pods-Algae EstimatorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60C5E669C9FC51C66F17FC11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		743CDEED4E12B96439EC0586 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Algae EstimatorUITests/Pods-Algae EstimatorUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		972B6BB5A553483617F4D4DD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Algae Estimator/Pods-Algae Estimator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B448970F71AAD12BA1D5D90E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FE9F3D904CB025CCDC650737 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FD4EE9141D9F269F0083C393 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -304,6 +494,7 @@
 				84F63DDA1DA5B2D000753A32 /* DataViewController.swift in Sources */,
 				FD4EE91E1D9F26A00083C393 /* CalculateViewController.swift in Sources */,
 				FD4EE91C1D9F269F0083C393 /* AppDelegate.swift in Sources */,
+				FDFEA9841DD90C210082D6DB /* GraphViewController.swift in Sources */,
 				FD5990021DC461950061816E /* ChlEstimateViewController.swift in Sources */,
 				FDC95D131DC18489003AB088 /* PO4EstimatesViewController.swift in Sources */,
 				FD1C31C21DB85118007C7036 /* PO4ViewController.swift in Sources */,
@@ -463,11 +654,12 @@
 		};
 		FD4EE9441D9F26A00083C393 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF05F169DD6DFE97CA48DF79 /* Pods-Algae Estimator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7KDLJ86653;
 				INFOPLIST_FILE = "Algae Estimator/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SE.Algae-Estimator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -477,11 +669,12 @@
 		};
 		FD4EE9451D9F26A00083C393 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CDE9AE90A7C796C22D5E5B4 /* Pods-Algae Estimator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7KDLJ86653;
 				INFOPLIST_FILE = "Algae Estimator/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SE.Algae-Estimator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -491,6 +684,7 @@
 		};
 		FD4EE9471D9F26A00083C393 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98017A4453AFFC99111A86F8 /* Pods-Algae EstimatorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,6 +699,7 @@
 		};
 		FD4EE9481D9F26A00083C393 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B65ED9ED6F664EE202DC53A1 /* Pods-Algae EstimatorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,6 +714,7 @@
 		};
 		FD4EE94A1D9F26A00083C393 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC2EF70200C74384E441A4B6 /* Pods-Algae EstimatorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Algae EstimatorUITests/Info.plist";
@@ -532,6 +728,7 @@
 		};
 		FD4EE94B1D9F26A00083C393 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91A39DD037E59AD49E703241 /* Pods-Algae EstimatorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Algae EstimatorUITests/Info.plist";

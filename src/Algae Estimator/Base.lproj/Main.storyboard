@@ -825,7 +825,7 @@
         <!--GRAPH-->
         <scene sceneID="FMC-k4-Mxd">
             <objects>
-                <viewController id="ltX-Y7-P7O" sceneMemberID="viewController">
+                <viewController id="ltX-Y7-P7O" customClass="GraphViewController" customModule="Algae_Estimator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RLc-of-uJv"/>
                         <viewControllerLayoutGuide type="bottom" id="Lsm-ez-81f"/>
@@ -1177,7 +1177,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="clY-HO-CpC">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="93" width="375" height="574"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="574" id="qzA-Rz-aXF"/>
