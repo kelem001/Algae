@@ -22,5 +22,4 @@ class DataLog2TableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

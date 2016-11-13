@@ -11,7 +11,6 @@ import CoreData
 class DataLogTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
-    //@IBOutlet weak var shareButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,5 +22,4 @@ class DataLogTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

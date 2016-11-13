@@ -35,7 +35,6 @@ class DataViewController: UIViewController {
         // Retrieve target datalog based on NSManagedObjectID
         let datalog = managedContext.object(with: self.id!)
         
-        
         var calculation: Calculations
         
         let pbot = datalog.value(forKey: "po4") as! Float

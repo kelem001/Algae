@@ -29,11 +29,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yWo-Wg-Y4l" id="giS-n4-sYi">
-                                            <frame key="frameInset" width="342" height="43"/>
+                                            <frame key="frameInset" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="71l-iH-NxA">
-                                                    <frame key="frameInset" minX="15" width="325" height="43"/>
+                                                    <frame key="frameInset" minX="15" width="325" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -44,7 +44,7 @@
                                         <color key="backgroundColor" red="0.28107216619999997" green="0.30745128989999998" blue="0.57800356220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="titleLabel" destination="71l-iH-NxA" id="dMB-5F-sdG"/>
-                                            <segue destination="HGm-9e-n0b" kind="show" identifier="showView" id="jNL-MB-5by"/>
+                                            <segue destination="HGm-9e-n0b" kind="show" identifier="showView" id="XCh-J5-odL"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -100,11 +100,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eGX-E4-WKM" id="W8g-QF-TXp">
-                                            <frame key="frameInset" width="342" height="43"/>
+                                            <frame key="frameInset" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qfj-lN-tBs">
-                                                    <frame key="frameInset" minX="15" width="325" height="43"/>
+                                                    <frame key="frameInset" minX="15" width="325" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -115,7 +115,7 @@
                                         <color key="backgroundColor" red="0.28278976678848267" green="0.30867388844490051" blue="0.57703393697738647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="titleLabel" destination="Qfj-lN-tBs" id="iXx-28-nPe"/>
-                                            <segue destination="OQj-UK-l0F" kind="show" identifier="showLog" id="WEg-ik-fuu"/>
+                                            <segue destination="OQj-UK-l0F" kind="show" identifier="showLog" id="6TK-3X-kBL"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -129,7 +129,7 @@
                                     <navigationItem title="Select Time" id="SlY-fZ-hsh">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="rlm-eW-y3E">
                                             <connections>
-                                                <segue destination="JGi-vB-afj" kind="show" id="bF3-X1-Yq3"/>
+                                                <segue destination="JGi-vB-afj" kind="show" id="jrU-ai-6la"/>
                                             </connections>
                                         </barButtonItem>
                                         <connections>
@@ -1162,7 +1162,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bF3-X1-Yq3"/>
-        <segue reference="WEg-ik-fuu"/>
+        <segue reference="jrU-ai-6la"/>
+        <segue reference="6TK-3X-kBL"/>
     </inferredMetricsTieBreakers>
 </document>
