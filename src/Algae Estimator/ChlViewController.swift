@@ -18,7 +18,7 @@ class ChlViewController: UIViewController {
     @IBOutlet weak var cyanoChlTextfield: UITextField!
     
     @IBAction func submitButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "submit", sender: self)
+       // performSegue(withIdentifier: "submit", sender: self)
     }
     
     
@@ -32,12 +32,12 @@ class ChlViewController: UIViewController {
     }
     
     private func _updateDataEntryVals() {
-        if totalChlTextfield.text != "" {
+        if totalChlTextfield.text != "" && Float(totalChlTextfield.text!) != nil {
             dataEntryVals["totalChl"] = Float(totalChlTextfield.text!)!
         } else {
             dataEntryVals["totalChl"] = nil
         }
-        if cyanoChlTextfield.text! != "" {
+        if cyanoChlTextfield.text! != "" && Float(cyanoChlTextfield.text!) != nil {
             dataEntryVals["cyanoChl"] = Float(cyanoChlTextfield.text!)!
         } else {
             dataEntryVals["cyanoChl"] = nil

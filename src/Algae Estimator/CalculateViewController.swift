@@ -90,7 +90,7 @@ class CalculateViewController: UIViewController {
     
     
     @IBAction func po4Set(_ sender: UIButton) {
-        performSegue(withIdentifier: "po4TabBar", sender: self)
+        //performSegue(withIdentifier: "po4TabBar", sender: self)
     }
     
     
@@ -101,6 +101,13 @@ class CalculateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
         
     }
     
@@ -144,6 +151,12 @@ class CalculateViewController: UIViewController {
         }
     }
     
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -152,16 +165,16 @@ class CalculateViewController: UIViewController {
     
     private func _updateDataEntryVals() {
         
-        if (tempBottom.text != "") {
+        if tempBottom.text != "" && Float(tempBottom.text!) != nil {
             dataEntryVals["temp_bot"] = Float(tempBottom.text!)!
         }
-        if (tempSurface.text != "") {
+        if tempSurface.text != "" && Float(tempSurface.text!) != nil {
             dataEntryVals["temp_top"] = Float(tempSurface.text!)!
         }
-        if (brightBox.text != "") {
+        if brightBox.text != "" && Float(brightBox.text!) != nil {
             dataEntryVals["brightness"] = Float(brightBox.text!)!
         }
-        if (lakeDepthBox.text != "") {
+        if lakeDepthBox.text != "" && Float(lakeDepthBox.text!) != nil {
             dataEntryVals["depth"] = Float(lakeDepthBox.text!)!
         }
         
@@ -181,82 +194,82 @@ class CalculateViewController: UIViewController {
                 msg = "Missing value for P04 Concentration."
             }
             
-            if dataEntryVals["cyanoChl"] == nil || dataEntryVals["totalChl"] == nil {
+            if formValid && (dataEntryVals["cyanoChl"] == nil || dataEntryVals["totalChl"] == nil) {
                 if dataEntryVals["secciDepth"] == nil || dataEntryVals["dissolvedOxygen"] == nil {
                     formValid = false
                     msg = "Missing value for Chl a."
                 }
             }
             
-            if  dataEntryVals["brightness"] == nil {
+            if formValid && dataEntryVals["brightness"] == nil {
                 formValid = false
                 msg = "Missing value for Brightness."
             }
             
-            if dataEntryVals["depth"] == nil {
+            if formValid && dataEntryVals["depth"] == nil {
                 formValid = false
                 msg = "Missing value for Lake Depth."
             }
             
-            if dataEntryVals["temp_bot"] == nil {
+            if formValid && dataEntryVals["temp_bot"] == nil {
                 formValid = false
                 msg = "Missing value for Bottom Temperature."
             }
             
-            if dataEntryVals["temp_top"] == nil {
+            if formValid && dataEntryVals["temp_top"] == nil {
                 formValid = false
                 msg = "Missing value for Surface Temperature."
             }
             
-            if dataEntryVals["temp_top"]! > 40.0 || dataEntryVals["temp_top"]! < Float(0.0) {
+            if formValid && (dataEntryVals["temp_top"]! > 40.0 || dataEntryVals["temp_top"]! < Float(0.0)) {
                 formValid = false
                 msg = "Please input Surface Temperature between 0 and 40."
             }
-            
-            if dataEntryVals["temp_bot"]! > 40.0 || dataEntryVals["temp_bot"]! < Float(0.0) {
+
+            if formValid && (dataEntryVals["temp_bot"]! > 40.0 || dataEntryVals["temp_bot"]! < Float(0.0)) {
                 formValid = false
                 msg = "Please input Bottom Temperature between 0 and 40."
             }
             
-            if dataEntryVals["temp_bot"]! > dataEntryVals["temp_top"]! {
+            if formValid && dataEntryVals["temp_bot"]! > dataEntryVals["temp_top"]! {
                 formValid = false
                 msg = "Bottom Temperature cannot be greater than Surface Temperature."
             }
             
-            if dataEntryVals["depth"]! > 5.0 {
+            if formValid && dataEntryVals["depth"]! > 5.0 {
                 formValid = false
                 msg = "Algae bloom will not happen if lake depth > 5."
             }
             
-            if dataEntryVals["totalChl"] != nil {
+            if formValid && dataEntryVals["totalChl"] != nil {
                 if dataEntryVals["totalChl"]! < 0.0 || dataEntryVals["totalChl"]! > 300.0 {
                     formValid = false
                     msg = "Please input Total Chl a value between 0 and 300."
                 }
             }
             
-            if dataEntryVals["cyanoChl"] != nil {
+            if formValid && dataEntryVals["cyanoChl"] != nil {
                 if dataEntryVals["cyanoChl"]! < 0.0 || dataEntryVals["cyanoChl"]! > 300.0 {
                     formValid = false
                     msg = "Please input Cyano Chl a value between 0 and 300."
                 }
             }
             
-            if dataEntryVals["secciDepth"] != nil {
+            if formValid && dataEntryVals["secciDepth"] != nil {
                 if dataEntryVals["secciDepth"]! < 0.0 || dataEntryVals["secciDepth"]! > 1.0 {
                     formValid = false
                     msg = "Please input Secchi Depth value between 0 and 1."
                 }
             }
             
-            if dataEntryVals["dissolvedOxygen"] != nil {
+            if formValid && dataEntryVals["dissolvedOxygen"] != nil {
                 if dataEntryVals["dissolvedOxygen"]! < 1.0 || dataEntryVals["dissolvedOxygen"]! > 100.0 {
                     formValid = false
                     msg = "Please input Oxygen Dissolved value between 1 and 100."
                 }
             }
             
-            if dataEntryVals["po4"] != nil {
+            if formValid && dataEntryVals["po4"] != nil {
                 if dataEntryVals["po4"]! < 0.0001 || dataEntryVals["po4"]! > 7.0 {
                     formValid = false
                     msg = "Please input PO4 concentation between 0.0001 and 7."
