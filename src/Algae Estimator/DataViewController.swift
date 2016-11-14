@@ -91,8 +91,7 @@ class DataViewController: UIViewController {
             destinationVC.startEdit = true
         }
         else if segue.identifier == "dataSet" {
-            let tabbar = segue.destination as! UITabBarController
-            let destinationVC = tabbar.viewControllers?[0] as! DataSetTableViewController
+            let destinationVC = segue.destination as! DataSetTableViewController
             destinationVC.data = [chlaDataSet, cyanoDataSet]
         }
     }
