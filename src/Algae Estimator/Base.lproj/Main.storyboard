@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Z9D-r2-cV2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Z9D-r2-cV2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -678,9 +678,6 @@
                                 <state key="normal" title="?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="TempSurButton:" destination="Msz-d4-ZYG" eventType="touchUpInside" id="ObS-Yc-kyB"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFd-05-RhG">
                                 <rect key="frame" x="329" y="130" width="30" height="28"/>
@@ -692,7 +689,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="TempBotButton:" destination="Msz-d4-ZYG" eventType="touchUpInside" id="Agg-CL-PEx"/>
+                                    <segue destination="N4g-Bv-p2X" kind="show" id="wJX-Jx-jAc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CP-SN-Nn7">
@@ -705,7 +702,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="lakeDepthButton:" destination="Msz-d4-ZYG" eventType="touchUpInside" id="vt1-dq-FDE"/>
+                                    <segue destination="JuW-u4-UC4" kind="show" id="n8T-9f-3op"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZy-Vr-MRl">
@@ -718,7 +715,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="BrightnessButton:" destination="Msz-d4-ZYG" eventType="touchUpInside" id="LRz-eS-8Qc"/>
+                                    <segue destination="J31-iR-NiM" kind="show" id="87j-FS-6cP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeP-Ry-jss">
@@ -731,7 +728,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="chlValueButton:" destination="Msz-d4-ZYG" eventType="touchUpInside" id="D2h-Jk-GnM"/>
+                                    <segue destination="ENf-Ep-xNo" kind="show" id="NlN-DF-z7D"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="°C" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I7P-11-wIS">
@@ -837,7 +834,7 @@
                         <outlet property="lakeDepthBox" destination="frl-KK-9X0" id="wd5-Sg-pDr"/>
                         <outlet property="tempBottom" destination="Iyi-pu-GYv" id="63Z-13-RgY"/>
                         <outlet property="tempSurface" destination="I7P-11-wIS" id="eOQ-De-Sdp"/>
-                        <segue destination="WUF-mt-2Lv" kind="presentation" id="Hnb-9B-DrQ"/>
+                        <segue destination="WUF-mt-2Lv" kind="show" id="Hnb-9B-DrQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AJh-MC-fUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1125,7 +1122,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MQT-Fk-fkL">
-                                <rect key="frame" x="16" y="40" width="343" height="587"/>
+                                <rect key="frame" x="16" y="84" width="343" height="499"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hit-Aq-npx">
                                         <rect key="frame" x="51.5" y="0.0" width="240" height="300"/>
@@ -1139,10 +1136,10 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H21-Pn-oXw">
-                                        <rect key="frame" x="0.0" y="320" width="343" height="198"/>
+                                        <rect key="frame" x="0.0" y="320" width="343" height="110"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38C-xx-Daf">
-                                        <rect key="frame" x="85" y="538" width="173" height="49"/>
+                                        <rect key="frame" x="85" y="450" width="173" height="49"/>
                                         <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="173" id="AMN-6R-y9A"/>
@@ -1186,9 +1183,301 @@
             </objects>
             <point key="canvasLocation" x="-530" y="602"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="dVu-9g-bVp">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="J31-iR-NiM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h1i-x5-lTL"/>
+                        <viewControllerLayoutGuide type="bottom" id="h3u-bH-dr0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7zT-Rp-qzK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WTD-Ue-YWZ">
+                                <rect key="frame" x="37" y="28" width="300" height="123"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Lux is the unit of luminance and luminous emittance, measuring luminous flux per unit area. For best accuracy, user should measure lux value directly by a lux meter and enter the value in.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="27.149999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="27.149999618530273">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_luxmeter" translatesAutoresizingMaskIntoConstraints="NO" id="Jbn-fQ-ddP">
+                                <rect key="frame" x="67" y="159" width="239" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sNQ-qK-fWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1356" y="1352"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QUc-Ah-Xjk">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="ENf-Ep-xNo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BWm-FI-NNA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qvk-tt-ro3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OvR-Ke-plB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dialog_chla" translatesAutoresizingMaskIntoConstraints="NO" id="bn2-QS-1vK">
+                                <rect key="frame" x="67" y="159" width="240" height="128"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YS0-sp-ey1">
+                                <rect key="frame" x="27" y="57" width="325" height="81"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="2TN-GI-q73"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Chlorophyll is the green pigment in plants that allow them to create energy from light by photosynthesis.">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nVQ-hk-RiP">
+                                <rect key="frame" x="16" y="307" width="325" height="478"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">By measuring chlorophyll, you are indirectly measuring the amount of photosynthesizing plants found in a sample. In a lake water sample, these plants would be algae or phytoplankton.
+
+Chlorophyll a is a measure of the portion of the pigment that is still active; that is, the portion that was still actively respiring and photosynthesizing at the time of sampling.
+
+Therefore, the amount of chlorophyll a in a water sample can determine the amounts of algae and cyanobacteria in the water source.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">There are 2 ways to input Chl a Values:
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">1. Directly input after measuring Chl a value by yourself
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">2. Estimate Chl a value based on the measurement of Secchi Depth and Dissolved Oxygen
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YS0-sp-ey1" firstAttribute="top" secondItem="BWm-FI-NNA" secondAttribute="bottom" constant="60" id="1Zc-gU-6iH"/>
+                            <constraint firstItem="YS0-sp-ey1" firstAttribute="top" secondItem="BWm-FI-NNA" secondAttribute="bottom" constant="60" id="8fM-mr-92c"/>
+                            <constraint firstItem="YS0-sp-ey1" firstAttribute="leading" secondItem="OvR-Ke-plB" secondAttribute="leadingMargin" constant="29" id="Ftg-eN-L05"/>
+                            <constraint firstItem="bn2-QS-1vK" firstAttribute="centerX" secondItem="YS0-sp-ey1" secondAttribute="centerX" id="Q6V-Bp-tBF"/>
+                            <constraint firstItem="bn2-QS-1vK" firstAttribute="top" secondItem="YS0-sp-ey1" secondAttribute="bottom" constant="32" id="d8q-fW-AXp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YS0-sp-ey1" secondAttribute="trailing" constant="74" id="gcq-DU-Tcu"/>
+                            <constraint firstItem="bn2-QS-1vK" firstAttribute="leading" secondItem="OvR-Ke-plB" secondAttribute="leadingMargin" constant="53" id="pdu-Gi-iS5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="z6d-G9-HJg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ge-eT-8PN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-532" y="1352.473763118441"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VlN-c9-hbe">
+            <objects>
+                <viewController modalPresentationStyle="currentContext" id="JuW-u4-UC4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="03e-LR-TlA"/>
+                        <viewControllerLayoutGuide type="bottom" id="QTb-qv-z4j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qvc-KT-sUI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_secchi_disk" translatesAutoresizingMaskIntoConstraints="NO" id="VWE-MR-kva">
+                                <rect key="frame" x="67" y="180" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ks9-2G-5RS">
+                                <rect key="frame" x="16" y="28" width="343" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="It is possible to measure the total depth with a Secchi Disk. Lower the disk until it reaches the bottom of the water source.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="27.149999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="27.149999618530273">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69218195921985815" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rxO-2k-eiH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320.80000000000001" y="1351.5742128935533"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="F8M-hM-3eW">
+            <objects>
+                <viewController id="N4g-Bv-p2X" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="reb-nU-5zy"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Az-fF-Pmg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CHt-oH-LA0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C75-t3-l8A">
+                                <rect key="frame" x="16" y="28" width="162" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="You will need: A thermometer tied to a rope ">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="😎">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="AppleColorEmoji"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_thermo_vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a0c-j5-1r8">
+                                <rect key="frame" x="186" y="28" width="116" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbL-zX-MPw">
+                                <rect key="frame" x="16" y="183" width="343" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">How to use:  1. Put the thermometer into water and slowly lower it down  2. Wait for some time and then lift the rope up and record the temperature</string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_bottemp" translatesAutoresizingMaskIntoConstraints="NO" id="V34-Md-YaR">
+                                <rect key="frame" x="16" y="340" width="343" height="307"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmH-L1-Jrh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1144.8" y="1351.5742128935533"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="dialog_bottemp" width="473" height="310"/>
+        <image name="dialog_chla" width="428" height="317"/>
+        <image name="dialog_luxmeter" width="261" height="256"/>
+        <image name="dialog_secchi_disk" width="265" height="305"/>
+        <image name="dialog_thermo_vertical" width="75" height="438"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BtY-bl-UkL"/>
+        <segue reference="fEh-F6-fBi"/>
         <segue reference="Jj9-Nt-6g6"/>
     </inferredMetricsTieBreakers>
 </document>
