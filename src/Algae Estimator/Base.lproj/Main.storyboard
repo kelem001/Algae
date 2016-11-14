@@ -79,7 +79,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="DissolvedOxygenButton:" destination="g63-R2-dKY" eventType="touchUpInside" id="Dr2-hI-dkV"/>
+                                    <segue destination="48x-J1-xCc" kind="show" id="b97-ZB-9JJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secci Depth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNe-h0-Ofr">
@@ -113,7 +113,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="SecchiDepthButton:" destination="g63-R2-dKY" eventType="touchUpInside" id="nTD-lg-Xcf"/>
+                                    <segue destination="IRr-cc-ovh" kind="show" id="Clb-qs-KjM"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="%" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mFe-Rx-qFu">
@@ -154,6 +154,63 @@
             </objects>
             <point key="canvasLocation" x="-1607" y="-1433"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="zd2-dw-2If">
+            <objects>
+                <viewController id="gh1-Gv-aMm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KsY-hL-h1m"/>
+                        <viewControllerLayoutGuide type="bottom" id="A7q-C9-hAP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PQp-uD-Cgi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BWD-JL-Rcy">
+                                <rect key="frame" x="0.0" y="28" width="150" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="You will need:   Algae Torch">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_torch" translatesAutoresizingMaskIntoConstraints="NO" id="AXf-L4-9mr">
+                                <rect key="frame" x="67" y="114" width="228" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_direct" translatesAutoresizingMaskIntoConstraints="NO" id="SLp-dH-0Hk">
+                                <rect key="frame" x="63" y="496" width="255" height="163"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jbj-cg-yw4">
+                                <rect key="frame" x="8" y="213" width="359" height="275"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <mutableString key="content">This allows direct measurement at the water source, helping to reduce failures due to transportation of the sample to the lab  How to use:  1. Place the torch in the water and wait for analysis to complete  2. The values shown on the torch are your result  3. The torch can measure both total Chlorophyll a ( all types of algae ) and Cyano chlorophyll a ( blue-green algae )</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uzf-B8-3VE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4174" y="1646"/>
+        </scene>
         <!--Direct-->
         <scene sceneID="8vU-e4-lEx">
             <objects>
@@ -185,7 +242,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="CyanoChlButton:" destination="LLM-MP-znG" eventType="touchUpInside" id="YBg-yr-Pys"/>
+                                    <segue destination="gh1-Gv-aMm" kind="show" id="EXp-h7-NJG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Chl a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qz8-fJ-Ul7">
@@ -466,6 +523,124 @@
             </objects>
             <point key="canvasLocation" x="271" y="-1567"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Skm-2C-AoI">
+            <objects>
+                <viewController id="48x-J1-xCc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aLa-E6-bkA"/>
+                        <viewControllerLayoutGuide type="bottom" id="5qP-FK-0T2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GOa-Lo-2Zg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lhe-ZJ-fRg">
+                                <rect key="frame" x="0.0" y="28" width="194" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="You will need:  Dissolved Oxygen Meter or Oxygen test Strip">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test_strip" translatesAutoresizingMaskIntoConstraints="NO" id="bap-2J-URf">
+                                <rect key="frame" x="202" y="28" width="173" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tI0-Uz-0ND">
+                                <rect key="frame" x="0.0" y="156" width="375" height="191"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">How to use the meter:  1. Collect a water sample from different depths  2. Place the electrode into the sample container and gently stir  3. Once the display on the meter has settled on a number, this is your result</string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_do" translatesAutoresizingMaskIntoConstraints="NO" id="R5B-O4-zDD">
+                                <rect key="frame" x="0.0" y="355" width="375" height="272"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o4A-XY-dwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3414" y="1646"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ibR-9Y-aMX">
+            <objects>
+                <viewController id="IRr-cc-ovh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2jd-8u-rbN"/>
+                        <viewControllerLayoutGuide type="bottom" id="g1B-zE-pAS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jZH-NM-6jy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oT5-zm-F0d">
+                                <rect key="frame" x="16" y="20" width="183" height="201"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Cecchi depth is used to determine the turbidity  You will need:  SECCHI DISK  A gadget used to measure water transparency">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_secchi_disk" translatesAutoresizingMaskIntoConstraints="NO" id="W60-8R-nai">
+                                <rect key="frame" x="207" y="35" width="130" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bga-SY-U36">
+                                <rect key="frame" x="16" y="229" width="343" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">How to use:  1. Put the Cecchi disk slowly into the water until the disk is no longer visible  2. Measure the length of the line that is dipped into the water</string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_low_algae_count" translatesAutoresizingMaskIntoConstraints="NO" id="Fb7-fa-HR6">
+                                <rect key="frame" x="16" y="381" width="170" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_high_algae_count" translatesAutoresizingMaskIntoConstraints="NO" id="Pho-vd-pn4">
+                                <rect key="frame" x="187" y="381" width="172" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1hc-NF-jzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2719" y="1646"/>
+        </scene>
         <!--Direct-->
         <scene sceneID="erP-VF-PzD">
             <objects>
@@ -499,7 +674,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="po4ConButton:" destination="VVh-Hh-oeO" eventType="touchUpInside" id="b9y-N8-NVJ"/>
+                                    <segue destination="ff0-Ua-2pT" kind="show" id="J43-MG-uT5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQB-CI-n6R">
@@ -666,7 +841,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="PO4ConButton:" destination="Msz-d4-ZYG" eventType="touchUpInside" id="6oC-3i-e0w"/>
+                                    <segue destination="P1I-OY-ZQW" kind="show" id="UX7-iO-A1f"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="el4-zN-AwI">
@@ -678,6 +853,9 @@
                                 <state key="normal" title="?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="x6u-TA-bfD" kind="show" id="wOt-eo-0GD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFd-05-RhG">
                                 <rect key="frame" x="329" y="130" width="30" height="28"/>
@@ -728,7 +906,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ENf-Ep-xNo" kind="show" id="NlN-DF-z7D"/>
+                                    <segue destination="ENf-Ep-xNo" kind="show" id="ahI-70-AIm"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="°C" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I7P-11-wIS">
@@ -859,6 +1037,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z0e-Dx-GcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="580" y="585"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="alN-UO-CSL">
+            <objects>
+                <viewController id="ff0-Ua-2pT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T9C-Hb-qCb"/>
+                        <viewControllerLayoutGuide type="bottom" id="CBq-oZ-GAV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aq6-YO-60F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPa-fh-qN8">
+                                <rect key="frame" x="16" y="28" width="343" height="245"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Collection of bottom phosphate can be done using affordable PO4 text strips on the spot, but the test water has to come from the bottom  </string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Preparations:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.60152159685863871" green="0.13732243986724288" blue="0.12272324626866879" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">  a. A narrow-mouthed glass bottle containing less than 500 ml of water  b. A stopper that fits tight into the mouth of the bottle  c. Firmly attach a weight ( stone or heavy piece of metal ) to the lower part of the bottom so that the bottle will easily sink  d. Attach a string to the neck of the bottle.   e. Attach the stopper securely to the same piece of string, just above the opening of the bottle, at a distance equal to at least twice the length of the stopper</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_podirect" translatesAutoresizingMaskIntoConstraints="NO" id="b8B-Y2-Ad3">
+                                <rect key="frame" x="16" y="303" width="343" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Od-Mb-Ukc">
+                                <rect key="frame" x="16" y="443" width="343" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <mutableString key="content">Sampling procedure:  1. Put the stopper firmly in place to close the water sampler  2. lower the sampler into the water to the desired depth  3. Jerk the string sharply to pull the stopper out and open the sampler. It should now start filling with water, while air bubbles appear on the surface of the pond  4. When air bubbles no longer appear, carefully pull the full water sampler out of the pond</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ft-ot-0C5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1962" y="1646"/>
         </scene>
         <!--DATA-->
         <scene sceneID="xK2-ka-JHs">
@@ -1122,7 +1368,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MQT-Fk-fkL">
-                                <rect key="frame" x="16" y="84" width="343" height="499"/>
+                                <rect key="frame" x="16" y="40" width="343" height="587"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hit-Aq-npx">
                                         <rect key="frame" x="51.5" y="0.0" width="240" height="300"/>
@@ -1136,10 +1382,10 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H21-Pn-oXw">
-                                        <rect key="frame" x="0.0" y="320" width="343" height="110"/>
+                                        <rect key="frame" x="0.0" y="320" width="343" height="198"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38C-xx-Daf">
-                                        <rect key="frame" x="85" y="450" width="173" height="49"/>
+                                        <rect key="frame" x="85" y="538" width="173" height="49"/>
                                         <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="173" id="AMN-6R-y9A"/>
@@ -1184,6 +1430,119 @@
             <point key="canvasLocation" x="-530" y="602"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="h0R-Yd-mfL">
+            <objects>
+                <viewController id="P1I-OY-ZQW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ISq-ba-eXa"/>
+                        <viewControllerLayoutGuide type="bottom" id="hfK-MW-sVL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="52u-mE-E8K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kjy-wP-Bsg">
+                                <rect key="frame" x="16" y="28" width="343" height="619"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <mutableString key="content">Phosphorus is an important nutrient element. Many important molecules within a cell contain phosphorus.  ATPis an example of molecule that uses phosphorus. ATP is essential to all living organisms since it is used for energy. However, too much phosphorus in a system could cause an algae bloom. So to predict algae bloom we need to measure the phosphate concentration at the bottom.   </mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Two options for inputting PO4 concentration value:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.55628272251308908" green="0.033118862067834071" blue="0.086681654050357229" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">  1. Directly input after measuring phosphate value by yourself  2. Estimate phosphate concentration based on the condition of the examining lake</string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n52-Zz-gfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2687.1999999999998" y="1645.7271364317842"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8vm-s2-boE">
+            <objects>
+                <viewController id="x6u-TA-bfD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vOb-nL-2Dd"/>
+                        <viewControllerLayoutGuide type="bottom" id="i2j-hy-tWm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hwT-y9-55p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cd2-GH-mkN">
+                                <rect key="frame" x="16" y="28" width="137" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="You will need:  Thermometer">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cbe-1b-cVi">
+                                <rect key="frame" x="0.0" y="148" width="359" height="263"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">How to use:  1. Place the bulb of the thermometer under water, at a depth of about 15-20 cm  2. Wait a short time until the column comes to a standstill  3. Without lifting the thermometer out of the water, read the temperature</string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RxZ-Hz-Lsi">
+                                <rect key="frame" x="318" y="604" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_surtemp" translatesAutoresizingMaskIntoConstraints="NO" id="yZn-ox-FeB">
+                                <rect key="frame" x="16" y="397" width="343" height="237"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_thermometer" translatesAutoresizingMaskIntoConstraints="NO" id="fDr-2t-Kj3">
+                                <rect key="frame" x="161" y="28" width="175" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bv5-6w-9k1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1930" y="1646"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="dVu-9g-bVp">
             <objects>
                 <viewController modalPresentationStyle="overCurrentContext" id="J31-iR-NiM" sceneMemberID="viewController">
@@ -1195,8 +1554,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_luxmeter" translatesAutoresizingMaskIntoConstraints="NO" id="Jbn-fQ-ddP">
+                                <rect key="frame" x="68" y="248" width="239" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WTD-Ue-YWZ">
-                                <rect key="frame" x="37" y="28" width="300" height="123"/>
+                                <rect key="frame" x="41" y="28" width="292" height="193"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
@@ -1218,17 +1581,13 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_luxmeter" translatesAutoresizingMaskIntoConstraints="NO" id="Jbn-fQ-ddP">
-                                <rect key="frame" x="67" y="159" width="239" height="170"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNQ-qK-fWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1356" y="1352"/>
+            <point key="canvasLocation" x="-1226.4000000000001" y="1645.7271364317842"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QUc-Ah-Xjk">
@@ -1281,8 +1640,18 @@ Therefore, the amount of chlorophyll a in a water sample can determine the amoun
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
+                                    <fragment content="There are 2 ways to input Chl a Values:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.60152159685863871" green="0.13732243986724288" blue="0.12272324626866879" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
                                     <fragment>
-                                        <string key="content">There are 2 ways to input Chl a Values:
+                                        <string key="content" base64-UTF8="YES">
+Cg
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1357,7 +1726,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ge-eT-8PN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-532" y="1352.473763118441"/>
+            <point key="canvasLocation" x="-458" y="1646"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VlN-c9-hbe">
@@ -1403,7 +1772,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rxO-2k-eiH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="320.80000000000001" y="1351.5742128935533"/>
+            <point key="canvasLocation" x="367" y="1646"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="F8M-hM-3eW">
@@ -1432,7 +1801,7 @@ Cg
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_thermo_vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a0c-j5-1r8">
-                                <rect key="frame" x="186" y="28" width="116" height="101"/>
+                                <rect key="frame" x="186" y="28" width="173" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbL-zX-MPw">
@@ -1460,15 +1829,24 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmH-L1-Jrh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1144.8" y="1351.5742128935533"/>
+            <point key="canvasLocation" x="1144.8" y="1645.7271364317842"/>
         </scene>
     </scenes>
     <resources>
         <image name="dialog_bottemp" width="473" height="310"/>
         <image name="dialog_chla" width="428" height="317"/>
+        <image name="dialog_direct" width="150" height="112"/>
+        <image name="dialog_do" width="150" height="150"/>
+        <image name="dialog_high_algae_count" width="311" height="309"/>
+        <image name="dialog_low_algae_count" width="311" height="309"/>
         <image name="dialog_luxmeter" width="261" height="256"/>
+        <image name="dialog_podirect" width="320" height="233"/>
         <image name="dialog_secchi_disk" width="265" height="305"/>
+        <image name="dialog_surtemp" width="325" height="248"/>
         <image name="dialog_thermo_vertical" width="75" height="438"/>
+        <image name="dialog_thermometer" width="646" height="202"/>
+        <image name="dialog_torch" width="650" height="359"/>
+        <image name="test_strip" width="101" height="104"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="OqX-KC-8za"/>
