@@ -1418,19 +1418,13 @@ Cg
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C75-t3-l8A">
-                                <rect key="frame" x="16" y="28" width="162" height="101"/>
+                                <rect key="frame" x="16" y="28" width="162" height="153"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment content="You will need: A thermometer tied to a rope ">
                                         <attributes>
                                             <font key="NSFont" size="16" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="😎">
-                                        <attributes>
-                                            <font key="NSFont" size="16" name="AppleColorEmoji"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -1477,7 +1471,7 @@ Cg
         <image name="dialog_thermo_vertical" width="75" height="438"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fEh-F6-fBi"/>
+        <segue reference="OqX-KC-8za"/>
         <segue reference="Jj9-Nt-6g6"/>
     </inferredMetricsTieBreakers>
 </document>
