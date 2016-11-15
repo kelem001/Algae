@@ -29,6 +29,8 @@ class DataViewController: UIViewController {
     var chlaDataSet: Array<Float> = [Float]()
     var cyanoDataSet:Array<Float> = [Float]()
     
+    var logDate = Date()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -72,7 +74,8 @@ class DataViewController: UIViewController {
         
         chlaDataSet = calculation.getTotalChlaDataSet()
         cyanoDataSet = calculation.getCyanoChlaDataSet()
-
+        
+        logDate = datalog.value(forKey: "date") as! Date
     }
     
     override func didReceiveMemoryWarning() {
@@ -90,6 +93,7 @@ class DataViewController: UIViewController {
         else if segue.identifier == "dataSet" {
             let destinationVC = segue.destination as! DataSetTableViewController
             destinationVC.data = [chlaDataSet, cyanoDataSet]
+            destinationVC.logDate = logDate
         }
     }
     
