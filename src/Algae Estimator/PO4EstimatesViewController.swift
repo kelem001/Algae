@@ -108,6 +108,9 @@ class PO4EstimatesViewController: UIViewController {
             if logID != nil {
                 destinationVC.logID = logID
             }
+            destinationVC.validChl = (self.tabBarController?.viewControllers?[0] as! PO4ViewController).validChl!
+            // Estimate will always return valid PO4 level
+            destinationVC.validPO4 = true
         }
     }
     

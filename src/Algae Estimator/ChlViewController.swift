@@ -13,6 +13,7 @@ class ChlViewController: UIViewController {
     
     var dataEntryVals: [String:Float] = [:]
     var logID: NSManagedObjectID?
+    var validPO4: Bool?
     
     @IBOutlet weak var totalChlTextfield: UITextField!
     @IBOutlet weak var cyanoChlTextfield: UITextField!
@@ -58,6 +59,10 @@ class ChlViewController: UIViewController {
             if logID != nil {
                 dest.logID = logID
             }
+            if dataEntryVals["totalChl"] != nil && dataEntryVals["cyanoChl"] != nil && dataEntryVals["totalChl"]! >= 0.0 && dataEntryVals["totalChl"]! <= 300.0 && dataEntryVals["cyanoChl"]! >= 0.0 && dataEntryVals["cyanoChl"]! <= 300.0 {
+                dest.validChl = true
+            } else {dest.validChl = false}
+            dest.validPO4 = validPO4!
             
         }
     }

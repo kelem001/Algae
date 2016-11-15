@@ -11,6 +11,7 @@ import CoreData
 
 class ChlEstimateViewController: UIViewController {
     
+    
     var dataEntryVals: [String:Float] = [:]
     var logID: NSManagedObjectID?
     
@@ -65,6 +66,10 @@ class ChlEstimateViewController: UIViewController {
                 dest.logID = logID
             }
             
+            if dataEntryVals["secciDepth"] != nil && dataEntryVals["dissolvedOxygen"] != nil && dataEntryVals["secciDepth"]! >= 0.0 && dataEntryVals["secciDepth"]! <= 1.0 && dataEntryVals["dissolvedOxygen"]! >= 1.0 && dataEntryVals["dissolvedOxygen"]! <= 100.0 {
+                dest.validChl = true
+            } else {dest.validChl = false}
+            dest.validPO4 = (self.tabBarController?.viewControllers?[0] as! ChlViewController).validPO4!
         }
     }
     

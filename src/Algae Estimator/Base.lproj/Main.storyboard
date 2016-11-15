@@ -730,13 +730,12 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="SET"/>
                                 <connections>
-                                    <action selector="po4Set:" destination="Msz-d4-ZYG" eventType="touchUpInside" id="KvI-fS-FKS"/>
                                     <segue destination="pfQ-Nm-DuW" kind="show" identifier="po4TabBar" id="wlK-Nm-eFc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4M-kv-g4X">
                                 <rect key="frame" x="159.5" y="305" width="56" height="30"/>
-                                <color key="backgroundColor" red="0.021847909190000001" green="0.68221745469999995" blue="0.43763557759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.023529411764705882" green="0.68235294117647061" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="I4M-kv-g4X" secondAttribute="height" multiplier="28:15" id="XLZ-gB-OnK"/>
                                 </constraints>
@@ -756,7 +755,6 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="SET"/>
                                 <connections>
-                                    <action selector="po4Set:" destination="Msz-d4-ZYG" eventType="touchUpInside" id="4q0-gZ-Rex"/>
                                     <segue destination="sVE-A7-Rfj" kind="show" identifier="toChl" id="1CB-tV-8TF"/>
                                 </connections>
                             </button>
@@ -812,7 +810,9 @@
                     <tabBarItem key="tabBarItem" title="CALCULATE" id="9D3-kF-Mha"/>
                     <connections>
                         <outlet property="brightBox" destination="srQ-gs-WWi" id="Kd0-2h-cDq"/>
+                        <outlet property="chlSetButton" destination="Whi-hI-oGN" id="1d3-fu-QGB"/>
                         <outlet property="lakeDepthBox" destination="frl-KK-9X0" id="wd5-Sg-pDr"/>
+                        <outlet property="po4SetButton" destination="9hX-4V-Upd" id="LrP-As-d15"/>
                         <outlet property="tempBottom" destination="Iyi-pu-GYv" id="63Z-13-RgY"/>
                         <outlet property="tempSurface" destination="I7P-11-wIS" id="eOQ-De-Sdp"/>
                         <segue destination="WUF-mt-2Lv" kind="presentation" id="Hnb-9B-DrQ"/>
@@ -1354,6 +1354,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="BtY-bl-UkL"/>
-        <segue reference="Y2d-5x-27M"/>
+        <segue reference="Jj9-Nt-6g6"/>
     </inferredMetricsTieBreakers>
 </document>

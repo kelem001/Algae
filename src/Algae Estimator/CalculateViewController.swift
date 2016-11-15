@@ -76,9 +76,13 @@ class CalculateViewController: UIViewController {
     var logID: NSManagedObjectID?
     var logDate: NSDate?
     var startEdit: Bool?
+    var validPO4 = false
+    var validChl = false
         
     //All IBOUTLETS are properties, text boxes are UITextField and
     //UILabel is the results label
+    
+    @IBOutlet weak var po4SetButton: UIButton!
     
     @IBOutlet weak var tempSurface: UITextField!
     @IBOutlet weak var tempBottom: UITextField!
@@ -88,15 +92,10 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var brightBox: UITextField!
     //@IBOutlet weak var luxLabel: UILabel!
     
-    
-    @IBAction func po4Set(_ sender: UIButton) {
-        //performSegue(withIdentifier: "po4TabBar", sender: self)
-    }
-    
-    
     @IBOutlet weak var lakeDepthBox: UITextField!
     //@IBOutlet weak var pavLabel: UILabel!
 
+    @IBOutlet weak var chlSetButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -148,6 +147,22 @@ class CalculateViewController: UIViewController {
         }
         if dataEntryVals["depth"] != nil {
             lakeDepthBox.text = String(describing: dataEntryVals["depth"]!)
+        }
+        
+        print("po4SetButton \(validPO4)")
+        changeButtonColor(button: po4SetButton, changeColor: validPO4)
+        print("chlSetButton \(validChl)")
+        changeButtonColor(button: chlSetButton, changeColor: validChl)
+    }
+    
+    private func changeButtonColor(button: UIButton, changeColor: Bool) {
+        if changeColor {
+            button.backgroundColor = MyConstants.Colors.green
+            button.setTitle("\u{2713}", for: UIControlState.normal)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 40)
+        } else {
+            button.backgroundColor = UIColor.lightGray
+            button.setTitle("SET", for: UIControlState.normal)
         }
     }
     
@@ -299,6 +314,7 @@ class CalculateViewController: UIViewController {
             let destinationVC = tabbar.viewControllers?[0] as! PO4ViewController
             
             destinationVC.dataEntryVals = dataEntryVals
+            destinationVC.validChl = validChl
             if logID != nil {
                 destinationVC.logID = logID
             }
@@ -312,10 +328,14 @@ class CalculateViewController: UIViewController {
             
             destinationVC.dataEntryVals = dataEntryVals
             otherTabVC.dataEntryVals = dataEntryVals
+            
+            destinationVC.validPO4 = validPO4
+            
             if logID != nil {
                 destinationVC.logID = logID
                 otherTabVC.logID = logID
             }
+            
         } else if (segue.identifier == "toDataPage") {
             
             let date = NSDate()
@@ -375,8 +395,6 @@ class CalculateViewController: UIViewController {
         }
 
     }
-    
-    
-    
+
 }
 
