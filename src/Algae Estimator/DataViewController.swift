@@ -32,14 +32,11 @@ class DataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSLog("\(self.tabBarItem.badgeColor)")
-        
         // Retrieve Managed Context
         let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
         // Retrieve target datalog based on NSManagedObjectID
         let datalog = managedContext.object(with: self.id!)
-        
         
         var calculation: Calculations
         

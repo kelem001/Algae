@@ -38,12 +38,12 @@ class ChlEstimateViewController: UIViewController {
     }
     
     private func _updateDataEntryVals() {
-        if secciDepthTextfield.text != "" {
+        if secciDepthTextfield.text != "" && Float(secciDepthTextfield.text!) != nil {
             dataEntryVals["secciDepth"] = Float(secciDepthTextfield.text!)!
         } else {
             dataEntryVals["secciDepth"] = nil
         }
-        if dissolvedOxygenTextfield.text != "" {
+        if dissolvedOxygenTextfield.text != "" && Float(dissolvedOxygenTextfield.text!) != nil {
             dataEntryVals["dissolvedOxygen"] = Float(dissolvedOxygenTextfield.text!)!
         } else {
             dataEntryVals["dissolvedOxygen"] = nil
