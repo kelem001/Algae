@@ -312,9 +312,14 @@ class CalculateViewController: UIViewController {
             // Obtain destVC controller instance.
             let tabbar = segue.destination as! UITabBarController
             let destinationVC = tabbar.viewControllers?[0] as! PO4ViewController
+            let otherTabVC = tabbar.viewControllers?[1] as! PO4EstimatesViewController
             
             destinationVC.dataEntryVals = dataEntryVals
+            otherTabVC.dataEntryVals = dataEntryVals
+            
             destinationVC.validChl = validChl
+            otherTabVC.validChl = validChl
+            
             if logID != nil {
                 destinationVC.logID = logID
             }
@@ -330,6 +335,7 @@ class CalculateViewController: UIViewController {
             otherTabVC.dataEntryVals = dataEntryVals
             
             destinationVC.validPO4 = validPO4
+            otherTabVC.validPO4 = validPO4
             
             if logID != nil {
                 destinationVC.logID = logID
