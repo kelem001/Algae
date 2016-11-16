@@ -26,6 +26,9 @@ class DataViewController: UIViewController {
     @IBOutlet weak var cyanorLabel: UILabel!
     @IBOutlet weak var cyanokLabel: UILabel!
     
+    var chlaDataSet: Array<Float> = [Float]()
+    var cyanoDataSet: Array<Float> = [Float]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,7 +69,13 @@ class DataViewController: UIViewController {
         cyanonLabel.text = String(describing: calculation.N0)
         cyanorLabel.text = String(describing: calculation.getR02())
         cyanokLabel.text = String(describing: calculation.getK2())
-
+        
+        chlaDataSet = calculation.getTotalChlaDataSet()
+        cyanoDataSet = calculation.getCyanoChlaDataSet()
+                
+        let graphController = self.tabBarController?.viewControllers?[1] as! GraphViewController
+//        graphController.chlaDataSet = chlaDataSet
+//        graphController.cyanoDataSet = cyanoDataSet
     }
     
     override func didReceiveMemoryWarning() {
@@ -80,6 +89,9 @@ class DataViewController: UIViewController {
             let destinationVC = tabbar.viewControllers?[0] as! CalculateViewController
             destinationVC.logID = id
             destinationVC.startEdit = true
+        }
+        else if segue.identifier == "graph" {
+            
         }
     }
     
