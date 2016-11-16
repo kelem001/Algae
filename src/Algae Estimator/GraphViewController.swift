@@ -191,7 +191,7 @@ class GraphViewController: UIViewController, UIGestureRecognizerDelegate {
         
         generateXAxisValues()
         
-        let topFrame = CGRect(x: 0.0, y: 70.0, width: self.view.frame.width, height: self.view.frame.height)
+        let topFrame = CGRect(x: 0.0, y: 100.0, width: self.view.frame.width, height: self.view.frame.height - 200.0)
         
 //        let (topFrame, bottomFrame) = fullFrame.divided(atDistance: fullFrame.height / 2, from: .minYEdge)
         
@@ -217,10 +217,10 @@ class GraphViewController: UIViewController, UIGestureRecognizerDelegate {
         let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = "h a"
         
-        let xAxisValues = ChartAxisValuesGenerator.generateXAxisValuesWithChartPoints(points, minSegmentCount: 5, maxSegmentCount: 10, multiple: TimeInterval(60 * 60), axisValueGenerator: { ChartAxisValueDate(date: ChartAxisValueDate.dateFromScalar($0), formatter: timeFormatter, labelSettings: self.axisLabelSettings)
+        let xAxisValues = ChartAxisValuesGenerator.generateXAxisValuesWithChartPoints(points, minSegmentCount: 5, maxSegmentCount: 10, multiple: TimeInterval(60 * 1000), axisValueGenerator: { ChartAxisValueDate(date: ChartAxisValueDate.dateFromScalar($0), formatter: timeFormatter, labelSettings: self.axisLabelSettings)
         }, addPaddingSegmentIfEdge: false)
-        xAxisValues.first?.hidden = true
-        xAxisValues.last?.hidden = true
+        xAxisValues.first?.hidden = false
+        xAxisValues.last?.hidden = false
         
         self.xAxisValues = xAxisValues
     }
@@ -233,7 +233,7 @@ class GraphViewController: UIViewController, UIGestureRecognizerDelegate {
         let allPoints = glucosePoints + predictedGlucosePoints
         
         // TODO: The segment/multiple values are unit-specific
-        let yAxisValues = ChartAxisValuesGenerator.generateYAxisValuesWithChartPoints(allPoints, minSegmentCount: 2, maxSegmentCount: 4, multiple: 25, axisValueGenerator: { ChartAxisValueDouble($0, labelSettings: self.axisLabelSettings) }, addPaddingSegmentIfEdge: true)
+        let yAxisValues = ChartAxisValuesGenerator.generateYAxisValuesWithChartPoints(allPoints, minSegmentCount: 5, maxSegmentCount: 7, multiple: 10, axisValueGenerator: { ChartAxisValueDouble($0, labelSettings: self.axisLabelSettings) }, addPaddingSegmentIfEdge: true)
         
         let yAxisModel = ChartAxisModel(axisValues: yAxisValues, lineColor: axisLineColor)
         
