@@ -166,10 +166,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BWD-JL-Rcy">
-                                <rect key="frame" x="0.0" y="28" width="150" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_torch" translatesAutoresizingMaskIntoConstraints="NO" id="AXf-L4-9mr">
+                                <rect key="frame" x="67" y="114" width="228" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="7Jx-Kb-HDT"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="dialog_direct" translatesAutoresizingMaskIntoConstraints="NO" id="SLp-dH-0Hk">
+                                <rect key="frame" x="63" y="496" width="255" height="163"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbj-cg-yw4">
+                                <rect key="frame" x="8" y="213" width="359" height="275"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="275" id="hjD-vs-pFc"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">This allows direct measurement at the water source, helping to reduce failures due to transportation of the sample to the lab  How to use:  1. Place the torch in the water and wait for analysis to complete  2. The values shown on the torch are your result  3. The torch can measure both total Chlorophyll a ( all types of algae ) and Cyano chlorophyll a ( blue-green algae )</string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWD-JL-Rcy">
+                                <rect key="frame" x="16" y="28" width="150" height="78"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="QVN-kR-O0h"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="You will need:   Algae Torch">
                                         <attributes>
@@ -180,31 +208,21 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_torch" translatesAutoresizingMaskIntoConstraints="NO" id="AXf-L4-9mr">
-                                <rect key="frame" x="67" y="114" width="228" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_direct" translatesAutoresizingMaskIntoConstraints="NO" id="SLp-dH-0Hk">
-                                <rect key="frame" x="63" y="496" width="255" height="163"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jbj-cg-yw4">
-                                <rect key="frame" x="8" y="213" width="359" height="275"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <mutableString key="content">This allows direct measurement at the water source, helping to reduce failures due to transportation of the sample to the lab  How to use:  1. Place the torch in the water and wait for analysis to complete  2. The values shown on the torch are your result  3. The torch can measure both total Chlorophyll a ( all types of algae ) and Cyano chlorophyll a ( blue-green algae )</mutableString>
-                                        <attributes>
-                                            <font key="NSFont" size="16" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SLp-dH-0Hk" firstAttribute="top" secondItem="jbj-cg-yw4" secondAttribute="bottom" constant="8" symbolic="YES" id="4a8-Ev-Jbs"/>
+                            <constraint firstItem="jbj-cg-yw4" firstAttribute="leading" secondItem="PQp-uD-Cgi" secondAttribute="leadingMargin" constant="-8" id="7A8-D3-Bvm"/>
+                            <constraint firstItem="jbj-cg-yw4" firstAttribute="top" secondItem="AXf-L4-9mr" secondAttribute="bottom" constant="8" symbolic="YES" id="9Qs-Gr-Mws"/>
+                            <constraint firstItem="BWD-JL-Rcy" firstAttribute="leading" secondItem="PQp-uD-Cgi" secondAttribute="leadingMargin" id="FQG-gU-FAM"/>
+                            <constraint firstItem="AXf-L4-9mr" firstAttribute="top" secondItem="BWD-JL-Rcy" secondAttribute="bottom" constant="8" symbolic="YES" id="TXY-4D-6gh"/>
+                            <constraint firstItem="BWD-JL-Rcy" firstAttribute="top" secondItem="KsY-hL-h1m" secondAttribute="bottom" constant="8" symbolic="YES" id="ZhW-ff-QcI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AXf-L4-9mr" secondAttribute="trailing" constant="64" id="efB-bn-0zG"/>
+                            <constraint firstItem="AXf-L4-9mr" firstAttribute="top" secondItem="BWD-JL-Rcy" secondAttribute="bottom" constant="8" id="ib3-Db-NJG"/>
+                            <constraint firstItem="AXf-L4-9mr" firstAttribute="leading" secondItem="PQp-uD-Cgi" secondAttribute="leadingMargin" constant="51" id="nYL-v1-s7P"/>
+                            <constraint firstItem="jbj-cg-yw4" firstAttribute="centerX" secondItem="PQp-uD-Cgi" secondAttribute="centerX" id="qoH-UQ-TJp"/>
+                            <constraint firstItem="jbj-cg-yw4" firstAttribute="top" secondItem="PQp-uD-Cgi" secondAttribute="top" constant="213" id="w1H-tX-lTb"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uzf-B8-3VE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -535,28 +553,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lhe-ZJ-fRg">
-                                <rect key="frame" x="0.0" y="28" width="194" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="You will need:  Dissolved Oxygen Meter or Oxygen test Strip">
-                                        <attributes>
-                                            <font key="NSFont" size="16" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test_strip" translatesAutoresizingMaskIntoConstraints="NO" id="bap-2J-URf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_strip" translatesAutoresizingMaskIntoConstraints="NO" id="bap-2J-URf">
                                 <rect key="frame" x="202" y="28" width="173" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Pc2-e9-H9v"/>
+                                    <constraint firstAttribute="width" constant="173" id="vSA-i7-GwH"/>
+                                </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tI0-Uz-0ND">
-                                <rect key="frame" x="0.0" y="156" width="375" height="191"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tI0-Uz-0ND">
+                                <rect key="frame" x="16" y="156" width="343" height="191"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="191" id="7pb-R0-xeQ"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">How to use the meter:  1. Collect a water sample from different depths  2. Place the electrode into the sample container and gently stir  3. Once the display on the meter has settled on a number, this is your result</string>
@@ -568,17 +577,45 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_do" translatesAutoresizingMaskIntoConstraints="NO" id="R5B-O4-zDD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_do" translatesAutoresizingMaskIntoConstraints="NO" id="R5B-O4-zDD">
                                 <rect key="frame" x="0.0" y="355" width="375" height="272"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhe-ZJ-fRg">
+                                <rect key="frame" x="16" y="28" width="194" height="99"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="You will need:  Dissolved Oxygen Meter or Oxygen test Strip">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tI0-Uz-0ND" firstAttribute="top" secondItem="Lhe-ZJ-fRg" secondAttribute="bottom" constant="29" id="3Hu-Ng-Ex6"/>
+                            <constraint firstItem="R5B-O4-zDD" firstAttribute="trailing" secondItem="bap-2J-URf" secondAttribute="trailing" id="45F-g4-zpd"/>
+                            <constraint firstItem="tI0-Uz-0ND" firstAttribute="top" secondItem="bap-2J-URf" secondAttribute="bottom" constant="8" symbolic="YES" id="7vJ-OH-iwb"/>
+                            <constraint firstItem="bap-2J-URf" firstAttribute="top" secondItem="aLa-E6-bkA" secondAttribute="bottom" constant="8" symbolic="YES" id="GLa-2e-jq6"/>
+                            <constraint firstItem="bap-2J-URf" firstAttribute="leading" secondItem="Lhe-ZJ-fRg" secondAttribute="trailing" constant="-8" id="JY1-w0-LoL"/>
+                            <constraint firstItem="Lhe-ZJ-fRg" firstAttribute="leading" secondItem="GOa-Lo-2Zg" secondAttribute="leading" constant="16" id="Viy-SM-3Bq"/>
+                            <constraint firstAttribute="trailing" secondItem="bap-2J-URf" secondAttribute="trailing" id="YR4-La-1hh"/>
+                            <constraint firstItem="bap-2J-URf" firstAttribute="top" secondItem="Lhe-ZJ-fRg" secondAttribute="top" id="cRl-Or-RSC"/>
+                            <constraint firstItem="bap-2J-URf" firstAttribute="leading" secondItem="Lhe-ZJ-fRg" secondAttribute="trailing" constant="-8" id="dWT-gH-SfT"/>
+                            <constraint firstItem="bap-2J-URf" firstAttribute="trailing" secondItem="tI0-Uz-0ND" secondAttribute="trailing" constant="16" id="imB-qf-NOY"/>
+                            <constraint firstItem="Lhe-ZJ-fRg" firstAttribute="leading" secondItem="tI0-Uz-0ND" secondAttribute="leading" id="kKj-0v-Cdo"/>
+                            <constraint firstItem="5qP-FK-0T2" firstAttribute="top" secondItem="R5B-O4-zDD" secondAttribute="bottom" constant="40" id="kl5-WY-bDA"/>
+                            <constraint firstItem="R5B-O4-zDD" firstAttribute="centerX" secondItem="tI0-Uz-0ND" secondAttribute="centerX" id="kve-cd-8LY"/>
+                            <constraint firstItem="R5B-O4-zDD" firstAttribute="top" secondItem="tI0-Uz-0ND" secondAttribute="bottom" constant="8" symbolic="YES" id="raq-op-NhU"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4A-XY-dwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3414" y="1646"/>
+            <point key="canvasLocation" x="-3415.1999999999998" y="1645.7271364317842"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ibR-9Y-aMX">
@@ -592,7 +629,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oT5-zm-F0d">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oT5-zm-F0d">
                                 <rect key="frame" x="16" y="20" width="183" height="201"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -610,7 +647,7 @@
                                 <rect key="frame" x="207" y="35" width="130" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bga-SY-U36">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bga-SY-U36">
                                 <rect key="frame" x="16" y="229" width="343" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1050,7 +1087,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPa-fh-qN8">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPa-fh-qN8">
                                 <rect key="frame" x="16" y="28" width="343" height="245"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1070,7 +1107,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">  a. A narrow-mouthed glass bottle containing less than 500 ml of water  b. A stopper that fits tight into the mouth of the bottle  c. Firmly attach a weight ( stone or heavy piece of metal ) to the lower part of the bottom so that the bottle will easily sink  d. Attach a string to the neck of the bottle.   e. Attach the stopper securely to the same piece of string, just above the opening of the bottle, at a distance equal to at least twice the length of the stopper</mutableString>
+                                        <string key="content">  a. A narrow-mouthed glass bottle containing less than 500 ml of water  b. A stopper that fits tight into the mouth of the bottle  c. Firmly attach a weight ( stone or heavy piece of metal ) to the lower part of the bottom so that the bottle will easily sink  d. Attach a string to the neck of the bottle.   e. Attach the stopper securely to the same piece of string, just above the opening of the bottle, at a distance equal to at least twice the length of the stopper</string>
                                         <attributes>
                                             <font key="NSFont" size="16" name="Helvetica"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -1083,13 +1120,13 @@
                                 <rect key="frame" x="16" y="303" width="343" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Od-Mb-Ukc">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Od-Mb-Ukc">
                                 <rect key="frame" x="16" y="443" width="343" height="204"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <mutableString key="content">Sampling procedure:  1. Put the stopper firmly in place to close the water sampler  2. lower the sampler into the water to the desired depth  3. Jerk the string sharply to pull the stopper out and open the sampler. It should now start filling with water, while air bubbles appear on the surface of the pond  4. When air bubbles no longer appear, carefully pull the full water sampler out of the pond</mutableString>
+                                        <string key="content">Sampling procedure:  1. Put the stopper firmly in place to close the water sampler  2. lower the sampler into the water to the desired depth  3. Jerk the string sharply to pull the stopper out and open the sampler. It should now start filling with water, while air bubbles appear on the surface of the pond  4. When air bubbles no longer appear, carefully pull the full water sampler out of the pond</string>
                                         <attributes>
                                             <font key="NSFont" size="16" name="Helvetica"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -1441,13 +1478,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kjy-wP-Bsg">
-                                <rect key="frame" x="16" y="28" width="343" height="619"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjy-wP-Bsg">
+                                <rect key="frame" x="16" y="58" width="343" height="619"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <mutableString key="content">Phosphorus is an important nutrient element. Many important molecules within a cell contain phosphorus.  ATPis an example of molecule that uses phosphorus. ATP is essential to all living organisms since it is used for energy. However, too much phosphorus in a system could cause an algae bloom. So to predict algae bloom we need to measure the phosphate concentration at the bottom.   </mutableString>
+                                        <string key="content">Phosphorus is an important nutrient element. Many important molecules within a cell contain phosphorus.  ATPis an example of molecule that uses phosphorus. ATP is essential to all living organisms since it is used for energy. However, too much phosphorus in a system could cause an algae bloom. So to predict algae bloom we need to measure the phosphate concentration at the bottom.   </string>
                                         <attributes>
                                             <font key="NSFont" size="16" name="Helvetica"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -1490,10 +1527,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cd2-GH-mkN">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cd2-GH-mkN">
                                 <rect key="frame" x="16" y="28" width="137" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="i9D-7Z-dwc"/>
+                                    <constraint firstAttribute="width" constant="137" id="mQr-wW-bBE"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="You will need:  Thermometer">
                                         <attributes>
@@ -1504,10 +1544,27 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cbe-1b-cVi">
-                                <rect key="frame" x="0.0" y="148" width="359" height="263"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RxZ-Hz-Lsi">
+                                <rect key="frame" x="318" y="604" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_surtemp" translatesAutoresizingMaskIntoConstraints="NO" id="yZn-ox-FeB">
+                                <rect key="frame" x="16" y="397" width="343" height="237"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="237" id="ury-8x-7hs"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dialog_thermometer" translatesAutoresizingMaskIntoConstraints="NO" id="fDr-2t-Kj3">
+                                <rect key="frame" x="184" y="28" width="175" height="112"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbe-1b-cVi">
+                                <rect key="frame" x="17" y="148" width="342" height="263"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="263" id="bLJ-vV-grF"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">How to use:  1. Place the bulb of the thermometer under water, at a depth of about 15-20 cm  2. Wait a short time until the column comes to a standstill  3. Without lifting the thermometer out of the water, read the temperature</string>
@@ -1519,28 +1576,28 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RxZ-Hz-Lsi">
-                                <rect key="frame" x="318" y="604" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_surtemp" translatesAutoresizingMaskIntoConstraints="NO" id="yZn-ox-FeB">
-                                <rect key="frame" x="16" y="397" width="343" height="237"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_thermometer" translatesAutoresizingMaskIntoConstraints="NO" id="fDr-2t-Kj3">
-                                <rect key="frame" x="161" y="28" width="175" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cbe-1b-cVi" firstAttribute="top" secondItem="fDr-2t-Kj3" secondAttribute="bottom" constant="8" symbolic="YES" id="0mn-Xg-smb"/>
+                            <constraint firstItem="cd2-GH-mkN" firstAttribute="leading" secondItem="hwT-y9-55p" secondAttribute="leadingMargin" id="3PW-Xi-JRd"/>
+                            <constraint firstItem="fDr-2t-Kj3" firstAttribute="leading" secondItem="cd2-GH-mkN" secondAttribute="trailing" constant="8" symbolic="YES" id="AaK-iB-QvS"/>
+                            <constraint firstItem="fDr-2t-Kj3" firstAttribute="top" secondItem="cd2-GH-mkN" secondAttribute="top" id="AzQ-QP-fYP"/>
+                            <constraint firstItem="Cbe-1b-cVi" firstAttribute="trailing" secondItem="yZn-ox-FeB" secondAttribute="trailing" id="JF2-Gu-84e"/>
+                            <constraint firstItem="yZn-ox-FeB" firstAttribute="bottom" secondItem="RxZ-Hz-Lsi" secondAttribute="bottom" id="L4G-dO-7MG"/>
+                            <constraint firstItem="Cbe-1b-cVi" firstAttribute="top" secondItem="cd2-GH-mkN" secondAttribute="bottom" constant="39" id="Nia-yz-S5r"/>
+                            <constraint firstItem="Cbe-1b-cVi" firstAttribute="leading" secondItem="hwT-y9-55p" secondAttribute="leading" id="Oih-yg-Rzv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fDr-2t-Kj3" secondAttribute="trailing" constant="23" id="ast-pe-Q77"/>
+                            <constraint firstItem="cd2-GH-mkN" firstAttribute="top" secondItem="vOb-nL-2Dd" secondAttribute="bottom" constant="8" symbolic="YES" id="mB8-u7-2jp"/>
+                            <constraint firstItem="Cbe-1b-cVi" firstAttribute="trailing" secondItem="hwT-y9-55p" secondAttribute="trailingMargin" id="q3g-eN-6zf"/>
+                            <constraint firstItem="i2j-hy-tWm" firstAttribute="top" secondItem="yZn-ox-FeB" secondAttribute="bottom" constant="33" id="rDz-q4-OGe"/>
+                            <constraint firstItem="cd2-GH-mkN" firstAttribute="leading" secondItem="yZn-ox-FeB" secondAttribute="leading" id="xjf-XG-TBs"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bv5-6w-9k1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1930" y="1646"/>
+            <point key="canvasLocation" x="-1930.4000000000001" y="1645.7271364317842"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dVu-9g-bVp">
@@ -1558,8 +1615,8 @@
                                 <rect key="frame" x="68" y="248" width="239" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WTD-Ue-YWZ">
-                                <rect key="frame" x="41" y="28" width="292" height="193"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTD-Ue-YWZ">
+                                <rect key="frame" x="41" y="60" width="292" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
@@ -1581,6 +1638,11 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HQH-r2-RWF">
+                                <rect key="frame" x="53" y="426" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1601,15 +1663,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dialog_chla" translatesAutoresizingMaskIntoConstraints="NO" id="bn2-QS-1vK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_chla" translatesAutoresizingMaskIntoConstraints="NO" id="bn2-QS-1vK">
                                 <rect key="frame" x="67" y="159" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="AFZ-aV-kZR"/>
+                                </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YS0-sp-ey1">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YS0-sp-ey1">
                                 <rect key="frame" x="27" y="57" width="325" height="81"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="81" id="2TN-GI-q73"/>
-                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Chlorophyll is the green pigment in plants that allow them to create energy from light by photosynthesis.">
                                         <attributes>
@@ -1619,10 +1681,12 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nVQ-hk-RiP">
-                                <rect key="frame" x="16" y="307" width="325" height="478"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVQ-hk-RiP">
+                                <rect key="frame" x="18" y="295" width="343" height="372"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="372" id="G3p-7C-qcI"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">By measuring chlorophyll, you are indirectly measuring the amount of photosynthesizing plants found in a sample. In a lake water sample, these plants would be algae or phytoplankton.
@@ -1713,20 +1777,23 @@ Cg
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YS0-sp-ey1" firstAttribute="top" secondItem="BWm-FI-NNA" secondAttribute="bottom" constant="60" id="1Zc-gU-6iH"/>
-                            <constraint firstItem="YS0-sp-ey1" firstAttribute="top" secondItem="BWm-FI-NNA" secondAttribute="bottom" constant="60" id="8fM-mr-92c"/>
-                            <constraint firstItem="YS0-sp-ey1" firstAttribute="leading" secondItem="OvR-Ke-plB" secondAttribute="leadingMargin" constant="29" id="Ftg-eN-L05"/>
-                            <constraint firstItem="bn2-QS-1vK" firstAttribute="centerX" secondItem="YS0-sp-ey1" secondAttribute="centerX" id="Q6V-Bp-tBF"/>
-                            <constraint firstItem="bn2-QS-1vK" firstAttribute="top" secondItem="YS0-sp-ey1" secondAttribute="bottom" constant="32" id="d8q-fW-AXp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YS0-sp-ey1" secondAttribute="trailing" constant="74" id="gcq-DU-Tcu"/>
-                            <constraint firstItem="bn2-QS-1vK" firstAttribute="leading" secondItem="OvR-Ke-plB" secondAttribute="leadingMargin" constant="53" id="pdu-Gi-iS5"/>
+                            <constraint firstItem="nVQ-hk-RiP" firstAttribute="bottom" secondItem="Qvk-tt-ro3" secondAttribute="top" id="6pH-r8-wQS"/>
+                            <constraint firstItem="bn2-QS-1vK" firstAttribute="centerX" secondItem="OvR-Ke-plB" secondAttribute="centerX" id="9xo-nL-C1I"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nVQ-hk-RiP" secondAttribute="trailing" constant="-2" id="CNy-Rg-wJd"/>
+                            <constraint firstItem="nVQ-hk-RiP" firstAttribute="top" secondItem="bn2-QS-1vK" secondAttribute="bottom" constant="8" symbolic="YES" id="Fpj-s2-PQS"/>
+                            <constraint firstItem="nVQ-hk-RiP" firstAttribute="leading" secondItem="OvR-Ke-plB" secondAttribute="leadingMargin" constant="2" id="Ijr-rH-w78"/>
+                            <constraint firstItem="YS0-sp-ey1" firstAttribute="leading" secondItem="OvR-Ke-plB" secondAttribute="leadingMargin" constant="11" id="Inz-Cw-vke"/>
+                            <constraint firstItem="nVQ-hk-RiP" firstAttribute="centerX" secondItem="YS0-sp-ey1" secondAttribute="centerX" id="Srw-Wc-SI0"/>
+                            <constraint firstItem="bn2-QS-1vK" firstAttribute="top" secondItem="YS0-sp-ey1" secondAttribute="bottom" constant="21" id="bYG-Dv-0pt"/>
+                            <constraint firstItem="YS0-sp-ey1" firstAttribute="top" secondItem="BWm-FI-NNA" secondAttribute="bottom" constant="37" id="hGn-TX-tyJ"/>
+                            <constraint firstItem="bn2-QS-1vK" firstAttribute="leading" secondItem="OvR-Ke-plB" secondAttribute="leadingMargin" constant="51" id="o14-dM-lhW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="z6d-G9-HJg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ge-eT-8PN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-458" y="1646"/>
+            <point key="canvasLocation" x="-458.39999999999998" y="1645.7271364317842"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VlN-c9-hbe">
@@ -1740,13 +1807,14 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_secchi_disk" translatesAutoresizingMaskIntoConstraints="NO" id="VWE-MR-kva">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_secchi_disk" translatesAutoresizingMaskIntoConstraints="NO" id="VWE-MR-kva">
                                 <rect key="frame" x="67" y="180" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="6jg-xO-Uul"/>
+                                </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ks9-2G-5RS">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ks9-2G-5RS">
                                 <rect key="frame" x="16" y="28" width="343" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment content="It is possible to measure the total depth with a Secchi Disk. Lower the disk until it reaches the bottom of the water source.">
@@ -1767,7 +1835,16 @@ Cg
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69218195921985815" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="QTb-qv-z4j" firstAttribute="top" secondItem="VWE-MR-kva" secondAttribute="bottom" constant="359" id="Dvg-zP-Q2Q"/>
+                            <constraint firstItem="VWE-MR-kva" firstAttribute="top" secondItem="Ks9-2G-5RS" secondAttribute="bottom" constant="36" id="MLV-dP-ggD"/>
+                            <constraint firstItem="Ks9-2G-5RS" firstAttribute="top" secondItem="03e-LR-TlA" secondAttribute="bottom" constant="8" symbolic="YES" id="Njp-hW-qWP"/>
+                            <constraint firstItem="Ks9-2G-5RS" firstAttribute="leading" secondItem="Qvc-KT-sUI" secondAttribute="leadingMargin" id="OgD-uT-xnM"/>
+                            <constraint firstItem="VWE-MR-kva" firstAttribute="leading" secondItem="Qvc-KT-sUI" secondAttribute="leadingMargin" constant="51" id="fS3-hr-PBe"/>
+                            <constraint firstItem="VWE-MR-kva" firstAttribute="centerX" secondItem="Ks9-2G-5RS" secondAttribute="centerX" id="kem-xi-ZYW"/>
+                            <constraint firstItem="VWE-MR-kva" firstAttribute="centerX" secondItem="Qvc-KT-sUI" secondAttribute="centerX" id="xC0-Fh-KXq"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rxO-2k-eiH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1786,10 +1863,13 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C75-t3-l8A">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C75-t3-l8A">
                                 <rect key="frame" x="16" y="28" width="162" height="153"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="SwJ-sp-8CY"/>
+                                    <constraint firstAttribute="height" constant="153" id="mT0-7T-g9A"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="You will need: A thermometer tied to a rope ">
                                         <attributes>
@@ -1800,13 +1880,11 @@ Cg
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_thermo_vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a0c-j5-1r8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_thermo_vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a0c-j5-1r8">
                                 <rect key="frame" x="186" y="28" width="173" height="147"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbL-zX-MPw">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbL-zX-MPw">
                                 <rect key="frame" x="16" y="183" width="343" height="189"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -1819,12 +1897,29 @@ Cg
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_bottemp" translatesAutoresizingMaskIntoConstraints="NO" id="V34-Md-YaR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_bottemp" translatesAutoresizingMaskIntoConstraints="NO" id="V34-Md-YaR">
                                 <rect key="frame" x="16" y="340" width="343" height="307"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="307" id="c5l-90-DaI"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="V34-Md-YaR" secondAttribute="bottom" constant="20" symbolic="YES" id="2Op-F7-fHY"/>
+                            <constraint firstItem="C75-t3-l8A" firstAttribute="leading" secondItem="CHt-oH-LA0" secondAttribute="leadingMargin" id="3f7-zb-dqo"/>
+                            <constraint firstItem="rbL-zX-MPw" firstAttribute="trailing" secondItem="a0c-j5-1r8" secondAttribute="trailing" id="84R-57-Eck"/>
+                            <constraint firstItem="C75-t3-l8A" firstAttribute="leading" secondItem="rbL-zX-MPw" secondAttribute="leading" id="9eQ-g0-Ah9"/>
+                            <constraint firstItem="rbL-zX-MPw" firstAttribute="trailing" secondItem="V34-Md-YaR" secondAttribute="trailing" id="DM5-iL-gsd"/>
+                            <constraint firstItem="rbL-zX-MPw" firstAttribute="top" secondItem="a0c-j5-1r8" secondAttribute="bottom" constant="8" symbolic="YES" id="HIT-dZ-4qL"/>
+                            <constraint firstItem="rbL-zX-MPw" firstAttribute="top" secondItem="C75-t3-l8A" secondAttribute="bottom" constant="2" id="I31-PX-mAl"/>
+                            <constraint firstItem="rbL-zX-MPw" firstAttribute="trailing" secondItem="CHt-oH-LA0" secondAttribute="trailingMargin" id="IdR-KE-JbE"/>
+                            <constraint firstItem="a0c-j5-1r8" firstAttribute="leading" secondItem="C75-t3-l8A" secondAttribute="trailing" constant="8" symbolic="YES" id="ZJa-n8-peo"/>
+                            <constraint firstItem="8Az-fF-Pmg" firstAttribute="top" secondItem="rbL-zX-MPw" secondAttribute="bottom" constant="295" id="jFx-yk-FZT"/>
+                            <constraint firstItem="C75-t3-l8A" firstAttribute="top" secondItem="a0c-j5-1r8" secondAttribute="top" id="mqO-Xg-68A"/>
+                            <constraint firstItem="C75-t3-l8A" firstAttribute="leading" secondItem="V34-Md-YaR" secondAttribute="leading" id="xMR-DA-9Od"/>
+                            <constraint firstItem="C75-t3-l8A" firstAttribute="top" secondItem="reb-nU-5zy" secondAttribute="bottom" constant="8" symbolic="YES" id="zMU-T1-aJr"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmH-L1-Jrh" userLabel="First Responder" sceneMemberID="firstResponder"/>
