@@ -11,8 +11,10 @@ import CoreData
 
 class ChlEstimateViewController: UIViewController {
     
+    
     var dataEntryVals: [String:Float] = [:]
     var logID: NSManagedObjectID?
+    var validPO4: Bool?
     
     @IBOutlet weak var dissolvedOxygenTextfield: UITextField!
     @IBOutlet weak var secciDepthTextfield: UITextField!
@@ -65,6 +67,10 @@ class ChlEstimateViewController: UIViewController {
                 dest.logID = logID
             }
             
+            if dataEntryVals["secciDepth"] != nil && dataEntryVals["dissolvedOxygen"] != nil && dataEntryVals["secciDepth"]! >= 0.0 && dataEntryVals["secciDepth"]! <= 1.0 && dataEntryVals["dissolvedOxygen"]! >= 1.0 && dataEntryVals["dissolvedOxygen"]! <= 100.0 {
+                dest.validChl = true
+            } else {dest.validChl = false}
+            dest.validPO4 = validPO4!
         }
     }
     
