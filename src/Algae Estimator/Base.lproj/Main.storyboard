@@ -1180,11 +1180,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="clY-HO-CpC">
-                                <rect key="frame" x="0.0" y="49" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="618" id="qzA-Rz-aXF"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="9Gi-aY-MIe" style="IBUITableViewCellStyleDefault" id="ius-sl-xAD" customClass="DataLogTableViewCell" customModule="Algae_Estimator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -1217,7 +1214,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.28107216619999997" green="0.30745128989999998" blue="0.57800356220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="clY-HO-CpC" firstAttribute="bottom" secondItem="3Wk-vM-q35" secondAttribute="top" id="GR6-9Z-25d"/>
+                            <constraint firstItem="clY-HO-CpC" firstAttribute="top" secondItem="kwj-Ki-ANP" secondAttribute="top" id="DVl-4H-BaW"/>
+                            <constraint firstAttribute="bottom" secondItem="clY-HO-CpC" secondAttribute="bottom" id="E7T-WH-RKP"/>
                             <constraint firstItem="clY-HO-CpC" firstAttribute="leading" secondItem="kwj-Ki-ANP" secondAttribute="leading" id="amz-ja-PMW"/>
                             <constraint firstAttribute="trailing" secondItem="clY-HO-CpC" secondAttribute="trailing" id="krg-s4-Ss3"/>
                         </constraints>
@@ -1246,9 +1244,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mrC-tY-40R">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="667" id="7RR-KV-VpX"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell2" textLabel="dTW-XF-D4R" style="IBUITableViewCellStyleDefault" id="T1u-ks-J2X" customClass="DataLog2TableViewCell" customModule="Algae_Estimator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -1283,6 +1278,7 @@
                         <constraints>
                             <constraint firstItem="mrC-tY-40R" firstAttribute="leading" secondItem="4Gk-ht-MGn" secondAttribute="leading" id="BET-YX-j2R"/>
                             <constraint firstAttribute="trailing" secondItem="mrC-tY-40R" secondAttribute="trailing" id="Mb6-UI-aBl"/>
+                            <constraint firstItem="mrC-tY-40R" firstAttribute="top" secondItem="4Gk-ht-MGn" secondAttribute="top" id="ayy-XR-XMH"/>
                             <constraint firstAttribute="bottom" secondItem="mrC-tY-40R" secondAttribute="bottom" id="mvp-36-reS"/>
                         </constraints>
                     </view>
@@ -1353,7 +1349,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Y2d-5x-27M"/>
         <segue reference="BtY-bl-UkL"/>
-        <segue reference="Jj9-Nt-6g6"/>
     </inferredMetricsTieBreakers>
 </document>

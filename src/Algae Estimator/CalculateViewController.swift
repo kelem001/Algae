@@ -149,9 +149,7 @@ class CalculateViewController: UIViewController {
             lakeDepthBox.text = String(describing: dataEntryVals["depth"]!)
         }
         
-        print("po4SetButton \(validPO4)")
         changeButtonColor(button: po4SetButton, changeColor: validPO4)
-        print("chlSetButton \(validChl)")
         changeButtonColor(button: chlSetButton, changeColor: validChl)
     }
     
