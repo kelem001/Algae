@@ -13,6 +13,8 @@ class DataSetTableViewController: UITableViewController {
     
     var data: Array<Array<Float>> = []
     
+    var logDate = Date()
+    
     let headers = ["Total Chl a", "Cyano Chl a"]
     
     let width = Int(UIScreen.main.bounds.width)
@@ -20,6 +22,13 @@ class DataSetTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.backgroundColor = UIColor(red:0.28, green:0.31, blue:0.58, alpha:1.0)
+        
+        let dateFormatter = DateFormatter()
+        let hourFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        hourFormatter.dateFormat = "HH:mm:ss"
+        
+        self.title = "\(dateFormatter.string(from: logDate)) \(hourFormatter.string(from: logDate))"
     }
 
     override func viewDidLoad() {
