@@ -34,6 +34,11 @@ class DataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+        
+        let rightButton =  UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector (tapped))
+        parent?.navigationItem.rightBarButtonItem = rightButton
+        
         // Retrieve Managed Context
         let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
@@ -78,12 +83,15 @@ class DataViewController: UIViewController {
         logDate = datalog.value(forKey: "date") as! Date
     }
     
+    func tapped(sender: AnyObject?) {
+        performSegue(withIdentifier: "editLog", sender: sender)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editLog" {
             let tabbar = segue.destination as! UITabBarController
             let destinationVC = tabbar.viewControllers?[0] as! CalculateViewController
