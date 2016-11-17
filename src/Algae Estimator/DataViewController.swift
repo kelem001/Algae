@@ -97,6 +97,8 @@ class DataViewController: UIViewController {
             let destinationVC = tabbar.viewControllers?[0] as! CalculateViewController
             destinationVC.logID = id
             destinationVC.startEdit = true
+            destinationVC.validPO4 = true
+            destinationVC.validChl = true
         }
         else if segue.identifier == "dataSet" {
             let destinationVC = segue.destination as! DataSetTableViewController
