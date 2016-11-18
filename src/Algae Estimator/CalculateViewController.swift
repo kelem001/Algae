@@ -103,6 +103,7 @@ class CalculateViewController: UIViewController {
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         
+        
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
         //tap.cancelsTouchesInView = false
         
@@ -112,6 +113,18 @@ class CalculateViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
+        // If current instance of CalculateViewController isnt only view controller then make it the olny one
+        if (navigationController?.viewControllers.count)! > 1 {
+            
+            // The user does not see the hiding and showing of the navbar, but it is necessary to update it. Without it the nabvar will show non-functional back buttons
+            navigationController?.isNavigationBarHidden = true
+            
+            // Make a new UIViewController Array and add only current instance of CalculateViewController and replace original array
+            navigationController?.viewControllers = [(navigationController?.topViewController)!]
+            
+            navigationController?.isNavigationBarHidden = false
+        }
+
         if self.logID != nil && startEdit! {
             // Retrieve Managed Context
             let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -151,6 +164,7 @@ class CalculateViewController: UIViewController {
         
         changeButtonColor(button: po4SetButton, changeColor: validPO4)
         changeButtonColor(button: chlSetButton, changeColor: validChl)
+        
     }
     
     private func changeButtonColor(button: UIButton, changeColor: Bool) {

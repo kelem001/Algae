@@ -21,7 +21,7 @@ class DataSetTableViewController: UITableViewController {
     let height: Int = 44 // Default cell height
     
     override func viewWillAppear(_ animated: Bool) {
-        tableView.backgroundColor = UIColor(red:0.28, green:0.31, blue:0.58, alpha:1.0)
+        tableView.backgroundColor = MyConstants.Colors.purple
         
         let dateFormatter = DateFormatter()
         let hourFormatter = DateFormatter()
