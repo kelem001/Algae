@@ -72,10 +72,10 @@ class DataViewController: UIViewController {
         
         chlaDataSet = calculation.getTotalChlaDataSet()
         cyanoDataSet = calculation.getCyanoChlaDataSet()
-                
-        let graphController = self.tabBarController?.viewControllers?[1] as! GraphViewController
-//        graphController.chlaDataSet = chlaDataSet
-//        graphController.cyanoDataSet = cyanoDataSet
+        
+        let graphController = tabBarController?.viewControllers?[1] as! GraphViewController
+        graphController.chlaDataSet = chlaDataSet
+        graphController.cyanoDataSet = cyanoDataSet
     }
     
     override func didReceiveMemoryWarning() {
@@ -90,9 +90,7 @@ class DataViewController: UIViewController {
             destinationVC.logID = id
             destinationVC.startEdit = true
         }
-        else if segue.identifier == "graph" {
-            
-        }
+
     }
     
 }
