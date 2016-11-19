@@ -17,7 +17,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Cqg-fB-zco"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="f7a-Gm-EiD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdR-a7-jYe">
@@ -197,7 +197,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wXE-Hn-Vqj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zdY-ty-wBG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="μg/L" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aiP-CI-Idc">
@@ -361,7 +361,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4Z8-dI-OPv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7xo-Wc-tdy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type of land within 1km of the lake:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDz-5P-2vV">
@@ -1486,7 +1486,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5c7-VU-jNG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tJB-0x-2P0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PO4 Concentration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpV-G9-RaP">
@@ -1635,7 +1635,7 @@
                         <viewControllerLayoutGuide type="bottom" id="LED-fV-W2z"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="o8R-CZ-GiE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PO4 Concentration" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGC-ke-0sW">
@@ -2152,7 +2152,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Lsm-ez-81f"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zG1-xq-uka">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.28107216619999997" green="0.30745128989999998" blue="0.57800356220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -2171,7 +2171,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Aa4-Fv-48y"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bVW-xI-zfW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Difference" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pks-uv-HKN">
@@ -2359,7 +2359,9 @@
                                     <constraint firstAttribute="height" constant="30" id="Elh-ya-eMQ">
                                         <variation key="widthClass=regular" constant="50"/>
                                     </constraint>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="XZS-pX-4P1"/>
                                     <constraint firstAttribute="width" constant="50" id="cAL-qS-iJm"/>
+                                    <constraint firstAttribute="width" constant="80" id="w1L-Wp-rIF"/>
                                     <constraint firstAttribute="width" constant="150" id="xIK-GU-lFB"/>
                                     <constraint firstAttribute="height" constant="30" id="xud-Yz-zVp"/>
                                 </constraints>
@@ -2369,14 +2371,18 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Elh-ya-eMQ"/>
+                                        <exclude reference="XZS-pX-4P1"/>
                                         <exclude reference="cAL-qS-iJm"/>
+                                        <exclude reference="w1L-Wp-rIF"/>
                                         <exclude reference="xIK-GU-lFB"/>
                                         <exclude reference="xud-Yz-zVp"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="cAL-qS-iJm"/>
+                                        <exclude reference="XZS-pX-4P1"/>
+                                        <exclude reference="cAL-qS-iJm"/>
+                                        <include reference="w1L-Wp-rIF"/>
                                         <include reference="xud-Yz-zVp"/>
                                     </mask>
                                 </variation>
@@ -2396,6 +2402,10 @@
                                     </constraint>
                                     <constraint firstAttribute="width" constant="50" id="N0H-zL-WY3"/>
                                     <constraint firstAttribute="height" constant="30" id="NwD-hB-agT"/>
+                                    <constraint firstAttribute="width" constant="80" id="Z0U-Qq-Xxw"/>
+                                    <constraint firstAttribute="width" constant="100" id="mlO-me-Cx1">
+                                        <variation key="widthClass=compact" constant="80"/>
+                                    </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2406,12 +2416,16 @@
                                         <exclude reference="MX9-FY-RJa"/>
                                         <exclude reference="N0H-zL-WY3"/>
                                         <exclude reference="NwD-hB-agT"/>
+                                        <exclude reference="Z0U-Qq-Xxw"/>
+                                        <exclude reference="mlO-me-Cx1"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="N0H-zL-WY3"/>
+                                        <exclude reference="N0H-zL-WY3"/>
                                         <include reference="NwD-hB-agT"/>
+                                        <exclude reference="Z0U-Qq-Xxw"/>
+                                        <include reference="mlO-me-Cx1"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
@@ -2426,10 +2440,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2Cx-VX-Igp"/>
                                     <constraint firstAttribute="width" constant="150" id="9uZ-0h-VZX"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="OKC-Jv-UgK"/>
                                     <constraint firstAttribute="width" constant="50" id="UNQ-AO-WZu"/>
                                     <constraint firstAttribute="height" constant="30" id="YfM-T4-hiR">
                                         <variation key="widthClass=regular" constant="50"/>
                                     </constraint>
+                                    <constraint firstAttribute="width" constant="80" id="k2n-tD-XDc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2438,14 +2454,18 @@
                                     <mask key="constraints">
                                         <exclude reference="2Cx-VX-Igp"/>
                                         <exclude reference="9uZ-0h-VZX"/>
+                                        <exclude reference="OKC-Jv-UgK"/>
                                         <exclude reference="UNQ-AO-WZu"/>
                                         <exclude reference="YfM-T4-hiR"/>
+                                        <exclude reference="k2n-tD-XDc"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="2Cx-VX-Igp"/>
-                                        <include reference="UNQ-AO-WZu"/>
+                                        <exclude reference="OKC-Jv-UgK"/>
+                                        <exclude reference="UNQ-AO-WZu"/>
+                                        <include reference="k2n-tD-XDc"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
@@ -2460,9 +2480,11 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="EkV-2s-0RO"/>
                                     <constraint firstAttribute="width" constant="50" id="YnV-G1-doe"/>
+                                    <constraint firstAttribute="width" constant="80" id="el8-hS-P3Z"/>
                                     <constraint firstAttribute="height" constant="30" id="lOB-nn-LKh">
                                         <variation key="widthClass=regular" constant="50"/>
                                     </constraint>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="mL0-m5-mF5"/>
                                     <constraint firstAttribute="height" constant="30" id="whl-x2-uNc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -2472,13 +2494,17 @@
                                     <mask key="constraints">
                                         <exclude reference="EkV-2s-0RO"/>
                                         <exclude reference="YnV-G1-doe"/>
+                                        <exclude reference="el8-hS-P3Z"/>
                                         <exclude reference="lOB-nn-LKh"/>
+                                        <exclude reference="mL0-m5-mF5"/>
                                         <exclude reference="whl-x2-uNc"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="YnV-G1-doe"/>
+                                        <exclude reference="YnV-G1-doe"/>
+                                        <include reference="el8-hS-P3Z"/>
+                                        <exclude reference="mL0-m5-mF5"/>
                                         <include reference="whl-x2-uNc"/>
                                     </mask>
                                 </variation>
@@ -2494,6 +2520,8 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="32D-wh-Rlz"/>
                                     <constraint firstAttribute="height" constant="30" id="3yZ-uF-N16"/>
+                                    <constraint firstAttribute="width" constant="80" id="DNH-Uq-rQA"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="fSs-5x-zBa"/>
                                     <constraint firstAttribute="height" constant="30" id="gG2-Kd-7J1">
                                         <variation key="widthClass=regular" constant="50"/>
                                     </constraint>
@@ -2506,6 +2534,8 @@
                                     <mask key="constraints">
                                         <exclude reference="32D-wh-Rlz"/>
                                         <exclude reference="3yZ-uF-N16"/>
+                                        <exclude reference="DNH-Uq-rQA"/>
+                                        <exclude reference="fSs-5x-zBa"/>
                                         <exclude reference="gG2-Kd-7J1"/>
                                         <exclude reference="r3d-ka-1TL"/>
                                     </mask>
@@ -2513,7 +2543,9 @@
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="3yZ-uF-N16"/>
-                                        <include reference="r3d-ka-1TL"/>
+                                        <include reference="DNH-Uq-rQA"/>
+                                        <exclude reference="fSs-5x-zBa"/>
+                                        <exclude reference="r3d-ka-1TL"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
@@ -2529,9 +2561,11 @@
                                     <constraint firstAttribute="width" constant="50" id="IHU-a0-FDu"/>
                                     <constraint firstAttribute="width" constant="150" id="OAF-gd-Q76"/>
                                     <constraint firstAttribute="height" constant="30" id="SoB-mh-jNv"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="oep-SJ-84e"/>
                                     <constraint firstAttribute="height" constant="30" id="tZC-Co-SdM">
                                         <variation key="widthClass=regular" constant="50"/>
                                     </constraint>
+                                    <constraint firstAttribute="width" constant="80" id="wHx-F6-4ez"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2541,13 +2575,17 @@
                                         <exclude reference="IHU-a0-FDu"/>
                                         <exclude reference="OAF-gd-Q76"/>
                                         <exclude reference="SoB-mh-jNv"/>
+                                        <exclude reference="oep-SJ-84e"/>
                                         <exclude reference="tZC-Co-SdM"/>
+                                        <exclude reference="wHx-F6-4ez"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="IHU-a0-FDu"/>
+                                        <exclude reference="IHU-a0-FDu"/>
                                         <include reference="SoB-mh-jNv"/>
+                                        <exclude reference="oep-SJ-84e"/>
+                                        <include reference="wHx-F6-4ez"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
@@ -2564,8 +2602,10 @@
                                         <variation key="widthClass=regular" constant="50"/>
                                     </constraint>
                                     <constraint firstAttribute="width" constant="50" id="dur-Cm-l6P"/>
+                                    <constraint firstAttribute="width" constant="80" id="exp-BV-GXr"/>
                                     <constraint firstAttribute="width" constant="150" id="oGW-7k-UCf"/>
                                     <constraint firstAttribute="height" constant="30" id="oaU-Qg-ve6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="vQe-hl-PIr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2574,14 +2614,18 @@
                                     <mask key="constraints">
                                         <exclude reference="QTz-fK-oGs"/>
                                         <exclude reference="dur-Cm-l6P"/>
+                                        <exclude reference="exp-BV-GXr"/>
                                         <exclude reference="oGW-7k-UCf"/>
                                         <exclude reference="oaU-Qg-ve6"/>
+                                        <exclude reference="vQe-hl-PIr"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="dur-Cm-l6P"/>
+                                        <exclude reference="dur-Cm-l6P"/>
+                                        <include reference="exp-BV-GXr"/>
                                         <include reference="oaU-Qg-ve6"/>
+                                        <exclude reference="vQe-hl-PIr"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
@@ -2595,11 +2639,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2r-EM-gXV">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="3bt-0r-UaF"/>
+                                    <constraint firstAttribute="width" constant="80" id="DeM-K8-eFy"/>
                                     <constraint firstAttribute="width" constant="50" id="Ho4-cf-B7x"/>
                                     <constraint firstAttribute="width" constant="150" id="cu2-na-4Vi"/>
                                     <constraint firstAttribute="height" constant="30" id="fID-rG-gK4">
                                         <variation key="widthClass=regular" constant="50"/>
                                     </constraint>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="r3d-oQ-BCr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2607,15 +2653,19 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="3bt-0r-UaF"/>
+                                        <exclude reference="DeM-K8-eFy"/>
                                         <exclude reference="Ho4-cf-B7x"/>
                                         <exclude reference="cu2-na-4Vi"/>
                                         <exclude reference="fID-rG-gK4"/>
+                                        <exclude reference="r3d-oQ-BCr"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="3bt-0r-UaF"/>
-                                        <include reference="Ho4-cf-B7x"/>
+                                        <include reference="DeM-K8-eFy"/>
+                                        <exclude reference="Ho4-cf-B7x"/>
+                                        <exclude reference="r3d-oQ-BCr"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
@@ -2782,6 +2832,8 @@
                                     </constraint>
                                     <constraint firstAttribute="height" constant="30" id="QBS-uk-0tV"/>
                                     <constraint firstAttribute="width" constant="50" id="ZXA-De-1bK"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="kLy-tf-Am8"/>
+                                    <constraint firstAttribute="width" constant="80" id="tAs-h4-t6O"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2792,12 +2844,16 @@
                                         <exclude reference="HhR-t8-YD4"/>
                                         <exclude reference="QBS-uk-0tV"/>
                                         <exclude reference="ZXA-De-1bK"/>
+                                        <exclude reference="kLy-tf-Am8"/>
+                                        <exclude reference="tAs-h4-t6O"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="QBS-uk-0tV"/>
-                                        <include reference="ZXA-De-1bK"/>
+                                        <exclude reference="ZXA-De-1bK"/>
+                                        <exclude reference="kLy-tf-Am8"/>
+                                        <include reference="tAs-h4-t6O"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
@@ -2811,8 +2867,10 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sv-KY-yyO">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Awh-PN-R2g"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="E2n-cE-2hS"/>
                                     <constraint firstAttribute="width" constant="50" id="FMZ-OQ-v7u"/>
                                     <constraint firstAttribute="width" constant="150" id="P0d-Io-qqh"/>
+                                    <constraint firstAttribute="width" constant="80" id="XHH-5V-gx7"/>
                                     <constraint firstAttribute="height" constant="30" id="xrp-7D-NtT">
                                         <variation key="widthClass=regular" constant="50"/>
                                     </constraint>
@@ -2823,15 +2881,19 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Awh-PN-R2g"/>
+                                        <exclude reference="E2n-cE-2hS"/>
                                         <exclude reference="FMZ-OQ-v7u"/>
                                         <exclude reference="P0d-Io-qqh"/>
+                                        <exclude reference="XHH-5V-gx7"/>
                                         <exclude reference="xrp-7D-NtT"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="Awh-PN-R2g"/>
-                                        <include reference="FMZ-OQ-v7u"/>
+                                        <exclude reference="E2n-cE-2hS"/>
+                                        <exclude reference="FMZ-OQ-v7u"/>
+                                        <include reference="XHH-5V-gx7"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
@@ -2918,10 +2980,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="6fb-d3-28l"/>
                                     <constraint firstAttribute="width" constant="50" id="OkD-wv-I5o"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="VJO-2E-fap"/>
                                     <constraint firstAttribute="height" constant="30" id="dpZ-zL-Rxa">
                                         <variation key="widthClass=regular" constant="50"/>
                                     </constraint>
                                     <constraint firstAttribute="width" constant="150" id="i7v-oG-X5i"/>
+                                    <constraint firstAttribute="width" constant="80" id="oFG-Lq-lRS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2930,14 +2994,18 @@
                                     <mask key="constraints">
                                         <exclude reference="6fb-d3-28l"/>
                                         <exclude reference="OkD-wv-I5o"/>
+                                        <exclude reference="VJO-2E-fap"/>
                                         <exclude reference="dpZ-zL-Rxa"/>
                                         <exclude reference="i7v-oG-X5i"/>
+                                        <exclude reference="oFG-Lq-lRS"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="6fb-d3-28l"/>
-                                        <include reference="OkD-wv-I5o"/>
+                                        <exclude reference="OkD-wv-I5o"/>
+                                        <exclude reference="VJO-2E-fap"/>
+                                        <include reference="oFG-Lq-lRS"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
@@ -3354,7 +3422,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akF-S9-yWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1780" y="-1075"/>
+            <point key="canvasLocation" x="1743" y="-1102"/>
         </scene>
         <!--Submit Entry-->
         <scene sceneID="Lz5-xU-Zdn">
@@ -3418,7 +3486,7 @@
                         <viewControllerLayoutGuide type="bottom" id="15H-G1-UMB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Gd4-h2-rql">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MQT-Fk-fkL">
@@ -3487,21 +3555,21 @@
                         <viewControllerLayoutGuide type="bottom" id="3Wk-vM-q35"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kwj-Ki-ANP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="clY-HO-CpC">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="9Gi-aY-MIe" style="IBUITableViewCellStyleDefault" id="ius-sl-xAD" customClass="DataLogTableViewCell" customModule="Algae_Estimator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ius-sl-xAD" id="24W-wD-pUD">
-                                            <frame key="frameInset" width="342" height="43"/>
+                                            <frame key="frameInset" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Gi-aY-MIe">
-                                                    <frame key="frameInset" minX="15" width="325" height="43"/>
+                                                    <frame key="frameInset" minX="15" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -3548,21 +3616,21 @@
                         <viewControllerLayoutGuide type="bottom" id="ZVO-6b-YTF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4Gk-ht-MGn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mrC-tY-40R">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell2" textLabel="dTW-XF-D4R" style="IBUITableViewCellStyleDefault" id="T1u-ks-J2X" customClass="DataLog2TableViewCell" customModule="Algae_Estimator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T1u-ks-J2X" id="8D2-hl-I42">
-                                            <frame key="frameInset" width="342" height="43"/>
+                                            <frame key="frameInset" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dTW-XF-D4R">
-                                                    <frame key="frameInset" minX="15" width="325" height="43"/>
+                                                    <frame key="frameInset" minX="15" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -3604,15 +3672,15 @@
             <objects>
                 <tableViewController id="EgI-Z9-iwe" customClass="DataSetTableViewController" customModule="Algae_Estimator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="PaM-Ee-ko5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.28235294119999998" green="0.30588235289999999" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="V0u-0N-CTg" customClass="DataSetTableViewCell" customModule="Algae_Estimator" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V0u-0N-CTg" id="uPc-4t-hf4">
-                                    <frame key="frameInset" width="375" height="44"/>
+                                    <frame key="frameInset" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whG-Ar-yaS">
