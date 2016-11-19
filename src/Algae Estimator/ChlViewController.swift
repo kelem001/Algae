@@ -23,15 +23,6 @@ class ChlViewController: UIViewController {
     }
     
     
-    @IBAction func CyanoChlButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 7
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
-    
     private func _updateDataEntryVals() {
         if totalChlTextfield.text != "" && Float(totalChlTextfield.text!) != nil {
             dataEntryVals["totalChl"] = Float(totalChlTextfield.text!)!

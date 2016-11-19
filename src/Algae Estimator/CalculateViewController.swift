@@ -10,68 +10,7 @@ import UIKit
 import CoreData
 
 class CalculateViewController: UIViewController {
-    @IBAction func chlValueButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 1
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
     
-    @IBAction func BrightnessButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 2
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
-    @IBAction func lakeDepthButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 3
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
-
-    @IBAction func TempBotButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 4
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
-
-    @IBAction func TempSurButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 5
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
-    
-    @IBAction func PO4ConButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 6
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
-    
-    @IBAction func ChlButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 1
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
- 
     var dataEntryVals: [String:Float] = [:]
     var logID: NSManagedObjectID?
     var logDate: NSDate?

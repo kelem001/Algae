@@ -22,15 +22,6 @@ class PO4ViewController: UIViewController {
         //performSegue(withIdentifier: "backToDataEntry", sender: self)
     }
     
-    
-    @IBAction func po4ConButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 10
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
 
     private func _updateDataEntryVals() {
         if po4TextField.text != "" && Float(po4TextField.text!) != nil {
