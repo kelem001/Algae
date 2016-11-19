@@ -576,76 +576,113 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEg-nS-Dus">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tI0-Uz-0ND">
-                                        <rect key="frame" x="24" y="148" width="343" height="191"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.875" translatesAutoresizingMaskIntoConstraints="NO" id="Pxv-iT-QWG">
+                                        <rect key="frame" x="22" y="161" width="330" height="189"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="191" id="Wqu-Mx-Rij"/>
-                                            <constraint firstAttribute="width" constant="343" id="mDU-gZ-EFH"/>
+                                            <constraint firstAttribute="height" constant="189" id="uuc-JK-Y3U"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <string key="content">How to use the meter:  1. Collect a water sample from different depths  2. Place the electrode into the sample container and gently stir  3. Once the display on the meter has settled on a number, this is your result</string>
+                                                <string key="content">How to use the meter:  1. Collect a water sample from different depths  2. Place the electrode into the sample container and gently stir  3. Place the electrode into the sample container and gently stir</string>
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="28">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="56">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="84">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="112">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="140">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="168">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="196">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="224">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="252">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="280">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="308">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="336">
+                                                                <options/>
+                                                            </textTab>
+                                                        </tabStops>
+                                                    </paragraphStyle>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_do" translatesAutoresizingMaskIntoConstraints="NO" id="R5B-O4-zDD">
-                                        <rect key="frame" x="-8" y="347" width="375" height="272"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_strip" translatesAutoresizingMaskIntoConstraints="NO" id="npa-o4-mZT">
+                                        <rect key="frame" x="219" y="30" width="148" height="101"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="272" id="Cy6-UZ-Ujr"/>
+                                            <constraint firstAttribute="width" constant="148" id="nmr-aB-TCV"/>
                                         </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhe-ZJ-fRg">
-                                        <rect key="frame" x="24" y="31" width="194" height="99"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_do" translatesAutoresizingMaskIntoConstraints="NO" id="Gyg-oL-dbp">
+                                        <rect key="frame" x="8" y="376" width="359" height="265"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="194" id="FqJ-tE-Ht5"/>
-                                            <constraint firstAttribute="height" constant="99" id="b22-U2-ZKr"/>
+                                            <constraint firstAttribute="height" constant="265" id="bCI-Cs-rlW"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.875" translatesAutoresizingMaskIntoConstraints="NO" id="DHF-dZ-DRK">
+                                        <rect key="frame" x="22" y="30" width="189" height="123"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="123" id="af0-eq-sJV"/>
                                         </constraints>
                                         <attributedString key="attributedText">
-                                            <fragment content="You will need:  Dissolved Oxygen Meter or Oxygen test Strip">
+                                            <fragment content="You will need:  Dissolved Oxygen Meter or Oxygen Test Strip">
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_strip" translatesAutoresizingMaskIntoConstraints="NO" id="bap-2J-URf">
-                                        <rect key="frame" x="201" y="20" width="157" height="120"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="157" id="qLc-aP-ZpT"/>
-                                        </constraints>
-                                    </imageView>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="tI0-Uz-0ND" firstAttribute="top" secondItem="bap-2J-URf" secondAttribute="bottom" constant="8" symbolic="YES" id="3U0-te-h9g"/>
-                                    <constraint firstAttribute="trailing" secondItem="bap-2J-URf" secondAttribute="trailing" constant="17" id="71i-8G-dTR"/>
-                                    <constraint firstItem="Lhe-ZJ-fRg" firstAttribute="leading" secondItem="sEg-nS-Dus" secondAttribute="leading" constant="24" id="Cny-bV-MRP"/>
-                                    <constraint firstItem="Lhe-ZJ-fRg" firstAttribute="centerY" secondItem="bap-2J-URf" secondAttribute="centerY" id="HtN-pz-VpP"/>
-                                    <constraint firstItem="tI0-Uz-0ND" firstAttribute="trailing" secondItem="sEg-nS-Dus" secondAttribute="trailingMargin" id="KNK-Ep-AtI"/>
-                                    <constraint firstItem="tI0-Uz-0ND" firstAttribute="trailing" secondItem="R5B-O4-zDD" secondAttribute="trailing" id="LeO-Nn-q1s"/>
-                                    <constraint firstItem="R5B-O4-zDD" firstAttribute="leading" secondItem="sEg-nS-Dus" secondAttribute="leading" constant="-8" id="PXv-ba-8lN"/>
-                                    <constraint firstItem="R5B-O4-zDD" firstAttribute="top" secondItem="tI0-Uz-0ND" secondAttribute="bottom" constant="8" symbolic="YES" id="YyE-yY-7SQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="R5B-O4-zDD" secondAttribute="bottom" constant="48" id="bkZ-gO-rpD"/>
-                                    <constraint firstItem="tI0-Uz-0ND" firstAttribute="top" secondItem="Lhe-ZJ-fRg" secondAttribute="bottom" constant="18" id="ebp-8b-xuT"/>
-                                    <constraint firstItem="bap-2J-URf" firstAttribute="top" secondItem="sEg-nS-Dus" secondAttribute="top" constant="20" id="li6-fn-8j5"/>
-                                    <constraint firstItem="Lhe-ZJ-fRg" firstAttribute="leading" secondItem="tI0-Uz-0ND" secondAttribute="leading" id="ooW-ft-UH0"/>
+                                    <constraint firstItem="Gyg-oL-dbp" firstAttribute="top" secondItem="Pxv-iT-QWG" secondAttribute="bottom" constant="26" id="1Sz-hw-GDE"/>
+                                    <constraint firstItem="DHF-dZ-DRK" firstAttribute="top" secondItem="npa-o4-mZT" secondAttribute="top" id="7oi-Dh-CID"/>
+                                    <constraint firstItem="Gyg-oL-dbp" firstAttribute="leading" secondItem="sEg-nS-Dus" secondAttribute="leadingMargin" id="Ag4-xP-s9d"/>
+                                    <constraint firstItem="DHF-dZ-DRK" firstAttribute="bottom" secondItem="npa-o4-mZT" secondAttribute="bottom" constant="22" id="EMB-od-cMY"/>
+                                    <constraint firstItem="npa-o4-mZT" firstAttribute="leading" secondItem="DHF-dZ-DRK" secondAttribute="trailing" constant="8" id="OgM-pn-NST"/>
+                                    <constraint firstItem="Pxv-iT-QWG" firstAttribute="top" secondItem="DHF-dZ-DRK" secondAttribute="bottom" constant="8" id="QIU-eH-t6s"/>
+                                    <constraint firstItem="DHF-dZ-DRK" firstAttribute="top" secondItem="sEg-nS-Dus" secondAttribute="top" constant="30" id="QVF-a3-f6S"/>
+                                    <constraint firstItem="npa-o4-mZT" firstAttribute="trailing" secondItem="sEg-nS-Dus" secondAttribute="trailingMargin" id="UMe-YT-VFx"/>
+                                    <constraint firstItem="npa-o4-mZT" firstAttribute="trailing" secondItem="Gyg-oL-dbp" secondAttribute="trailing" id="YR4-61-2qW"/>
+                                    <constraint firstItem="Pxv-iT-QWG" firstAttribute="centerX" secondItem="Gyg-oL-dbp" secondAttribute="centerX" id="bZV-9W-lex"/>
+                                    <constraint firstItem="DHF-dZ-DRK" firstAttribute="leading" secondItem="Pxv-iT-QWG" secondAttribute="leading" id="blV-Hq-43L"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gyg-oL-dbp" secondAttribute="bottom" constant="26" id="blu-8S-OHn"/>
+                                    <constraint firstItem="Pxv-iT-QWG" firstAttribute="centerX" secondItem="sEg-nS-Dus" secondAttribute="centerX" id="dpQ-lw-JEa"/>
+                                    <constraint firstItem="DHF-dZ-DRK" firstAttribute="leading" secondItem="sEg-nS-Dus" secondAttribute="leading" constant="22" id="zTg-j0-pR0"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="sEg-nS-Dus" secondAttribute="trailing" id="Bc5-E7-GeB"/>
-                            <constraint firstItem="sEg-nS-Dus" firstAttribute="top" secondItem="GOa-Lo-2Zg" secondAttribute="top" id="SXC-oI-XCR"/>
-                            <constraint firstItem="sEg-nS-Dus" firstAttribute="bottom" secondItem="5qP-FK-0T2" secondAttribute="top" id="faT-YT-Fb2"/>
-                            <constraint firstItem="sEg-nS-Dus" firstAttribute="leading" secondItem="GOa-Lo-2Zg" secondAttribute="leading" id="npC-vu-F3r"/>
+                            <constraint firstItem="sEg-nS-Dus" firstAttribute="top" secondItem="GOa-Lo-2Zg" secondAttribute="top" id="90C-2y-ocA"/>
+                            <constraint firstAttribute="trailing" secondItem="sEg-nS-Dus" secondAttribute="trailing" id="9RO-lh-HCk"/>
+                            <constraint firstItem="sEg-nS-Dus" firstAttribute="leading" secondItem="GOa-Lo-2Zg" secondAttribute="leading" id="hDE-1K-HhF"/>
+                            <constraint firstItem="sEg-nS-Dus" firstAttribute="bottom" secondItem="5qP-FK-0T2" secondAttribute="top" id="xiS-o9-4CF"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -654,6 +691,101 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4A-XY-dwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3415.1999999999998" y="1645.7271364317842"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VFa-vC-433">
+            <objects>
+                <viewController id="SaL-Al-GtW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BEr-qt-gSZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="5e4-iO-6XD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bhk-Ky-BiO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.875" translatesAutoresizingMaskIntoConstraints="NO" id="5cw-ac-PyW">
+                                <rect key="frame" x="68" y="28" width="194" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="194" id="Pc4-mV-eS9"/>
+                                    <constraint firstAttribute="height" constant="99" id="aCk-6H-3oS"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="You will need:  Dissolved Oxygen Meter or Oxygen test Strip">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itp-NE-pvu">
+                                <rect key="frame" x="10" y="238" width="343" height="191"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="191" id="WVi-et-Ndh"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">How to use the meter:  1. Collect a water sample from different depths  2. Place the electrode into the sample container and gently stir  3. Once the display on the meter has settled on a number, this is your result</string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="28">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="56">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="84">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="112">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="140">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="168">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="196">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="224">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="252">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="280">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="308">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="336">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="itp-NE-pvu" firstAttribute="trailing" secondItem="bhk-Ky-BiO" secondAttribute="trailingMargin" constant="59" id="D8m-2b-A87"/>
+                            <constraint firstItem="5cw-ac-PyW" firstAttribute="leading" secondItem="bhk-Ky-BiO" secondAttribute="leading" constant="68" id="QqB-a7-ItK"/>
+                            <constraint firstItem="5cw-ac-PyW" firstAttribute="top" secondItem="bhk-Ky-BiO" secondAttribute="top" constant="28" id="qEG-Xa-Mxu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RkX-7Y-jhl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2847" y="1531"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ibR-9Y-aMX">
