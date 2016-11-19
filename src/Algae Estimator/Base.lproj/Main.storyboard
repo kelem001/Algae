@@ -170,76 +170,71 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_torch" translatesAutoresizingMaskIntoConstraints="NO" id="AXf-L4-9mr">
-                                        <rect key="frame" x="139" y="46" width="228" height="91"/>
+                                        <rect key="frame" x="189" y="46" width="178" height="91"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_direct" translatesAutoresizingMaskIntoConstraints="NO" id="SLp-dH-0Hk">
+                                        <rect key="frame" x="65" y="466" width="254" height="157"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="228" id="MFK-nY-J8M"/>
+                                            <constraint firstAttribute="height" constant="157" id="Iay-m1-QXW"/>
                                         </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWD-JL-Rcy">
-                                        <rect key="frame" x="20" y="46" width="150" height="70"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumScaleFactor="0.875" translatesAutoresizingMaskIntoConstraints="NO" id="5w2-lf-jKc">
+                                        <rect key="frame" x="33" y="46" width="155" height="91"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="AgK-CD-DNu"/>
-                                            <constraint firstAttribute="height" constant="70" id="hlk-U7-HJ4"/>
+                                            <constraint firstAttribute="height" constant="91" id="JFN-eI-6HP"/>
+                                            <constraint firstAttribute="width" constant="155" id="kXG-ww-yMb"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment content="You will need:   Algae Torch">
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_direct" translatesAutoresizingMaskIntoConstraints="NO" id="SLp-dH-0Hk">
-                                        <rect key="frame" x="65" y="466" width="254" height="157"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="36" baselineAdjustment="alignBaselines" minimumScaleFactor="0.875" translatesAutoresizingMaskIntoConstraints="NO" id="r7C-NC-9wM">
+                                        <rect key="frame" x="33" y="145" width="309" height="313"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="157" id="abw-L4-L2r"/>
-                                            <constraint firstAttribute="width" constant="254" id="hAx-lC-sij"/>
-                                        </constraints>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbj-cg-yw4">
-                                        <rect key="frame" x="20" y="145" width="345" height="300"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="Yvn-Lo-tyq"/>
+                                            <constraint firstAttribute="height" constant="313" id="VWp-Xd-4jR"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <string key="content">This allows direct measurement at the water source, helping to reduce failures due to transportation of the sample to the lab  How to use:  1. Place the torch in the water and wait for analysis to complete  2. The values shown on the torch are your result  3. The torch can measure both total Chlorophyll a ( all types of algae ) and Cyano chlorophyll a ( blue-green algae )</string>
+                                                <string key="content">This allows direct measurement at the water source, helping to reduce failures due to transportation of the sample to the lab  How to use:  1. Place the torch in the water and wait for analysis to complete  2. The values shown on the torch are your results  3. The torch can measure both total Chlorophyll a ( all types of algae ) and Cyano chlorophyll a ( blue-green algae )</string>
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="SLp-dH-0Hk" secondAttribute="bottom" constant="44" id="0Lg-6O-PLF"/>
-                                    <constraint firstItem="jbj-cg-yw4" firstAttribute="top" secondItem="AXf-L4-9mr" secondAttribute="bottom" constant="8" symbolic="YES" id="0UD-tV-rFi"/>
-                                    <constraint firstItem="SLp-dH-0Hk" firstAttribute="top" secondItem="jbj-cg-yw4" secondAttribute="bottom" constant="21" id="5Ym-Tc-pZI"/>
-                                    <constraint firstItem="jbj-cg-yw4" firstAttribute="top" secondItem="BWD-JL-Rcy" secondAttribute="bottom" constant="29" id="I92-dJ-99w"/>
-                                    <constraint firstItem="jbj-cg-yw4" firstAttribute="top" secondItem="AXf-L4-9mr" secondAttribute="bottom" constant="8" id="K8f-r3-7Nk"/>
-                                    <constraint firstItem="BWD-JL-Rcy" firstAttribute="leading" secondItem="jbj-cg-yw4" secondAttribute="leading" id="KLk-nH-Mqj"/>
-                                    <constraint firstItem="BWD-JL-Rcy" firstAttribute="top" secondItem="pKx-dg-8Ac" secondAttribute="top" constant="46" id="cVl-H3-TgY"/>
-                                    <constraint firstItem="SLp-dH-0Hk" firstAttribute="leading" secondItem="pKx-dg-8Ac" secondAttribute="leading" constant="65" id="ey7-ih-r6j"/>
-                                    <constraint firstItem="AXf-L4-9mr" firstAttribute="trailing" secondItem="pKx-dg-8Ac" secondAttribute="trailingMargin" id="fTM-Pk-aB5"/>
-                                    <constraint firstItem="jbj-cg-yw4" firstAttribute="centerX" secondItem="SLp-dH-0Hk" secondAttribute="centerX" id="gqC-5n-4S2"/>
-                                    <constraint firstAttribute="trailing" secondItem="jbj-cg-yw4" secondAttribute="trailing" constant="10" id="m2w-Iu-Zkb"/>
-                                    <constraint firstItem="BWD-JL-Rcy" firstAttribute="top" secondItem="AXf-L4-9mr" secondAttribute="top" id="rgX-z4-pZH"/>
-                                    <constraint firstItem="BWD-JL-Rcy" firstAttribute="leading" secondItem="pKx-dg-8Ac" secondAttribute="leading" constant="20" id="xVx-Oq-Gdb"/>
+                                    <constraint firstItem="5w2-lf-jKc" firstAttribute="top" secondItem="pKx-dg-8Ac" secondAttribute="top" constant="46" id="HNT-3v-X9p"/>
+                                    <constraint firstItem="5w2-lf-jKc" firstAttribute="top" secondItem="AXf-L4-9mr" secondAttribute="top" id="J1V-Qf-MbD"/>
+                                    <constraint firstItem="5w2-lf-jKc" firstAttribute="leading" secondItem="r7C-NC-9wM" secondAttribute="leading" id="KTJ-8H-hh3"/>
+                                    <constraint firstAttribute="trailing" secondItem="SLp-dH-0Hk" secondAttribute="trailing" constant="56" id="KxJ-AM-1gd"/>
+                                    <constraint firstAttribute="trailing" secondItem="r7C-NC-9wM" secondAttribute="trailing" constant="33" id="PkO-ry-K0h"/>
+                                    <constraint firstItem="AXf-L4-9mr" firstAttribute="trailing" secondItem="pKx-dg-8Ac" secondAttribute="trailingMargin" id="UcK-ng-uXG"/>
+                                    <constraint firstItem="5w2-lf-jKc" firstAttribute="leading" secondItem="pKx-dg-8Ac" secondAttribute="leading" constant="33" id="WIF-Zs-M9I"/>
+                                    <constraint firstAttribute="bottom" secondItem="SLp-dH-0Hk" secondAttribute="bottom" constant="44" id="Xm9-6w-Teg"/>
+                                    <constraint firstItem="r7C-NC-9wM" firstAttribute="top" secondItem="AXf-L4-9mr" secondAttribute="bottom" constant="8" symbolic="YES" id="ctN-V8-qoD"/>
+                                    <constraint firstItem="SLp-dH-0Hk" firstAttribute="leading" secondItem="pKx-dg-8Ac" secondAttribute="leading" constant="65" id="iLK-5j-N3X"/>
+                                    <constraint firstItem="r7C-NC-9wM" firstAttribute="top" secondItem="5w2-lf-jKc" secondAttribute="bottom" constant="8" symbolic="YES" id="pg1-uz-hna"/>
+                                    <constraint firstItem="SLp-dH-0Hk" firstAttribute="top" secondItem="r7C-NC-9wM" secondAttribute="bottom" constant="8" symbolic="YES" id="rCe-5b-zMO"/>
+                                    <constraint firstItem="AXf-L4-9mr" firstAttribute="leading" secondItem="5w2-lf-jKc" secondAttribute="trailing" constant="1" id="sso-oL-YsR"/>
+                                    <constraint firstItem="r7C-NC-9wM" firstAttribute="centerX" secondItem="pKx-dg-8Ac" secondAttribute="centerX" id="ysF-af-Fvm"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pKx-dg-8Ac" firstAttribute="top" secondItem="PQp-uD-Cgi" secondAttribute="top" id="2Dp-FG-43N"/>
-                            <constraint firstItem="A7q-C9-hAP" firstAttribute="top" secondItem="pKx-dg-8Ac" secondAttribute="bottom" id="SzD-F5-hgl"/>
-                            <constraint firstItem="pKx-dg-8Ac" firstAttribute="leading" secondItem="PQp-uD-Cgi" secondAttribute="leading" id="Tfp-K0-oYa"/>
-                            <constraint firstAttribute="trailing" secondItem="pKx-dg-8Ac" secondAttribute="trailing" id="U1R-7Z-Xxf"/>
+                            <constraint firstAttribute="trailing" secondItem="pKx-dg-8Ac" secondAttribute="trailing" id="6D4-Dw-KsC"/>
+                            <constraint firstItem="pKx-dg-8Ac" firstAttribute="leading" secondItem="PQp-uD-Cgi" secondAttribute="leading" id="Q7V-S6-0pu"/>
+                            <constraint firstItem="pKx-dg-8Ac" firstAttribute="bottom" secondItem="A7q-C9-hAP" secondAttribute="top" id="aFw-wf-Gy6"/>
+                            <constraint firstItem="pKx-dg-8Ac" firstAttribute="top" secondItem="PQp-uD-Cgi" secondAttribute="top" id="ohh-sM-QTl"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -247,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uzf-B8-3VE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4175.1999999999998" y="1645.7271364317842"/>
+            <point key="canvasLocation" x="-4228" y="1620.5397301349326"/>
         </scene>
         <!--Direct-->
         <scene sceneID="8vU-e4-lEx">
@@ -704,88 +699,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.875" translatesAutoresizingMaskIntoConstraints="NO" id="5cw-ac-PyW">
-                                <rect key="frame" x="68" y="28" width="194" height="99"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWD-JL-Rcy">
+                                <rect key="frame" x="24" y="38" width="150" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="194" id="Pc4-mV-eS9"/>
-                                    <constraint firstAttribute="height" constant="99" id="aCk-6H-3oS"/>
+                                    <constraint firstAttribute="width" constant="150" id="AgK-CD-DNu"/>
+                                    <constraint firstAttribute="height" constant="70" id="hlk-U7-HJ4"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="You will need:  Dissolved Oxygen Meter or Oxygen test Strip">
+                                    <fragment content="You will need:   Algae Torch">
                                         <attributes>
-                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itp-NE-pvu">
-                                <rect key="frame" x="10" y="238" width="343" height="191"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbj-cg-yw4">
+                                <rect key="frame" x="16" y="164" width="345" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="191" id="WVi-et-Ndh"/>
+                                    <constraint firstAttribute="height" constant="300" id="Yvn-Lo-tyq"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">How to use the meter:  1. Collect a water sample from different depths  2. Place the electrode into the sample container and gently stir  3. Once the display on the meter has settled on a number, this is your result</string>
+                                        <string key="content">This allows direct measurement at the water source, helping to reduce failures due to transportation of the sample to the lab  How to use:  1. Place the torch in the water and wait for analysis to complete  2. The values shown on the torch are your result  3. The torch can measure both total Chlorophyll a ( all types of algae ) and Cyano chlorophyll a ( blue-green algae )</string>
                                         <attributes>
                                             <font key="NSFont" size="16" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="28">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="56">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="84">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="112">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="140">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="168">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="196">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="224">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="252">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="280">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="308">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="336">
-                                                        <options/>
-                                                    </textTab>
-                                                </tabStops>
-                                            </paragraphStyle>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="itp-NE-pvu" firstAttribute="trailing" secondItem="bhk-Ky-BiO" secondAttribute="trailingMargin" constant="59" id="D8m-2b-A87"/>
-                            <constraint firstItem="5cw-ac-PyW" firstAttribute="leading" secondItem="bhk-Ky-BiO" secondAttribute="leading" constant="68" id="QqB-a7-ItK"/>
-                            <constraint firstItem="5cw-ac-PyW" firstAttribute="top" secondItem="bhk-Ky-BiO" secondAttribute="top" constant="28" id="qEG-Xa-Mxu"/>
+                            <constraint firstItem="BWD-JL-Rcy" firstAttribute="leading" secondItem="bhk-Ky-BiO" secondAttribute="leading" constant="24" id="CiI-Vd-EiI"/>
+                            <constraint firstAttribute="trailing" secondItem="jbj-cg-yw4" secondAttribute="trailing" constant="14" id="av1-IQ-Pjo"/>
+                            <constraint firstItem="BWD-JL-Rcy" firstAttribute="top" secondItem="bhk-Ky-BiO" secondAttribute="top" constant="38" id="fpv-Nb-8Fa"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RkX-7Y-jhl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2847" y="1531"/>
+            <point key="canvasLocation" x="-3506" y="1645"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ibR-9Y-aMX">
