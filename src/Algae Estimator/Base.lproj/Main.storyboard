@@ -1436,7 +1436,6 @@
                                     <constraint firstItem="Yiv-XP-zI2" firstAttribute="leading" secondItem="jVU-BI-Hcq" secondAttribute="leading" constant="22" id="ThS-AF-PnN"/>
                                     <constraint firstItem="3OF-2R-XVz" firstAttribute="leading" secondItem="Yiv-XP-zI2" secondAttribute="trailing" constant="8" id="Tri-a3-bYa"/>
                                     <constraint firstItem="Yiv-XP-zI2" firstAttribute="leading" secondItem="duh-BD-qzm" secondAttribute="leading" id="Ufv-A8-VaR"/>
-                                    <constraint firstItem="duh-BD-qzm" firstAttribute="centerX" secondItem="jVU-BI-Hcq" secondAttribute="centerX" id="XrL-z9-vly"/>
                                     <constraint firstAttribute="bottom" secondItem="IOP-Hk-F7C" secondAttribute="bottom" constant="26" id="cMo-Mm-Mc8"/>
                                     <constraint firstItem="Yiv-XP-zI2" firstAttribute="top" secondItem="3OF-2R-XVz" secondAttribute="top" id="mcQ-oX-oma"/>
                                     <constraint firstItem="IOP-Hk-F7C" firstAttribute="top" secondItem="duh-BD-qzm" secondAttribute="bottom" constant="26" id="nch-5m-XlO"/>
@@ -1655,7 +1654,6 @@
                                     <constraint firstItem="Zwv-c6-Cyj" firstAttribute="top" secondItem="XXk-Cs-q6g" secondAttribute="topMargin" id="gB1-r1-gnn"/>
                                     <constraint firstItem="feg-zO-Flo" firstAttribute="top" secondItem="XXk-Cs-q6g" secondAttribute="top" constant="633" id="hdO-GB-Xb8"/>
                                     <constraint firstItem="Zwv-c6-Cyj" firstAttribute="leading" secondItem="XXk-Cs-q6g" secondAttribute="leadingMargin" id="imE-En-9Fv"/>
-                                    <constraint firstItem="ueM-N5-Xbx" firstAttribute="leading" secondItem="XXk-Cs-q6g" secondAttribute="leading" constant="74" id="zo5-1n-EPF"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
