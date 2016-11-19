@@ -113,6 +113,9 @@ class CalculateViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
+        let rightButton =  UIBarButtonItem(title: "Clear", style: .plain, target: self, action: #selector (clear))
+        parent?.navigationItem.rightBarButtonItem = rightButton
+        
         // If current instance of CalculateViewController isnt only view controller then make it the olny one
         if (navigationController?.viewControllers.count)! > 1 {
             
@@ -175,7 +178,25 @@ class CalculateViewController: UIViewController {
         } else {
             button.backgroundColor = UIColor.lightGray
             button.setTitle("SET", for: UIControlState.normal)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
         }
+    }
+    
+    func clear(sender: AnyObject?) {
+        
+        dataEntryVals = [:]
+        logID = NSManagedObjectID()
+        logDate = NSDate()
+        startEdit = false
+        tempSurface.text = ""
+        tempBottom.text = ""
+        brightBox.text = ""
+        lakeDepthBox.text = ""
+        validPO4 = false
+        validChl = false
+        
+        viewWillAppear(false)
+        viewDidLoad()
     }
     
     //Calls this function when the tap is recognized.
@@ -415,4 +436,3 @@ class CalculateViewController: UIViewController {
     }
 
 }
-
