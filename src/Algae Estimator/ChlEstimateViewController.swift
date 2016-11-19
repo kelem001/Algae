@@ -11,39 +11,26 @@ import CoreData
 
 class ChlEstimateViewController: UIViewController {
     
+    
     var dataEntryVals: [String:Float] = [:]
     var logID: NSManagedObjectID?
+    var validPO4: Bool?
     
     @IBOutlet weak var dissolvedOxygenTextfield: UITextField!
     @IBOutlet weak var secciDepthTextfield: UITextField!
     
-    @IBAction func SecchiDepthButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 8
-        self.present(result, animated: true, completion: nil)
-    }
-    @IBAction func DissolvedOxygenButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 9
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
-
     
     @IBAction func submitButton(_ sender: UIButton) {
        // performSegue(withIdentifier: "submit", sender: self)
     }
     
     private func _updateDataEntryVals() {
-        if secciDepthTextfield.text != "" {
+        if secciDepthTextfield.text != "" && Float(secciDepthTextfield.text!) != nil {
             dataEntryVals["secciDepth"] = Float(secciDepthTextfield.text!)!
         } else {
             dataEntryVals["secciDepth"] = nil
         }
-        if dissolvedOxygenTextfield.text != "" {
+        if dissolvedOxygenTextfield.text != "" && Float(dissolvedOxygenTextfield.text!) != nil {
             dataEntryVals["dissolvedOxygen"] = Float(dissolvedOxygenTextfield.text!)!
         } else {
             dataEntryVals["dissolvedOxygen"] = nil
@@ -65,6 +52,10 @@ class ChlEstimateViewController: UIViewController {
                 dest.logID = logID
             }
             
+            if dataEntryVals["secciDepth"] != nil && dataEntryVals["dissolvedOxygen"] != nil && dataEntryVals["secciDepth"]! >= 0.0 && dataEntryVals["secciDepth"]! <= 1.0 && dataEntryVals["dissolvedOxygen"]! >= 1.0 && dataEntryVals["dissolvedOxygen"]! <= 100.0 {
+                dest.validChl = true
+            } else {dest.validChl = false}
+            dest.validPO4 = validPO4!
         }
     }
     

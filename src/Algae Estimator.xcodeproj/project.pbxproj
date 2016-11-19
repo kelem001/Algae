@@ -8,7 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		84F63DDA1DA5B2D000753A32 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F63DD91DA5B2D000753A32 /* DataViewController.swift */; };
+		96C171DE1DD9828C009E70E1 /* DataSetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C171DD1DD9828C009E70E1 /* DataSetTableViewController.swift */; };
+		96C171E01DD982C6009E70E1 /* DataSetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C171DF1DD982C6009E70E1 /* DataSetTableViewCell.swift */; };
+		96C172531DDE985C009E70E1 /* SegueFromLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C172521DDE985C009E70E1 /* SegueFromLeft.swift */; };
 		FD1C31C21DB85118007C7036 /* PO4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1C31C11DB85118007C7036 /* PO4ViewController.swift */; };
+		FD2525C01DDA88ED00C0E7C2 /* DataLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2525BF1DDA88ED00C0E7C2 /* DataLogTableViewCell.swift */; };
+		FD2525C31DDA88FF00C0E7C2 /* DataLog2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2525C11DDA88FF00C0E7C2 /* DataLog2TableViewCell.swift */; };
+		FD2525C41DDA88FF00C0E7C2 /* DataLog2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2525C21DDA88FF00C0E7C2 /* DataLog2ViewController.swift */; };
 		FD4574421DC518BF008E87E4 /* DataLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4574411DC518BF008E87E4 /* DataLogViewController.swift */; };
 		FD4EE91C1D9F269F0083C393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4EE91B1D9F269F0083C393 /* AppDelegate.swift */; };
 		FD4EE91E1D9F26A00083C393 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4EE91D1D9F269F0083C393 /* CalculateViewController.swift */; };
@@ -45,11 +51,17 @@
 
 /* Begin PBXFileReference section */
 		84F63DD91DA5B2D000753A32 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		FD1C31C11DB85118007C7036 /* PO4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PO4ViewController.swift; sourceTree = "<group>"; };
+		96C171DD1DD9828C009E70E1 /* DataSetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSetTableViewController.swift; sourceTree = "<group>"; };
+		96C171DF1DD982C6009E70E1 /* DataSetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSetTableViewCell.swift; sourceTree = "<group>"; };
+		96C172521DDE985C009E70E1 /* SegueFromLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueFromLeft.swift; sourceTree = "<group>"; };
+		FD1C31C11DB85118007C7036 /* PO4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PO4ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FD2525BF1DDA88ED00C0E7C2 /* DataLogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLogTableViewCell.swift; sourceTree = "<group>"; };
+		FD2525C11DDA88FF00C0E7C2 /* DataLog2TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLog2TableViewCell.swift; sourceTree = "<group>"; };
+		FD2525C21DDA88FF00C0E7C2 /* DataLog2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLog2ViewController.swift; sourceTree = "<group>"; };
 		FD4574411DC518BF008E87E4 /* DataLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLogViewController.swift; sourceTree = "<group>"; };
 		FD4EE9181D9F269F0083C393 /* Algae Estimator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Algae Estimator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD4EE91B1D9F269F0083C393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD4EE91D1D9F269F0083C393 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
+		FD4EE91D1D9F269F0083C393 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CalculateViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FD4EE9201D9F26A00083C393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD4EE9231D9F26A00083C393 /* Algae_Estimator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Algae_Estimator.xcdatamodel; sourceTree = "<group>"; };
 		FD4EE9251D9F26A00083C393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,8 +73,8 @@
 		FD4EE93A1D9F26A00083C393 /* Algae EstimatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Algae EstimatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD4EE93E1D9F26A00083C393 /* Algae_EstimatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algae_EstimatorUITests.swift; sourceTree = "<group>"; };
 		FD4EE9401D9F26A00083C393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD5990011DC461950061816E /* ChlEstimateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChlEstimateViewController.swift; sourceTree = "<group>"; };
-		FD5990031DC462350061816E /* ChlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChlViewController.swift; sourceTree = "<group>"; };
+		FD5990011DC461950061816E /* ChlEstimateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ChlEstimateViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FD5990031DC462350061816E /* ChlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ChlViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FD7310D61DC4100900ACBE6A /* MyConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyConstants.swift; sourceTree = "<group>"; };
 		FD7310D81DC4101C00ACBE6A /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		FDB90A3C1DA5BF0200800DDD /* Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculations.swift; sourceTree = "<group>"; };
@@ -117,22 +129,28 @@
 		FD4EE91A1D9F269F0083C393 /* Algae Estimator */ = {
 			isa = PBXGroup;
 			children = (
-				FD4EE91B1D9F269F0083C393 /* AppDelegate.swift */,
-				FD4EE91D1D9F269F0083C393 /* CalculateViewController.swift */,
-				FD4EE91F1D9F26A00083C393 /* Main.storyboard */,
-				FD1C31C11DB85118007C7036 /* PO4ViewController.swift */,
-				FD4EE9251D9F26A00083C393 /* Assets.xcassets */,
-				FD4EE9271D9F26A00083C393 /* LaunchScreen.storyboard */,
-				FD4EE92A1D9F26A00083C393 /* Info.plist */,
 				FD4EE9221D9F26A00083C393 /* Algae_Estimator.xcdatamodeld */,
-				84F63DD91DA5B2D000753A32 /* DataViewController.swift */,
+				FD4EE91B1D9F269F0083C393 /* AppDelegate.swift */,
+				FD4EE9251D9F26A00083C393 /* Assets.xcassets */,
+				FD4EE91D1D9F269F0083C393 /* CalculateViewController.swift */,
 				FDB90A3C1DA5BF0200800DDD /* Calculations.swift */,
-				FD4574411DC518BF008E87E4 /* DataLogViewController.swift */,
-				FDC95D121DC18489003AB088 /* PO4EstimatesViewController.swift */,
-				FD7310D61DC4100900ACBE6A /* MyConstants.swift */,
-				FD7310D81DC4101C00ACBE6A /* ResultViewController.swift */,
 				FD5990011DC461950061816E /* ChlEstimateViewController.swift */,
 				FD5990031DC462350061816E /* ChlViewController.swift */,
+				FD2525C11DDA88FF00C0E7C2 /* DataLog2TableViewCell.swift */,
+				FD2525C21DDA88FF00C0E7C2 /* DataLog2ViewController.swift */,
+				FD2525BF1DDA88ED00C0E7C2 /* DataLogTableViewCell.swift */,
+				FD4574411DC518BF008E87E4 /* DataLogViewController.swift */,
+				96C171DF1DD982C6009E70E1 /* DataSetTableViewCell.swift */,
+				96C171DD1DD9828C009E70E1 /* DataSetTableViewController.swift */,
+				84F63DD91DA5B2D000753A32 /* DataViewController.swift */,
+				FD4EE92A1D9F26A00083C393 /* Info.plist */,
+				FD4EE9271D9F26A00083C393 /* LaunchScreen.storyboard */,
+				FD4EE91F1D9F26A00083C393 /* Main.storyboard */,
+				FD7310D61DC4100900ACBE6A /* MyConstants.swift */,
+				FDC95D121DC18489003AB088 /* PO4EstimatesViewController.swift */,
+				96C172521DDE985C009E70E1 /* SegueFromLeft.swift */,
+				FD1C31C11DB85118007C7036 /* PO4ViewController.swift */,
+				FD7310D81DC4101C00ACBE6A /* ResultViewController.swift */,
 			);
 			path = "Algae Estimator";
 			sourceTree = "<group>";
@@ -290,11 +308,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C172531DDE985C009E70E1 /* SegueFromLeft.swift in Sources */,
+				96C171E01DD982C6009E70E1 /* DataSetTableViewCell.swift in Sources */,
 				FDB90A3D1DA5BF0200800DDD /* Calculations.swift in Sources */,
+				96C171DE1DD9828C009E70E1 /* DataSetTableViewController.swift in Sources */,
 				84F63DDA1DA5B2D000753A32 /* DataViewController.swift in Sources */,
 				FD4EE91E1D9F26A00083C393 /* CalculateViewController.swift in Sources */,
+				FD2525C41DDA88FF00C0E7C2 /* DataLog2ViewController.swift in Sources */,
 				FD4EE91C1D9F269F0083C393 /* AppDelegate.swift in Sources */,
 				FD5990021DC461950061816E /* ChlEstimateViewController.swift in Sources */,
+				FD2525C31DDA88FF00C0E7C2 /* DataLog2TableViewCell.swift in Sources */,
 				FDC95D131DC18489003AB088 /* PO4EstimatesViewController.swift in Sources */,
 				FD1C31C21DB85118007C7036 /* PO4ViewController.swift in Sources */,
 				FD4EE9241D9F26A00083C393 /* Algae_Estimator.xcdatamodeld in Sources */,
@@ -302,6 +325,7 @@
 				FD4574421DC518BF008E87E4 /* DataLogViewController.swift in Sources */,
 				FD7310D91DC4101C00ACBE6A /* ResultViewController.swift in Sources */,
 				FD5990041DC462350061816E /* ChlViewController.swift in Sources */,
+				FD2525C01DDA88ED00C0E7C2 /* DataLogTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
