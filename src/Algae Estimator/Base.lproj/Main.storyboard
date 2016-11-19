@@ -171,10 +171,14 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_torch" translatesAutoresizingMaskIntoConstraints="NO" id="AXf-L4-9mr">
                                         <rect key="frame" x="189" y="46" width="178" height="91"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="AXf-L4-9mr" secondAttribute="height" multiplier="178:91" id="bC4-Hr-L7A"/>
+                                        </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_direct" translatesAutoresizingMaskIntoConstraints="NO" id="SLp-dH-0Hk">
                                         <rect key="frame" x="65" y="466" width="254" height="157"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" secondItem="SLp-dH-0Hk" secondAttribute="height" multiplier="254:157" id="2YU-Z1-Mbe"/>
                                             <constraint firstAttribute="height" constant="157" id="Iay-m1-QXW"/>
                                         </constraints>
                                     </imageView>
@@ -265,19 +269,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyS-b3-cAT">
-                                <rect key="frame" x="255.5" y="248.5" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="CJ4-1N-ekf"/>
-                                    <constraint firstAttribute="height" constant="30" id="gsp-d6-Qay"/>
-                                </constraints>
-                                <state key="normal" title="?">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="gh1-Gv-aMm" kind="show" id="EXp-h7-NJG"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Chl a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qz8-fJ-Ul7">
                                 <rect key="frame" x="42.5" y="248.5" width="100" height="30"/>
                                 <constraints>
@@ -323,10 +314,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyS-b3-cAT">
+                                <rect key="frame" x="267" y="276" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="CJ4-1N-ekf"/>
+                                    <constraint firstAttribute="height" constant="30" id="gsp-d6-Qay"/>
+                                </constraints>
+                                <state key="normal" title="?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gh1-Gv-aMm" kind="show" id="EXp-h7-NJG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.28107216619999997" green="0.30745128989999998" blue="0.57800356220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fyS-b3-cAT" firstAttribute="leading" secondItem="aiP-CI-Idc" secondAttribute="trailing" constant="15" id="3nY-fL-Dro"/>
+                            <constraint firstItem="fyS-b3-cAT" firstAttribute="leading" secondItem="aiP-CI-Idc" secondAttribute="trailing" constant="26.5" id="3nY-fL-Dro"/>
                             <constraint firstItem="gA4-IY-DgP" firstAttribute="top" secondItem="qz8-fJ-Ul7" secondAttribute="bottom" constant="30" id="EmF-mw-Pc2"/>
                             <constraint firstItem="qz8-fJ-Ul7" firstAttribute="centerY" secondItem="zdY-ty-wBG" secondAttribute="centerY" constant="-70" id="IHv-yg-bSS"/>
                             <constraint firstItem="15Z-Db-yxj" firstAttribute="leading" secondItem="gA4-IY-DgP" secondAttribute="trailing" constant="8" id="NXt-SH-FLr"/>
@@ -337,7 +341,7 @@
                             <constraint firstItem="gA4-IY-DgP" firstAttribute="centerX" secondItem="zdY-ty-wBG" secondAttribute="centerX" constant="-95" id="idc-Hy-G1u"/>
                             <constraint firstItem="DiI-P4-ePt" firstAttribute="top" secondItem="gA4-IY-DgP" secondAttribute="bottom" constant="58" id="jJ0-TV-HgK"/>
                             <constraint firstItem="15Z-Db-yxj" firstAttribute="centerY" secondItem="zdY-ty-wBG" secondAttribute="centerY" constant="-10" id="qJM-Uw-0QK"/>
-                            <constraint firstItem="fyS-b3-cAT" firstAttribute="centerY" secondItem="zdY-ty-wBG" secondAttribute="centerY" constant="-70" id="rKm-jj-VNg"/>
+                            <constraint firstItem="fyS-b3-cAT" firstAttribute="centerY" secondItem="zdY-ty-wBG" secondAttribute="centerY" constant="-42.5" id="rKm-jj-VNg"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Direct" id="Bxx-N7-5AA"/>
@@ -581,46 +585,7 @@
                                                 <string key="content">How to use the meter:  1. Collect a water sample from different depths  2. Place the electrode into the sample container and gently stir  3. Place the electrode into the sample container and gently stir</string>
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops>
-                                                            <textTab alignment="left" location="28">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="56">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="84">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="112">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="140">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="168">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="196">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="224">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="252">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="280">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="308">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="336">
-                                                                <options/>
-                                                            </textTab>
-                                                        </tabStops>
-                                                    </paragraphStyle>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -629,6 +594,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_strip" translatesAutoresizingMaskIntoConstraints="NO" id="npa-o4-mZT">
                                         <rect key="frame" x="219" y="30" width="148" height="101"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" secondItem="npa-o4-mZT" secondAttribute="height" multiplier="148:101" id="h79-Lx-Vm4"/>
                                             <constraint firstAttribute="width" constant="148" id="nmr-aB-TCV"/>
                                         </constraints>
                                     </imageView>
@@ -636,6 +602,7 @@
                                         <rect key="frame" x="8" y="376" width="359" height="265"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="265" id="bCI-Cs-rlW"/>
+                                            <constraint firstAttribute="width" secondItem="Gyg-oL-dbp" secondAttribute="height" multiplier="359:265" id="cky-uY-hm8"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.875" translatesAutoresizingMaskIntoConstraints="NO" id="DHF-dZ-DRK">
@@ -688,65 +655,6 @@
             <point key="canvasLocation" x="-3415.1999999999998" y="1645.7271364317842"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="VFa-vC-433">
-            <objects>
-                <viewController id="SaL-Al-GtW" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BEr-qt-gSZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="5e4-iO-6XD"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bhk-Ky-BiO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWD-JL-Rcy">
-                                <rect key="frame" x="24" y="38" width="150" height="70"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="AgK-CD-DNu"/>
-                                    <constraint firstAttribute="height" constant="70" id="hlk-U7-HJ4"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="You will need:   Algae Torch">
-                                        <attributes>
-                                            <font key="NSFont" size="16" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbj-cg-yw4">
-                                <rect key="frame" x="16" y="164" width="345" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="Yvn-Lo-tyq"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">This allows direct measurement at the water source, helping to reduce failures due to transportation of the sample to the lab  How to use:  1. Place the torch in the water and wait for analysis to complete  2. The values shown on the torch are your result  3. The torch can measure both total Chlorophyll a ( all types of algae ) and Cyano chlorophyll a ( blue-green algae )</string>
-                                        <attributes>
-                                            <font key="NSFont" size="16" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="BWD-JL-Rcy" firstAttribute="leading" secondItem="bhk-Ky-BiO" secondAttribute="leading" constant="24" id="CiI-Vd-EiI"/>
-                            <constraint firstAttribute="trailing" secondItem="jbj-cg-yw4" secondAttribute="trailing" constant="14" id="av1-IQ-Pjo"/>
-                            <constraint firstItem="BWD-JL-Rcy" firstAttribute="top" secondItem="bhk-Ky-BiO" secondAttribute="top" constant="38" id="fpv-Nb-8Fa"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RkX-7Y-jhl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3506" y="1645"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="ibR-9Y-aMX">
             <objects>
                 <viewController id="IRr-cc-ovh" sceneMemberID="viewController">
@@ -761,82 +669,90 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6RQ-qU-ttW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oT5-zm-F0d">
-                                        <rect key="frame" x="16" y="20" width="183" height="201"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Cecchi depth is used to determine the turbidity  You will need:  SECCHI DISK  A gadget used to measure water transparency">
-                                                <attributes>
-                                                    <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_secchi_disk" translatesAutoresizingMaskIntoConstraints="NO" id="W60-8R-nai">
-                                        <rect key="frame" x="217" y="35" width="130" height="132"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="132" id="ulK-i2-PKI"/>
-                                        </constraints>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bga-SY-U36">
-                                        <rect key="frame" x="10" y="229" width="355" height="160"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="160" id="9st-qR-Rcp"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment>
-                                                <string key="content">How to use:  1. Put the Cecchi disk slowly into the water until the disk is no longer visible  2. Measure the length of the line that is dipped into the water</string>
-                                                <attributes>
-                                                    <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_low_algae_count" translatesAutoresizingMaskIntoConstraints="NO" id="Fb7-fa-HR6">
                                         <rect key="frame" x="24" y="403" width="155" height="190"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="190" id="kqg-FD-kZH"/>
+                                            <constraint firstAttribute="height" constant="190" id="gIb-kJ-bjH"/>
+                                            <constraint firstAttribute="width" constant="155" id="oOQ-RT-UrB"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_high_algae_count" translatesAutoresizingMaskIntoConstraints="NO" id="Pho-vd-pn4">
                                         <rect key="frame" x="187" y="403" width="155" height="190"/>
                                     </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_secchi_disk" translatesAutoresizingMaskIntoConstraints="NO" id="W60-8R-nai">
+                                        <rect key="frame" x="212" y="35" width="155" height="132"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="132" id="Pfy-wU-OI8"/>
+                                            <constraint firstAttribute="width" constant="155" id="zFj-zB-Gip"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" minimumScaleFactor="0.875" translatesAutoresizingMaskIntoConstraints="NO" id="ZXl-Tb-Vv9">
+                                        <rect key="frame" x="8" y="18" width="196" height="204"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Secchi depth is used to determine the turbidity  You will need:  SECCHI DISK  A gadget used to measure water transparency
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCg-tb-63E">
+                                        <rect key="frame" x="8" y="230" width="359" height="165"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="165" id="5WB-NP-ccG"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">How to use:  1. Put the Secchi disk slowly into the water until the disk is no longer visible  2. Measure the length of the line that is dipped into the water
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="W60-8R-nai" firstAttribute="leading" secondItem="oT5-zm-F0d" secondAttribute="trailing" constant="18" id="BZ2-aN-7s2"/>
-                                    <constraint firstItem="W60-8R-nai" firstAttribute="centerX" secondItem="Pho-vd-pn4" secondAttribute="centerX" constant="17.5" id="D4V-Ez-oqG"/>
-                                    <constraint firstItem="Fb7-fa-HR6" firstAttribute="height" secondItem="Pho-vd-pn4" secondAttribute="height" id="D85-xa-gyZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="Pho-vd-pn4" secondAttribute="trailing" constant="33" id="FAE-LH-SIS"/>
-                                    <constraint firstItem="bga-SY-U36" firstAttribute="centerX" secondItem="6RQ-qU-ttW" secondAttribute="centerX" id="KEc-Zx-E15"/>
-                                    <constraint firstAttribute="trailing" secondItem="W60-8R-nai" secondAttribute="trailing" constant="28" id="NQg-rt-Oaz"/>
-                                    <constraint firstAttribute="trailing" secondItem="bga-SY-U36" secondAttribute="trailing" constant="10" id="RhN-GU-nAo"/>
-                                    <constraint firstAttribute="bottom" secondItem="Fb7-fa-HR6" secondAttribute="bottom" constant="74" id="U38-2j-dyA"/>
-                                    <constraint firstItem="Fb7-fa-HR6" firstAttribute="top" secondItem="bga-SY-U36" secondAttribute="bottom" constant="14" id="Whh-0h-73y"/>
-                                    <constraint firstItem="bga-SY-U36" firstAttribute="leading" secondItem="6RQ-qU-ttW" secondAttribute="leading" constant="10" id="bG5-rH-4TG"/>
-                                    <constraint firstItem="bga-SY-U36" firstAttribute="top" secondItem="W60-8R-nai" secondAttribute="bottom" constant="62" id="dig-Xm-TMw"/>
-                                    <constraint firstItem="Fb7-fa-HR6" firstAttribute="bottom" secondItem="Pho-vd-pn4" secondAttribute="bottom" id="eRq-VS-sJn"/>
-                                    <constraint firstItem="Pho-vd-pn4" firstAttribute="width" secondItem="Fb7-fa-HR6" secondAttribute="width" id="eha-2O-HGR"/>
-                                    <constraint firstItem="oT5-zm-F0d" firstAttribute="leading" secondItem="6RQ-qU-ttW" secondAttribute="leading" constant="16" id="etu-j7-Io9"/>
-                                    <constraint firstItem="oT5-zm-F0d" firstAttribute="top" secondItem="6RQ-qU-ttW" secondAttribute="top" constant="20" id="m9A-xB-8rC"/>
-                                    <constraint firstItem="bga-SY-U36" firstAttribute="top" secondItem="oT5-zm-F0d" secondAttribute="bottom" constant="8" symbolic="YES" id="oow-t9-Ant"/>
-                                    <constraint firstItem="oT5-zm-F0d" firstAttribute="leading" secondItem="Fb7-fa-HR6" secondAttribute="leading" constant="-8" id="qBi-r4-XPc"/>
-                                    <constraint firstAttribute="trailing" secondItem="oT5-zm-F0d" secondAttribute="trailing" constant="176" id="sRy-ud-6db"/>
-                                    <constraint firstItem="Fb7-fa-HR6" firstAttribute="top" secondItem="Pho-vd-pn4" secondAttribute="top" id="sfN-lf-yFG"/>
-                                    <constraint firstItem="W60-8R-nai" firstAttribute="top" secondItem="6RQ-qU-ttW" secondAttribute="top" constant="35" id="uK2-OD-x0y"/>
+                                    <constraint firstItem="W60-8R-nai" firstAttribute="trailing" secondItem="6RQ-qU-ttW" secondAttribute="trailingMargin" id="2xr-ge-1Fb"/>
+                                    <constraint firstItem="Fb7-fa-HR6" firstAttribute="width" secondItem="Pho-vd-pn4" secondAttribute="width" id="435-y3-ctm"/>
+                                    <constraint firstItem="TCg-tb-63E" firstAttribute="top" secondItem="ZXl-Tb-Vv9" secondAttribute="bottom" constant="8" symbolic="YES" id="5KD-ob-78R"/>
+                                    <constraint firstItem="ZXl-Tb-Vv9" firstAttribute="leading" secondItem="6RQ-qU-ttW" secondAttribute="leadingMargin" id="5c2-Cz-gus"/>
+                                    <constraint firstItem="W60-8R-nai" firstAttribute="top" secondItem="6RQ-qU-ttW" secondAttribute="top" constant="35" id="8ud-Hf-G5X"/>
+                                    <constraint firstItem="Fb7-fa-HR6" firstAttribute="top" secondItem="TCg-tb-63E" secondAttribute="bottom" constant="8" symbolic="YES" id="9VZ-2o-s6J"/>
+                                    <constraint firstItem="Pho-vd-pn4" firstAttribute="leading" secondItem="Fb7-fa-HR6" secondAttribute="trailing" constant="8" symbolic="YES" id="9og-E9-rXx"/>
+                                    <constraint firstItem="ZXl-Tb-Vv9" firstAttribute="top" secondItem="6RQ-qU-ttW" secondAttribute="top" constant="18" id="D8d-Ay-CES"/>
+                                    <constraint firstItem="TCg-tb-63E" firstAttribute="top" secondItem="W60-8R-nai" secondAttribute="bottom" constant="63" id="JP9-5g-grI"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fb7-fa-HR6" secondAttribute="bottom" constant="74" id="Kze-RW-Vwu"/>
+                                    <constraint firstItem="W60-8R-nai" firstAttribute="leading" secondItem="ZXl-Tb-Vv9" secondAttribute="trailing" constant="8" symbolic="YES" id="O1u-6o-qSM"/>
+                                    <constraint firstItem="Fb7-fa-HR6" firstAttribute="width" secondItem="Pho-vd-pn4" secondAttribute="height" multiplier="31:38" id="TnK-0X-SYu"/>
+                                    <constraint firstItem="W60-8R-nai" firstAttribute="trailing" secondItem="TCg-tb-63E" secondAttribute="trailing" id="Vqp-DF-SkJ"/>
+                                    <constraint firstItem="Fb7-fa-HR6" firstAttribute="height" secondItem="Pho-vd-pn4" secondAttribute="height" id="gIT-Vi-Xq9"/>
+                                    <constraint firstItem="Fb7-fa-HR6" firstAttribute="leading" secondItem="6RQ-qU-ttW" secondAttribute="leading" constant="24" id="ge9-Ts-DbW"/>
+                                    <constraint firstItem="Fb7-fa-HR6" firstAttribute="top" secondItem="Pho-vd-pn4" secondAttribute="top" id="h0c-X0-VSQ"/>
+                                    <constraint firstItem="Fb7-fa-HR6" firstAttribute="bottom" secondItem="Pho-vd-pn4" secondAttribute="bottom" id="h1h-hv-hgN"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pho-vd-pn4" secondAttribute="trailing" constant="33" id="jwU-5J-NHn"/>
+                                    <constraint firstItem="ZXl-Tb-Vv9" firstAttribute="leading" secondItem="TCg-tb-63E" secondAttribute="leading" id="rpU-nX-Wke"/>
+                                    <constraint firstItem="TCg-tb-63E" firstAttribute="centerX" secondItem="6RQ-qU-ttW" secondAttribute="centerX" id="yPL-Pn-OaI"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6RQ-qU-ttW" firstAttribute="top" secondItem="jZH-NM-6jy" secondAttribute="top" id="5Gb-5s-9JM"/>
-                            <constraint firstItem="6RQ-qU-ttW" firstAttribute="bottom" secondItem="g1B-zE-pAS" secondAttribute="top" id="Om1-oS-H9Y"/>
-                            <constraint firstAttribute="trailing" secondItem="6RQ-qU-ttW" secondAttribute="trailing" id="VJ2-0P-FxF"/>
-                            <constraint firstItem="6RQ-qU-ttW" firstAttribute="leading" secondItem="jZH-NM-6jy" secondAttribute="leading" id="jaU-Mn-lwW"/>
+                            <constraint firstAttribute="trailing" secondItem="6RQ-qU-ttW" secondAttribute="trailing" id="9HK-hs-N6k"/>
+                            <constraint firstItem="6RQ-qU-ttW" firstAttribute="bottom" secondItem="g1B-zE-pAS" secondAttribute="top" id="Ejs-53-oJf"/>
+                            <constraint firstItem="6RQ-qU-ttW" firstAttribute="top" secondItem="jZH-NM-6jy" secondAttribute="top" id="IfM-2B-r0C"/>
+                            <constraint firstItem="6RQ-qU-ttW" firstAttribute="leading" secondItem="jZH-NM-6jy" secondAttribute="leading" id="Viu-gx-C27"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -1251,92 +1167,99 @@
                         <viewControllerLayoutGuide type="bottom" id="CBq-oZ-GAV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aq6-YO-60F">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="920"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPO-dM-JTo">
-                                <rect key="frame" x="-8" y="0.0" width="383" height="912"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPa-fh-qN8">
-                                        <rect key="frame" x="20" y="20" width="343" height="423"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_podirect" translatesAutoresizingMaskIntoConstraints="NO" id="b8B-Y2-Ad3">
+                                        <rect key="frame" x="74" y="442" width="226" height="192"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="423" id="7H1-lr-mVG"/>
+                                            <constraint firstAttribute="width" secondItem="b8B-Y2-Ad3" secondAttribute="height" multiplier="113:96" id="0Bw-Ij-7s4"/>
+                                            <constraint firstAttribute="height" constant="192" id="6kd-zd-391"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" minimumScaleFactor="0.875" translatesAutoresizingMaskIntoConstraints="NO" id="bDK-tF-WXW">
+                                        <rect key="frame" x="8" y="8" width="359" height="426"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="426" id="SmO-HH-87R"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <string key="content">Collection of bottom phosphate can be done using affordable PO4 text strips on the spot, but the test water has to come from the bottom  </string>
+                                                <string key="content">Collection of bottom phosphate can be done using affordable PO4 test strips on the spot, but the test water has to come from the bottom  </string>
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
                                                 </attributes>
                                             </fragment>
                                             <fragment content="Preparations:">
                                                 <attributes>
-                                                    <color key="NSColor" red="0.60152159685863871" green="0.13732243986724288" blue="0.12272324626866879" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="NSColor" red="0.61176470588235299" green="0.035294117647058823" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <string key="content">  a. A narrow-mouthed glass bottle containing less than 500 ml of water  b. A stopper that fits tight into the mouth of the bottle  c. Firmly attach a weight ( stone or heavy piece of metal ) to the lower part of the bottom so that the bottle will easily sink  d. Attach a string to the neck of the bottle.   e. Attach the stopper securely to the same piece of string, just above the opening of the bottle, at a distance equal to at least twice the length of the stopper</string>
+                                                <string key="content">  a. A narrow-mouthed glass bottle containing less than 500 ml of water  b. A stopper that fits tight into the mouth of the bottle  c. Firmly attach a weight ( stone or heavy piece of metal ) to the lower part of the bottom so that the bottle can sink easily  d. Attach a string to the neck of the bottle  e. Attach the stopper securely to the same piece of string, just above the opening of the bottle, at a distance equal to atlas twice the length of the stopper</string>
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_podirect" translatesAutoresizingMaskIntoConstraints="NO" id="b8B-Y2-Ad3">
-                                        <rect key="frame" x="20" y="451" width="343" height="132"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" minimumScaleFactor="0.875" translatesAutoresizingMaskIntoConstraints="NO" id="p25-P5-U9T">
+                                        <rect key="frame" x="8" y="633" width="359" height="359"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="132" id="cX7-jB-bSf"/>
-                                        </constraints>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Od-Mb-Ukc">
-                                        <rect key="frame" x="20" y="591" width="343" height="313"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="313" id="QtV-09-mjl"/>
+                                            <constraint firstAttribute="height" constant="359" id="7bI-cC-LWO"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">Sampling procedure:  1. Put the stopper firmly in place to close the water sampler  2. lower the sampler into the water to the desired depth  3. Jerk the string sharply to pull the stopper out and open the sampler. It should now start filling with water, while air bubbles appear on the surface of the pond  4. When air bubbles no longer appear, carefully pull the full water sampler out of the pond</string>
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="mPa-fh-qN8" firstAttribute="top" secondItem="dPO-dM-JTo" secondAttribute="top" constant="20" id="4o9-zq-mLt"/>
-                                    <constraint firstItem="mPa-fh-qN8" firstAttribute="leading" secondItem="dPO-dM-JTo" secondAttribute="leading" constant="20" id="EZO-ZV-36O"/>
-                                    <constraint firstItem="mPa-fh-qN8" firstAttribute="trailing" secondItem="b8B-Y2-Ad3" secondAttribute="trailing" id="PN3-Ra-9Ir"/>
-                                    <constraint firstAttribute="trailing" secondItem="mPa-fh-qN8" secondAttribute="trailing" constant="20" id="WVP-7U-Q8Y"/>
-                                    <constraint firstItem="6Od-Mb-Ukc" firstAttribute="top" secondItem="b8B-Y2-Ad3" secondAttribute="bottom" constant="8" symbolic="YES" id="ab0-OU-okc"/>
-                                    <constraint firstItem="b8B-Y2-Ad3" firstAttribute="trailing" secondItem="6Od-Mb-Ukc" secondAttribute="trailing" id="djk-ZT-eIc"/>
-                                    <constraint firstItem="6Od-Mb-Ukc" firstAttribute="bottom" secondItem="dPO-dM-JTo" secondAttribute="bottomMargin" id="kpH-zz-med"/>
-                                    <constraint firstItem="b8B-Y2-Ad3" firstAttribute="top" secondItem="mPa-fh-qN8" secondAttribute="bottom" constant="8" symbolic="YES" id="rmt-pd-9bQ"/>
-                                    <constraint firstItem="mPa-fh-qN8" firstAttribute="centerX" secondItem="dPO-dM-JTo" secondAttribute="centerX" id="wfg-UZ-8Je"/>
-                                    <constraint firstItem="mPa-fh-qN8" firstAttribute="leading" secondItem="b8B-Y2-Ad3" secondAttribute="leading" id="wph-od-WM0"/>
-                                    <constraint firstItem="b8B-Y2-Ad3" firstAttribute="leading" secondItem="6Od-Mb-Ukc" secondAttribute="leading" id="yAC-Dk-i4Z"/>
+                                    <constraint firstItem="b8B-Y2-Ad3" firstAttribute="centerX" secondItem="dPO-dM-JTo" secondAttribute="centerX" id="3Bh-tP-xqc"/>
+                                    <constraint firstItem="p25-P5-U9T" firstAttribute="bottom" secondItem="dPO-dM-JTo" secondAttribute="bottomMargin" id="DU1-Qg-wVE"/>
+                                    <constraint firstItem="p25-P5-U9T" firstAttribute="top" secondItem="dPO-dM-JTo" secondAttribute="top" constant="633" id="EU1-mK-5qD"/>
+                                    <constraint firstItem="bDK-tF-WXW" firstAttribute="leading" secondItem="p25-P5-U9T" secondAttribute="leading" id="MXB-Ob-oAx"/>
+                                    <constraint firstItem="bDK-tF-WXW" firstAttribute="trailing" secondItem="p25-P5-U9T" secondAttribute="trailing" id="Mq8-A9-mkN"/>
+                                    <constraint firstItem="b8B-Y2-Ad3" firstAttribute="centerX" secondItem="p25-P5-U9T" secondAttribute="centerX" id="PMc-wA-Krm"/>
+                                    <constraint firstItem="bDK-tF-WXW" firstAttribute="top" secondItem="dPO-dM-JTo" secondAttribute="topMargin" id="Z99-ed-n3F"/>
+                                    <constraint firstItem="bDK-tF-WXW" firstAttribute="trailing" secondItem="dPO-dM-JTo" secondAttribute="trailingMargin" id="bjQ-1p-EQZ"/>
+                                    <constraint firstItem="b8B-Y2-Ad3" firstAttribute="top" secondItem="bDK-tF-WXW" secondAttribute="bottom" constant="8" symbolic="YES" id="fIW-JI-0qZ"/>
+                                    <constraint firstItem="bDK-tF-WXW" firstAttribute="leading" secondItem="dPO-dM-JTo" secondAttribute="leadingMargin" id="p0R-CK-WnL"/>
+                                    <constraint firstItem="b8B-Y2-Ad3" firstAttribute="leading" secondItem="dPO-dM-JTo" secondAttribute="leading" constant="74" id="uKq-SG-YIa"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dPO-dM-JTo" firstAttribute="leading" secondItem="aq6-YO-60F" secondAttribute="leadingMargin" constant="-24" id="1li-pO-9ED"/>
-                            <constraint firstItem="CBq-oZ-GAV" firstAttribute="top" secondItem="dPO-dM-JTo" secondAttribute="bottom" constant="8" symbolic="YES" id="P4k-lz-jsX"/>
-                            <constraint firstItem="dPO-dM-JTo" firstAttribute="top" secondItem="aq6-YO-60F" secondAttribute="top" id="dae-lJ-uVc"/>
-                            <constraint firstAttribute="trailing" secondItem="dPO-dM-JTo" secondAttribute="trailing" id="umB-EL-i1a"/>
+                            <constraint firstItem="dPO-dM-JTo" firstAttribute="top" secondItem="aq6-YO-60F" secondAttribute="top" id="DeX-4R-Az2"/>
+                            <constraint firstItem="dPO-dM-JTo" firstAttribute="bottom" secondItem="CBq-oZ-GAV" secondAttribute="top" id="a3x-VC-xvX"/>
+                            <constraint firstItem="dPO-dM-JTo" firstAttribute="leading" secondItem="aq6-YO-60F" secondAttribute="leading" id="enn-32-7Oq"/>
+                            <constraint firstAttribute="trailing" secondItem="dPO-dM-JTo" secondAttribute="trailing" id="hJV-ac-4Qw"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="920"/>
+                    <size key="freeformSize" width="375" height="1000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ft-ot-0C5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1680,53 +1603,52 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVZ-bp-5bl">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjy-wP-Bsg">
-                                        <rect key="frame" x="16" y="20" width="343" height="393"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" minimumScaleFactor="0.875" translatesAutoresizingMaskIntoConstraints="NO" id="Kwl-tt-9VU">
+                                        <rect key="frame" x="16" y="36" width="343" height="396"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="393" id="WTT-Lm-7fu"/>
+                                            <constraint firstAttribute="height" constant="396" id="XIj-Yd-svB"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <string key="content">Phosphorus is an important nutrient element. Many important molecules within a cell contain phosphorus.  ATPis an example of molecule that uses phosphorus. ATP is essential to all living organisms since it is used for energy. However, too much phosphorus in a system could cause an algae bloom. So to predict algae bloom we need to measure the phosphate concentration at the bottom.   </string>
+                                                <string key="content">Phosphorus is an important nutrient element. Many important molecules within a cell contain phosphorus  ATP is an example of molecule that uses phosphorus. ATP is essential to all living organisms since it is used for energy. However, too much phosphorus in a system could cause an algae bloom. So to predict algae bloom we need to measure the phosphate concentration at the bottom  </string>
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment content="Two options for inputting PO4 concentration value:">
                                                 <attributes>
-                                                    <color key="NSColor" red="0.55628272251308908" green="0.033118862067834071" blue="0.086681654050357229" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="NSColor" red="0.55686274509803924" green="0.031372549019607843" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment>
                                                 <string key="content">  1. Directly input after measuring phosphate value by yourself  2. Estimate phosphate concentration based on the condition of the examining lake</string>
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Kjy-wP-Bsg" firstAttribute="leading" secondItem="SVZ-bp-5bl" secondAttribute="leading" constant="16" id="37H-Rx-RyR"/>
-                                    <constraint firstItem="Kjy-wP-Bsg" firstAttribute="centerX" secondItem="SVZ-bp-5bl" secondAttribute="centerX" id="4dC-Bf-sjV"/>
-                                    <constraint firstAttribute="trailing" secondItem="Kjy-wP-Bsg" secondAttribute="trailing" constant="16" id="GQ2-Xf-H5J"/>
-                                    <constraint firstAttribute="bottom" secondItem="Kjy-wP-Bsg" secondAttribute="bottom" constant="254" id="jaA-Oy-TqS"/>
-                                    <constraint firstItem="Kjy-wP-Bsg" firstAttribute="top" secondItem="SVZ-bp-5bl" secondAttribute="top" constant="20" id="w0k-A3-RqW"/>
+                                    <constraint firstItem="Kwl-tt-9VU" firstAttribute="top" secondItem="SVZ-bp-5bl" secondAttribute="top" constant="36" id="EX3-II-Xnu"/>
+                                    <constraint firstItem="Kwl-tt-9VU" firstAttribute="leading" secondItem="SVZ-bp-5bl" secondAttribute="leading" constant="16" id="XbK-5X-TWs"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kwl-tt-9VU" secondAttribute="bottom" constant="235" id="lov-J4-95P"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kwl-tt-9VU" secondAttribute="trailing" constant="16" id="m6O-TO-oBb"/>
+                                    <constraint firstItem="Kwl-tt-9VU" firstAttribute="centerX" secondItem="SVZ-bp-5bl" secondAttribute="centerX" id="yo9-9Y-dL8"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="SVZ-bp-5bl" secondAttribute="trailing" id="27A-oS-gxz"/>
-                            <constraint firstItem="SVZ-bp-5bl" firstAttribute="leading" secondItem="52u-mE-E8K" secondAttribute="leading" id="2Jv-Vg-cIB"/>
-                            <constraint firstItem="SVZ-bp-5bl" firstAttribute="top" secondItem="52u-mE-E8K" secondAttribute="top" id="fWr-xA-1Ub"/>
-                            <constraint firstItem="SVZ-bp-5bl" firstAttribute="bottom" secondItem="hfK-MW-sVL" secondAttribute="top" id="udq-PC-KX3"/>
+                            <constraint firstAttribute="trailing" secondItem="SVZ-bp-5bl" secondAttribute="trailing" id="ENY-CJ-RTG"/>
+                            <constraint firstItem="SVZ-bp-5bl" firstAttribute="bottom" secondItem="hfK-MW-sVL" secondAttribute="top" id="Kgc-nv-lLS"/>
+                            <constraint firstItem="SVZ-bp-5bl" firstAttribute="leading" secondItem="52u-mE-E8K" secondAttribute="leading" id="o5M-43-DBB"/>
+                            <constraint firstItem="SVZ-bp-5bl" firstAttribute="top" secondItem="52u-mE-E8K" secondAttribute="top" id="xcl-da-UMN"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -1752,73 +1674,75 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_surtemp" translatesAutoresizingMaskIntoConstraints="NO" id="yZn-ox-FeB">
-                                        <rect key="frame" x="17" y="366" width="343" height="237"/>
+                                        <rect key="frame" x="16" y="399" width="343" height="237"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="237" id="3Kd-p1-J4H"/>
+                                            <constraint firstAttribute="width" secondItem="yZn-ox-FeB" secondAttribute="height" multiplier="343:237" id="1Pc-Da-2n4"/>
+                                            <constraint firstAttribute="height" constant="237" id="TIr-SL-vmT"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_thermometer" translatesAutoresizingMaskIntoConstraints="NO" id="fDr-2t-Kj3">
                                         <rect key="frame" x="184" y="20" width="175" height="112"/>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbe-1b-cVi">
-                                        <rect key="frame" x="17" y="140" width="342" height="263"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="263" id="nYU-6Z-NOR"/>
+                                            <constraint firstAttribute="width" secondItem="fDr-2t-Kj3" secondAttribute="height" multiplier="25:16" id="g6w-Zq-PuJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumScaleFactor="0.875" translatesAutoresizingMaskIntoConstraints="NO" id="dku-Sa-yRo">
+                                        <rect key="frame" x="32" y="32" width="144" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="9Uy-F9-1Cx"/>
+                                            <constraint firstAttribute="width" constant="144" id="Ezt-ln-cNp"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="You will need:  Thermometer">
+                                                <attributes>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="22" baselineAdjustment="alignBaselines" minimumScaleFactor="0.875" translatesAutoresizingMaskIntoConstraints="NO" id="iaQ-Of-d8G">
+                                        <rect key="frame" x="16" y="128" width="343" height="263"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="263" id="5xc-bP-RYX"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">How to use:  1. Place the bulb of the thermometer under water, at a depth of about 15-20 cm  2. Wait a short time until the column comes to a standstill  3. Without lifting the thermometer out of the water, read the temperature</string>
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cd2-GH-mkN">
-                                        <rect key="frame" x="32" y="32" width="144" height="88"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="144" id="61A-HY-uDl"/>
-                                            <constraint firstAttribute="height" constant="88" id="VkO-0e-ehk"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment content="You will need:  Thermometer">
-                                                <attributes>
-                                                    <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="yZn-ox-FeB" secondAttribute="trailing" constant="15" id="00Z-bk-xjo"/>
-                                    <constraint firstItem="fDr-2t-Kj3" firstAttribute="top" secondItem="w9s-uh-pUN" secondAttribute="top" constant="20" id="Ex1-2A-vbH"/>
-                                    <constraint firstAttribute="bottom" secondItem="yZn-ox-FeB" secondAttribute="bottom" constant="64" id="HBK-bk-gTD"/>
-                                    <constraint firstItem="fDr-2t-Kj3" firstAttribute="leading" secondItem="cd2-GH-mkN" secondAttribute="trailing" constant="8" symbolic="YES" id="Ycj-PS-uDx"/>
-                                    <constraint firstItem="Cbe-1b-cVi" firstAttribute="top" secondItem="fDr-2t-Kj3" secondAttribute="bottom" constant="8" symbolic="YES" id="blx-YY-tZZ"/>
-                                    <constraint firstItem="yZn-ox-FeB" firstAttribute="top" secondItem="w9s-uh-pUN" secondAttribute="top" constant="366" id="cIb-I7-OqO"/>
-                                    <constraint firstItem="Cbe-1b-cVi" firstAttribute="top" secondItem="cd2-GH-mkN" secondAttribute="bottom" constant="20" id="cmf-KR-EeF"/>
-                                    <constraint firstItem="Cbe-1b-cVi" firstAttribute="leading" secondItem="yZn-ox-FeB" secondAttribute="leading" id="hIg-Q2-Zsa"/>
-                                    <constraint firstItem="Cbe-1b-cVi" firstAttribute="centerX" secondItem="w9s-uh-pUN" secondAttribute="centerX" id="mY8-Tn-gvL"/>
-                                    <constraint firstItem="cd2-GH-mkN" firstAttribute="centerY" secondItem="fDr-2t-Kj3" secondAttribute="centerY" id="o0S-g1-19b"/>
-                                    <constraint firstItem="Cbe-1b-cVi" firstAttribute="centerX" secondItem="yZn-ox-FeB" secondAttribute="centerX" id="o9a-CA-Dy4"/>
-                                    <constraint firstItem="Cbe-1b-cVi" firstAttribute="leading" secondItem="w9s-uh-pUN" secondAttribute="leading" constant="17" id="vS4-pc-Y1g"/>
-                                    <constraint firstItem="fDr-2t-Kj3" firstAttribute="trailing" secondItem="Cbe-1b-cVi" secondAttribute="trailing" id="vl0-P2-SFi"/>
-                                    <constraint firstItem="cd2-GH-mkN" firstAttribute="leading" secondItem="w9s-uh-pUN" secondAttribute="leading" constant="32" id="xoO-Ea-BK9"/>
+                                    <constraint firstItem="dku-Sa-yRo" firstAttribute="leading" secondItem="w9s-uh-pUN" secondAttribute="leading" constant="32" id="2PT-QA-qwx"/>
+                                    <constraint firstItem="iaQ-Of-d8G" firstAttribute="trailing" secondItem="yZn-ox-FeB" secondAttribute="trailing" id="4jt-Ji-5s8"/>
+                                    <constraint firstItem="yZn-ox-FeB" firstAttribute="top" secondItem="iaQ-Of-d8G" secondAttribute="bottom" constant="8" symbolic="YES" id="5g8-nN-EzN"/>
+                                    <constraint firstItem="dku-Sa-yRo" firstAttribute="centerY" secondItem="fDr-2t-Kj3" secondAttribute="centerY" id="8nU-qK-VKx"/>
+                                    <constraint firstAttribute="trailing" secondItem="fDr-2t-Kj3" secondAttribute="trailing" constant="16" id="B7D-oC-3Op"/>
+                                    <constraint firstItem="iaQ-Of-d8G" firstAttribute="centerX" secondItem="w9s-uh-pUN" secondAttribute="centerX" id="KF8-yH-2Pl"/>
+                                    <constraint firstItem="iaQ-Of-d8G" firstAttribute="leading" secondItem="yZn-ox-FeB" secondAttribute="leading" id="MD6-ny-gIn"/>
+                                    <constraint firstItem="iaQ-Of-d8G" firstAttribute="top" secondItem="dku-Sa-yRo" secondAttribute="bottom" constant="8" symbolic="YES" id="dXK-tY-2A7"/>
+                                    <constraint firstItem="fDr-2t-Kj3" firstAttribute="top" secondItem="w9s-uh-pUN" secondAttribute="top" constant="20" id="hNA-Bu-OTZ"/>
+                                    <constraint firstItem="fDr-2t-Kj3" firstAttribute="trailing" secondItem="iaQ-Of-d8G" secondAttribute="trailing" id="jbH-2Z-Rae"/>
+                                    <constraint firstAttribute="bottom" secondItem="yZn-ox-FeB" secondAttribute="bottom" constant="31" id="ksQ-g7-kAm"/>
+                                    <constraint firstItem="dku-Sa-yRo" firstAttribute="top" secondItem="w9s-uh-pUN" secondAttribute="top" constant="32" id="rZP-F0-BQf"/>
+                                    <constraint firstItem="iaQ-Of-d8G" firstAttribute="leading" secondItem="w9s-uh-pUN" secondAttribute="leading" constant="16" id="ugX-Ye-fBF"/>
+                                    <constraint firstItem="fDr-2t-Kj3" firstAttribute="leading" secondItem="dku-Sa-yRo" secondAttribute="trailing" constant="8" symbolic="YES" id="zbQ-FY-joQ"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="w9s-uh-pUN" firstAttribute="top" secondItem="hwT-y9-55p" secondAttribute="top" id="6E1-3r-zwS"/>
-                            <constraint firstAttribute="trailing" secondItem="w9s-uh-pUN" secondAttribute="trailing" id="HV0-E9-BwT"/>
-                            <constraint firstItem="w9s-uh-pUN" firstAttribute="bottom" secondItem="i2j-hy-tWm" secondAttribute="top" id="TAr-Od-RhP"/>
-                            <constraint firstItem="w9s-uh-pUN" firstAttribute="leading" secondItem="hwT-y9-55p" secondAttribute="leading" id="jxv-Gm-NTm"/>
+                            <constraint firstItem="w9s-uh-pUN" firstAttribute="leading" secondItem="hwT-y9-55p" secondAttribute="leading" id="2LQ-ra-5fF"/>
+                            <constraint firstAttribute="trailing" secondItem="w9s-uh-pUN" secondAttribute="trailing" id="aKQ-Bo-sAZ"/>
+                            <constraint firstItem="w9s-uh-pUN" firstAttribute="bottom" secondItem="i2j-hy-tWm" secondAttribute="top" id="oYv-a0-qnl"/>
+                            <constraint firstItem="w9s-uh-pUN" firstAttribute="top" secondItem="hwT-y9-55p" secondAttribute="top" id="xHx-Y3-aX3"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -1843,22 +1767,52 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ld9-79-h9k">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTD-Ue-YWZ">
-                                        <rect key="frame" x="41" y="60" width="292" height="164"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" minimumScaleFactor="0.875" translatesAutoresizingMaskIntoConstraints="NO" id="ayD-7B-buq">
+                                        <rect key="frame" x="8" y="0.0" width="359" height="162"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="164" id="bta-Aq-gHf"/>
+                                            <constraint firstAttribute="height" constant="162" id="WFz-Tt-jQy"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <string key="content">Lux is the unit of luminance and luminous emittance, measuring luminous flux per unit area. For best accuracy, user should measure lux value directly by a lux meter and enter the value in.</string>
+                                                <string key="content">Lux is the unit of luminance and luminous emittance, measuring luminous flux per unit area. For best accuracy, user should measure lux value directly by a lux meter and enter the value in. </string>
                                                 <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <integer key="NSLigature" value="0"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="27.149999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                         <tabStops>
-                                                            <textTab alignment="left" location="27.149999618530273">
+                                                            <textTab alignment="left" location="28">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="56">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="84">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="112">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="140">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="168">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="196">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="224">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="252">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="280">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="308">
+                                                                <options/>
+                                                            </textTab>
+                                                            <textTab alignment="left" location="336">
                                                                 <options/>
                                                             </textTab>
                                                         </tabStops>
@@ -1866,33 +1820,33 @@
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_luxmeter" translatesAutoresizingMaskIntoConstraints="NO" id="Jbn-fQ-ddP">
-                                        <rect key="frame" x="54" y="299" width="266" height="205"/>
+                                        <rect key="frame" x="54" y="170" width="267" height="205"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="205" id="ywl-vT-BYl"/>
+                                            <constraint firstAttribute="height" constant="205" id="a1o-b0-2Bv"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Jbn-fQ-ddP" firstAttribute="top" secondItem="WTD-Ue-YWZ" secondAttribute="bottom" constant="75" id="FGA-t3-0Rg"/>
-                                    <constraint firstItem="Jbn-fQ-ddP" firstAttribute="leading" secondItem="Ld9-79-h9k" secondAttribute="leading" constant="54" id="Mpo-FD-mfm"/>
-                                    <constraint firstItem="WTD-Ue-YWZ" firstAttribute="leading" secondItem="Ld9-79-h9k" secondAttribute="leading" constant="41" id="SsV-Yu-MZh"/>
-                                    <constraint firstAttribute="bottom" secondItem="Jbn-fQ-ddP" secondAttribute="bottom" constant="163" id="Wpr-92-R1L"/>
-                                    <constraint firstItem="WTD-Ue-YWZ" firstAttribute="centerX" secondItem="Ld9-79-h9k" secondAttribute="centerX" id="dZS-0w-SaE"/>
-                                    <constraint firstAttribute="trailing" secondItem="WTD-Ue-YWZ" secondAttribute="trailing" constant="42" id="eFS-8C-gnj"/>
-                                    <constraint firstItem="WTD-Ue-YWZ" firstAttribute="centerX" secondItem="Jbn-fQ-ddP" secondAttribute="centerX" id="hgf-Pm-xUV"/>
-                                    <constraint firstItem="WTD-Ue-YWZ" firstAttribute="top" secondItem="Ld9-79-h9k" secondAttribute="top" constant="60" id="xCb-y7-5fb"/>
+                                    <constraint firstItem="ayD-7B-buq" firstAttribute="centerX" secondItem="Jbn-fQ-ddP" secondAttribute="centerX" id="8Xh-aG-Zcg"/>
+                                    <constraint firstItem="ayD-7B-buq" firstAttribute="leading" secondItem="Ld9-79-h9k" secondAttribute="leadingMargin" id="9NU-wR-V9Z"/>
+                                    <constraint firstItem="ayD-7B-buq" firstAttribute="centerX" secondItem="Ld9-79-h9k" secondAttribute="centerX" id="GBj-dK-Zwy"/>
+                                    <constraint firstItem="ayD-7B-buq" firstAttribute="trailing" secondItem="Ld9-79-h9k" secondAttribute="trailingMargin" id="JZI-xg-EOF"/>
+                                    <constraint firstItem="ayD-7B-buq" firstAttribute="top" secondItem="Ld9-79-h9k" secondAttribute="top" id="PCs-Ao-l2i"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jbn-fQ-ddP" secondAttribute="bottom" constant="292" id="Rg8-mS-z8h"/>
+                                    <constraint firstItem="Jbn-fQ-ddP" firstAttribute="top" secondItem="ayD-7B-buq" secondAttribute="bottom" constant="8" symbolic="YES" id="XqT-Ia-Q7c"/>
+                                    <constraint firstItem="Jbn-fQ-ddP" firstAttribute="leading" secondItem="Ld9-79-h9k" secondAttribute="leading" constant="54" id="nhB-M1-g4r"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Ld9-79-h9k" secondAttribute="trailing" id="L0C-Yi-Nww"/>
-                            <constraint firstItem="Ld9-79-h9k" firstAttribute="top" secondItem="7zT-Rp-qzK" secondAttribute="top" id="PpH-6Z-CR0"/>
-                            <constraint firstItem="Ld9-79-h9k" firstAttribute="bottom" secondItem="h3u-bH-dr0" secondAttribute="top" id="WNl-K6-W0d"/>
-                            <constraint firstItem="Ld9-79-h9k" firstAttribute="leading" secondItem="7zT-Rp-qzK" secondAttribute="leading" id="afA-7w-Kzf"/>
+                            <constraint firstAttribute="trailing" secondItem="Ld9-79-h9k" secondAttribute="trailing" id="280-go-Vaw"/>
+                            <constraint firstItem="Ld9-79-h9k" firstAttribute="leading" secondItem="7zT-Rp-qzK" secondAttribute="leading" id="Dyl-0U-px0"/>
+                            <constraint firstItem="Ld9-79-h9k" firstAttribute="top" secondItem="7zT-Rp-qzK" secondAttribute="top" id="FpI-RK-pPc"/>
+                            <constraint firstItem="Ld9-79-h9k" firstAttribute="bottom" secondItem="h3u-bH-dr0" secondAttribute="top" id="wlm-I8-lc0"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -1920,139 +1874,77 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_chla" translatesAutoresizingMaskIntoConstraints="NO" id="bn2-QS-1vK">
                                         <rect key="frame" x="71" y="109" width="240" height="128"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="8L8-RU-4iq"/>
+                                            <constraint firstAttribute="height" constant="128" id="RIl-y3-wjP"/>
+                                            <constraint firstAttribute="width" secondItem="bn2-QS-1vK" secondAttribute="height" multiplier="15:8" id="rnc-H2-aBa"/>
                                         </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YS0-sp-ey1">
-                                        <rect key="frame" x="29" y="20" width="325" height="81"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.875" translatesAutoresizingMaskIntoConstraints="NO" id="WqL-2q-PVw">
+                                        <rect key="frame" x="24" y="20" width="334" height="81"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="81" id="PZy-ao-oLB"/>
+                                            <constraint firstAttribute="height" constant="81" id="cjU-On-jJb"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment content="Chlorophyll is the green pigment in plants that allow them to create energy from light by photosynthesis.">
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVQ-hk-RiP">
-                                        <rect key="frame" x="20" y="245" width="343" height="457"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUV-pH-ybD">
+                                        <rect key="frame" x="14" y="245" width="355" height="460"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="457" id="WJI-XW-DjU"/>
+                                            <constraint firstAttribute="height" constant="460" id="zAG-w2-Fa8"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <string key="content">By measuring chlorophyll, you are indirectly measuring the amount of photosynthesizing plants found in a sample. In a lake water sample, these plants would be algae or phytoplankton.
-
-Chlorophyll a is a measure of the portion of the pigment that is still active; that is, the portion that was still actively respiring and photosynthesizing at the time of sampling.
-
-Therefore, the amount of chlorophyll a in a water sample can determine the amounts of algae and cyanobacteria in the water source.
-
-</string>
+                                                <string key="content">By measuring chlorophyll, you are indirectly measuring the amount of photosynthesizing plants found in a sample. In a lake water sample, these plants would be algae or phytoplankton.  Chlorophyll a is a measures of the portion of the pigment that is still active;l that is, the portion that was still actively respiring and photosynthesizing at the time of sampling.  Therefore, the amount of chlorophyll a in a water sample can determine the amounts of algae and cyanobacteria in the water source.  </string>
                                                 <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content="There are 2 ways to input Chl a Values:">
+                                            <fragment content="There are 2 Ways to input Chl a Values:">
                                                 <attributes>
-                                                    <color key="NSColor" red="0.60152159685863871" green="0.13732243986724288" blue="0.12272324626866879" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="NSColor" red="0.60798429319371727" green="0.04576225862748412" blue="0.04576225862748412" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
+                                                <string key="content">  1. Directly input after measuring Chl a value by yourself  2. Estimate Chl a value based on the measurement of Secchi Depth and Dissolved Oxygen</string>
                                                 <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">1. Directly input after measuring Chl a value by yourself
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">2. Estimate Chl a value based on the measurement of Secchi Depth and Dissolved Oxygen
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="YS0-sp-ey1" firstAttribute="top" secondItem="C4e-m4-T4N" secondAttribute="top" constant="20" id="C6h-HH-22B"/>
-                                    <constraint firstItem="YS0-sp-ey1" firstAttribute="centerX" secondItem="bn2-QS-1vK" secondAttribute="centerX" id="Hkb-aG-WAh"/>
-                                    <constraint firstItem="bn2-QS-1vK" firstAttribute="leading" secondItem="C4e-m4-T4N" secondAttribute="leading" constant="71" id="MkB-0x-opn"/>
-                                    <constraint firstItem="bn2-QS-1vK" firstAttribute="centerX" secondItem="nVQ-hk-RiP" secondAttribute="centerX" id="Nwi-xG-xtr"/>
-                                    <constraint firstItem="bn2-QS-1vK" firstAttribute="top" secondItem="YS0-sp-ey1" secondAttribute="bottom" constant="8" symbolic="YES" id="PF0-mG-tPO"/>
-                                    <constraint firstAttribute="bottom" secondItem="nVQ-hk-RiP" secondAttribute="bottom" constant="18" id="X4e-qa-3b7"/>
-                                    <constraint firstItem="nVQ-hk-RiP" firstAttribute="top" secondItem="bn2-QS-1vK" secondAttribute="bottom" constant="8" symbolic="YES" id="bkj-PO-teN"/>
-                                    <constraint firstItem="nVQ-hk-RiP" firstAttribute="leading" secondItem="C4e-m4-T4N" secondAttribute="leading" constant="20" id="eAK-18-gDP"/>
-                                    <constraint firstItem="bn2-QS-1vK" firstAttribute="centerX" secondItem="C4e-m4-T4N" secondAttribute="centerX" id="gr4-Le-8o3"/>
-                                    <constraint firstAttribute="trailing" secondItem="nVQ-hk-RiP" secondAttribute="trailing" constant="20" id="k9g-bC-hQ8"/>
-                                    <constraint firstItem="YS0-sp-ey1" firstAttribute="leading" secondItem="C4e-m4-T4N" secondAttribute="leading" constant="29" id="kGX-1v-T0y"/>
+                                    <constraint firstItem="WqL-2q-PVw" firstAttribute="top" secondItem="C4e-m4-T4N" secondAttribute="top" constant="20" id="9gR-dK-O72"/>
+                                    <constraint firstItem="WqL-2q-PVw" firstAttribute="centerX" secondItem="C4e-m4-T4N" secondAttribute="centerX" id="B3z-95-XFZ"/>
+                                    <constraint firstItem="bn2-QS-1vK" firstAttribute="centerX" secondItem="xUV-pH-ybD" secondAttribute="centerX" id="JXK-nA-TQ4"/>
+                                    <constraint firstItem="bn2-QS-1vK" firstAttribute="leading" secondItem="C4e-m4-T4N" secondAttribute="leading" constant="71" id="R3e-jt-BiG"/>
+                                    <constraint firstItem="WqL-2q-PVw" firstAttribute="leading" secondItem="C4e-m4-T4N" secondAttribute="leading" constant="24" id="RfY-Tf-XGE"/>
+                                    <constraint firstAttribute="trailing" secondItem="xUV-pH-ybD" secondAttribute="trailing" constant="14" id="aPi-bU-iAA"/>
+                                    <constraint firstItem="bn2-QS-1vK" firstAttribute="top" secondItem="WqL-2q-PVw" secondAttribute="bottom" constant="8" symbolic="YES" id="dob-Cr-8pf"/>
+                                    <constraint firstItem="WqL-2q-PVw" firstAttribute="centerX" secondItem="bn2-QS-1vK" secondAttribute="centerX" id="eFb-q1-h3n"/>
+                                    <constraint firstAttribute="bottom" secondItem="xUV-pH-ybD" secondAttribute="bottom" constant="15" id="nwf-9l-W8Q"/>
+                                    <constraint firstItem="xUV-pH-ybD" firstAttribute="top" secondItem="bn2-QS-1vK" secondAttribute="bottom" constant="8" symbolic="YES" id="pvh-3e-4Np"/>
+                                    <constraint firstItem="xUV-pH-ybD" firstAttribute="leading" secondItem="C4e-m4-T4N" secondAttribute="leading" constant="14" id="uKc-Z8-1ec"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="C4e-m4-T4N" firstAttribute="top" secondItem="OvR-Ke-plB" secondAttribute="top" id="Fst-hi-Jx3"/>
-                            <constraint firstItem="C4e-m4-T4N" firstAttribute="centerX" secondItem="OvR-Ke-plB" secondAttribute="centerX" id="Gwv-hb-MMc"/>
-                            <constraint firstItem="C4e-m4-T4N" firstAttribute="bottom" secondItem="Qvk-tt-ro3" secondAttribute="top" id="c2t-nT-bUm"/>
-                            <constraint firstItem="C4e-m4-T4N" firstAttribute="leading" secondItem="OvR-Ke-plB" secondAttribute="leadingMargin" constant="-20" id="tEA-TZ-rTv"/>
+                            <constraint firstItem="C4e-m4-T4N" firstAttribute="bottom" secondItem="Qvk-tt-ro3" secondAttribute="top" id="5SI-00-SqT"/>
+                            <constraint firstItem="C4e-m4-T4N" firstAttribute="centerX" secondItem="OvR-Ke-plB" secondAttribute="centerX" id="Coq-ye-wJ9"/>
+                            <constraint firstItem="C4e-m4-T4N" firstAttribute="leading" secondItem="OvR-Ke-plB" secondAttribute="leadingMargin" constant="-20" id="Nx0-Kv-XKU"/>
+                            <constraint firstItem="C4e-m4-T4N" firstAttribute="top" secondItem="OvR-Ke-plB" secondAttribute="top" id="gIy-qp-yZG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="z6d-G9-HJg"/>
@@ -2080,53 +1972,47 @@ Cg
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_secchi_disk" translatesAutoresizingMaskIntoConstraints="NO" id="VWE-MR-kva">
                                         <rect key="frame" x="51" y="265" width="272" height="181"/>
+                                        <color key="backgroundColor" red="0.55301047120418856" green="0.55301047120418856" blue="0.55301047120418856" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="181" id="rEt-7t-M5Y"/>
+                                            <constraint firstAttribute="width" secondItem="VWE-MR-kva" secondAttribute="height" multiplier="272:181" id="10w-bP-Nzl"/>
+                                            <constraint firstAttribute="height" constant="181" id="mMj-gI-6Qs"/>
                                         </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ks9-2G-5RS">
-                                        <rect key="frame" x="16" y="102" width="343" height="116"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.875" translatesAutoresizingMaskIntoConstraints="NO" id="m63-DK-Qh1">
+                                        <rect key="frame" x="16" y="64" width="343" height="116"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="116" id="JIv-rT-cnm"/>
+                                            <constraint firstAttribute="height" constant="116" id="RrD-FI-XUf"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment content="It is possible to measure the total depth with a Secchi Disk. Lower the disk until it reaches the bottom of the water source.">
                                                 <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <integer key="NSLigature" value="0"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="27.149999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops>
-                                                            <textTab alignment="left" location="27.149999618530273">
-                                                                <options/>
-                                                            </textTab>
-                                                        </tabStops>
-                                                    </paragraphStyle>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="VWE-MR-kva" firstAttribute="top" secondItem="Ks9-2G-5RS" secondAttribute="bottom" constant="47" id="I6K-tX-lSY"/>
-                                    <constraint firstItem="Ks9-2G-5RS" firstAttribute="centerX" secondItem="VWE-MR-kva" secondAttribute="centerX" id="Nd4-s3-8mH"/>
-                                    <constraint firstItem="VWE-MR-kva" firstAttribute="leading" secondItem="hCP-II-YHE" secondAttribute="leading" constant="51" id="Xgf-52-70L"/>
-                                    <constraint firstItem="Ks9-2G-5RS" firstAttribute="top" secondItem="hCP-II-YHE" secondAttribute="top" constant="102" id="bLo-C6-4dE"/>
-                                    <constraint firstItem="VWE-MR-kva" firstAttribute="centerX" secondItem="hCP-II-YHE" secondAttribute="centerX" id="bdc-ph-dqB"/>
-                                    <constraint firstAttribute="bottom" secondItem="VWE-MR-kva" secondAttribute="bottom" constant="221" id="gYB-n5-PWm"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ks9-2G-5RS" secondAttribute="trailing" constant="16" id="pQ7-48-1Q8"/>
-                                    <constraint firstItem="Ks9-2G-5RS" firstAttribute="leading" secondItem="hCP-II-YHE" secondAttribute="leading" constant="16" id="q24-yQ-rkw"/>
+                                    <constraint firstAttribute="trailing" secondItem="m63-DK-Qh1" secondAttribute="trailing" constant="16" id="31K-GJ-rsq"/>
+                                    <constraint firstItem="m63-DK-Qh1" firstAttribute="leading" secondItem="hCP-II-YHE" secondAttribute="leading" constant="16" id="Cgd-bT-mp2"/>
+                                    <constraint firstItem="VWE-MR-kva" firstAttribute="top" secondItem="m63-DK-Qh1" secondAttribute="bottom" constant="85" id="M5R-7U-qDK"/>
+                                    <constraint firstItem="VWE-MR-kva" firstAttribute="leading" secondItem="hCP-II-YHE" secondAttribute="leading" constant="51" id="Uxx-Ia-pY9"/>
+                                    <constraint firstItem="VWE-MR-kva" firstAttribute="centerX" secondItem="hCP-II-YHE" secondAttribute="centerX" id="b8X-wr-tFK"/>
+                                    <constraint firstAttribute="bottom" secondItem="VWE-MR-kva" secondAttribute="bottom" constant="221" id="dXt-gt-nyP"/>
+                                    <constraint firstItem="m63-DK-Qh1" firstAttribute="top" secondItem="hCP-II-YHE" secondAttribute="top" constant="64" id="rur-MN-IeP"/>
+                                    <constraint firstItem="m63-DK-Qh1" firstAttribute="centerX" secondItem="VWE-MR-kva" secondAttribute="centerX" id="x6y-nx-ASI"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="hCP-II-YHE" firstAttribute="top" secondItem="Qvc-KT-sUI" secondAttribute="top" id="0nn-xs-KbR"/>
-                            <constraint firstItem="hCP-II-YHE" firstAttribute="bottom" secondItem="QTb-qv-z4j" secondAttribute="top" id="9Hb-VT-YoC"/>
-                            <constraint firstItem="hCP-II-YHE" firstAttribute="leading" secondItem="Qvc-KT-sUI" secondAttribute="leading" id="eKR-1Q-D4C"/>
-                            <constraint firstAttribute="trailing" secondItem="hCP-II-YHE" secondAttribute="trailing" id="sVV-by-K3o"/>
+                            <constraint firstItem="hCP-II-YHE" firstAttribute="leading" secondItem="Qvc-KT-sUI" secondAttribute="leading" id="NyK-7l-gy4"/>
+                            <constraint firstAttribute="trailing" secondItem="hCP-II-YHE" secondAttribute="trailing" id="gPL-G3-Pa3"/>
+                            <constraint firstItem="hCP-II-YHE" firstAttribute="top" secondItem="Qvc-KT-sUI" secondAttribute="top" id="gQd-8n-JhT"/>
+                            <constraint firstItem="hCP-II-YHE" firstAttribute="bottom" secondItem="QTb-qv-z4j" secondAttribute="top" id="zQo-Ns-zfM"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -2151,76 +2037,72 @@ Cg
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIK-C4-JcJ">
                                 <rect key="frame" x="-4" y="0.0" width="379" height="667"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbL-zX-MPw">
-                                        <rect key="frame" x="18" y="194" width="343" height="189"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_thermo_vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a0c-j5-1r8">
+                                        <rect key="frame" x="174" y="23" width="173" height="136"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumScaleFactor="0.875" translatesAutoresizingMaskIntoConstraints="NO" id="jFN-yM-KV1">
+                                        <rect key="frame" x="18" y="23" width="148" height="114"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="189" id="Y2z-fF-oID"/>
+                                            <constraint firstAttribute="height" constant="114" id="8g7-WQ-hWG"/>
+                                            <constraint firstAttribute="width" constant="148" id="UeJ-Yi-zVJ"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="You will need:  A thermometer tied to a rope">
+                                                <attributes>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" minimumScaleFactor="0.875" translatesAutoresizingMaskIntoConstraints="NO" id="Cjc-6v-rph">
+                                        <rect key="frame" x="18" y="167" width="343" height="167"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="167" id="G9P-iB-mJi"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <string key="content">How to use:  1. Put the thermometer into water and slowly lower it down  2. Wait for some time and then lift the rope up and record the temperature</string>
+                                                <string key="content">How to use:  1. Put the thermometer into the water and slowly lower it down  2. Wait for some time and then lift the rope up and record the temperature</string>
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_bottemp" translatesAutoresizingMaskIntoConstraints="NO" id="V34-Md-YaR">
-                                        <rect key="frame" x="18" y="360" width="343" height="307"/>
+                                        <rect key="frame" x="18" y="342" width="343" height="275"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="307" id="Aoy-Fb-gOo"/>
-                                        </constraints>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C75-t3-l8A">
-                                        <rect key="frame" x="20" y="38" width="162" height="117"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="162" id="NEG-SI-MVz"/>
-                                            <constraint firstAttribute="height" constant="117" id="gog-sc-sHH"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment content="You will need:  A thermometer tied to a rope ">
-                                                <attributes>
-                                                    <font key="NSFont" size="16" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog_thermo_vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a0c-j5-1r8">
-                                        <rect key="frame" x="174" y="23" width="173" height="147"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="173" id="LD0-FN-ZMf"/>
+                                            <constraint firstAttribute="height" constant="275" id="7pA-rv-pcF"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="rbL-zX-MPw" firstAttribute="leading" secondItem="V34-Md-YaR" secondAttribute="leading" id="2m5-yX-LbA"/>
-                                    <constraint firstAttribute="trailing" secondItem="rbL-zX-MPw" secondAttribute="trailing" constant="18" id="53j-tb-ZNh"/>
-                                    <constraint firstItem="rbL-zX-MPw" firstAttribute="centerX" secondItem="hIK-C4-JcJ" secondAttribute="centerX" id="D0T-rC-ieJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="a0c-j5-1r8" secondAttribute="trailing" constant="32" id="Jzh-6j-ODR"/>
-                                    <constraint firstItem="rbL-zX-MPw" firstAttribute="leading" secondItem="hIK-C4-JcJ" secondAttribute="leading" constant="18" id="KzS-4i-uUX"/>
-                                    <constraint firstItem="rbL-zX-MPw" firstAttribute="top" secondItem="a0c-j5-1r8" secondAttribute="bottom" constant="24" id="TtA-w6-Ou5"/>
-                                    <constraint firstItem="rbL-zX-MPw" firstAttribute="top" secondItem="C75-t3-l8A" secondAttribute="bottom" constant="39" id="WBj-Mn-idR"/>
-                                    <constraint firstItem="V34-Md-YaR" firstAttribute="top" secondItem="hIK-C4-JcJ" secondAttribute="top" constant="360" id="din-8j-D8M"/>
-                                    <constraint firstAttribute="bottom" secondItem="V34-Md-YaR" secondAttribute="bottom" id="iAX-Wj-UWe"/>
-                                    <constraint firstItem="C75-t3-l8A" firstAttribute="centerY" secondItem="a0c-j5-1r8" secondAttribute="centerY" id="ikH-QK-NCh"/>
-                                    <constraint firstItem="C75-t3-l8A" firstAttribute="leading" secondItem="hIK-C4-JcJ" secondAttribute="leading" constant="20" id="tAa-n6-hPt"/>
-                                    <constraint firstItem="a0c-j5-1r8" firstAttribute="top" secondItem="hIK-C4-JcJ" secondAttribute="top" constant="23" id="vi8-lB-fn7"/>
-                                    <constraint firstItem="rbL-zX-MPw" firstAttribute="trailing" secondItem="V34-Md-YaR" secondAttribute="trailing" id="zQC-MB-3rv"/>
+                                    <constraint firstItem="Cjc-6v-rph" firstAttribute="top" secondItem="jFN-yM-KV1" secondAttribute="bottom" constant="30" id="7VK-T3-hsZ"/>
+                                    <constraint firstItem="Cjc-6v-rph" firstAttribute="centerX" secondItem="hIK-C4-JcJ" secondAttribute="centerX" id="7hd-E2-JMe"/>
+                                    <constraint firstAttribute="trailing" secondItem="a0c-j5-1r8" secondAttribute="trailing" constant="32" id="E4V-kh-OzH"/>
+                                    <constraint firstItem="jFN-yM-KV1" firstAttribute="top" secondItem="a0c-j5-1r8" secondAttribute="top" id="M7s-Da-lSp"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cjc-6v-rph" secondAttribute="trailing" constant="18" id="Q02-HL-IJL"/>
+                                    <constraint firstItem="a0c-j5-1r8" firstAttribute="leading" secondItem="jFN-yM-KV1" secondAttribute="trailing" constant="8" symbolic="YES" id="VHM-JE-ag6"/>
+                                    <constraint firstAttribute="bottom" secondItem="V34-Md-YaR" secondAttribute="bottom" constant="50" id="bmQ-uK-gqz"/>
+                                    <constraint firstItem="jFN-yM-KV1" firstAttribute="top" secondItem="hIK-C4-JcJ" secondAttribute="top" constant="23" id="cFq-mS-wW4"/>
+                                    <constraint firstItem="Cjc-6v-rph" firstAttribute="trailing" secondItem="V34-Md-YaR" secondAttribute="trailing" id="hN0-Cm-0h9"/>
+                                    <constraint firstItem="Cjc-6v-rph" firstAttribute="leading" secondItem="V34-Md-YaR" secondAttribute="leading" id="kR0-EG-m2M"/>
+                                    <constraint firstItem="jFN-yM-KV1" firstAttribute="leading" secondItem="hIK-C4-JcJ" secondAttribute="leading" constant="18" id="kxI-x4-huX"/>
+                                    <constraint firstItem="jFN-yM-KV1" firstAttribute="leading" secondItem="Cjc-6v-rph" secondAttribute="leading" id="nom-Bj-d3t"/>
+                                    <constraint firstItem="V34-Md-YaR" firstAttribute="top" secondItem="Cjc-6v-rph" secondAttribute="bottom" constant="8" symbolic="YES" id="tGV-IV-VSK"/>
+                                    <constraint firstItem="Cjc-6v-rph" firstAttribute="top" secondItem="a0c-j5-1r8" secondAttribute="bottom" constant="8" symbolic="YES" id="tmw-bA-SM1"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hIK-C4-JcJ" firstAttribute="bottom" secondItem="8Az-fF-Pmg" secondAttribute="top" id="4u7-3Y-AQS"/>
-                            <constraint firstItem="hIK-C4-JcJ" firstAttribute="top" secondItem="CHt-oH-LA0" secondAttribute="top" id="gYq-0J-d0b"/>
-                            <constraint firstAttribute="trailing" secondItem="hIK-C4-JcJ" secondAttribute="trailing" id="h4V-VB-HB0"/>
-                            <constraint firstItem="hIK-C4-JcJ" firstAttribute="leading" secondItem="CHt-oH-LA0" secondAttribute="leadingMargin" constant="-20" id="xbV-BI-O0G"/>
+                            <constraint firstItem="hIK-C4-JcJ" firstAttribute="bottom" secondItem="8Az-fF-Pmg" secondAttribute="top" id="7fb-B6-lIv"/>
+                            <constraint firstItem="hIK-C4-JcJ" firstAttribute="leading" secondItem="CHt-oH-LA0" secondAttribute="leadingMargin" constant="-20" id="IQr-w4-KzJ"/>
+                            <constraint firstItem="hIK-C4-JcJ" firstAttribute="top" secondItem="CHt-oH-LA0" secondAttribute="top" id="gD3-n4-vQU"/>
+                            <constraint firstAttribute="trailing" secondItem="hIK-C4-JcJ" secondAttribute="trailing" id="mx7-OS-E9N"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
