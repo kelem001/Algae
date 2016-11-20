@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class DataViewController: UIViewController {
-
+    
     // ID for the target NSManagedObject for datalog.
     var id: NSManagedObjectID?
     
@@ -27,14 +27,22 @@ class DataViewController: UIViewController {
     @IBOutlet weak var cyanokLabel: UILabel!
     
     var chlaDataSet: Array<Float> = [Float]()
-    var cyanoDataSet: Array<Float> = [Float]()
+    
+    var cyanoDataSet:Array<Float> = [Float]()
+    
+    var logDate = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+        let rightButton =  UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector (tapped))
+        parent?.navigationItem.rightBarButtonItem = rightButton
+        
         // Retrieve Managed Context
         let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
+        
         // Retrieve target datalog based on NSManagedObjectID
         let datalog = managedContext.object(with: self.id!)
         
@@ -78,6 +86,10 @@ class DataViewController: UIViewController {
         graphController.cyanoDataSet = cyanoDataSet
     }
     
+    func tapped(sender: AnyObject?) {
+        performSegue(withIdentifier: "editLog", sender: sender)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -89,8 +101,15 @@ class DataViewController: UIViewController {
             let destinationVC = tabbar.viewControllers?[0] as! CalculateViewController
             destinationVC.logID = id
             destinationVC.startEdit = true
+            destinationVC.validPO4 = true
+            destinationVC.validChl = true
         }
-
+        else if segue.identifier == "dataSet" {
+            let destinationVC = segue.destination as! DataSetTableViewController
+            destinationVC.data = [chlaDataSet, cyanoDataSet]
+            destinationVC.logDate = logDate
+        }
+        
     }
     
 }

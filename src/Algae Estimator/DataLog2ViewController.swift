@@ -95,7 +95,6 @@ class DataLog2ViewController: UIViewController, UITableViewDataSource, UITableVi
             datalogIDsIndex = indexPath.row
             
             // Pass ObjectID to the destVC
-            NSLog(String(describing: datalogIDs?[datalogIDsIndex!]))
             destinationVC.id = datalogIDs?[datalogIDsIndex!]
         }
     }

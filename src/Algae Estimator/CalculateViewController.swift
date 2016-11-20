@@ -11,75 +11,18 @@ import CoreData
 import SwiftCharts
 
 class CalculateViewController: UIViewController {
-    @IBAction func chlValueButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 1
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
     
-    @IBAction func BrightnessButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 2
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
-    @IBAction func lakeDepthButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 3
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
-
-    @IBAction func TempBotButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 4
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
-
-    @IBAction func TempSurButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 5
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
-    
-    @IBAction func PO4ConButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 6
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
-    
-    @IBAction func ChlButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 1
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
- 
     var dataEntryVals: [String:Float] = [:]
     var logID: NSManagedObjectID?
     var logDate: NSDate?
     var startEdit: Bool?
+    var validPO4 = false
+    var validChl = false
         
     //All IBOUTLETS are properties, text boxes are UITextField and
     //UILabel is the results label
+    
+    @IBOutlet weak var po4SetButton: UIButton!
     
     @IBOutlet weak var tempSurface: UITextField!
     @IBOutlet weak var tempBottom: UITextField!
@@ -89,21 +32,17 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var brightBox: UITextField!
     //@IBOutlet weak var luxLabel: UILabel!
     
-    
-    @IBAction func po4Set(_ sender: UIButton) {
-        //performSegue(withIdentifier: "po4TabBar", sender: self)
-    }
-    
-    
     @IBOutlet weak var lakeDepthBox: UITextField!
     //@IBOutlet weak var pavLabel: UILabel!
 
+    @IBOutlet weak var chlSetButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        
         
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
         //tap.cancelsTouchesInView = false
@@ -114,6 +53,21 @@ class CalculateViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
+        let rightButton =  UIBarButtonItem(title: "Clear", style: .plain, target: self, action: #selector (clear))
+        parent?.navigationItem.rightBarButtonItem = rightButton
+        
+        // If current instance of CalculateViewController isnt only view controller then make it the olny one
+        if (navigationController?.viewControllers.count)! > 1 {
+            
+            // The user does not see the hiding and showing of the navbar, but it is necessary to update it. Without it the nabvar will show non-functional back buttons
+            navigationController?.isNavigationBarHidden = true
+            
+            // Make a new UIViewController Array and add only current instance of CalculateViewController and replace original array
+            navigationController?.viewControllers = [(navigationController?.topViewController)!]
+            
+            navigationController?.isNavigationBarHidden = false
+        }
+
         if self.logID != nil && startEdit! {
             // Retrieve Managed Context
             let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -150,6 +104,39 @@ class CalculateViewController: UIViewController {
         if dataEntryVals["depth"] != nil {
             lakeDepthBox.text = String(describing: dataEntryVals["depth"]!)
         }
+        
+        changeButtonColor(button: po4SetButton, changeColor: validPO4)
+        changeButtonColor(button: chlSetButton, changeColor: validChl)
+        
+    }
+    
+    private func changeButtonColor(button: UIButton, changeColor: Bool) {
+        if changeColor {
+            button.backgroundColor = MyConstants.Colors.green
+            button.setTitle("\u{2713}", for: UIControlState.normal)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 40)
+        } else {
+            button.backgroundColor = UIColor.lightGray
+            button.setTitle("SET", for: UIControlState.normal)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        }
+    }
+    
+    func clear(sender: AnyObject?) {
+        
+        dataEntryVals = [:]
+        logID = NSManagedObjectID()
+        logDate = NSDate()
+        startEdit = false
+        tempSurface.text = ""
+        tempBottom.text = ""
+        brightBox.text = ""
+        lakeDepthBox.text = ""
+        validPO4 = false
+        validChl = false
+        
+        viewWillAppear(false)
+        viewDidLoad()
     }
     
     //Calls this function when the tap is recognized.
@@ -298,8 +285,14 @@ class CalculateViewController: UIViewController {
             // Obtain destVC controller instance.
             let tabbar = segue.destination as! UITabBarController
             let destinationVC = tabbar.viewControllers?[0] as! PO4ViewController
+            let otherTabVC = tabbar.viewControllers?[1] as! PO4EstimatesViewController
             
             destinationVC.dataEntryVals = dataEntryVals
+            otherTabVC.dataEntryVals = dataEntryVals
+            
+            destinationVC.validChl = validChl
+            otherTabVC.validChl = validChl
+            
             if logID != nil {
                 destinationVC.logID = logID
             }
@@ -313,10 +306,15 @@ class CalculateViewController: UIViewController {
             
             destinationVC.dataEntryVals = dataEntryVals
             otherTabVC.dataEntryVals = dataEntryVals
+            
+            destinationVC.validPO4 = validPO4
+            otherTabVC.validPO4 = validPO4
+            
             if logID != nil {
                 destinationVC.logID = logID
                 otherTabVC.logID = logID
             }
+            
         } else if (segue.identifier == "toDataPage") {
             
             let date = NSDate()
@@ -376,8 +374,5 @@ class CalculateViewController: UIViewController {
         }
 
     }
-    
-    
-    
-}
 
+}

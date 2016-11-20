@@ -13,6 +13,7 @@ class ChlViewController: UIViewController {
     
     var dataEntryVals: [String:Float] = [:]
     var logID: NSManagedObjectID?
+    var validPO4: Bool?
     
     @IBOutlet weak var totalChlTextfield: UITextField!
     @IBOutlet weak var cyanoChlTextfield: UITextField!
@@ -21,15 +22,6 @@ class ChlViewController: UIViewController {
        // performSegue(withIdentifier: "submit", sender: self)
     }
     
-    
-    @IBAction func CyanoChlButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 7
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
     
     private func _updateDataEntryVals() {
         if totalChlTextfield.text != "" && Float(totalChlTextfield.text!) != nil {
@@ -58,6 +50,10 @@ class ChlViewController: UIViewController {
             if logID != nil {
                 dest.logID = logID
             }
+            if dataEntryVals["totalChl"] != nil && dataEntryVals["cyanoChl"] != nil && dataEntryVals["totalChl"]! >= 0.0 && dataEntryVals["totalChl"]! <= 300.0 && dataEntryVals["cyanoChl"]! >= 0.0 && dataEntryVals["cyanoChl"]! <= 300.0 {
+                dest.validChl = true
+            } else {dest.validChl = false}
+            dest.validPO4 = validPO4!
             
         }
     }

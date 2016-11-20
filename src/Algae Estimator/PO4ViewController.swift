@@ -13,6 +13,7 @@ class PO4ViewController: UIViewController {
 
     var dataEntryVals: [String:Float] = [:]
     var logID: NSManagedObjectID?
+    var validChl: Bool?
     
     @IBOutlet weak var po4TextField: UITextField!
     
@@ -21,15 +22,6 @@ class PO4ViewController: UIViewController {
         //performSegue(withIdentifier: "backToDataEntry", sender: self)
     }
     
-    
-    @IBAction func po4ConButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 10
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
 
     private func _updateDataEntryVals() {
         if po4TextField.text != "" && Float(po4TextField.text!) != nil {
@@ -51,6 +43,10 @@ class PO4ViewController: UIViewController {
                 dest.logID = logID
             }
             
+            if dataEntryVals["po4"] != nil && dataEntryVals["po4"]! >= 0.0001 && dataEntryVals["po4"]! <= 7.0 {
+                dest.validPO4 = true
+            } else {dest.validPO4 = false}
+            dest.validChl = validChl!
         }
     }
     

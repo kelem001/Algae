@@ -24,6 +24,10 @@ class DataLogViewController: UIViewController, UITableViewDataSource, UITableVie
     var datalogIDs: [NSManagedObjectID]?
     var datalogIDsIndex: Int?
     
+    override func viewWillAppear(_ animated: Bool) {
+        parent?.navigationItem.rightBarButtonItem = nil
+    }
+    
     override func viewDidLoad() {
         
         // Retrieve Managed Context
