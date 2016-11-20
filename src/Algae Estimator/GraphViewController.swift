@@ -87,20 +87,46 @@ class GraphViewController: UIViewController {
                     ]
                 )
                 
-                //let box = "■"
+                
+                let box = UILabel(frame: CGRect(x: 0, y: 0, width:200, height: 21)) //w: 200 h: 21
+                box.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.15))  //x: /3.4 y: /1.15
+                box.textAlignment = .left
+                box.font = box.font.withSize(10)
+                box.textColor = UIColor.blue
+                box.text = "\t■"   //10 spaces
+                
                 
                 
                 let label = UILabel(frame: CGRect(x: 0, y: 0, width:200, height: 21)) //w: 200 h: 21
                 label.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.15))  //x: /3.4 y: /1.15
-                label.textAlignment = .center
+                label.textAlignment = .left
                 label.font = label.font.withSize(10)
-                label.text = "Total Chla     Cyano Chla"
+                label.text = "\t   Total Chla" //13 spaces
+                
+                
+                let box2 = UILabel(frame: CGRect(x: 0, y: 0, width:200, height: 21)) //w: 200 h: 21
+                box2.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.15))  //x: /3.4 y: /1.15
+                box2.textAlignment = .center
+                box2.font = box.font.withSize(10)
+                box2.textColor = UIColor(red:0.2, green:0.68, blue:0.44, alpha:1.0)
+                box2.text = "■" //no spaces
+                
+                
+                
+                let label2 = UILabel(frame: CGRect(x: 0, y: 0, width:200, height: 21)) //w: 200 h: 21
+                label2.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.15))  //x: /3.4 y: /1.15
+                label2.textAlignment = .center
+                label2.font = label.font.withSize(10)
+                label2.text = "\t\t   Cyano Chla"  //22 spaces
                 
                 
                 
                 scrollView.addSubview(chart.view)
                 self.view.addSubview(scrollView)
+                self.view.addSubview(box)
                 self.view.addSubview(label)
+                self.view.addSubview(box2)
+                self.view.addSubview(label2)
                 self.chart = chart
                 
             }
