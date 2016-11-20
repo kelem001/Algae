@@ -26,16 +26,20 @@ class GraphViewController: UIViewController {
         
         let labelSettings = ChartLabelSettings(font: UIFont.init(name: "Helvetica", size: 10)!)
         
+        
         var chartPoints0 = [ChartPoint]()
         var chartPoints1 = [ChartPoint]()
         var chartPoints2 = [ChartPoint]()
         
+        
+
         for i in 0..<chlaDataSet.count {
             chartPoints0.append(createChartPoint(Double(i), Double(chlaDataSet[i]), labelSettings))
             chartPoints1.append(createChartPoint(Double(i), Double(cyanoDataSet[i]), labelSettings))
             chartPoints2.append(createChartPoint(Double(i), 40.0, labelSettings))
         }
         
+
         let xValues = stride(from: 0, through: chartPoints0.count, by: 66).map {ChartAxisValueDouble(Double($0), labelSettings: labelSettings)}
         let yValues = ChartAxisValuesGenerator.generateYAxisValuesWithChartPoints(chartPoints0, minSegmentCount: 5, maxSegmentCount: 20, multiple: 10, axisValueGenerator: {ChartAxisValueDouble($0, labelSettings: labelSettings)}, addPaddingSegmentIfEdge: false)
         
@@ -87,13 +91,20 @@ class GraphViewController: UIViewController {
                     ]
                 )
                 
+                let warn = UILabel(frame: CGRect(x: 0, y: 0, width:200, height: 21)) //w: 200 h: 21
+                warn.center = CGPoint(x: self.view.bounds.minX + 200, y: self.view.bounds.minY + 175)  //x: 250 y: 175
+                warn.textAlignment = .center
+                warn.font = warn.font.withSize(10)
+                warn.textColor = UIColor.red
+                warn.text = "WHO Risk Limit for HAB: 40 μg/L"
+                
                 
                 let box = UILabel(frame: CGRect(x: 0, y: 0, width:200, height: 21)) //w: 200 h: 21
                 box.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.15))  //x: /3.4 y: /1.15
-                box.textAlignment = .left
+                box.textAlignment = .left   //left
                 box.font = box.font.withSize(10)
                 box.textColor = UIColor.blue
-                box.text = "\t■"   //10 spaces
+                box.text = "\t■"   //1 tab
                 
                 
                 
@@ -101,12 +112,12 @@ class GraphViewController: UIViewController {
                 label.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.15))  //x: /3.4 y: /1.15
                 label.textAlignment = .left
                 label.font = label.font.withSize(10)
-                label.text = "\t   Total Chla" //13 spaces
+                label.text = "\t   Total Chla" //1 tab 3 spaces
                 
                 
                 let box2 = UILabel(frame: CGRect(x: 0, y: 0, width:200, height: 21)) //w: 200 h: 21
                 box2.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.15))  //x: /3.4 y: /1.15
-                box2.textAlignment = .center
+                box2.textAlignment = .center  //center
                 box2.font = box.font.withSize(10)
                 box2.textColor = UIColor(red:0.2, green:0.68, blue:0.44, alpha:1.0)
                 box2.text = "■" //no spaces
@@ -117,7 +128,7 @@ class GraphViewController: UIViewController {
                 label2.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.15))  //x: /3.4 y: /1.15
                 label2.textAlignment = .center
                 label2.font = label.font.withSize(10)
-                label2.text = "\t\t   Cyano Chla"  //22 spaces
+                label2.text = "\t\t   Cyano Chla"  //2 tabs 3 spaces
                 
                 
                 
@@ -127,6 +138,7 @@ class GraphViewController: UIViewController {
                 self.view.addSubview(label)
                 self.view.addSubview(box2)
                 self.view.addSubview(label2)
+                self.view.addSubview(warn)
                 self.chart = chart
                 
             }
