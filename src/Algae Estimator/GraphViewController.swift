@@ -32,6 +32,7 @@ class GraphViewController: UIViewController {
         var chartPoints2 = [ChartPoint]()
         
         
+        
 
         for i in 0..<chlaDataSet.count {
             chartPoints0.append(createChartPoint(Double(i), Double(chlaDataSet[i]), labelSettings))
@@ -44,8 +45,11 @@ class GraphViewController: UIViewController {
         let yValues = ChartAxisValuesGenerator.generateYAxisValuesWithChartPoints(chartPoints0, minSegmentCount: 5, maxSegmentCount: 20, multiple: 10, axisValueGenerator: {ChartAxisValueDouble($0, labelSettings: labelSettings)}, addPaddingSegmentIfEdge: false)
         
        
+        
         let xModel = ChartAxisModel(axisValues: xValues, axisTitleLabel: ChartAxisLabel(text: "Time (h)", settings: labelSettings))
         let yModel = ChartAxisModel(axisValues: yValues, axisTitleLabel: ChartAxisLabel(text: "Chl a\nConc.\n(μg/L)", settings: labelSettings))
+        
+        
     
     
 
@@ -54,7 +58,8 @@ class GraphViewController: UIViewController {
         
         
         
-        let chartFrame = CGRect(x: 0, y: 0, width: self.view.bounds.width - 40, height: self.view.bounds.height - 150)
+        //let chartFrame = CGRect(x: 0, y: 0, width: self.view.bounds.width - 40, height: self.view.bounds.height - 150)
+        let chartFrame = CGRect(x: 0, y: 0, width: self.view.bounds.width - 40, height: self.view.bounds.height - 180)
     
         
         // calculate coords space in the background to keep UI smooth
@@ -94,17 +99,29 @@ class GraphViewController: UIViewController {
                 var wid = self.view.bounds.width
                 var hei = self.view.bounds.height
                 
+                
                 let warn = UILabel(frame: CGRect(x: 0, y: 0, width:200, height: 21)) //w: 200 h: 21
-                warn.center = CGPoint(x: self.view.bounds.minX + 200, y: self.view.bounds.minY + 175)  //x: 250 y: 175
-                warn.textAlignment = .center
+                //warn.center = CGPoint(x: self.view.bounds.minX + 200, y: self.view.bounds.minY + 175)  //x: 250 y: 175
+                //warn.center = CGPoint(x: UIScreen.main.bounds.size.width/2, y: UIScreen.main.bounds.size.height/(4))
+                warn.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.17))  //x: 3.4 y: 1.17
+                warn.textAlignment = .left
                 warn.font = warn.font.withSize(10)
                 warn.textColor = UIColor.red
-                warn.text = "WHO Risk Limit for HAB: 40 μg/L"
+                warn.text = "\t■"  //1 tab
+                
+                let warn2 = UILabel(frame: CGRect(x: 0, y: 0, width:200, height: 21)) //w: 200 h: 21
+                //warn.center = CGPoint(x: self.view.bounds.minX + 200, y: self.view.bounds.minY + 175)  //x: 250 y: 175
+                //warn.center = CGPoint(x: UIScreen.main.bounds.size.width/2, y: UIScreen.main.bounds.size.height/(4))
+                warn2.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.17))   //x: 3.4 y: 1.17
+                warn2.textAlignment = .left
+                warn2.font = warn2.font.withSize(10)
+                warn2.textColor = UIColor.black
+                warn2.text = "\t   WHO Risk Limit for HAB: 40 μg/L"    //1 tab 3 spaces
                 
                 
                 let box = UILabel(frame: CGRect(x: 0, y: 0, width:200, height: 21)) //w: 200 h: 21
-                //box.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.15))  //x: /3.4 y: /1.15
-                box.center = CGPoint(x: self.view.bounds.width - 267, y: self.view.bounds.height - 87)
+                box.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.2))  //x: /3.4 y: /1.15
+                //box.center = CGPoint(x: self.view.bounds.width - 267, y: self.view.bounds.height - 87)
                 //box.center = CGPoint(x: wid/2, y: hei/2)
                 box.textAlignment = .left   //left
                 box.font = box.font.withSize(10)
@@ -114,28 +131,28 @@ class GraphViewController: UIViewController {
                 
                 
                 let label = UILabel(frame: CGRect(x: 0, y: 0, width:200, height: 21)) //w: 200 h: 21
-                //label.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.15))  //x: /3.4 y: /1.15
-                label.center = CGPoint(x: self.view.bounds.width - 265, y: self.view.bounds.height - 87)
-                label.textAlignment = .left
+                label.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.2))  //x: /3.4 y: /1.15
+                //label.center = CGPoint(x: self.view.bounds.width - 265, y: self.view.bounds.height - 87)
+                label.textAlignment = .left  //left
                 label.font = label.font.withSize(10)
                 label.text = "\t   Total Chla" //1 tab 3 spaces
                 
                 
                 let box2 = UILabel(frame: CGRect(x: 0, y: 0, width:200, height: 21)) //w: 200 h: 21
-                //box2.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.15))  //x: /3.4 y: /1.15
-                box2.center = CGPoint(x: self.view.bounds.width - 260, y: self.view.bounds.height - 87)
+                box2.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.2))  //x: /3.4 y: /1.15
+                //box2.center = CGPoint(x: self.view.bounds.width - 260, y: self.view.bounds.height - 87)
                 box2.textAlignment = .center  //center
-                box2.font = box.font.withSize(10)
+                box2.font = box2.font.withSize(10)
                 box2.textColor = UIColor(red:0.2, green:0.68, blue:0.44, alpha:1.0)
                 box2.text = "■" //no spaces
                 
                 
                 
                 let label2 = UILabel(frame: CGRect(x: 0, y: 0, width:200, height: 21)) //w: 200 h: 21
-                //label2.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.15))  //x: /3.4 y: /1.15
-                label2.center = CGPoint(x: self.view.bounds.width - 258, y: self.view.bounds.height - 87)
-                label2.textAlignment = .center
-                label2.font = label.font.withSize(10)
+                label2.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.2))  //x: /3.4 y: /1.15
+                //label2.center = CGPoint(x: self.view.bounds.width - 258, y: self.view.bounds.height - 87)
+                label2.textAlignment = .center   //center
+                label2.font = label2.font.withSize(10)
                 label2.text = "\t\t   Cyano Chla"  //2 tabs 3 spaces
                 
                 
@@ -147,6 +164,7 @@ class GraphViewController: UIViewController {
                 self.view.addSubview(box2)
                 self.view.addSubview(label2)
                 self.view.addSubview(warn)
+                self.view.addSubview(warn2)
                 self.chart = chart
                 
             }
