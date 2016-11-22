@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class DataViewController: UIViewController {
-
+    
     // ID for the target NSManagedObject for datalog.
     var id: NSManagedObjectID?
     
@@ -26,15 +26,25 @@ class DataViewController: UIViewController {
     @IBOutlet weak var cyanorLabel: UILabel!
     @IBOutlet weak var cyanokLabel: UILabel!
     
+    var chlaDataSet: Array<Float> = [Float]()
+    
+    var cyanoDataSet:Array<Float> = [Float]()
+    
+    var logDate = Date()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+        let rightButton =  UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector (tapped))
+        parent?.navigationItem.rightBarButtonItem = rightButton
+        
         // Retrieve Managed Context
         let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
+        
         // Retrieve target datalog based on NSManagedObjectID
         let datalog = managedContext.object(with: self.id!)
-        
         
         var calculation: Calculations
         
@@ -67,7 +77,17 @@ class DataViewController: UIViewController {
         cyanonLabel.text = String(describing: calculation.N0)
         cyanorLabel.text = String(describing: calculation.getR02())
         cyanokLabel.text = String(describing: calculation.getK2())
-
+        
+        chlaDataSet = calculation.getTotalChlaDataSet()
+        cyanoDataSet = calculation.getCyanoChlaDataSet()
+        
+        let graphController = tabBarController?.viewControllers?[1] as! GraphViewController
+        graphController.chlaDataSet = chlaDataSet
+        graphController.cyanoDataSet = cyanoDataSet
+    }
+    
+    func tapped(sender: AnyObject?) {
+        performSegue(withIdentifier: "editLog", sender: sender)
     }
     
     override func didReceiveMemoryWarning() {
@@ -80,7 +100,16 @@ class DataViewController: UIViewController {
             let tabbar = segue.destination as! UITabBarController
             let destinationVC = tabbar.viewControllers?[0] as! CalculateViewController
             destinationVC.logID = id
+            destinationVC.startEdit = true
+            destinationVC.validPO4 = true
+            destinationVC.validChl = true
         }
+        else if segue.identifier == "dataSet" {
+            let destinationVC = segue.destination as! DataSetTableViewController
+            destinationVC.data = [chlaDataSet, cyanoDataSet]
+            destinationVC.logDate = logDate
+        }
+        
     }
     
 }

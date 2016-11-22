@@ -8,76 +8,21 @@
 
 import UIKit
 import CoreData
+import SwiftCharts
 
 class CalculateViewController: UIViewController {
-    @IBAction func chlValueButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 1
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
     
-    @IBAction func BrightnessButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 2
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
-    @IBAction func lakeDepthButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 3
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
-
-    @IBAction func TempBotButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 4
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
-
-    @IBAction func TempSurButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 5
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
-    
-    @IBAction func PO4ConButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 6
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
-    
-    @IBAction func ChlButton(_ sender: AnyObject) {
-        let result = self.storyboard?.instantiateViewController(withIdentifier: "resultVC")
-            as! ResultViewController
-        result.number = 1
-        _updateDataEntryVals()
-        result.dataEntryVals = dataEntryVals
-        self.present(result, animated: true, completion: nil)
-    }
- 
     var dataEntryVals: [String:Float] = [:]
     var logID: NSManagedObjectID?
     var logDate: NSDate?
+    var startEdit: Bool?
+    var validPO4 = false
+    var validChl = false
         
     //All IBOUTLETS are properties, text boxes are UITextField and
     //UILabel is the results label
+    
+    @IBOutlet weak var po4SetButton: UIButton!
     
     @IBOutlet weak var tempSurface: UITextField!
     @IBOutlet weak var tempBottom: UITextField!
@@ -87,31 +32,50 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var brightBox: UITextField!
     //@IBOutlet weak var luxLabel: UILabel!
     
-    
-    @IBAction func po4Set(_ sender: UIButton) {
-        performSegue(withIdentifier: "po4TabBar", sender: self)
-    }
-    
-    
     @IBOutlet weak var lakeDepthBox: UITextField!
     //@IBOutlet weak var pavLabel: UILabel!
 
+    @IBOutlet weak var chlSetButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        
+        
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
-        if self.logID != nil {
+        let rightButton =  UIBarButtonItem(title: "Clear", style: .plain, target: self, action: #selector (clear))
+        parent?.navigationItem.rightBarButtonItem = rightButton
+        
+        // If current instance of CalculateViewController isnt only view controller then make it the olny one
+        if (navigationController?.viewControllers.count)! > 1 {
+            
+            // The user does not see the hiding and showing of the navbar, but it is necessary to update it. Without it the nabvar will show non-functional back buttons
+            navigationController?.isNavigationBarHidden = true
+            
+            // Make a new UIViewController Array and add only current instance of CalculateViewController and replace original array
+            navigationController?.viewControllers = [(navigationController?.topViewController)!]
+            
+            navigationController?.isNavigationBarHidden = false
+        }
+
+        if self.logID != nil && startEdit! {
             // Retrieve Managed Context
             let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             
             // Retrieve target datalog based on NSManagedObjectID
             let datalog = managedContext.object(with: self.logID!)
             
-            dataEntryVals["po4"] = datalog.value(forKey: "po4") as! Float
+            dataEntryVals["po4"] = datalog.value(forKey: "po4") as? Float
             dataEntryVals["temp_top"] = datalog.value(forKey: "temp_top") as? Float
             dataEntryVals["temp_bot"] = datalog.value(forKey: "temp_bot") as? Float
             dataEntryVals["depth"] = datalog.value(forKey: "depth") as? Float
@@ -125,6 +89,7 @@ class CalculateViewController: UIViewController {
                 dataEntryVals["secciDepth"] = datalog.value(forKey: "secci_depth") as! Float
                 dataEntryVals["dissolvedOxygen"] = datalog.value(forKey: "dissolved_oxygen") as! Float
             }
+            self.startEdit = false
         }
         
         if dataEntryVals["temp_top"] != nil {
@@ -139,6 +104,45 @@ class CalculateViewController: UIViewController {
         if dataEntryVals["depth"] != nil {
             lakeDepthBox.text = String(describing: dataEntryVals["depth"]!)
         }
+        
+        changeButtonColor(button: po4SetButton, changeColor: validPO4)
+        changeButtonColor(button: chlSetButton, changeColor: validChl)
+        
+    }
+    
+    private func changeButtonColor(button: UIButton, changeColor: Bool) {
+        if changeColor {
+            button.backgroundColor = MyConstants.Colors.green
+            button.setTitle("\u{2713}", for: UIControlState.normal)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 40)
+        } else {
+            button.backgroundColor = UIColor.lightGray
+            button.setTitle("SET", for: UIControlState.normal)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        }
+    }
+    
+    func clear(sender: AnyObject?) {
+        
+        dataEntryVals = [:]
+        logID = NSManagedObjectID()
+        logDate = NSDate()
+        startEdit = false
+        tempSurface.text = ""
+        tempBottom.text = ""
+        brightBox.text = ""
+        lakeDepthBox.text = ""
+        validPO4 = false
+        validChl = false
+        
+        viewWillAppear(false)
+        viewDidLoad()
+    }
+    
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -149,35 +153,146 @@ class CalculateViewController: UIViewController {
     
     private func _updateDataEntryVals() {
         
-        if (tempBottom.text != "") {
+        if tempBottom.text != "" && Float(tempBottom.text!) != nil {
             dataEntryVals["temp_bot"] = Float(tempBottom.text!)!
         }
-        if (tempSurface.text != "") {
+        if tempSurface.text != "" && Float(tempSurface.text!) != nil {
             dataEntryVals["temp_top"] = Float(tempSurface.text!)!
         }
-        if (brightBox.text != "") {
+        if brightBox.text != "" && Float(brightBox.text!) != nil {
             dataEntryVals["brightness"] = Float(brightBox.text!)!
         }
-        if (lakeDepthBox.text != "") {
+        if lakeDepthBox.text != "" && Float(lakeDepthBox.text!) != nil {
             dataEntryVals["depth"] = Float(lakeDepthBox.text!)!
         }
         
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         _updateDataEntryVals()
         
+        if identifier == "toDataPage" {
+            
+            var formValid = true
+            var msg = ""
+            
+            if dataEntryVals["po4"] == nil {
+                formValid = false
+                msg = "Missing value for P04 Concentration."
+            }
+            
+            if formValid && (dataEntryVals["cyanoChl"] == nil || dataEntryVals["totalChl"] == nil) {
+                if dataEntryVals["secciDepth"] == nil || dataEntryVals["dissolvedOxygen"] == nil {
+                    formValid = false
+                    msg = "Missing value for Chl a."
+                }
+            }
+            
+            if formValid && dataEntryVals["brightness"] == nil {
+                formValid = false
+                msg = "Missing value for Brightness."
+            }
+            
+            if formValid && dataEntryVals["depth"] == nil {
+                formValid = false
+                msg = "Missing value for Lake Depth."
+            }
+            
+            if formValid && dataEntryVals["temp_bot"] == nil {
+                formValid = false
+                msg = "Missing value for Bottom Temperature."
+            }
+            
+            if formValid && dataEntryVals["temp_top"] == nil {
+                formValid = false
+                msg = "Missing value for Surface Temperature."
+            }
+            
+            if formValid && (dataEntryVals["temp_top"]! > 40.0 || dataEntryVals["temp_top"]! < Float(0.0)) {
+                formValid = false
+                msg = "Please input Surface Temperature between 0 and 40."
+            }
+
+            if formValid && (dataEntryVals["temp_bot"]! > 40.0 || dataEntryVals["temp_bot"]! < Float(0.0)) {
+                formValid = false
+                msg = "Please input Bottom Temperature between 0 and 40."
+            }
+            
+            if formValid && dataEntryVals["temp_bot"]! > dataEntryVals["temp_top"]! {
+                formValid = false
+                msg = "Bottom Temperature cannot be greater than Surface Temperature."
+            }
+            
+            if formValid && dataEntryVals["depth"]! > 5.0 {
+                formValid = false
+                msg = "Algae bloom will not happen if lake depth > 5."
+            }
+            
+            if formValid && dataEntryVals["totalChl"] != nil {
+                if dataEntryVals["totalChl"]! < 0.0 || dataEntryVals["totalChl"]! > 300.0 {
+                    formValid = false
+                    msg = "Please input Total Chl a value between 0 and 300."
+                }
+            }
+            
+            if formValid && dataEntryVals["cyanoChl"] != nil {
+                if dataEntryVals["cyanoChl"]! < 0.0 || dataEntryVals["cyanoChl"]! > 300.0 {
+                    formValid = false
+                    msg = "Please input Cyano Chl a value between 0 and 300."
+                }
+            }
+            
+            if formValid && dataEntryVals["secciDepth"] != nil {
+                if dataEntryVals["secciDepth"]! < 0.0 || dataEntryVals["secciDepth"]! > 1.0 {
+                    formValid = false
+                    msg = "Please input Secchi Depth value between 0 and 1."
+                }
+            }
+            
+            if formValid && dataEntryVals["dissolvedOxygen"] != nil {
+                if dataEntryVals["dissolvedOxygen"]! < 1.0 || dataEntryVals["dissolvedOxygen"]! > 100.0 {
+                    formValid = false
+                    msg = "Please input Oxygen Dissolved value between 1 and 100."
+                }
+            }
+            
+            if formValid && dataEntryVals["po4"] != nil {
+                if dataEntryVals["po4"]! < 0.0001 || dataEntryVals["po4"]! > 7.0 {
+                    formValid = false
+                    msg = "Please input PO4 concentation between 0.0001 and 7."
+                }
+            }
+            
+            
+            if !formValid {
+                let alert = UIAlertController(title: "Alert", message: msg, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+
+            return formValid
+        }
         
+        return true
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if (segue.identifier == "po4TabBar") {
             
             // Obtain destVC controller instance.
             let tabbar = segue.destination as! UITabBarController
             let destinationVC = tabbar.viewControllers?[0] as! PO4ViewController
+            let otherTabVC = tabbar.viewControllers?[1] as! PO4EstimatesViewController
             
             destinationVC.dataEntryVals = dataEntryVals
+            otherTabVC.dataEntryVals = dataEntryVals
+            
+            destinationVC.validChl = validChl
+            otherTabVC.validChl = validChl
+            
             if logID != nil {
                 destinationVC.logID = logID
             }
@@ -191,10 +306,15 @@ class CalculateViewController: UIViewController {
             
             destinationVC.dataEntryVals = dataEntryVals
             otherTabVC.dataEntryVals = dataEntryVals
+            
+            destinationVC.validPO4 = validPO4
+            otherTabVC.validPO4 = validPO4
+            
             if logID != nil {
                 destinationVC.logID = logID
                 otherTabVC.logID = logID
             }
+            
         } else if (segue.identifier == "toDataPage") {
             
             let date = NSDate()
@@ -254,8 +374,5 @@ class CalculateViewController: UIViewController {
         }
 
     }
-    
-    
-    
-}
 
+}

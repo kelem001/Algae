@@ -11,11 +11,6 @@ import CoreData
 
 class ResultViewController : UIViewController {
     
-    
-    private var transport:MyConstants.Transport?
-    
-    
-    
     var number: Int = 0
     var dataEntryVals: [String:Float] = [:]
     var logID: NSManagedObjectID?
@@ -29,13 +24,10 @@ class ResultViewController : UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-
         super.viewWillAppear(animated)
-        
-        
-        
-        
+
         switch number {
+            
         case 1:
             myImage.image = UIImage(named: "dialog_chla")
             TextResult.text = "Chlorophyll is the green pigment in plants that allow them to create energy from light by photosynthesis." + "By measuring chlorophyll, you are indirectly measuring the amount of phtosynthesizing plants found in a sample. In a lake water sample, these plants would be algae or phytoplankton." + "Chlorophyll a is a measure of the portion of the pigment that is still active; that is, the portion that was still actively respiring and photosynthesizing at the time of sampling." + "Therefore, the amount of chlorophyll a in a water sample can determine the amounts of algae and cyanobacteria in the water source."
@@ -68,18 +60,14 @@ class ResultViewController : UIViewController {
             TextResult.text = "Collection of bottom phosphate can be done using affordable PO4 test strips on the spot, but the test water has to come from the bottom. - Preperations: a. A narrow-mouthed glass bottle containing less than 500 ml of water. b. A stopper that fits tight into the mouth of the bottle. c. Firmly attach a weight (stone or a heavy piece of metal) to the lower part of the bottle so that the bottle will easily sink. d. Attach a string to the neck of the bottle. e. Attach the stopper securely to the same piece of string, just obove the opening of the bottle, at a distance eual to  at least twice the length of the stopper. - Sampling procedure: 1. Put the stopper firmly in place to close the water sampler. 2. Lower the sampler into the water ito the desired depth. 3. Jerk the string sharply to pull the stopper out and open the sampler. It should now start filling with water, while air bubbles appear on the surface of the pond. 4. When air bubbles no longer appear, carefully pull the full water sampler out of the pond."
         default:
             myImage.image = UIImage(named: "")
-
         }
-        //myImage.image = UIImage(named: (transport?.rawValue)!)
     }
     
-    @IBAction func goBack(sender: AnyObject) {
-    
-    }
-    
-    
-    func setTransport ( transport:MyConstants.Transport){
-        self.transport = transport
+    @IBAction func goBack(_ sender: Any) {
+        
+        if((self.presentingViewController) != nil){
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -91,5 +79,4 @@ class ResultViewController : UIViewController {
             destinationVC.logID = logID
         }
     }
-    
 }

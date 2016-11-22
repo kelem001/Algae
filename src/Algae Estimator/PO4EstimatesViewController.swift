@@ -13,6 +13,7 @@ class PO4EstimatesViewController: UIViewController {
     
     var dataEntryVals: [String:Float] = [:]
     var logID: NSManagedObjectID?
+    var validChl: Bool?
 
     // MAKE:Properties
     @IBOutlet weak var po4Val: UILabel!
@@ -24,7 +25,7 @@ class PO4EstimatesViewController: UIViewController {
     
     
     @IBAction func sendP04Val(_ sender: AnyObject) {
-        performSegue(withIdentifier: "segueSend2", sender: self)
+        //performSegue(withIdentifier: "segueSend2", sender: self)
     }
     
     var location:Float = 0.065
@@ -100,13 +101,20 @@ class PO4EstimatesViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "segueSend2") {
+            
             let tabbar = segue.destination as! UITabBarController
             let destinationVC = tabbar.viewControllers?[0] as! CalculateViewController
+            
             dataEntryVals["po4"] = Float(po4Val.text!)!
             destinationVC.dataEntryVals = dataEntryVals
+            destinationVC.startEdit = false
             if logID != nil {
                 destinationVC.logID = logID
             }
+            
+            // Estimate will always return valid PO4 level
+            destinationVC.validPO4 = true
+            destinationVC.validChl = validChl!
         }
     }
     
