@@ -9,21 +9,26 @@
 import UIKit
 import CoreData
 
-class DataLogViewController: UIViewController {
-
-    var datalogs :[NSManagedObject]?
+class DataLogViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    // Contains an array of dates
+    var objects: NSMutableArray! = NSMutableArray()
+    
+    // Current Date
+    var currDate = ""
+    
+    // Contains log information
+    var datalogs: [NSManagedObject]?
     var datalogIDs: [NSManagedObjectID]?
     var datalogIDsIndex: Int?
     
-    func viewDataLog(sender:UIButton) {
-        datalogIDsIndex = sender.tag
-        NSLog(String(describing: sender.tag))
-        NSLog(String(describing: datalogIDs))
-        performSegue(withIdentifier: "showLog", sender: self)
+    override func viewWillAppear(_ animated: Bool) {
+        parent?.navigationItem.rightBarButtonItem = nil
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidLoad() {
         
         // Retrieve Managed Context
         let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -33,52 +38,65 @@ class DataLogViewController: UIViewController {
         do {
             let datalogs = try managedContext.fetch(dataLogFetch) as? [NSManagedObject]
             
-            var offset: Int = 30
-            
-            let screenSize: CGRect = UIScreen.main.bounds
-            let btnWidth = screenSize.width
-            let btnHeight = 40
-            
-            var index = 0
-            
             for datalog in datalogs! {
-                // Retrieve date for corrent log
+                
+                // Retrieve date for current log
                 // Date in format YYYY-MM-DD HH:MM:SS in UTC time zone
                 let logDate = datalog.value(forKey: "date")
-                let dateStr = String(describing: logDate!)
                 
-                //Retrieve Record ID for current log
-                let logID = datalog.objectID
-                if datalogIDs?.append(logID) == nil {
-                    datalogIDs = [logID]
+                // Checks for dates in full Optional(NSDate) format
+                if (logDate != nil) {
+                    
+                    // Format used for displaying dates
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd"
+                    let date = dateFormatter.string(from: logDate as! Date)
+                    
+                    // Set current date if not already set and different
+                    if date != currDate {
+                        currDate = date
+                        
+                        // If the date is found then add date to array
+                        if currDate.contains(date) {
+                            self.objects.add(currDate)
+                        }
+                        
+                        // Retrieve Record ID for current log
+                        let logID = datalog.objectID
+                        if datalogIDs?.append(logID) == nil {
+                            datalogIDs = [logID]
+                        }
+                    }
                 }
-                
-                let button = UIButton(type: .system)
-                button.frame = CGRect(origin: CGPoint(x: 0,y: offset), size: CGSize(width: CGFloat(btnWidth), height: CGFloat(btnHeight)))
-                button.backgroundColor = UIColor.green
-                button.setTitle(dateStr, for: UIControlState.normal)
-                button.tag = index
-                button.addTarget(self, action: #selector(DataLogViewController.viewDataLog), for: UIControlEvents.touchUpInside)
-                self.view.addSubview(button)
-                
-                offset += btnHeight
-                index += 1
-                
             }
         } catch {print("Error")}
-        
+        self.tableView.reloadData()
     }
     
+    
+    // MARK: - Table View
+    // Creates number of cells equal to number of objects in array
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.objects.count
+    }
+    
+    // Set cells title labels for indices
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as! DataLogTableViewCell
+        
+        cell.titleLabel.text = self.objects.object(at: indexPath.row) as? String
+        
+        return cell
+    }
+    
+    // Pass our titleString to next UITableViewController containing date in format yyyy-MM-dd
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "showLog") {
-            // Obtain destVC controller instance.
-            let tabbar = segue.destination as! UITabBarController
-            let destinationVC = tabbar.viewControllers?[0] as! DataViewController
-            
-            // Pass ObjectID to the destVC
-            NSLog(String(describing: datalogIDs?[datalogIDsIndex!]))
-            destinationVC.id = datalogIDs?[datalogIDsIndex!]
+        if (segue.identifier == "showView") {
+            let upcoming: DataLog2ViewController = segue.destination as! DataLog2ViewController
+            let indexPath = self.tableView.indexPathForSelectedRow!
+            let titleString = self.objects.object(at: indexPath.row) as? String
+            upcoming.titleString = titleString
+            self.tableView.deselectRow(at: indexPath, animated: true)
         }
     }
-    
 }
