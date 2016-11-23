@@ -71,11 +71,18 @@ class DataViewController: UIViewController {
         luxLabel.text = String(describing: calculation.lux)
         chlaLabel.text = String(describing: calculation.total_chla)
         chlanLabel.text = String(describing: calculation.N0)
-        chlarLabel.text = String(describing: calculation.getR01())
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = NumberFormatter.Style.scientific
+        numberFormatter.positiveFormat = "0.###E+0"
+        numberFormatter.negativeFormat = "-0.###E+0"
+        numberFormatter.exponentSymbol = "e"
+        
+        chlarLabel.text = String(describing: numberFormatter.string(from: NSNumber(value: calculation.getR01()))!)
         chlakLabel.text = String(describing: calculation.getK1())
         cyanoLabel.text = String(describing: calculation.cyano_chla)
         cyanonLabel.text = String(describing: calculation.N0)
-        cyanorLabel.text = String(describing: calculation.getR02())
+        cyanorLabel.text = String(describing: numberFormatter.string(from: NSNumber(value: calculation.getR02()))!)
         cyanokLabel.text = String(describing: calculation.getK2())
         
         chlaDataSet = calculation.getTotalChlaDataSet()
