@@ -21,12 +21,7 @@ class PO4EstimatesViewController: UIViewController {
     @IBOutlet weak var naturalButton: UISegmentedControl!
     @IBOutlet weak var plantSeek: UISlider!
     @IBOutlet weak var bloomSeek: UISlider!
-    //@IBOutlet weak var sendPO4Val: UIButton!
     
-    
-    @IBAction func sendP04Val(_ sender: AnyObject) {
-        //performSegue(withIdentifier: "segueSend2", sender: self)
-    }
     
     var location:Float = 0.065
     var landVegetation:Float = 0.002
@@ -34,20 +29,7 @@ class PO4EstimatesViewController: UIViewController {
     var recurringBlooms:Float = 0.002
     var scaleBloom:Float = (0.065-0.002)/100
     var scalePlant:Float = (0.065-0.034)/100
-    
-    
 
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     @IBAction func landIndexChanged(sender: UISegmentedControl) {
         switch farmButton.selectedSegmentIndex
@@ -99,6 +81,17 @@ class PO4EstimatesViewController: UIViewController {
         calculatePO4()
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "segueSend2") {
             
@@ -123,18 +116,6 @@ class PO4EstimatesViewController: UIViewController {
         let finalVal:  Float = 44.2222*value - 0.36
         po4Val.text = String(format: "%.4f",(round(10000*finalVal)/10000))
         
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 }

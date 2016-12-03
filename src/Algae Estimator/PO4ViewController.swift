@@ -18,11 +18,71 @@ class PO4ViewController: UIViewController {
     @IBOutlet weak var po4TextField: UITextField!
     
     
-    @IBAction func submitButton(_ sender: UIButton) {
-        //performSegue(withIdentifier: "backToDataEntry", sender: self)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        self.addDoneButtonOnKeyboard()
+        
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        if dataEntryVals["po4"] != nil {
+            po4TextField.text = String(describing: dataEntryVals["po4"]!)
+        }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        _updateDataEntryVals()
+        
+        var formValid = true
+        var msg = ""
+        
+        if formValid && dataEntryVals["po4"] != nil {
+            if dataEntryVals["po4"]! < 0.0001 || dataEntryVals["po4"]! > 7.0 {
+                formValid = false
+                msg = "Please input PO4 concentation between 0.0001 and 7."
+            }
+        }
+        
+        if !formValid {
+            let alert = UIAlertController(title: "Alert", message: msg, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        return formValid
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "backToDataEntry") {
+            _updateDataEntryVals()
+            let tabbar = segue.destination as! UITabBarController
+            let dest = tabbar.viewControllers?[0] as! CalculateViewController
+            dest.dataEntryVals = dataEntryVals
+            dest.startEdit = false
+            
+            if logID != nil {
+                dest.logID = logID
+            }
+            
+            if dataEntryVals["po4"] != nil && dataEntryVals["po4"]! >= 0.0001 && dataEntryVals["po4"]! <= 7.0 {
+                dest.validPO4 = true
+            } else {dest.validPO4 = false}
+            dest.validChl = validChl!
+        }
+    }
+    
+    
     private func _updateDataEntryVals() {
         if po4TextField.text != "" && Float(po4TextField.text!) != nil {
             dataEntryVals["po4"] = Float(po4TextField.text!)!
@@ -50,45 +110,6 @@ class PO4ViewController: UIViewController {
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "backToDataEntry") {
-            _updateDataEntryVals()
-            let tabbar = segue.destination as! UITabBarController
-            let dest = tabbar.viewControllers?[0] as! CalculateViewController
-            dest.dataEntryVals = dataEntryVals
-            dest.startEdit = false
-            
-            if logID != nil {
-                dest.logID = logID
-            }
-            
-            if dataEntryVals["po4"] != nil && dataEntryVals["po4"]! >= 0.0001 && dataEntryVals["po4"]! <= 7.0 {
-                dest.validPO4 = true
-            } else {dest.validPO4 = false}
-            dest.validChl = validChl!
-        }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-        self.addDoneButtonOnKeyboard()
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        if dataEntryVals["po4"] != nil {
-            po4TextField.text = String(describing: dataEntryVals["po4"]!)
-        }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }

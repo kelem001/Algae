@@ -140,7 +140,7 @@ class CalculateViewController: UIViewController {
     func clear(sender: AnyObject?) {
         
         dataEntryVals = [:]
-        logID = NSManagedObjectID()
+        logID = nil
         logDate = NSDate()
         startEdit = false
         tempSurface.text = ""

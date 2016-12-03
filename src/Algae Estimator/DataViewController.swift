@@ -104,7 +104,6 @@ class DataViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editLog" {
-            print("editLog")
             let tabbar = segue.destination as! UITabBarController
             let destinationVC = tabbar.viewControllers?[0] as! CalculateViewController
             destinationVC.logID = id
@@ -113,7 +112,6 @@ class DataViewController: UIViewController {
             destinationVC.validChl = true
         }
         else if segue.identifier == "dataSet" {
-            print("dataSet")
             let destinationVC = segue.destination as! DataSetTableViewController
             destinationVC.data = [chlaDataSet, cyanoDataSet]
             destinationVC.logDate = logDate

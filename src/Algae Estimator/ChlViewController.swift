@@ -17,24 +17,60 @@ class ChlViewController: UIViewController {
     
     @IBOutlet weak var totalChlTextfield: UITextField!
     @IBOutlet weak var cyanoChlTextfield: UITextField!
-    
-    @IBAction func submitButton(_ sender: UIButton) {
-       // performSegue(withIdentifier: "submit", sender: self)
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        self.addDoneButtonOnKeyboard()
+        
     }
     
-    
-    private func _updateDataEntryVals() {
-        if totalChlTextfield.text != "" && Float(totalChlTextfield.text!) != nil {
-            dataEntryVals["totalChl"] = Float(totalChlTextfield.text!)!
-        } else {
-            dataEntryVals["totalChl"] = nil
+    override func viewWillAppear(_ animated: Bool) {
+        if dataEntryVals["totalChl"] != nil {
+            totalChlTextfield.text = String(describing: dataEntryVals["totalChl"]!)
         }
-        if cyanoChlTextfield.text! != "" && Float(cyanoChlTextfield.text!) != nil {
-            dataEntryVals["cyanoChl"] = Float(cyanoChlTextfield.text!)!
-        } else {
-            dataEntryVals["cyanoChl"] = nil
+        if dataEntryVals["cyanoChl"] != nil {
+            cyanoChlTextfield.text = String(describing: dataEntryVals["cyanoChl"]!)
         }
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        _updateDataEntryVals()
+        
+        var formValid = true
+        var msg = ""
+        
+        if formValid && dataEntryVals["totalChl"] != nil {
+            if dataEntryVals["totalChl"]! < 0.0 || dataEntryVals["totalChl"]! > 300.0 {
+                formValid = false
+                msg = "Please input Total Chl a value between 0 and 300."
+            }
+        }
+        
+        if formValid && dataEntryVals["cyanoChl"] != nil {
+            if dataEntryVals["cyanoChl"]! < 0.0 || dataEntryVals["cyanoChl"]! > 300.0 {
+                formValid = false
+                msg = "Please input Cyano Chl a value between 0 and 300."
+            }
+        }
+        
+        if !formValid {
+            let alert = UIAlertController(title: "Alert", message: msg, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        return formValid
+    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -58,6 +94,22 @@ class ChlViewController: UIViewController {
         }
     }
     
+    private func _updateDataEntryVals() {
+        if totalChlTextfield.text != "" && Float(totalChlTextfield.text!) != nil {
+            dataEntryVals["totalChl"] = Float(totalChlTextfield.text!)!
+        } else {
+            dataEntryVals["totalChl"] = nil
+        }
+        if cyanoChlTextfield.text! != "" && Float(cyanoChlTextfield.text!) != nil {
+            dataEntryVals["cyanoChl"] = Float(cyanoChlTextfield.text!)!
+        } else {
+            dataEntryVals["cyanoChl"] = nil
+        }
+        
+        dataEntryVals["secciDepth"] = nil
+        dataEntryVals["dissolvedOxygen"] = nil
+    }
+    
     func addDoneButtonOnKeyboard() {
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
         doneToolbar.barStyle       = UIBarStyle.default
@@ -78,29 +130,6 @@ class ChlViewController: UIViewController {
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-        self.addDoneButtonOnKeyboard()
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        if dataEntryVals["totalChl"] != nil {
-            totalChlTextfield.text = String(describing: dataEntryVals["totalChl"]!)
-        }
-        if dataEntryVals["cyanoChl"] != nil {
-            cyanoChlTextfield.text = String(describing: dataEntryVals["cyanoChl"]!)
-        }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 }
