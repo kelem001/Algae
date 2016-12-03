@@ -96,10 +96,6 @@ class GraphViewController: UIViewController {
                     ]
                 )
                 
-                var wid = self.view.bounds.width
-                var hei = self.view.bounds.height
-                
-                
                 let warn = UILabel(frame: CGRect(x: 0, y: 0, width:200, height: 21)) //w: 200 h: 21
                 //warn.center = CGPoint(x: self.view.bounds.minX + 200, y: self.view.bounds.minY + 175)  //x: 250 y: 175
                 //warn.center = CGPoint(x: UIScreen.main.bounds.size.width/2, y: UIScreen.main.bounds.size.height/(4))

@@ -98,11 +98,11 @@ class CalculateViewController: UIViewController {
             logDate = datalog.value(forKey: "date") as? NSDate
             
             if (datalog.value(forKey: "total_chl") != nil) {
-                dataEntryVals["totalChl"] = datalog.value(forKey: "total_chl") as! Float
-                dataEntryVals["cyanoChl"] = datalog.value(forKey: "cyano_chl") as! Float
+                dataEntryVals["totalChl"] = datalog.value(forKey: "total_chl") as? Float
+                dataEntryVals["cyanoChl"] = datalog.value(forKey: "cyano_chl") as? Float
             } else {
-                dataEntryVals["secciDepth"] = datalog.value(forKey: "secci_depth") as! Float
-                dataEntryVals["dissolvedOxygen"] = datalog.value(forKey: "dissolved_oxygen") as! Float
+                dataEntryVals["secciDepth"] = datalog.value(forKey: "secci_depth") as? Float
+                dataEntryVals["dissolvedOxygen"] = datalog.value(forKey: "dissolved_oxygen") as? Float
             }
             self.startEdit = false
         }
