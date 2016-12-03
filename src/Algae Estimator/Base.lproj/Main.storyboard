@@ -4487,10 +4487,10 @@
                                     <segue destination="c82-su-mDU" kind="show" id="tFo-d9-pCn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Dissolved Oxygen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEr-gn-dXq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dissolved Oxygen" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEr-gn-dXq">
                                 <rect key="frame" x="16" y="297" width="160" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="JIr-pg-i6C"/>
+                                    <constraint firstAttribute="height" constant="55" id="JIr-pg-i6C"/>
                                     <constraint firstAttribute="width" constant="160" id="U5O-7O-e2K"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -4506,12 +4506,12 @@
                             <constraint firstItem="gJi-oB-Pb9" firstAttribute="centerX" secondItem="sO2-FU-oWY" secondAttribute="centerX" id="KIe-HQ-eJm"/>
                             <constraint firstItem="2uX-2R-BXy" firstAttribute="centerY" secondItem="sO2-FU-oWY" secondAttribute="centerY" constant="-10" id="N81-gg-l9K"/>
                             <constraint firstItem="vnZ-kq-Pq7" firstAttribute="leading" secondItem="2uX-2R-BXy" secondAttribute="trailing" constant="4" id="QUS-bg-vhD"/>
-                            <constraint firstItem="gJi-oB-Pb9" firstAttribute="top" secondItem="YEr-gn-dXq" secondAttribute="bottom" constant="58" id="SCN-BH-mVr"/>
+                            <constraint firstItem="gJi-oB-Pb9" firstAttribute="top" secondItem="YEr-gn-dXq" secondAttribute="bottom" constant="44" id="SCN-BH-mVr"/>
                             <constraint firstItem="hMd-8u-t63" firstAttribute="centerY" secondItem="sO2-FU-oWY" secondAttribute="centerY" constant="-70" id="SOD-yo-zDC"/>
                             <constraint firstItem="VOm-AA-wke" firstAttribute="leading" secondItem="2uX-2R-BXy" secondAttribute="leading" id="TxO-3W-h8u"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vnZ-kq-Pq7" secondAttribute="trailing" constant="-3" id="dZF-FR-6bo"/>
                             <constraint firstAttribute="leadingMargin" secondItem="hMd-8u-t63" secondAttribute="leading" id="eNp-DE-ARA"/>
-                            <constraint firstItem="YEr-gn-dXq" firstAttribute="top" secondItem="hMd-8u-t63" secondAttribute="bottom" constant="30" id="hJD-4I-q2D"/>
+                            <constraint firstItem="YEr-gn-dXq" firstAttribute="top" secondItem="hMd-8u-t63" secondAttribute="bottom" constant="19" id="hJD-4I-q2D"/>
                             <constraint firstItem="LbI-oc-ntC" firstAttribute="leading" secondItem="VOm-AA-wke" secondAttribute="trailing" constant="4" id="hQ2-VR-ZOX"/>
                             <constraint firstItem="VOm-AA-wke" firstAttribute="leading" secondItem="hMd-8u-t63" secondAttribute="trailing" constant="4" id="kdp-dZ-nmd"/>
                             <constraint firstItem="2uX-2R-BXy" firstAttribute="leading" secondItem="YEr-gn-dXq" secondAttribute="trailing" constant="4" id="lsi-5R-QPk"/>
@@ -4548,7 +4548,7 @@
         <image name="test_strip" width="101" height="104"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yMV-pY-w6K"/>
+        <segue reference="tHu-Cp-CaO"/>
         <segue reference="12W-oY-tIk"/>
     </inferredMetricsTieBreakers>
 </document>
