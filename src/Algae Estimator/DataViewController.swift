@@ -37,7 +37,7 @@ class DataViewController: UIViewController {
         
         
         
-        let rightButton =  UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector (tapped))
+        let rightButton =  UIBarButtonItem(title: "New Log", style: .plain, target: self, action: #selector (tapped))
         parent?.navigationItem.rightBarButtonItem = rightButton
         
         // Retrieve Managed Context
@@ -94,7 +94,7 @@ class DataViewController: UIViewController {
     }
     
     func tapped(sender: AnyObject?) {
-        performSegue(withIdentifier: "editLog", sender: sender)
+        performSegue(withIdentifier: "new", sender: sender)
     }
     
     override func didReceiveMemoryWarning() {
@@ -104,6 +104,7 @@ class DataViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editLog" {
+            print("editLog")
             let tabbar = segue.destination as! UITabBarController
             let destinationVC = tabbar.viewControllers?[0] as! CalculateViewController
             destinationVC.logID = id
@@ -112,6 +113,7 @@ class DataViewController: UIViewController {
             destinationVC.validChl = true
         }
         else if segue.identifier == "dataSet" {
+            print("dataSet")
             let destinationVC = segue.destination as! DataSetTableViewController
             destinationVC.data = [chlaDataSet, cyanoDataSet]
             destinationVC.logDate = logDate

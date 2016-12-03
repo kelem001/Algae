@@ -214,11 +214,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ius-sl-xAD" id="24W-wD-pUD">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Gi-aY-MIe">
-                                                    <rect key="frame" x="15" y="0.0" width="325" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -276,11 +276,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T1u-ks-J2X" id="8D2-hl-I42">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dTW-XF-D4R">
-                                                    <rect key="frame" x="15" y="0.0" width="325" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -3847,6 +3847,47 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VB5-rI-mKy">
+                                <rect key="frame" x="87" y="538" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.021847909190000001" green="0.68221745469999995" blue="0.43763557759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="26X-xH-axn"/>
+                                    <constraint firstAttribute="height" constant="30" id="DNS-gk-1ge"/>
+                                    <constraint firstAttribute="width" constant="150" id="jPD-rP-G35">
+                                        <variation key="widthClass=regular" constant="300"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="30" id="sP0-g8-QSW">
+                                        <variation key="widthClass=regular" constant="50"/>
+                                    </constraint>
+                                </constraints>
+                                <state key="normal" title="EDIT SET">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jPD-rP-G35"/>
+                                        <exclude reference="DNS-gk-1ge"/>
+                                        <exclude reference="sP0-g8-QSW"/>
+                                        <exclude reference="26X-xH-axn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="DNS-gk-1ge"/>
+                                        <include reference="26X-xH-axn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <mask key="constraints">
+                                        <include reference="jPD-rP-G35"/>
+                                        <include reference="sP0-g8-QSW"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="JGi-vB-afj" kind="show" identifier="editLog" id="yMV-pY-w6K"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.28107216619999997" green="0.30745128989999998" blue="0.57800356220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -3859,6 +3900,7 @@
                             <constraint firstItem="woQ-Pg-zJh" firstAttribute="top" secondItem="In6-DH-giO" secondAttribute="bottom" constant="10" id="3Gi-CO-XLk"/>
                             <constraint firstItem="3mN-ZE-uBF" firstAttribute="leading" secondItem="Vls-VE-weI" secondAttribute="leadingMargin" constant="10" id="43H-PR-wdQ"/>
                             <constraint firstItem="xJ7-88-vpI" firstAttribute="centerX" secondItem="Vls-VE-weI" secondAttribute="centerX" id="4C2-1j-JFq"/>
+                            <constraint firstItem="VB5-rI-mKy" firstAttribute="centerX" secondItem="Vls-VE-weI" secondAttribute="centerX" id="4Lg-BP-jlF"/>
                             <constraint firstItem="NTm-Qd-fT2" firstAttribute="top" secondItem="7M5-KY-5bu" secondAttribute="bottom" constant="10" id="4US-bh-85x"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qKJ-rA-3Z4" secondAttribute="trailing" constant="10" id="5r4-Wc-Quw"/>
                             <constraint firstItem="NTm-Qd-fT2" firstAttribute="leading" secondItem="Vls-VE-weI" secondAttribute="leadingMargin" constant="30" id="6OC-yv-39r"/>
@@ -3961,6 +4003,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="In6-DH-giO" secondAttribute="trailing" constant="10" id="uk2-sf-Wrm"/>
                             <constraint firstItem="CQ5-DC-jnJ" firstAttribute="top" secondItem="zwG-sD-UlG" secondAttribute="bottom" constant="10" id="unr-vs-1Bl"/>
                             <constraint firstItem="VdB-ql-oi7" firstAttribute="top" secondItem="GaG-13-VSP" secondAttribute="bottom" constant="10" id="vnQ-16-77n"/>
+                            <constraint firstItem="VB5-rI-mKy" firstAttribute="top" secondItem="xJ7-88-vpI" secondAttribute="bottom" constant="8" symbolic="YES" id="wcA-Bt-lIZ"/>
                             <constraint firstItem="IZa-Gh-g9j" firstAttribute="top" secondItem="VdB-ql-oi7" secondAttribute="bottom" constant="10" id="wn1-f4-Mr9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="H1m-0M-hyE" secondAttribute="trailing" constant="10" id="xrB-Yb-giH"/>
                             <constraint firstItem="2ck-xQ-TaA" firstAttribute="leading" secondItem="Vls-VE-weI" secondAttribute="leadingMargin" constant="30" id="yFj-qd-Gmb"/>
@@ -4212,7 +4255,7 @@
                         <outlet property="luxLabel" destination="yH9-ft-GES" id="g8F-Mi-iIg"/>
                         <outlet property="pavLabel" destination="Kym-xS-KgG" id="wmq-Te-fU2"/>
                         <outlet property="tempDiffLabel" destination="NWB-yY-HNO" id="BsS-Je-l9i"/>
-                        <segue destination="JGi-vB-afj" kind="show" identifier="editLog" customClass="SegueFromLeft" customModule="Algae_Estimator" customModuleProvider="target" id="Kb8-Hk-eoJ"/>
+                        <segue destination="JGi-vB-afj" kind="show" identifier="new" customClass="SegueFromLeft" customModule="Algae_Estimator" customModuleProvider="target" id="Kb8-Hk-eoJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4c-NH-Us0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4505,7 +4548,7 @@
         <image name="test_strip" width="101" height="104"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tHu-Cp-CaO"/>
+        <segue reference="yMV-pY-w6K"/>
         <segue reference="12W-oY-tIk"/>
     </inferredMetricsTieBreakers>
 </document>
