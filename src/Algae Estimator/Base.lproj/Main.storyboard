@@ -1922,7 +1922,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="°C" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gjT-x8-tjH">
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="°C" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gjT-x8-tjH">
                                 <rect key="frame" x="180" y="181" width="145" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="ajA-J9-2pe">
@@ -1936,7 +1936,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="m" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vUf-Dt-uSy">
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="m" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vUf-Dt-uSy">
                                 <rect key="frame" x="180" y="249" width="145" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="vYn-oa-rEd">
@@ -1950,7 +1950,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="lux" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTs-eu-5rY">
+                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="lux" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTs-eu-5rY">
                                 <rect key="frame" x="180" y="317" width="145" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="LNz-Hm-nBA">
@@ -2112,7 +2112,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4g-12-132">
-                                <rect key="frame" x="113" y="617" width="150" height="30"/>
+                                <rect key="frame" x="113" y="568" width="150" height="30"/>
                                 <color key="backgroundColor" red="0.023529411760000001" green="0.68235294120000001" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="dWk-L2-f0L"/>

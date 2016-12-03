@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import SwiftCharts
 
-class CalculateViewController: UIViewController {
+class CalculateViewController: UIViewController, UITextFieldDelegate {
     
     var dataEntryVals: [String:Float] = [:]
     var logID: NSManagedObjectID?
@@ -18,22 +18,15 @@ class CalculateViewController: UIViewController {
     var startEdit: Bool?
     var validPO4 = false
     var validChl = false
-        
-    //All IBOUTLETS are properties, text boxes are UITextField and
-    //UILabel is the results label
+    
+    var currentTextField: UITextField!
     
     @IBOutlet weak var po4SetButton: UIButton!
     
     @IBOutlet weak var tempSurface: UITextField!
     @IBOutlet weak var tempBottom: UITextField!
-    //@IBOutlet weak var tempDiffLabel: UILabel!
-    
-    
     @IBOutlet weak var brightBox: UITextField!
-    //@IBOutlet weak var luxLabel: UILabel!
-    
     @IBOutlet weak var lakeDepthBox: UITextField!
-    //@IBOutlet weak var pavLabel: UILabel!
 
     @IBOutlet weak var chlSetButton: UIButton!
     
@@ -42,29 +35,14 @@ class CalculateViewController: UIViewController {
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
-        self.addDoneButtonOnKeyboard()
+        self.addUIToolbar()
+        
+        tempSurface.delegate = self
+        tempBottom.delegate = self
+        brightBox.delegate = self
+        lakeDepthBox.delegate = self
         
     }
-    
-    func addDoneButtonOnKeyboard() {
-        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
-        doneToolbar.barStyle       = UIBarStyle.default
-        let flexSpace              = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        let done: UIBarButtonItem  = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(CalculateViewController.dismissKeyboard))
-        
-        var items = [UIBarButtonItem]()
-        items.append(flexSpace)
-        items.append(done)
-        
-        doneToolbar.items = items
-        doneToolbar.sizeToFit()
-        
-        self.tempSurface.inputAccessoryView = doneToolbar
-        self.tempBottom.inputAccessoryView = doneToolbar
-        self.brightBox.inputAccessoryView = doneToolbar
-        self.lakeDepthBox.inputAccessoryView = doneToolbar
-    }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -154,35 +132,11 @@ class CalculateViewController: UIViewController {
         viewDidLoad()
     }
     
-    //Calls this function when the tap is recognized.
-    func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    private func _updateDataEntryVals() {
-        
-        if tempBottom.text != "" && Float(tempBottom.text!) != nil {
-            dataEntryVals["temp_bot"] = Float(tempBottom.text!)!
-        }
-        if tempSurface.text != "" && Float(tempSurface.text!) != nil {
-            dataEntryVals["temp_top"] = Float(tempSurface.text!)!
-        }
-        if brightBox.text != "" && Float(brightBox.text!) != nil {
-            dataEntryVals["brightness"] = Float(brightBox.text!)!
-        }
-        if lakeDepthBox.text != "" && Float(lakeDepthBox.text!) != nil {
-            dataEntryVals["depth"] = Float(lakeDepthBox.text!)!
-        }
-        
-    }
-    
+
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         _updateDataEntryVals()
@@ -388,6 +342,63 @@ class CalculateViewController: UIViewController {
 
         }
 
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        currentTextField = textField
+    }
+    
+    private func _updateDataEntryVals() {
+        
+        if tempBottom.text != "" && Float(tempBottom.text!) != nil {
+            dataEntryVals["temp_bot"] = Float(tempBottom.text!)!
+        }
+        if tempSurface.text != "" && Float(tempSurface.text!) != nil {
+            dataEntryVals["temp_top"] = Float(tempSurface.text!)!
+        }
+        if brightBox.text != "" && Float(brightBox.text!) != nil {
+            dataEntryVals["brightness"] = Float(brightBox.text!)!
+        }
+        if lakeDepthBox.text != "" && Float(lakeDepthBox.text!) != nil {
+            dataEntryVals["depth"] = Float(lakeDepthBox.text!)!
+        }
+        
+    }
+    
+    func addUIToolbar() {
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        doneToolbar.barStyle       = UIBarStyle.default
+        let flexSpace              = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let done: UIBarButtonItem  = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(CalculateViewController.dismissKeyboard))
+        let next: UIBarButtonItem  = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.plain, target: self, action: #selector(CalculateViewController.nextField))
+        
+        var items = [UIBarButtonItem]()
+        items.append(done)
+        items.append(flexSpace)
+        items.append(next)
+        
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        self.tempSurface.inputAccessoryView = doneToolbar
+        self.tempBottom.inputAccessoryView = doneToolbar
+        self.brightBox.inputAccessoryView = doneToolbar
+        self.lakeDepthBox.inputAccessoryView = doneToolbar
+    }
+    
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    func nextField() {
+        // Try to find next responder
+        if let nextField = currentTextField.superview?.viewWithTag(currentTextField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            self.dismissKeyboard()
+        }
     }
 
 }
