@@ -10,15 +10,8 @@ import UIKit
 import CoreData
 
 class PO4ViewController: DataEntryViewControllerBase {
-
-    var dataEntryVals: [String:Float] = [:]
-    var logID: NSManagedObjectID?
-    var validChl: Bool?
-    
-
     
     @IBOutlet weak var po4TextField: UITextField!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,7 +73,7 @@ class PO4ViewController: DataEntryViewControllerBase {
             if dataEntryVals["po4"] != nil && dataEntryVals["po4"]! >= 0.0001 && dataEntryVals["po4"]! <= 7.0 {
                 dest.validPO4 = true
             } else {dest.validPO4 = false}
-            dest.validChl = validChl!
+            dest.validChl = validChl
         }
     }
     

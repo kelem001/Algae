@@ -12,13 +12,8 @@ import SwiftCharts
 
 class CalculateViewController: DataEntryViewControllerBase {
     
-    var dataEntryVals: [String:Float] = [:]
-    var logID: NSManagedObjectID?
     var logDate: NSDate?
     var startEdit: Bool?
-    var validPO4 = false
-    var validChl = false
-    
     
     @IBOutlet weak var po4SetButton: UIButton!
     

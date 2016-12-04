@@ -13,8 +13,12 @@ import SwiftCharts
 class DataEntryViewControllerBase: UIViewController, UITextFieldDelegate {
     
     var currentTextField: UITextField!
-    
     var uiToolbar: UIToolbar!
+    
+    var dataEntryVals: [String:Float] = [:]
+    var logID: NSManagedObjectID?
+    var validChl = false
+    var validPO4 = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
