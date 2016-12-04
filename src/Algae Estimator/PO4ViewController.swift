@@ -9,11 +9,13 @@
 import UIKit
 import CoreData
 
-class PO4ViewController: UIViewController {
+class PO4ViewController: DataEntryViewControllerBase {
 
     var dataEntryVals: [String:Float] = [:]
     var logID: NSManagedObjectID?
     var validChl: Bool?
+    
+
     
     @IBOutlet weak var po4TextField: UITextField!
     
@@ -21,9 +23,9 @@ class PO4ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-        self.addDoneButtonOnKeyboard()
+        self.po4TextField.inputAccessoryView = self.uiToolbar
+        
+        po4TextField.delegate = self
         
     }
     
@@ -89,27 +91,6 @@ class PO4ViewController: UIViewController {
         } else {
             dataEntryVals["po4"] = nil
         }
-    }
-    
-    func addDoneButtonOnKeyboard() {
-        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
-        doneToolbar.barStyle       = UIBarStyle.default
-        let flexSpace              = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        let done: UIBarButtonItem  = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(CalculateViewController.dismissKeyboard))
-        
-        var items = [UIBarButtonItem]()
-        items.append(flexSpace)
-        items.append(done)
-        
-        doneToolbar.items = items
-        doneToolbar.sizeToFit()
-        
-        self.po4TextField.inputAccessoryView = doneToolbar
-    }
-    
-    func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
     }
 
 }

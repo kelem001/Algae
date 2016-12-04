@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ChlViewController: UIViewController {
+class ChlViewController: DataEntryViewControllerBase {
     
     var dataEntryVals: [String:Float] = [:]
     var logID: NSManagedObjectID?
@@ -21,9 +21,11 @@ class ChlViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-        self.addDoneButtonOnKeyboard()
+        self.totalChlTextfield.inputAccessoryView = self.uiToolbar
+        self.cyanoChlTextfield.inputAccessoryView = self.uiToolbar
+        
+        totalChlTextfield.delegate = self
+        cyanoChlTextfield.delegate = self
         
     }
     
@@ -108,28 +110,6 @@ class ChlViewController: UIViewController {
         
         dataEntryVals["secciDepth"] = nil
         dataEntryVals["dissolvedOxygen"] = nil
-    }
-    
-    func addDoneButtonOnKeyboard() {
-        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
-        doneToolbar.barStyle       = UIBarStyle.default
-        let flexSpace              = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        let done: UIBarButtonItem  = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(CalculateViewController.dismissKeyboard))
-        
-        var items = [UIBarButtonItem]()
-        items.append(flexSpace)
-        items.append(done)
-        
-        doneToolbar.items = items
-        doneToolbar.sizeToFit()
-        
-        self.totalChlTextfield.inputAccessoryView = doneToolbar
-        self.cyanoChlTextfield.inputAccessoryView = doneToolbar
-    }
-    
-    func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
     }
     
 }

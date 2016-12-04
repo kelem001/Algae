@@ -32,6 +32,7 @@
 		FD7310D71DC4100900ACBE6A /* MyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7310D61DC4100900ACBE6A /* MyConstants.swift */; };
 		FDB90A3D1DA5BF0200800DDD /* Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB90A3C1DA5BF0200800DDD /* Calculations.swift */; };
 		FDC95D131DC18489003AB088 /* PO4EstimatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC95D121DC18489003AB088 /* PO4EstimatesViewController.swift */; };
+		FDF7DCBB1DF495AB00764131 /* DataEntryViewControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF7DCBA1DF495AB00764131 /* DataEntryViewControllerBase.swift */; };
 		FDFEA9841DD90C210082D6DB /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFEA9831DD90C210082D6DB /* GraphViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,7 @@
 		FD7310D61DC4100900ACBE6A /* MyConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyConstants.swift; sourceTree = "<group>"; };
 		FDB90A3C1DA5BF0200800DDD /* Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculations.swift; sourceTree = "<group>"; };
 		FDC95D121DC18489003AB088 /* PO4EstimatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PO4EstimatesViewController.swift; sourceTree = "<group>"; };
+		FDF7DCBA1DF495AB00764131 /* DataEntryViewControllerBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryViewControllerBase.swift; sourceTree = "<group>"; };
 		FDFEA9831DD90C210082D6DB /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +175,7 @@
 				FD4EE91B1D9F269F0083C393 /* AppDelegate.swift */,
 				FD4EE9251D9F26A00083C393 /* Assets.xcassets */,
 				FD4EE91D1D9F269F0083C393 /* CalculateViewController.swift */,
+				FDF7DCBA1DF495AB00764131 /* DataEntryViewControllerBase.swift */,
 				FDB90A3C1DA5BF0200800DDD /* Calculations.swift */,
 				FD5990011DC461950061816E /* ChlEstimateViewController.swift */,
 				FD5990031DC462350061816E /* ChlViewController.swift */,
@@ -285,7 +288,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Software Engineering";
 				TargetAttributes = {
 					FD4EE9171D9F269F0083C393 = {
@@ -510,6 +513,7 @@
 				FD4EE9241D9F26A00083C393 /* Algae_Estimator.xcdatamodeld in Sources */,
 				FD7310D71DC4100900ACBE6A /* MyConstants.swift in Sources */,
 				751BB8771DCE66C000678BB6 /* DataLog2ViewController.swift in Sources */,
+				FDF7DCBB1DF495AB00764131 /* DataEntryViewControllerBase.swift in Sources */,
 				FD4574421DC518BF008E87E4 /* DataLogViewController.swift in Sources */,
 				FD46F44C1DE24ACD00B12986 /* DataSetTableViewController.swift in Sources */,
 				FD5990041DC462350061816E /* ChlViewController.swift in Sources */,
@@ -585,6 +589,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -635,6 +640,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
