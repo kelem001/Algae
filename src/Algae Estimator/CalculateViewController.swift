@@ -37,6 +37,9 @@ class CalculateViewController: DataEntryViewControllerBase {
         brightBox.delegate = self
         lakeDepthBox.delegate = self
         
+        registerForKeyboardNotifications()
+//        deregisterFromKeyboardNotifications()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -243,6 +246,8 @@ class CalculateViewController: DataEntryViewControllerBase {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        super.prepare(for: segue, sender: sender)
         
         if (segue.identifier == "po4TabBar") {
             
