@@ -293,7 +293,7 @@
 				TargetAttributes = {
 					FD4EE9171D9F269F0083C393 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 7KDLJ86653;
+						DevelopmentTeam = 2T9JP2ZYVK;
 						ProvisioningStyle = Automatic;
 					};
 					FD4EE92E1D9F26A00083C393 = {
@@ -671,7 +671,7 @@
 			baseConfigurationReference = DF05F169DD6DFE97CA48DF79 /* Pods-Algae Estimator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7KDLJ86653;
+				DEVELOPMENT_TEAM = 2T9JP2ZYVK;
 				INFOPLIST_FILE = "Algae Estimator/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -687,7 +687,7 @@
 			baseConfigurationReference = 0CDE9AE90A7C796C22D5E5B4 /* Pods-Algae Estimator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7KDLJ86653;
+				DEVELOPMENT_TEAM = 2T9JP2ZYVK;
 				INFOPLIST_FILE = "Algae Estimator/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
