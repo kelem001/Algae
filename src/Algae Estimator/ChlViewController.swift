@@ -84,11 +84,9 @@ class ChlViewController: DataEntryViewControllerBase {
             if logID != nil {
                 dest.logID = logID
             }
-            if dataEntryVals["totalChl"] != nil && dataEntryVals["cyanoChl"] != nil && dataEntryVals["totalChl"]! >= 0.0 && dataEntryVals["totalChl"]! <= 300.0 && dataEntryVals["cyanoChl"]! >= 0.0 && dataEntryVals["cyanoChl"]! <= 300.0 {
-                dest.validChl = true
-            } else {dest.validChl = false}
-            dest.validPO4 = validPO4
             
+            dest.validChl = true
+            dest.validPO4 = validPO4
         }
     }
     

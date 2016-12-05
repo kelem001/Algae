@@ -46,6 +46,8 @@ class ChlEstimateViewController: DataEntryViewControllerBase {
         var formValid = true
         var msg = ""
         
+        print(String(describing: dataEntryVals["secciDepth"]))
+        
         if formValid && dataEntryVals["secciDepth"] != nil {
             if dataEntryVals["secciDepth"]! < 0.0 || dataEntryVals["secciDepth"]! > 1.0 {
                 formValid = false
@@ -85,9 +87,7 @@ class ChlEstimateViewController: DataEntryViewControllerBase {
                 dest.logID = logID
             }
             
-            if dataEntryVals["secciDepth"] != nil && dataEntryVals["dissolvedOxygen"] != nil && dataEntryVals["secciDepth"]! >= 0.0 && dataEntryVals["secciDepth"]! <= 1.0 && dataEntryVals["dissolvedOxygen"]! >= 1.0 && dataEntryVals["dissolvedOxygen"]! <= 100.0 {
-                dest.validChl = true
-            } else {dest.validChl = false}
+            dest.validChl = true
             dest.validPO4 = validPO4
         }
     }
