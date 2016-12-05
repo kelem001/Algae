@@ -114,9 +114,7 @@
                             <constraint firstItem="sQB-CI-n6R" firstAttribute="top" secondItem="UK7-tr-bRy" secondAttribute="bottom" constant="45.5" id="sfn-1B-bdP"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Direct" image="Browsertool" id="19S-dP-VIn">
-                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Direct" image="Test Passed_000000_32" id="19S-dP-VIn"/>
                     <connections>
                         <outlet property="po4TextField" destination="UK7-tr-bRy" id="enW-Ci-dqb"/>
                     </connections>
@@ -249,9 +247,7 @@
                             <constraint firstAttribute="trailing" secondItem="clY-HO-CpC" secondAttribute="trailing" id="krg-s4-Ss3"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="DATALOG" image="HDD" selectedImage="HDD" id="7Zb-WN-oqs">
-                        <inset key="imageInsets" minX="8" minY="8" maxX="8" maxY="8"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="DATALOG" image="Save_000000_32" selectedImage="HDD" id="7Zb-WN-oqs"/>
                     <connections>
                         <outlet property="tableView" destination="clY-HO-CpC" id="v1n-rA-MLK"/>
                     </connections>
@@ -2390,9 +2386,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Estimate" image="Browserstats" id="AEf-1r-eJY">
-                        <inset key="imageInsets" minX="4" minY="5" maxX="4" maxY="5"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Estimate" image="Drafting Compass_000000_32" id="AEf-1r-eJY"/>
                     <connections>
                         <outlet property="bloomSeek" destination="pQK-Yw-Ojt" id="laE-PP-w41"/>
                         <outlet property="farmButton" destination="Z21-y8-wDD" id="6D2-k3-ptF"/>
@@ -2709,7 +2703,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4g-12-132">
-                                <rect key="frame" x="113" y="568" width="150" height="30"/>
+                                <rect key="frame" x="113" y="617" width="150" height="30"/>
                                 <color key="backgroundColor" red="0.023529411760000001" green="0.68235294120000001" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="dWk-L2-f0L"/>
@@ -2926,9 +2920,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="CALCULATE" image="Calculator" id="DkT-2E-FkG">
-                        <inset key="imageInsets" minX="7" minY="7" maxX="7" maxY="7"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="CALCULATE" image="Calculator_000000_32" id="DkT-2E-FkG"/>
                     <connections>
                         <outlet property="brightBox" destination="WTs-eu-5rY" id="M1D-Gf-NoJ"/>
                         <outlet property="chlSetButton" destination="33v-Gf-W2R" id="oEK-tJ-EbJ"/>
@@ -4207,9 +4199,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="DATA" image="Browsercode" id="2EN-Ow-rZC">
-                        <inset key="imageInsets" minX="4" minY="5" maxX="4" maxY="5"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="DATA" image="Binary File_000000_32" id="2EN-Ow-rZC"/>
                     <connections>
                         <outlet property="chlaLabel" destination="O2j-2s-niR" id="c2n-Ms-pEE"/>
                         <outlet property="chlakLabel" destination="jMu-tc-UV2" id="8pD-PQ-41V"/>
@@ -4242,9 +4232,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.28107216619999997" green="0.30745128989999998" blue="0.57800356220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="GRAPH" image="Chart" selectedImage="Chart" id="6uD-Bl-feE">
-                        <inset key="imageInsets" minX="3" minY="5" maxX="3" maxY="5"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="GRAPH" image="Normal Distribution Histogram_000000_32" selectedImage="Chart" id="6uD-Bl-feE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zx-Y3-zLi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4362,9 +4350,7 @@
                             <constraint firstItem="I11-gC-ekI" firstAttribute="trailing" secondItem="iQd-wy-F1c" secondAttribute="trailingMargin" id="zOs-wn-1h1"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Direct" image="Browsertool" id="X75-wH-dkv">
-                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Direct" image="Test Passed_000000_32" id="X75-wH-dkv"/>
                     <connections>
                         <outlet property="cyanoChlTextfield" destination="Sz8-A3-Z75" id="Oeg-zP-aGE"/>
                         <outlet property="totalChlTextfield" destination="j4L-vg-11g" id="5RG-Dx-lFC"/>
@@ -4491,9 +4477,7 @@
                             <constraint firstItem="hMd-8u-t63" firstAttribute="centerX" secondItem="sO2-FU-oWY" secondAttribute="centerX" constant="-91.5" id="ygI-ff-wb5"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Estimate" image="Browserstats" id="nEd-EO-TxE">
-                        <inset key="imageInsets" minX="4" minY="5" maxX="4" maxY="5"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Estimate" image="Drafting Compass_000000_32" id="nEd-EO-TxE"/>
                     <connections>
                         <outlet property="dissolvedOxygenTextfield" destination="2uX-2R-BXy" id="G0R-Ki-5gE"/>
                         <outlet property="secciDepthTextfield" destination="VOm-AA-wke" id="9bv-KY-eoH"/>
@@ -4505,12 +4489,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Browsercode" width="60" height="60"/>
-        <image name="Browserstats" width="60" height="60"/>
-        <image name="Browsertool" width="60" height="60"/>
-        <image name="Calculator" width="60" height="60"/>
+        <image name="Binary File_000000_32" width="32" height="32"/>
+        <image name="Calculator_000000_32" width="32" height="32"/>
         <image name="Chart" width="60" height="60"/>
+        <image name="Drafting Compass_000000_32" width="32" height="32"/>
         <image name="HDD" width="60" height="60"/>
+        <image name="Normal Distribution Histogram_000000_32" width="32" height="32"/>
+        <image name="Save_000000_32" width="32" height="32"/>
+        <image name="Test Passed_000000_32" width="32" height="32"/>
         <image name="dialog_bottemp" width="473" height="310"/>
         <image name="dialog_chla" width="428" height="317"/>
         <image name="dialog_direct" width="150" height="112"/>
@@ -4527,7 +4513,7 @@
         <image name="test_strip" width="101" height="104"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="hL2-wu-grz"/>
         <segue reference="12W-oY-tIk"/>
-        <segue reference="Kb8-Hk-eoJ"/>
     </inferredMetricsTieBreakers>
 </document>
