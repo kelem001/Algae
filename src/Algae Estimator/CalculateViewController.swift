@@ -12,6 +12,7 @@ import SwiftCharts
 
 class CalculateViewController: UIViewController {
     
+    
     var dataEntryVals: [String:Float] = [:]
     var logID: NSManagedObjectID?
     var logDate: NSDate?
@@ -52,6 +53,7 @@ class CalculateViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+     
         
         let rightButton =  UIBarButtonItem(title: "Clear", style: .plain, target: self, action: #selector (clear))
         parent?.navigationItem.rightBarButtonItem = rightButton

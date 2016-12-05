@@ -2,10 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "HDD.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "HDD@2x.png",
       "scale" : "2x"
     },
     {
