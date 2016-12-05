@@ -10,45 +10,35 @@ import UIKit
 import CoreData
 import SwiftCharts
 
-class CalculateViewController: UIViewController {
+class CalculateViewController: DataEntryViewControllerBase {
     
-    
-    var dataEntryVals: [String:Float] = [:]
-    var logID: NSManagedObjectID?
     var logDate: NSDate?
     var startEdit: Bool?
-    var validPO4 = false
-    var validChl = false
-        
-    //All IBOUTLETS are properties, text boxes are UITextField and
-    //UILabel is the results label
     
     @IBOutlet weak var po4SetButton: UIButton!
     
     @IBOutlet weak var tempSurface: UITextField!
     @IBOutlet weak var tempBottom: UITextField!
-    //@IBOutlet weak var tempDiffLabel: UILabel!
-    
-    
     @IBOutlet weak var brightBox: UITextField!
-    //@IBOutlet weak var luxLabel: UILabel!
-    
     @IBOutlet weak var lakeDepthBox: UITextField!
-    //@IBOutlet weak var pavLabel: UILabel!
 
     @IBOutlet weak var chlSetButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        self.tempSurface.inputAccessoryView = self.uiToolbar
+        self.tempBottom.inputAccessoryView = self.uiToolbar
+        self.brightBox.inputAccessoryView = self.uiToolbar
+        self.lakeDepthBox.inputAccessoryView = self.uiToolbar
         
+        tempSurface.delegate = self
+        tempBottom.delegate = self
+        brightBox.delegate = self
+        lakeDepthBox.delegate = self
         
-        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-        //tap.cancelsTouchesInView = false
-        
-        view.addGestureRecognizer(tap)
+        registerForKeyboardNotifications()
+//        deregisterFromKeyboardNotifications()
         
     }
     
@@ -85,11 +75,11 @@ class CalculateViewController: UIViewController {
             logDate = datalog.value(forKey: "date") as? NSDate
             
             if (datalog.value(forKey: "total_chl") != nil) {
-                dataEntryVals["totalChl"] = datalog.value(forKey: "total_chl") as! Float
-                dataEntryVals["cyanoChl"] = datalog.value(forKey: "cyano_chl") as! Float
+                dataEntryVals["totalChl"] = datalog.value(forKey: "total_chl") as? Float
+                dataEntryVals["cyanoChl"] = datalog.value(forKey: "cyano_chl") as? Float
             } else {
-                dataEntryVals["secciDepth"] = datalog.value(forKey: "secci_depth") as! Float
-                dataEntryVals["dissolvedOxygen"] = datalog.value(forKey: "dissolved_oxygen") as! Float
+                dataEntryVals["secciDepth"] = datalog.value(forKey: "secci_depth") as? Float
+                dataEntryVals["dissolvedOxygen"] = datalog.value(forKey: "dissolved_oxygen") as? Float
             }
             self.startEdit = false
         }
@@ -127,7 +117,7 @@ class CalculateViewController: UIViewController {
     func clear(sender: AnyObject?) {
         
         dataEntryVals = [:]
-        logID = NSManagedObjectID()
+        logID = nil
         logDate = NSDate()
         startEdit = false
         tempSurface.text = ""
@@ -141,35 +131,11 @@ class CalculateViewController: UIViewController {
         viewDidLoad()
     }
     
-    //Calls this function when the tap is recognized.
-    func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    private func _updateDataEntryVals() {
-        
-        if tempBottom.text != "" && Float(tempBottom.text!) != nil {
-            dataEntryVals["temp_bot"] = Float(tempBottom.text!)!
-        }
-        if tempSurface.text != "" && Float(tempSurface.text!) != nil {
-            dataEntryVals["temp_top"] = Float(tempSurface.text!)!
-        }
-        if brightBox.text != "" && Float(brightBox.text!) != nil {
-            dataEntryVals["brightness"] = Float(brightBox.text!)!
-        }
-        if lakeDepthBox.text != "" && Float(lakeDepthBox.text!) != nil {
-            dataEntryVals["depth"] = Float(lakeDepthBox.text!)!
-        }
-        
-    }
-    
+
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         _updateDataEntryVals()
@@ -282,6 +248,8 @@ class CalculateViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        super.prepare(for: segue, sender: sender)
+        
         if (segue.identifier == "po4TabBar") {
             
             // Obtain destVC controller instance.
@@ -375,6 +343,23 @@ class CalculateViewController: UIViewController {
 
         }
 
+    }
+    
+    private func _updateDataEntryVals() {
+        
+        if tempBottom.text != "" && Float(tempBottom.text!) != nil {
+            dataEntryVals["temp_bot"] = Float(tempBottom.text!)!
+        }
+        if tempSurface.text != "" && Float(tempSurface.text!) != nil {
+            dataEntryVals["temp_top"] = Float(tempSurface.text!)!
+        }
+        if brightBox.text != "" && Float(brightBox.text!) != nil {
+            dataEntryVals["brightness"] = Float(brightBox.text!)!
+        }
+        if lakeDepthBox.text != "" && Float(lakeDepthBox.text!) != nil {
+            dataEntryVals["depth"] = Float(lakeDepthBox.text!)!
+        }
+        
     }
 
 }

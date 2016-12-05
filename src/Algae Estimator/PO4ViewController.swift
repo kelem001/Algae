@@ -9,27 +9,54 @@
 import UIKit
 import CoreData
 
-class PO4ViewController: UIViewController {
-
-    var dataEntryVals: [String:Float] = [:]
-    var logID: NSManagedObjectID?
-    var validChl: Bool?
+class PO4ViewController: DataEntryViewControllerBase {
     
     @IBOutlet weak var po4TextField: UITextField!
     
-    
-    @IBAction func submitButton(_ sender: UIButton) {
-        //performSegue(withIdentifier: "backToDataEntry", sender: self)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.po4TextField.inputAccessoryView = self.uiToolbar
+        
+        po4TextField.delegate = self
+        
     }
     
-
-    private func _updateDataEntryVals() {
-        if po4TextField.text != "" && Float(po4TextField.text!) != nil {
-            dataEntryVals["po4"] = Float(po4TextField.text!)!
-        } else {
-            dataEntryVals["po4"] = nil
+    override func viewWillAppear(_ animated: Bool) {
+        if dataEntryVals["po4"] != nil {
+            po4TextField.text = String(describing: dataEntryVals["po4"]!)
         }
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        _updateDataEntryVals()
+        
+        var formValid = true
+        var msg = ""
+        
+        if formValid && dataEntryVals["po4"] != nil {
+            if dataEntryVals["po4"]! < 0.0001 || dataEntryVals["po4"]! > 7.0 {
+                formValid = false
+                msg = "Please input PO4 concentation between 0.0001 and 7."
+            }
+        }
+        
+        if !formValid {
+            let alert = UIAlertController(title: "Alert", message: msg, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        return formValid
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "backToDataEntry") {
@@ -46,25 +73,17 @@ class PO4ViewController: UIViewController {
             if dataEntryVals["po4"] != nil && dataEntryVals["po4"]! >= 0.0001 && dataEntryVals["po4"]! <= 7.0 {
                 dest.validPO4 = true
             } else {dest.validPO4 = false}
-            dest.validChl = validChl!
+            dest.validChl = validChl
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
-    override func viewWillAppear(_ animated: Bool) {
-        if dataEntryVals["po4"] != nil {
-            po4TextField.text = String(describing: dataEntryVals["po4"]!)
+    private func _updateDataEntryVals() {
+        if po4TextField.text != "" && Float(po4TextField.text!) != nil {
+            dataEntryVals["po4"] = Float(po4TextField.text!)!
+        } else {
+            dataEntryVals["po4"] = nil
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }
