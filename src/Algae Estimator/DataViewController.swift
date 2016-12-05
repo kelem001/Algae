@@ -37,7 +37,7 @@ class DataViewController: UIViewController {
         
         
         
-        let rightButton =  UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector (tapped))
+        let rightButton =  UIBarButtonItem(title: "New Log", style: .plain, target: self, action: #selector (tapped))
         parent?.navigationItem.rightBarButtonItem = rightButton
         
         // Retrieve Managed Context
@@ -94,7 +94,7 @@ class DataViewController: UIViewController {
     }
     
     func tapped(sender: AnyObject?) {
-        performSegue(withIdentifier: "editLog", sender: sender)
+        performSegue(withIdentifier: "new", sender: sender)
     }
     
     override func didReceiveMemoryWarning() {

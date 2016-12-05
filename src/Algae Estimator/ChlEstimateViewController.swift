@@ -9,33 +9,68 @@
 import UIKit
 import CoreData
 
-class ChlEstimateViewController: UIViewController {
-    
-    
-    var dataEntryVals: [String:Float] = [:]
-    var logID: NSManagedObjectID?
-    var validPO4: Bool?
+class ChlEstimateViewController: DataEntryViewControllerBase {
     
     @IBOutlet weak var dissolvedOxygenTextfield: UITextField!
     @IBOutlet weak var secciDepthTextfield: UITextField!
-    
-    
-    @IBAction func submitButton(_ sender: UIButton) {
-       // performSegue(withIdentifier: "submit", sender: self)
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.dissolvedOxygenTextfield.inputAccessoryView = self.uiToolbar
+        self.secciDepthTextfield.inputAccessoryView = self.uiToolbar
+        
+        dissolvedOxygenTextfield.delegate = self
+        secciDepthTextfield.delegate = self
+        
     }
     
-    private func _updateDataEntryVals() {
-        if secciDepthTextfield.text != "" && Float(secciDepthTextfield.text!) != nil {
-            dataEntryVals["secciDepth"] = Float(secciDepthTextfield.text!)!
-        } else {
-            dataEntryVals["secciDepth"] = nil
+    override func viewWillAppear(_ animated: Bool) {
+        if dataEntryVals["secciDepth"] != nil {
+            secciDepthTextfield.text = String(describing: dataEntryVals["secciDepth"]!)
         }
-        if dissolvedOxygenTextfield.text != "" && Float(dissolvedOxygenTextfield.text!) != nil {
-            dataEntryVals["dissolvedOxygen"] = Float(dissolvedOxygenTextfield.text!)!
-        } else {
-            dataEntryVals["dissolvedOxygen"] = nil
+        if dataEntryVals["dissolvedOxygen"] != nil {
+            dissolvedOxygenTextfield.text = String(describing: dataEntryVals["dissolvedOxygen"]!)
         }
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        _updateDataEntryVals()
+        
+        var formValid = true
+        var msg = ""
+        
+        print(String(describing: dataEntryVals["secciDepth"]))
+        
+        if formValid && dataEntryVals["secciDepth"] != nil {
+            if dataEntryVals["secciDepth"]! < 0.0 || dataEntryVals["secciDepth"]! > 1.0 {
+                formValid = false
+                msg = "Please input Secchi Depth value between 0 and 1."
+            }
+        }
+        
+        if formValid && dataEntryVals["dissolvedOxygen"] != nil {
+            if dataEntryVals["dissolvedOxygen"]! < 1.0 || dataEntryVals["dissolvedOxygen"]! > 100.0 {
+                formValid = false
+                msg = "Please input Oxygen Dissolved value between 1 and 100."
+            }
+        }
+        
+        if !formValid {
+            let alert = UIAlertController(title: "Alert", message: msg, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        return formValid
+    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -52,31 +87,26 @@ class ChlEstimateViewController: UIViewController {
                 dest.logID = logID
             }
             
-            if dataEntryVals["secciDepth"] != nil && dataEntryVals["dissolvedOxygen"] != nil && dataEntryVals["secciDepth"]! >= 0.0 && dataEntryVals["secciDepth"]! <= 1.0 && dataEntryVals["dissolvedOxygen"]! >= 1.0 && dataEntryVals["dissolvedOxygen"]! <= 100.0 {
-                dest.validChl = true
-            } else {dest.validChl = false}
-            dest.validPO4 = validPO4!
+            dest.validChl = true
+            dest.validPO4 = validPO4
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private func _updateDataEntryVals() {
+        if secciDepthTextfield.text != "" && Float(secciDepthTextfield.text!) != nil {
+            dataEntryVals["secciDepth"] = Float(secciDepthTextfield.text!)!
+        } else {
+            dataEntryVals["secciDepth"] = nil
+        }
+        if dissolvedOxygenTextfield.text != "" && Float(dissolvedOxygenTextfield.text!) != nil {
+            dataEntryVals["dissolvedOxygen"] = Float(dissolvedOxygenTextfield.text!)!
+        } else {
+            dataEntryVals["dissolvedOxygen"] = nil
+        }
         
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        if dataEntryVals["secciDepth"] != nil {
-            secciDepthTextfield.text = String(describing: dataEntryVals["secciDepth"]!)
-        }
-        if dataEntryVals["dissolvedOxygen"] != nil {
-            dissolvedOxygenTextfield.text = String(describing: dataEntryVals["dissolvedOxygen"]!)
-        }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        dataEntryVals["totalChl"] = nil
+        dataEntryVals["cyanoChl"] = nil
+        
     }
     
 }

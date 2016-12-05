@@ -97,7 +97,7 @@ class Calculations {
     }
     
     func getR01() -> Float {
-        var pav = Pbot/depth
+        let pav = Pbot/depth
         var tempdiff: Float
         
         var R01 = R0_MIN
@@ -125,7 +125,7 @@ class Calculations {
     }
     
     func getR02() -> Float {
-        var pav: Float = Pbot/depth
+        let pav: Float = Pbot/depth
         var tempdiff: Float
         var R02: Float = R0_MIN
         tempdiff = surtemp - bottemp
@@ -173,8 +173,8 @@ class Calculations {
         var totalDataSet: Array<Float> = [Float]()
         totalDataSet.append(0)
         var q:Int = 0
-        var K:Float = getK1()
-        var R0:Float = getR01()
+        let K:Float = getK1()
+        let R0:Float = getR01()
         var Nt_continuous:Float = (N0 * K)/(N0+(K - N0) * Float (exp(-R0 * GROWTH_RATE_SCALE * Float(q - TIMESHIFT))))
         totalDataSet.append(Nt_continuous)
         while (K-Nt_continuous>0.1&&q<360){
@@ -183,10 +183,10 @@ class Calculations {
             totalDataSet.append(Nt_continuous)
             
         }
-        var peak:Int = q
+        let peak:Int = q
         for q in((q + 1)..<401){
-            var tempTemp: Int = (-(q - 2 * peak) - TIMESHIFT)
-            var temp:Float = exp(-R0 * GROWTH_RATE_SCALE * Float(tempTemp))
+            let tempTemp: Int = (-(q - 2 * peak) - TIMESHIFT)
+            let temp:Float = exp(-R0 * GROWTH_RATE_SCALE * Float(tempTemp))
             Nt_continuous = (N0*K)/(N0+(K-N0) * temp)
             totalDataSet.append(Nt_continuous)
         }
@@ -197,8 +197,8 @@ class Calculations {
         var cyanoDataSet:Array<Float> = [Float]()
         cyanoDataSet.append(0)
         var q:Int = 0
-        var K:Float = getK2()
-        var R0:Float = getR02()
+        let K:Float = getK2()
+        let R0:Float = getR02()
         var Nt_continuous:Float = (N0*K)/(N0+(K-N0)*Float(exp(-R0*GROWTH_RATE_SCALE * Float((q-TIMESHIFT)))))
         cyanoDataSet.append(Nt_continuous)
         while (K-Nt_continuous>0.1&&q<360){
@@ -207,9 +207,9 @@ class Calculations {
             cyanoDataSet.append(Nt_continuous)
             
         }
-        var peak:Int = q
+        let peak:Int = q
         for q in((q + 1)..<401){
-            var temp:Float = exp(-R0*GROWTH_RATE_SCALE * Float((-(q-2*peak)-TIMESHIFT)))
+            let temp:Float = exp(-R0*GROWTH_RATE_SCALE * Float((-(q-2*peak)-TIMESHIFT)))
             Nt_continuous = (N0*K)/(N0+(K-N0)*temp)
             cyanoDataSet.append(Nt_continuous)
         }
