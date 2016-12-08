@@ -135,7 +135,7 @@
                             <constraint firstItem="7CW-Wn-Lng" firstAttribute="top" secondItem="Xt7-ny-yMb" secondAttribute="bottom" id="gda-Q6-Snj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Direct" id="19S-dP-VIn"/>
+                    <tabBarItem key="tabBarItem" title="Direct" image="Test Passed_000000_32" id="19S-dP-VIn"/>
                     <connections>
                         <outlet property="po4TextField" destination="UK7-tr-bRy" id="enW-Ci-dqb"/>
                         <outlet property="scrollView" destination="7CW-Wn-Lng" id="Zfi-PW-MPx"/>
@@ -269,7 +269,7 @@
                             <constraint firstAttribute="trailing" secondItem="clY-HO-CpC" secondAttribute="trailing" id="krg-s4-Ss3"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="DATALOG" id="7Zb-WN-oqs"/>
+                    <tabBarItem key="tabBarItem" title="DATALOG" image="Save_000000_32" id="7Zb-WN-oqs"/>
                     <connections>
                         <outlet property="tableView" destination="clY-HO-CpC" id="v1n-rA-MLK"/>
                     </connections>
@@ -1818,7 +1818,7 @@
                             <constraint firstItem="jwU-fo-Oxa" firstAttribute="top" secondItem="wOZ-XS-Yyg" secondAttribute="top" id="WnR-Bk-IlM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Estimate" id="AEf-1r-eJY"/>
+                    <tabBarItem key="tabBarItem" title="Estimate" image="Drafting Compass_000000_32" id="AEf-1r-eJY"/>
                     <connections>
                         <outlet property="bloomSeek" destination="pQK-Yw-Ojt" id="laE-PP-w41"/>
                         <outlet property="farmButton" destination="Z21-y8-wDD" id="6D2-k3-ptF"/>
@@ -2282,7 +2282,7 @@
                             <constraint firstAttribute="trailing" secondItem="Nct-Kn-oyn" secondAttribute="trailing" id="y8k-1O-3Vj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="CALCULATE" id="DkT-2E-FkG"/>
+                    <tabBarItem key="tabBarItem" title="CALCULATE" image="Calculator_000000_32" id="DkT-2E-FkG"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="brightBox" destination="WTs-eu-5rY" id="M1D-Gf-NoJ"/>
@@ -3304,7 +3304,7 @@
                             <constraint firstItem="7AE-rZ-PhD" firstAttribute="leading" secondItem="Vls-VE-weI" secondAttribute="leading" id="z0M-uv-Qvn"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="DATA" id="2EN-Ow-rZC"/>
+                    <tabBarItem key="tabBarItem" title="DATA" image="Binary File_000000_32" id="2EN-Ow-rZC"/>
                     <connections>
                         <outlet property="chlaLabel" destination="O2j-2s-niR" id="c2n-Ms-pEE"/>
                         <outlet property="chlakLabel" destination="jMu-tc-UV2" id="8pD-PQ-41V"/>
@@ -3337,7 +3337,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.28107216619999997" green="0.30745128989999998" blue="0.57800356220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="GRAPH" id="6uD-Bl-feE"/>
+                    <tabBarItem key="tabBarItem" title="GRAPH" image="Normal Distribution Histogram_000000_32" id="6uD-Bl-feE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zx-Y3-zLi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3479,7 +3479,7 @@
                             <constraint firstItem="VWq-00-0bV" firstAttribute="centerX" secondItem="iQd-wy-F1c" secondAttribute="centerX" id="kXE-q0-AS0"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Direct" id="X75-wH-dkv"/>
+                    <tabBarItem key="tabBarItem" title="Direct" image="Test Passed_000000_32" id="X75-wH-dkv"/>
                     <connections>
                         <outlet property="cyanoChlTextfield" destination="Sz8-A3-Z75" id="Oeg-zP-aGE"/>
                         <outlet property="scrollView" destination="VWq-00-0bV" id="4bJ-U5-mjV"/>
@@ -3643,7 +3643,7 @@
                             <constraint firstItem="sTW-tN-VSk" firstAttribute="top" secondItem="cdn-Fg-pCW" secondAttribute="bottom" id="IU5-0l-2V7"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Estimate" id="nEd-EO-TxE"/>
+                    <tabBarItem key="tabBarItem" title="Estimate" image="Drafting Compass_000000_32" id="nEd-EO-TxE"/>
                     <connections>
                         <outlet property="dissolvedOxygenTextfield" destination="49k-B6-1X8" id="u6I-s4-uCX"/>
                         <outlet property="scrollView" destination="sTW-tN-VSk" id="fRl-xj-EHt"/>
@@ -3656,6 +3656,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Binary File_000000_32" width="32" height="32"/>
+        <image name="Calculator_000000_32" width="32" height="32"/>
+        <image name="Drafting Compass_000000_32" width="32" height="32"/>
+        <image name="Normal Distribution Histogram_000000_32" width="32" height="32"/>
+        <image name="Save_000000_32" width="32" height="32"/>
+        <image name="Test Passed_000000_32" width="32" height="32"/>
         <image name="dialog_bottemp" width="473" height="310"/>
         <image name="dialog_chla" width="428" height="317"/>
         <image name="dialog_direct" width="150" height="112"/>
@@ -3673,6 +3679,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="K04-Th-z4X"/>
-        <segue reference="12W-oY-tIk"/>
+        <segue reference="Y2d-5x-27M"/>
     </inferredMetricsTieBreakers>
 </document>
