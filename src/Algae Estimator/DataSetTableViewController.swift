@@ -23,12 +23,7 @@ class DataSetTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         tableView.backgroundColor = MyConstants.Colors.purple
         
-        let dateFormatter = DateFormatter()
-        let hourFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        hourFormatter.dateFormat = "HH:mm:ss"
-        
-        self.title = "\(dateFormatter.string(from: logDate)) \(hourFormatter.string(from: logDate))"
+        self.title = "Data Set"
     }
 
     override func viewDidLoad() {
