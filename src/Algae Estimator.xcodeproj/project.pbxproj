@@ -14,6 +14,7 @@
 		751BB8791DCE782200678BB6 /* DataLog2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751BB8781DCE782200678BB6 /* DataLog2TableViewCell.swift */; };
 		793795B9888AEC73433689B7 /* Pods_Algae_EstimatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40B394B362F49A115019AA9 /* Pods_Algae_EstimatorTests.framework */; };
 		84F63DDA1DA5B2D000753A32 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F63DD91DA5B2D000753A32 /* DataViewController.swift */; };
+		FD0AD0E91DF625B00061509F /* Test_Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0AD0E81DF625B00061509F /* Test_Calculation.swift */; };
 		FD1C31C21DB85118007C7036 /* PO4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1C31C11DB85118007C7036 /* PO4ViewController.swift */; };
 		FD4574421DC518BF008E87E4 /* DataLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4574411DC518BF008E87E4 /* DataLogViewController.swift */; };
 		FD46F44B1DE24ACD00B12986 /* DataSetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD46F4491DE24ACD00B12986 /* DataSetTableViewCell.swift */; };
@@ -67,6 +68,7 @@
 		DF05F169DD6DFE97CA48DF79 /* Pods-Algae Estimator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algae Estimator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Algae Estimator/Pods-Algae Estimator.debug.xcconfig"; sourceTree = "<group>"; };
 		E40B394B362F49A115019AA9 /* Pods_Algae_EstimatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Algae_EstimatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2EF70200C74384E441A4B6 /* Pods-Algae EstimatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algae EstimatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Algae EstimatorUITests/Pods-Algae EstimatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FD0AD0E81DF625B00061509F /* Test_Calculation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test_Calculation.swift; sourceTree = "<group>"; };
 		FD1C31C11DB85118007C7036 /* PO4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PO4ViewController.swift; sourceTree = "<group>"; };
 		FD4574411DC518BF008E87E4 /* DataLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLogViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FD46F4491DE24ACD00B12986 /* DataSetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSetTableViewCell.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				FD4EE9331D9F26A00083C393 /* Algae_EstimatorTests.swift */,
+				FD0AD0E81DF625B00061509F /* Test_Calculation.swift */,
 				FD4EE9351D9F26A00083C393 /* Info.plist */,
 			);
 			path = "Algae EstimatorTests";
@@ -525,6 +528,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD4EE9341D9F26A00083C393 /* Algae_EstimatorTests.swift in Sources */,
+				FD0AD0E91DF625B00061509F /* Test_Calculation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

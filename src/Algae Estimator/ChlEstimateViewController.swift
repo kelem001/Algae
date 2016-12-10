@@ -87,7 +87,10 @@ class ChlEstimateViewController: DataEntryViewControllerBase {
                 dest.logID = logID
             }
             
-            dest.validChl = true
+            if (self.dataEntryVals["secciDepth"] != nil && self.dataEntryVals["dissolvedOxygen"] != nil) {
+                dest.validChl = true
+            }
+            
             dest.validPO4 = validPO4
         }
     }
