@@ -43,6 +43,7 @@ class CalculateViewController: DataEntryViewControllerBase {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+     
         
         let rightButton =  UIBarButtonItem(title: "Clear", style: .plain, target: self, action: #selector (clear))
         parent?.navigationItem.rightBarButtonItem = rightButton

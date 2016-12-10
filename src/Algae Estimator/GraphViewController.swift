@@ -13,7 +13,7 @@ import CoreData
 import Foundation
 
 class GraphViewController: UIViewController {
-    
+    //data for chl values
     var chlaDataSet: Array<Float> = [Float]()
     var cyanoDataSet: Array<Float> = [Float]()
     
@@ -23,17 +23,17 @@ class GraphViewController: UIViewController {
 
         
         
-        
+        //Settings of axis labels
         let labelSettings = ChartLabelSettings(font: UIFont.init(name: "Helvetica", size: 10)!)
         
-        
+        //chart's points
         var chartPoints0 = [ChartPoint]()
         var chartPoints1 = [ChartPoint]()
         var chartPoints2 = [ChartPoint]()
         
         
         
-
+        //Plotting the CHL on the graph
         for i in 0..<chlaDataSet.count {
             chartPoints0.append(createChartPoint(Double(i), Double(chlaDataSet[i]), labelSettings))
             chartPoints1.append(createChartPoint(Double(i), Double(cyanoDataSet[i]), labelSettings))
@@ -41,32 +41,34 @@ class GraphViewController: UIViewController {
         }
         
 
+        //Graph settings, scaling, padding, gridlines
         let xValues = stride(from: 0, through: chartPoints0.count, by: 66).map {ChartAxisValueDouble(Double($0), labelSettings: labelSettings)}
         let yValues = ChartAxisValuesGenerator.generateYAxisValuesWithChartPoints(chartPoints0, minSegmentCount: 5, maxSegmentCount: 20, multiple: 10, axisValueGenerator: {ChartAxisValueDouble($0, labelSettings: labelSettings)}, addPaddingSegmentIfEdge: false)
         
        
-        
+        //X & Y axis label settings
         let xModel = ChartAxisModel(axisValues: xValues, axisTitleLabel: ChartAxisLabel(text: "Time (h)", settings: labelSettings))
         let yModel = ChartAxisModel(axisValues: yValues, axisTitleLabel: ChartAxisLabel(text: "Chl a\nConc.\n(μg/L)", settings: labelSettings))
         
         
     
     
-
+        //Scrolling view settings
         let scrollViewFrame = CGRect(x: self.view.bounds.minX + 20, y: self.view.bounds.minY + 80, width: self.view.bounds.width - 40, height: self.view.bounds.height - 150)
         
         
         
-        
-        //let chartFrame = CGRect(x: 0, y: 0, width: self.view.bounds.width - 40, height: self.view.bounds.height - 150)
+        //The white rectangle that holds the the graph
         let chartFrame = CGRect(x: 0, y: 0, width: self.view.bounds.width - 40, height: self.view.bounds.height - 180)
     
         
         // calculate coords space in the background to keep UI smooth
         DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
             
+            //coordinate space
             let coordsSpace = ChartCoordsSpaceLeftBottomSingleAxis(chartSettings: FormatForDevice.chartSettings, chartFrame: chartFrame, xModel: xModel, yModel: yModel)
             
+            //Building the lines in the graph
             DispatchQueue.main.async {
                 let (xAxis, yAxis, innerFrame) = (coordsSpace.xAxis, coordsSpace.yAxis, coordsSpace.chartInnerFrame)
                 
@@ -96,6 +98,7 @@ class GraphViewController: UIViewController {
                     ]
                 )
                 
+                //The rest of the code until ∆ are the labels for the legend
                 let warn = UILabel(frame: CGRect(x: 0, y: 0, width:200, height: 21)) //w: 200 h: 21
                 //warn.center = CGPoint(x: self.view.bounds.minX + 200, y: self.view.bounds.minY + 175)  //x: 250 y: 175
                 //warn.center = CGPoint(x: UIScreen.main.bounds.size.width/2, y: UIScreen.main.bounds.size.height/(4))
@@ -150,9 +153,10 @@ class GraphViewController: UIViewController {
                 label2.textAlignment = .center   //center
                 label2.font = label2.font.withSize(10)
                 label2.text = "\t\t   Cyano Chla"  //2 tabs 3 spaces
+                //∆ END OF LEGEND
                 
                 
-                
+                //viewing the componenets above
                 scrollView.addSubview(chart.view)
                 self.view.addSubview(scrollView)
                 self.view.addSubview(box)
@@ -175,13 +179,14 @@ class GraphViewController: UIViewController {
 
 ///////////////////////////////////////////////////////////////////////////
 
-
+//Getting device information
 class Env {
     static var iPad: Bool {
         return UIDevice.current.userInterfaceIdiom == .pad
     }
 }
 
+//determines if iPad or iPhone
 struct FormatForDevice {
     static var chartSettings: ChartSettings {
         if Env.iPad {
@@ -191,6 +196,7 @@ struct FormatForDevice {
         }
     }
     
+    //Changing the view scaling for iPad
     fileprivate static var iPadChartSettings: ChartSettings {
         let chartSettings = ChartSettings()
         chartSettings.leading = 20
@@ -206,6 +212,7 @@ struct FormatForDevice {
         return chartSettings
     }
     
+    //Changing the view scaling for iPhone
     fileprivate static var iPhoneChartSettings: ChartSettings {
         let chartSettings = ChartSettings()
         chartSettings.leading = 10
