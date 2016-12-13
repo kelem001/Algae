@@ -72,8 +72,9 @@ class GraphViewController: UIViewController {
             DispatchQueue.main.async {
                 let (xAxis, yAxis, innerFrame) = (coordsSpace.xAxis, coordsSpace.yAxis, coordsSpace.chartInnerFrame)
                 
-                let lineModel0 = ChartLineModel(chartPoints: chartPoints0, lineColor: UIColor.blue, lineWidth: 2.5, animDuration: 1, animDelay: 0)
-                let lineModel1 = ChartLineModel(chartPoints: chartPoints1, lineColor: UIColor(red:0.2, green:0.68, blue:0.44, alpha:1.0), lineWidth: 2.5, animDuration: 1, animDelay: 0)
+                let lineModel0 = ChartLineModel(chartPoints: chartPoints0, lineColor: #colorLiteral(red: 0.09019607843, green: 0.5490196078, blue: 0.5176470588, alpha: 1), lineWidth: 2.5, animDuration: 1, animDelay: 0)
+                //let lineModel1 = ChartLineModel(chartPoints: chartPoints1, lineColor: UIColor(red:0, green:1.96, blue:2.01, alpha:1.0), lineWidth: 2.5, animDuration: 1, animDelay: 0)
+                let lineModel1 = ChartLineModel(chartPoints: chartPoints1, lineColor: #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1), lineWidth: 2.5, animDuration: 1, animDelay: 0)
                 let lineModel2 = ChartLineModel(chartPoints: chartPoints2, lineColor: UIColor.red, lineWidth: 3.0, animDuration: 1, animDelay: 0)
                 let chartPointsLineLayer = ChartPointsLineLayer(xAxis: xAxis, yAxis: yAxis, innerFrame: innerFrame, lineModels: [lineModel0, lineModel1, lineModel2])
                 
@@ -100,8 +101,6 @@ class GraphViewController: UIViewController {
                 
                 //The rest of the code until ∆ are the labels for the legend
                 let warn = UILabel(frame: CGRect(x: 0, y: 0, width:200, height: 21)) //w: 200 h: 21
-                //warn.center = CGPoint(x: self.view.bounds.minX + 200, y: self.view.bounds.minY + 175)  //x: 250 y: 175
-                //warn.center = CGPoint(x: UIScreen.main.bounds.size.width/2, y: UIScreen.main.bounds.size.height/(4))
                 warn.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.17))  //x: 3.4 y: 1.17
                 warn.textAlignment = .left
                 warn.font = warn.font.withSize(10)
@@ -109,8 +108,6 @@ class GraphViewController: UIViewController {
                 warn.text = "\t■"  //1 tab
                 
                 let warn2 = UILabel(frame: CGRect(x: 0, y: 0, width:200, height: 21)) //w: 200 h: 21
-                //warn.center = CGPoint(x: self.view.bounds.minX + 200, y: self.view.bounds.minY + 175)  //x: 250 y: 175
-                //warn.center = CGPoint(x: UIScreen.main.bounds.size.width/2, y: UIScreen.main.bounds.size.height/(4))
                 warn2.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.17))   //x: 3.4 y: 1.17
                 warn2.textAlignment = .left
                 warn2.font = warn2.font.withSize(10)
@@ -120,11 +117,9 @@ class GraphViewController: UIViewController {
                 
                 let box = UILabel(frame: CGRect(x: 0, y: 0, width:200, height: 21)) //w: 200 h: 21
                 box.center = CGPoint(x: UIScreen.main.bounds.size.width/3.4, y: UIScreen.main.bounds.size.height/(1.2))  //x: /3.4 y: /1.15
-                //box.center = CGPoint(x: self.view.bounds.width - 267, y: self.view.bounds.height - 87)
-                //box.center = CGPoint(x: wid/2, y: hei/2)
                 box.textAlignment = .left   //left
                 box.font = box.font.withSize(10)
-                box.textColor = UIColor.blue
+                box.textColor = #colorLiteral(red: 0.09019607843, green: 0.5490196078, blue: 0.5176470588, alpha: 1)
                 box.text = "\t■"   //1 tab
                 
                 
@@ -142,7 +137,7 @@ class GraphViewController: UIViewController {
                 //box2.center = CGPoint(x: self.view.bounds.width - 260, y: self.view.bounds.height - 87)
                 box2.textAlignment = .center  //center
                 box2.font = box2.font.withSize(10)
-                box2.textColor = UIColor(red:0.2, green:0.68, blue:0.44, alpha:1.0)
+                box2.textColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
                 box2.text = "■" //no spaces
                 
                 
